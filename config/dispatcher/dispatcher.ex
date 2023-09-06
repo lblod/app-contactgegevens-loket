@@ -1,9 +1,14 @@
 defmodule Dispatcher do
   use Matcher
   define_accept_types [
-    html: [ "text/html", "application/xhtml+html" ],
-    json: [ "application/json", "application/vnd.api+json" ]
+    html: ["text/html", "application/xhtml+html"],
+    json: ["application/json", "application/vnd.api+json"],
+    upload: ["multipart/form-data"],
+    sparql_json: ["application/sparql-results+json"],
+    any: [ "*/*" ],
   ]
+
+  define_layers [ :api_services, :api, :frontend, :not_found ]
 
   @any %{}
   @json %{ accept: %{ json: true } }
@@ -63,7 +68,7 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/site-types/"
   end
 
-  match "/*_", %{ last_call: true } do
-    send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
+ match "/*_path", %{ accept: [:any], layer: :not_found} do
+    send_resp( conn, 404, "{\"error\": {\"code\": 404}")
   end
 end
