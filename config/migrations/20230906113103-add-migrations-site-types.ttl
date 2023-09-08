@@ -1,0 +1,26 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://lblod.data.gift/concepts/> .
+@prefix ns2:	<http://lblod.data.gift/vocabularies/organisatie/> .
+ns1:dd0418307e7038c0c3809e3ec03a0932	rdf:type	ns2:TypeVestiging .
+@prefix ns3:	<http://mu.semte.ch/vocabularies/core/> .
+ns1:dd0418307e7038c0c3809e3ec03a0932	ns3:uuid	"dd0418307e7038c0c3809e3ec03a0932" .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+ns1:dd0418307e7038c0c3809e3ec03a0932	skos:prefLabel	"Hoofdgebouw erediensten" .
+ns1:f1381723dec42c0b6ba6492e41d6f5dd	rdf:type	ns2:TypeVestiging ;
+	ns3:uuid	"f1381723dec42c0b6ba6492e41d6f5dd" ;
+	skos:prefLabel	"Maatschappelijke zetel" .
+<http://lblod.data.gift/concepts/57e8e5498ca84056b8a87631a26c90af>	rdf:type	ns2:TypeVestiging ;
+	ns3:uuid	"57e8e5498ca84056b8a87631a26c90af" ;
+	skos:prefLabel	"Gemeentehuis" .
+<http://lblod.data.gift/concepts/15f2683c61b74541b27b64b4365806c7>	rdf:type	ns2:TypeVestiging ;
+	ns3:uuid	"15f2683c61b74541b27b64b4365806c7" ;
+	skos:prefLabel	"Provinciehuis" .
+ns1:db13a289b78e42d19d8d1d269b61b18f	rdf:type	ns2:TypeVestiging ;
+	ns3:uuid	"db13a289b78e42d19d8d1d269b61b18f" ;
+	skos:prefLabel	"Districtshuis" .
+ns1:fbec5e94aba343b0a7361aca8a0c7d79	rdf:type	ns2:TypeVestiging ;
+	ns3:uuid	"fbec5e94aba343b0a7361aca8a0c7d79" ;
+	skos:prefLabel	"Ander administratief adres" .
+ns1:dcc01338-842c-4fbd-ba68-3ca6f3af975c	rdf:type	ns2:TypeVestiging ;
+	ns3:uuid	"dcc01338-842c-4fbd-ba68-3ca6f3af975c" ;
+	skos:prefLabel	"Andere vestiging" .
