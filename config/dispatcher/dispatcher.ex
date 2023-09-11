@@ -68,6 +68,13 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/site-types/"
   end
 
+  match "/gebruikers/*path" do
+    forward conn, path, "http://cache/gebruikers/"
+  end
+  match "/accounts/*path" do
+    forward conn, path, "http://cache/accounts/"
+  end
+
  match "/*_path", %{ accept: [:any], layer: :not_found} do
     send_resp( conn, 404, "{\"error\": {\"code\": 404}")
   end

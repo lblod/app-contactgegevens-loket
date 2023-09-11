@@ -29,9 +29,60 @@
     "code": "http://lblod.data.gift/vocabularies/organisatie/",
     "ext": "http://mu.semte.ch/vocabularies/ext/",
     "geo": "http://www.opengis.net/ont/geosparql#",
-    "nacebel": "http://data.gift/vocabularies/nace-bel/"
+    "nacebel": "http://data.gift/vocabularies/nace-bel/",
+    "dct": "http://purl.org/dc/terms/"
   },
   "resources": {
+    "users": {
+      "name": "user",
+      "class": "foaf:Person",
+      "attributes": {
+          "first-name": {
+              "type": "string",
+              "predicate": "foaf:firstName"
+          },
+          "family-name": {
+              "type": "string",
+              "predicate": "foaf:familyName"
+          }
+      },
+      "relationships": {
+          "accounts": {
+              "predicate": "foaf:account",
+              "target": "account",
+              "cardinality": "many"
+          },
+          "groups": {
+              "predicate": "foaf:member",
+              "target": "administrative-units",
+              "cardinality": "many"
+          }
+      },
+      "new-resource-base": "http://data.lblod.info/id/gebruiker/"
+    },
+    "accounts": {
+        "name": "account",
+        "class": "foaf:OnlineAccount",
+        "attributes": {
+            "provider": {
+                "type": "string",
+                "predicate": "foaf:accountServiceHomepage"
+            },
+            "identifier": {
+                "type": "string",
+                "predicate": "dct:identifier"
+            }
+        },
+        "relationships": {
+            "user": {
+                "predicate": "foaf:account",
+                "target": "user",
+                "cardinality": "one",
+                "inverse": true
+            }
+        },
+        "new-resource-base": "http://data.lblod.info/id/account/"
+    },
     "administrative-units": {
       "class": "besluit:Bestuurseenheid",
       "super": [
