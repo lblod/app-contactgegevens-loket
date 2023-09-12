@@ -5,18 +5,20 @@ PREFIX mu:<http://mu.semte.ch/vocabularies/core/>
 PREFIX ext:<http://mu.semte.ch/vocabularies/ext/>
 PREFIX org: <http://www.w3.org/ns/org#>
 
-WITH <http://mu.semte.ch/application>
+WITH <http://mu.semte.ch/graphs/public> 
 INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
   ?persoon a foaf:Person;
-           mu:uuid ?uuidPersoon;
-           foaf:firstName ?classificatie;
-           foaf:familyName ?naam;
-           foaf:member ?bestuurseenheid;
-           foaf:account ?account.
+          mu:uuid ?uuidPersoon;
+          foaf:firstName ?classificatie;
+          foaf:familyName ?naam;
+          foaf:member ?bestuurseenheid;
+          foaf:account ?account.
   ?account a foaf:OnlineAccount;
-           mu:uuid ?uuidAccount;
-           foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
-           ext:sessionRole "LoketLB-CLBVGebruiker". 
+          mu:uuid ?uuidAccount;
+          foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
+          ext:sessionRole "LoketLB-CLBVGebruiker". 
+  }
 }
 WHERE {
      ?bestuurseenheid a besluit:Bestuurseenheid;
