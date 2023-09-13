@@ -1,0 +1,39 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lblodgeneriek: <https://data.lblod.info/vocabularies/generiek/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX code: <http://lblod.data.gift/vocabularies/organisatie/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX generiek: <https://data.vlaanderen.be/ns/generiek#>
+PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
+PREFIX organisatie: <https://data.vlaanderen.be/ns/organisatie#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+DELETE {
+GRAPH <http://mu.semte.ch/application> {
+  ?site a org:Site;
+    mu:uuid ?uuid;
+    org:siteAddress ?contacts;
+    organisatie:bestaatUit ?address;
+    ere:vestigingstype ?type.
+}
+}
+INSERT {
+GRAPH ?g {
+  ?site a org:Site;
+    mu:uuid ?uuid;
+    org:siteAddress ?contacts;
+    organisatie:bestaatUit ?address;
+    ere:vestigingstype ?type.
+}
+
+}
+WHERE {
+?adminUnit org:hasPrimarySite ?site.
+?adminUnit mu:uuid ?adminUnitUuid.
+?site a org:Site;
+    mu:uuid ?uuid;
+    org:siteAddress ?contacts;
+    organisatie:bestaatUit ?address;
+    ere:vestigingstype ?type.
+BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+}
