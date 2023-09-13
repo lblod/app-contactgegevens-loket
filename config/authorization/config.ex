@@ -35,7 +35,7 @@ defmodule Acl.UserGroups.Config do
                     constraint: %ResourceFormatConstraint{
                       resource_prefix: "http://mu.semte.ch/sessions/"
                     } } ] },
-      //ORGANIZATION DATA
+      # // ORGANIZATION DATA
       %GroupSpec{
         name: "org",
         useage: [:read],
