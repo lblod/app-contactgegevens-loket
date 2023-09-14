@@ -1,0 +1,9 @@
+DELETE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?a ?b ?c.
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?a ?b ?c.
+  }
+}

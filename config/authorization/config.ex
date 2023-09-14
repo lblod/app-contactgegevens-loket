@@ -54,7 +54,9 @@ defmodule Acl.UserGroups.Config do
                         "http://schema.org/ContactPoint",
                         "http://schema.org/Site",
                         "http://www.w3.org/ns/adms#Identifier",
-                        "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator"
+                        "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator",
+                        "http://schema.org/ContactPoint",
+                        "http://www.w3.org/ns/locn#Address",
                       ] } } ] },
 
       %GraphCleanup{
