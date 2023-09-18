@@ -29,24 +29,62 @@
     "code": "http://lblod.data.gift/vocabularies/organisatie/",
     "ext": "http://mu.semte.ch/vocabularies/ext/",
     "geo": "http://www.opengis.net/ont/geosparql#",
-    "nacebel": "http://data.gift/vocabularies/nace-bel/"
+    "nacebel": "http://data.gift/vocabularies/nace-bel/",
+    "dct": "http://purl.org/dc/terms/"
   },
   "resources": {
-    "administrative-units": {
-      "class": "besluit:Bestuurseenheid",
-      "super": [
-        "organizations"
-      ],
-      "relationships": {
-        "classification": {
-          "predicate": "org:classification",
-          "target": "administrative-unit-classification-codes",
-          "cardinality": "one"
-        }
+    "users": {
+      "name": "user",
+      "class": "foaf:Person",
+      "attributes": {
+          "first-name": {
+              "type": "string",
+              "predicate": "foaf:firstName"
+          },
+          "family-name": {
+              "type": "string",
+              "predicate": "foaf:familyName"
+          }
       },
-      "new-resource-base": "http://data.lblod.info/id/bestuurseenheden/"
+      "relationships": {
+          "accounts": {
+              "predicate": "foaf:account",
+              "target": "account",
+              "cardinality": "many"
+          },
+          "groups": {
+              "predicate": "foaf:member",
+              "target": "administrative-unit",
+              "cardinality": "many"
+          }
+      },
+      "new-resource-base": "http://data.lblod.info/id/gebruiker/"
+    },
+    "accounts": {
+        "name": "account",
+        "class": "foaf:OnlineAccount",
+        "attributes": {
+            "provider": {
+                "type": "string",
+                "predicate": "foaf:accountServiceHomepage"
+            },
+            "identifier": {
+                "type": "string",
+                "predicate": "dct:identifier"
+            }
+        },
+        "relationships": {
+            "user": {
+                "predicate": "foaf:account",
+                "target": "user",
+                "cardinality": "one",
+                "inverse": true
+            }
+        },
+        "new-resource-base": "http://data.lblod.info/id/account/"
     },
     "organizations": {
+      "name": "organization",
       "class": "org:Organization",
       "attributes": {
         "name": {
@@ -69,28 +107,44 @@
       "relationships": {
         "identifiers": {
           "predicate": "adms:identifier",
-          "target": "identifiers",
+          "target": "identifier",
           "cardinality": "many"
         },
         "organization-status": {
           "predicate": "regorg:orgStatus",
-          "target": "organization-status-codes",
+          "target": "organization-status-code",
           "cardinality": "one"
         },
         "primary-site": {
           "predicate": "org:hasPrimarySite",
-          "target": "sites",
+          "target": "site",
           "cardinality": "one"
         },
         "sites": {
           "predicate": "org:hasSite",
-          "target": "sites",
+          "target": "site",
           "cardinality": "many"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/organisaties/"
     },
+    "administrative-units": {
+      "name": "administrative-unit",
+      "class": "besluit:Bestuurseenheid",
+      "super": [
+        "organization"
+      ],
+      "relationships": {
+        "classification": {
+          "predicate": "org:classification",
+          "target": "administrative-unit-classification-code",
+          "cardinality": "one"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/bestuurseenheden/"
+    },
     "identifiers": {
+      "name": "identifier",
       "class": "adms:Identifier",
       "attributes": {
         "id-name": {
@@ -101,13 +155,14 @@
       "relationships": {
         "structured-identifier": {
           "predicate": "generiek:gestructureerdeIdentificator",
-          "target": "structured-identifiers",
+          "target": "structured-identifier",
           "cardinality": "one"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/identificatoren/"
     },
     "structured-identifiers": {
+      "name": "structured-identifier",
       "class": "generiek:GestructureerdeIdentificator",
       "attributes": {
         "local-id": {
@@ -118,6 +173,7 @@
       "new-resource-base": "http://data.lblod.info/id/gestructureerdeIdentificatoren/"
     },
     "administrative-unit-classification-codes": {
+      "name": "administrative-unit-classification-code",
       "class": "code:BestuurseenheidClassificatieCode",
       "attributes": {
         "label": {
@@ -128,6 +184,7 @@
       "new-resource-base": "http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/"
     },
     "organization-status-codes": {
+      "name": "organization-status-code",
       "class": "code:OrganisatieStatusCode",
       "attributes": {
         "label": {
@@ -141,6 +198,7 @@
       "new-resource-base": "http://lblod.data.gift/concepts/"
     },
     "sites": {
+      "name": "site",
       "class": "org:Site",
       "relationships": {
         "contacts": {
@@ -162,6 +220,7 @@
       "new-resource-base": "http://data.lblod.info/id/vestigingen/"
     },
     "contact-points": {
+      "name": "contact-point",
       "class": "schema:ContactPoint",
       "attributes": {
         "email": {
@@ -188,13 +247,14 @@
       "relationships": {
         "contact-address": {
           "predicate": "locn:address",
-          "target": "addresses",
+          "target": "address",
           "cardinality": "one"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/contact-punten/"
     },
     "addresses": {
+      "name": "address",
       "class": "locn:Address",
       "attributes": {
         "number": {
@@ -237,13 +297,14 @@
       "relationships": {
         "source": {
           "predicate": "dc_terms:source",
-          "target": "concepts",
+          "target": "concept",
           "cardinality": "one"
         }
       },
       "new-resource-base": "http://data.lblod.info/id/adressen/"
     },
     "concepts": {
+      "name": "concept",
       "class": "skos:Concept",
       "attributes": {
         "label": {
@@ -262,6 +323,7 @@
       "new-resource-base": "http://lblod.data.gift/concepts/"
     },
     "site-types": {
+      "name": "site-type",
       "class": "code:TypeVestiging",
       "attributes": {
         "label": {

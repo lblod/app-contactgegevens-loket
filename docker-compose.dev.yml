@@ -8,12 +8,17 @@ services:
   dispatcher:
     restart: "no"
   database:
+    restart: "no"
+  virtuoso:
     ports:
       - "8890:8890"
-    restart: "no"
-  database:
     restart: "no"
   resource:
     restart: "no"
   cache:
+    restart: "no"
+  mocklogin:
+    image: lblod/mock-login-service:latest
+    links:
+      - database:database
     restart: "no"

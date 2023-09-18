@@ -1,0 +1,31 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lblodgeneriek: <https://data.lblod.info/vocabularies/generiek/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX code: <http://lblod.data.gift/vocabularies/organisatie/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX generiek: <https://data.vlaanderen.be/ns/generiek#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+
+DELETE {
+    GRAPH <http://mu.semte.ch/application> {
+     ?concept a skos:Concept;
+    mu:uuid ?uuid;
+    skos:prefLabel ?label;
+    skos:notation ?notation;
+    skos:altLabel ?altLabel.
+  }
+}
+WHERE {
+   ?concept a skos:Concept;
+  mu:uuid ?uuid.
+  OPTIONAL {
+    ?concept skos:prefLabel ?label.
+  }
+  OPTIONAL {
+    ?concept skos:notation ?notation.
+  }
+  OPTIONAL {
+    ?concept skos:altLabel ?altLabel.
+  }
+}

@@ -2,4 +2,3 @@
 
 ;; reading in the domain.json
 (read-domain-file "domain.json")
-(read-domain-file "auth.json")

@@ -1,0 +1,85 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lblodgeneriek: <https://data.lblod.info/vocabularies/generiek/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX code: <http://lblod.data.gift/vocabularies/organisatie/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX generiek: <https://data.vlaanderen.be/ns/generiek#>
+PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
+PREFIX organisatie: <https://data.vlaanderen.be/ns/organisatie#>
+PREFIX schema: <http://schema.org/>
+PREFIX locn: <http://www.w3.org/ns/locn#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX adres: <https://data.vlaanderen.be/ns/adres#>
+PREFIX dc_terms: <http://purl.org/dc/terms/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+DELETE {
+GRAPH <http://mu.semte.ch/application> {
+  ?address a locn:Address;
+    mu:uuid ?uuid;
+    adres:Adresvoorstelling.huisnummer ?number;
+    adres:Adresvoorstelling.busnummer ?boxNumber;
+    locn:thoroughfare ?street;
+    locn:postCode ?postcode;
+    adres:gemeentenaam ?municipality;
+    locn:adminUnitL2 ?province;
+    adres:land ?country;
+    locn:fullAddress ?fullAddress;
+    adres:verwijstNaar ?addressRegisterUri;
+    dc_terms:source ?source.
+}
+}
+INSERT {
+GRAPH ?g {
+  ?address a locn:Address;
+    mu:uuid ?uuid;
+    adres:Adresvoorstelling.huisnummer ?number;
+    adres:Adresvoorstelling.busnummer ?boxNumber;
+    locn:thoroughfare ?street;
+    locn:postCode ?postcode;
+    adres:gemeentenaam ?municipality;
+    locn:adminUnitL2 ?province;
+    adres:land ?country;
+    locn:fullAddress ?fullAddress;
+    adres:verwijstNaar ?addressRegisterUri;
+    dc_terms:source ?source.
+}
+
+}
+WHERE {
+GRAPH ?g {
+  ?site organisatie:bestaatUit ?address.
+}
+?address a locn:Address;
+  mu:uuid ?uuid.
+  OPTIONAL {
+    ?address adres:Adresvoorstelling.huisnummer ?number.
+  }
+  OPTIONAL {
+    ?address adres:Adresvoorstelling.busnummer ?boxNumber.
+  }
+  OPTIONAL {
+    ?address locn:thoroughfare ?street.
+  }
+  OPTIONAL {
+    ?address locn:postCode ?postcode.
+  }
+  OPTIONAL {
+    ?address adres:gemeentenaam ?municipality.
+  }
+  OPTIONAL {
+    ?address locn:adminUnitL2 ?province.
+  }
+  OPTIONAL {
+    ?address adres:land ?country.
+  }
+  OPTIONAL {
+    ?address locn:fullAddress ?fullAddress.
+  }
+  OPTIONAL {
+    ?address adres:verwijstNaar ?addressRegisterUri.
+  }
+  OPTIONAL {
+    ?address dc_terms:source ?source.
+  }
+}
