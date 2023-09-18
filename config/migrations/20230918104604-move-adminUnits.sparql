@@ -1,0 +1,51 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lblodgeneriek: <https://data.lblod.info/vocabularies/generiek/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX code: <http://lblod.data.gift/vocabularies/organisatie/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX generiek: <https://data.vlaanderen.be/ns/generiek#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+
+DELETE {
+    GRAPH <http://mu.semte.ch/application> {
+      ?administrativeUnit a besluit:Bestuurseenheid;
+    mu:uuid ?uuid;
+    skos:prefLabel ?adminUnitLabel;
+    skos:altLabel ?adminUnitAltLabel;
+    org:classification ?classification;
+    adms:identifier ?identifier;
+    org:hasPrimarySite ?primarySite;
+    org:hasSite ?site;
+    lblodgeneriek:geplandeEindDatum ?adminUnitPlannedEndDate;
+    org:purpose ?adminUnitPurpose.
+    }
+}
+where {
+    ?administrativeUnit a besluit:Bestuurseenheid;
+  mu:uuid ?uuid.
+  OPTIONAL {
+    ?administrativeUnit skos:prefLabel ?adminUnitLabel.
+  }
+  OPTIONAL {
+    ?administrativeUnit skos:altLabel ?adminUnitAltLabel.
+  }
+  OPTIONAL {
+    ?administrativeUnit org:classification ?classification.
+  }
+  OPTIONAL {
+    ?administrativeUnit adms:identifier ?identifier.
+  }
+  OPTIONAL {
+    ?administrativeUnit org:hasPrimarySite ?primarySite.
+  }
+  OPTIONAL {
+    ?administrativeUnit lblodgeneriek:geplandeEindDatum ?adminUnitPlannedEndDate.
+  }
+  OPTIONAL {
+    ?administrativeUnit org:purpose ?adminUnitPurpose.
+  }
+  OPTIONAL {
+    ?administrativeUnit org:hasSite ?site.
+  }
+}
