@@ -21,7 +21,7 @@ DELETE {
     org:purpose ?adminUnitPurpose.
     }
 }
-where {
+WHERE {
     ?administrativeUnit a besluit:Bestuurseenheid;
   mu:uuid ?uuid.
   OPTIONAL {

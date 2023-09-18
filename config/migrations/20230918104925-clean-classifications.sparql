@@ -14,7 +14,7 @@ DELETE {
     skos:prefLabel ?classificationLabel.
   }
 }
-where {
+WHERE {
   ?classification a code:BestuurseenheidClassificatieCode;
   mu:uuid ?uuid;
   skos:prefLabel ?classificationLabel.

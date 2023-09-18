@@ -14,7 +14,7 @@ DELETE {
     skos:prefLabel ?siteTypeLabel.
 }
 }
-where {
+WHERE {
   ?siteType a code:TypeVestiging;
     mu:uuid ?uuid;
     skos:prefLabel ?siteTypeLabel.

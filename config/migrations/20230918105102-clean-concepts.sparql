@@ -16,7 +16,7 @@ DELETE {
     skos:altLabel ?altLabel.
   }
 }
-where {
+WHERE {
    ?concept a skos:Concept;
   mu:uuid ?uuid.
   OPTIONAL {

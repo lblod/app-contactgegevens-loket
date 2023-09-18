@@ -13,7 +13,7 @@ DELETE {
   skos:prefLabel ?organizationStatusLabel.
 }
 }
-where {
+WHERE {
    ?organizationStatus a code:OrganisatieStatusCode;
   mu:uuid ?uuid;
   skos:prefLabel ?organizationStatusLabel.

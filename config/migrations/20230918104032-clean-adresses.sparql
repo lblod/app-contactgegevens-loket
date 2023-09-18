@@ -30,7 +30,7 @@ DELETE {
     dc_terms:source ?source.
     }
 }
-where {
+WHERE {
     ?address a locn:Address;
   mu:uuid ?uuid.
   OPTIONAL {
