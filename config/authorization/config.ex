@@ -35,7 +35,7 @@ defmodule Acl.UserGroups.Config do
                     constraint: %ResourceFormatConstraint{
                       resource_prefix: "http://mu.semte.ch/sessions/"
                     } } ] },
-      //ORGANIZATION DATA
+      # // ORGANIZATION DATA
       %GroupSpec{
         name: "org",
         useage: [:read],
@@ -54,7 +54,9 @@ defmodule Acl.UserGroups.Config do
                         "http://schema.org/ContactPoint",
                         "http://schema.org/Site",
                         "http://www.w3.org/ns/adms#Identifier",
-                        "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator"
+                        "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator",
+                        "http://schema.org/ContactPoint",
+                        "http://www.w3.org/ns/locn#Address",
                       ] } } ] },
 
       %GraphCleanup{
