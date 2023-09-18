@@ -11,7 +11,6 @@ PREFIX schema: <http://schema.org/>
 PREFIX locn: <http://www.w3.org/ns/locn#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
-<<<<<<< Updated upstream
 DELETE {
 GRAPH <http://mu.semte.ch/application> {
   ?contactPoint a schema:ContactPoint;
@@ -42,24 +41,6 @@ GRAPH ?g {
   ?site org:siteAddress ?contactPoint.
 }
 ?contactPoint a schema:ContactPoint;
-=======
-
-DELETE {
-    GRAPH <http://mu.semte.ch/application> 
-    {
-         ?contactPoint a schema:ContactPoint;
-    mu:uuid ?uuid;
-    schema:email ?email;
-    schema:telephone ?telephone;
-    schema:faxNumber ?fax;
-    foaf:page ?website;
-    schema:contactType ?type;
-    locn:address ?address.
-    }
-}
-WHERE {
-     ?contactPoint a schema:ContactPoint;
->>>>>>> Stashed changes
   mu:uuid ?uuid.
   OPTIONAL {
     ?contactPoint schema:email ?email.

@@ -5,4 +5,5 @@
 !/data/db/toLoad/*
 
 docker-compose.override.yml
-
+Makefile
+prepare.sh
