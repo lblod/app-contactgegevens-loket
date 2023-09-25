@@ -79,6 +79,14 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://mocklogin/sessions/"
   end
 
+    #################################################################
+  # Address search
+  #################################################################
+
+  match "/adresses-register/*path" do
+    forward conn, path, "http://adressenregister"
+  end
+
  match "/*_path", %{ accept: [:any], layer: :not_found} do
     send_resp( conn, 404, "{\"error\": {\"code\": 404}")
   end
