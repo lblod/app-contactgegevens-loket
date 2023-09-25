@@ -1,0 +1,17 @@
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+DELETE {
+GRAPH ?g {
+  ?a <https://data.vlaanderen.be/ns/adres#uuid> ?b.
+}
+}
+INSERT {
+GRAPH ?g {
+  ?a mu:uuid ?b.
+}
+
+}
+WHERE {
+GRAPH ?g {
+  ?a <https://data.vlaanderen.be/ns/adres#uuid> ?b.
+}
+}
