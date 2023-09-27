@@ -1,0 +1,1513 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<https://data.vlaanderen.be/ns/generiek#> .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/170edc9a9b4c4f9632b8706adc514338>	rdf:type	ns1:GestructureerdeIdentificator .
+@prefix ns2:	<http://mu.semte.ch/vocabularies/core/> .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/170edc9a9b4c4f9632b8706adc514338>	ns2:uuid	"170edc9a9b4c4f9632b8706adc514338" ;
+	ns1:lokaleIdentificator	"0211287576" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/10c69f82dc459da49ec849ef09e95396>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"10c69f82dc459da49ec849ef09e95396" ;
+	ns1:lokaleIdentificator	"E_KORTEMARK_RKT_St_Martinus_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/9fa202c387c8cc929bcb8d59826676cd>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"9fa202c387c8cc929bcb8d59826676cd" ;
+	ns1:lokaleIdentificator	"E_KORTENAKEN_RKT_St_Bartholomeus_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/48ed92796a53fe94e0ea4b87f687b022>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"48ed92796a53fe94e0ea4b87f687b022" ;
+	ns1:lokaleIdentificator	"E_LILLE_RKT_St_Pieter_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/1d06f8e429864d4f05f3534cbf7e3ca2>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"1d06f8e429864d4f05f3534cbf7e3ca2" ;
+	ns1:lokaleIdentificator	"0211490088" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/36ca57afc43929fdce506ba84c4d5ec4>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"36ca57afc43929fdce506ba84c4d5ec4" ;
+	ns1:lokaleIdentificator	"E_ANTWERPEN_RKT_St_Benediktus_Lillo_A" .
+@prefix ns3:	<http://data.lblod.info/id/gestructureerdeIdentificatoren/> .
+ns3:e0ca63ac61fb2c04002fb35618243442	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"e0ca63ac61fb2c04002fb35618243442" ;
+	ns1:lokaleIdentificator	"0211156528" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/79448be3cdbbb51d13f1b70120031115>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"79448be3cdbbb51d13f1b70120031115" ;
+	ns1:lokaleIdentificator	"0211284608" .
+@prefix ns4:	<http://data.lblod.info/id/gestructureerdeIdentificator/> .
+ns4:b4dbe0ef42ff80d18c98d059fb3d862e	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b4dbe0ef42ff80d18c98d059fb3d862e" ;
+	ns1:lokaleIdentificator	"E_LANDEN_RKT_H_Kruis_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/5cd1276f079636856fe4d9e471f40266>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"5cd1276f079636856fe4d9e471f40266" ;
+	ns1:lokaleIdentificator	"0211306184" .
+ns4:c13885d58eda8162376fccdebc7db1ac	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c13885d58eda8162376fccdebc7db1ac" ;
+	ns1:lokaleIdentificator	"E_GINGELOM_RKT_St_Petrus_Borlo_L" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/2f5ae37c96d814021ee8e3e3729cdb56>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"2f5ae37c96d814021ee8e3e3729cdb56" ;
+	ns1:lokaleIdentificator	"E_DENDERMONDE_RKT_St_Apollonia_O" .
+ns4:ac52ac3609e9d08f571b9c8b82628ab9	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ac52ac3609e9d08f571b9c8b82628ab9" ;
+	ns1:lokaleIdentificator	"E_KORTRIJK_RKT_St_Elooi_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/45c5743a19d643a94e6381dec200c19f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"45c5743a19d643a94e6381dec200c19f" ;
+	ns1:lokaleIdentificator	"0211418824" .
+ns4:d148027a71ac9a5e5356c9088abf24c9	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d148027a71ac9a5e5356c9088abf24c9" ;
+	ns1:lokaleIdentificator	"E_PEER_RKT_St_Trudo_Centrum_L" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/69a07ea9ce9536e8bb8eec507fedd492>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"69a07ea9ce9536e8bb8eec507fedd492" ;
+	ns1:lokaleIdentificator	"0211324297" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/424bcd528f1a350757c57f584767e552>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"424bcd528f1a350757c57f584767e552" ;
+	ns1:lokaleIdentificator	"E_WETTEREN_RKT_Kristus_Koning_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/74cf0e3b66caff41083cdd907efa1c44>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"74cf0e3b66caff41083cdd907efa1c44" ;
+	ns1:lokaleIdentificator	"0667829558" .
+ns3:c2b4f550d16d97154ddaa4dd5d51d9b7	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c2b4f550d16d97154ddaa4dd5d51d9b7" ;
+	ns1:lokaleIdentificator	"0211243630" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/69a4c87f84848bfc717fa3c5a907600c>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"69a4c87f84848bfc717fa3c5a907600c" ;
+	ns1:lokaleIdentificator	"E_BALEN_RKT_St_Andries_A" .
+ns4:d14f924bc7a597f9e5cc4a27fe28c5fc	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d14f924bc7a597f9e5cc4a27fe28c5fc" ;
+	ns1:lokaleIdentificator	"E_HEUSDEN_ZOLDER_RKT_H_Hart_Boekt_L" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/79536f197ea69a4b5782247cd905cfcb>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"79536f197ea69a4b5782247cd905cfcb" ;
+	ns1:lokaleIdentificator	"E_KRUISEM_RKT_St_Ursmarus_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/18c1b44fab98da154f26f303cb5291bf>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"18c1b44fab98da154f26f303cb5291bf" ;
+	ns1:lokaleIdentificator	"E_BALEN_RKT_St_Willibrordus_Olmen_A" .
+ns3:c7799a730a8e4d2b93a168f24f7ec19b	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c7799a730a8e4d2b93a168f24f7ec19b" ;
+	ns1:lokaleIdentificator	"0213868172" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/4520d095ff312923ca7a76ab46e8594e>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"4520d095ff312923ca7a76ab46e8594e" ;
+	ns1:lokaleIdentificator	"E_STEENOKKERZEEL_RKT_St_Rumoldus_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/7c291ab7b025c00566adea758464ab88>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"7c291ab7b025c00566adea758464ab88" ;
+	ns1:lokaleIdentificator	"E_TONGEREN_RKT_St_Laurentius_Overrepen_L" .
+ns3:a439d5b18ad96e13ba232ac138e7f110	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a439d5b18ad96e13ba232ac138e7f110" ;
+	ns1:lokaleIdentificator	"0211322517" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/2a2da1a1dbdbd91961eb79465e4ded85>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"2a2da1a1dbdbd91961eb79465e4ded85" ;
+	ns1:lokaleIdentificator	"E_BOORTMEERBEEK_RKT_OLV_V" .
+ns3:e486ce023bfa50e26c77ca3dc72fc66c	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"e486ce023bfa50e26c77ca3dc72fc66c" ;
+	ns1:lokaleIdentificator	"0827887971" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/194a571df677b608ccac52ef78aae273>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"194a571df677b608ccac52ef78aae273" ;
+	ns1:lokaleIdentificator	"0211163654" .
+ns3:a67181da82cb15fdc3e8272465631f92	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a67181da82cb15fdc3e8272465631f92" ;
+	ns1:lokaleIdentificator	"0211455149" .
+ns3:fcc9b521ab5a413fc088730b65ca64f3	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"fcc9b521ab5a413fc088730b65ca64f3" ;
+	ns1:lokaleIdentificator	"0220434676" .
+ns4:eb881e8fc6b27bcc9361fd7228bba49c	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"eb881e8fc6b27bcc9361fd7228bba49c" ;
+	ns1:lokaleIdentificator	"E_LEBBEKE_RKT_OLVrouw_O" .
+ns4:c39c01b340d9631328918fc8a9c3ae4c	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c39c01b340d9631328918fc8a9c3ae4c" ;
+	ns1:lokaleIdentificator	"E_OUDENBURG_RKT_St_Eligius_W" .
+ns3:a4dbb3b22028b7146dbc47f06091c1e1	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a4dbb3b22028b7146dbc47f06091c1e1" ;
+	ns1:lokaleIdentificator	"0211381113" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/52b055c24fc405288a1a1ee2e4b8be20>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"52b055c24fc405288a1a1ee2e4b8be20" ;
+	ns1:lokaleIdentificator	"0211200771" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/12cad1d307080c477ac14f7092eee738>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"12cad1d307080c477ac14f7092eee738" ;
+	ns1:lokaleIdentificator	"E_BERTEM_RKT_St_Bartholomeus_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/565ba1bf9d857225272c5138b3042120>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"565ba1bf9d857225272c5138b3042120" ;
+	ns1:lokaleIdentificator	"E_MERELBEKE_RKT_OLV_van_de_Rozenkrans_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/1bc615ee9a45074c9ff23a8f6718dd83>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"1bc615ee9a45074c9ff23a8f6718dd83" ;
+	ns1:lokaleIdentificator	"E_MECHELEN_RKT_OLV_Over_De_Dijle_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/42098d9a4428a9dbffc6291810db787b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"42098d9a4428a9dbffc6291810db787b" ;
+	ns1:lokaleIdentificator	"0211541261" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/7581107b375c1c339ca01ee2c586824c>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"7581107b375c1c339ca01ee2c586824c" ;
+	ns1:lokaleIdentificator	"0211427039" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/8d143d7dc800a92e76f14f967fd1b955>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"8d143d7dc800a92e76f14f967fd1b955" ;
+	ns1:lokaleIdentificator	"0211160387" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/7e260dcd799de3ce6a7d7cb10afee3c9>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"7e260dcd799de3ce6a7d7cb10afee3c9" ;
+	ns1:lokaleIdentificator	"E_SINT_LAUREINS_RKT_St_Margriet_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/18b5c7d03fd8729e31b56b551df3c02f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"18b5c7d03fd8729e31b56b551df3c02f" ;
+	ns1:lokaleIdentificator	"E_HERZELE_RKT_St_Bartholomeus_O" .
+ns3:d6a96b5a441798a78d97ad5d767e4e0f	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d6a96b5a441798a78d97ad5d767e4e0f" ;
+	ns1:lokaleIdentificator	"0211149402" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/9b2c2362b271297f42d571376b113b75>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"9b2c2362b271297f42d571376b113b75" ;
+	ns1:lokaleIdentificator	"0211390219" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0a92137725a130a91bd9516f26f80c9f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"0a92137725a130a91bd9516f26f80c9f" ;
+	ns1:lokaleIdentificator	"E_AALST_RKT_St_Jozef_O" .
+ns4:da500c6efdc432b31f6d77cb6970ebf7	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"da500c6efdc432b31f6d77cb6970ebf7" ;
+	ns1:lokaleIdentificator	"E_MIDDELKERKE_RKT_OL_Vrouw_Bezoeking_W" .
+ns4:dd9b91cf22c53c16f9f4cdfa62944c48	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"dd9b91cf22c53c16f9f4cdfa62944c48" ;
+	ns1:lokaleIdentificator	"E_BIERBEEK_RKT_H_Kruis_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0ac77180162b24a6727d8b894d4eda5a>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"0ac77180162b24a6727d8b894d4eda5a" ;
+	ns1:lokaleIdentificator	"E_BRUGGE_RKT_St_Andries_en_St_Anna_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/42aed4a2bcbc29c12c5ec5d2a67cc8cb>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"42aed4a2bcbc29c12c5ec5d2a67cc8cb" ;
+	ns1:lokaleIdentificator	"0211393385" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/31e5bee2c1e1e25caabb623900269afe>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"31e5bee2c1e1e25caabb623900269afe" ;
+	ns1:lokaleIdentificator	"E_KORTESSEM_RKT_St_Quintinus_Guigoven_L" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/632ba779d5485044729035868f4ccf90>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"632ba779d5485044729035868f4ccf90" ;
+	ns1:lokaleIdentificator	"E_BOCHOLT_RKT_St_Monulfus_en_Gondulfus_Kaulille_L" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/45cbfd01301d91518e2c4e323b295b01>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"45cbfd01301d91518e2c4e323b295b01" ;
+	ns1:lokaleIdentificator	"E_GENT_RKT_St_Antonius_Abt_O" .
+ns4:ae807fadce14c989d6d812c65925f18e	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ae807fadce14c989d6d812c65925f18e" ;
+	ns1:lokaleIdentificator	"E_LEUVEN_RKT_St_Antonius_van_Padua_V" .
+ns4:ca2569cf4b9e6cb548406090055c22a3	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ca2569cf4b9e6cb548406090055c22a3" ;
+	ns1:lokaleIdentificator	"E_BEKKEVOORT_RKT_O_L_Vrouw_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/0ecbea9bf1d33c4dab8b75a3388f675e>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"0ecbea9bf1d33c4dab8b75a3388f675e" ;
+	ns1:lokaleIdentificator	"0211448122" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/19731ba8666099df04343e0b4140c702>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"19731ba8666099df04343e0b4140c702" ;
+	ns1:lokaleIdentificator	"0211243333" .
+ns4:cd3904416fae5afccba6dd1d7a104fb9	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"cd3904416fae5afccba6dd1d7a104fb9" ;
+	ns1:lokaleIdentificator	"E_LIER_RKT_St_Jan_Evangelist_Koningshooikt_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/36ba1006c2670e6db1bba30305552c82>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"36ba1006c2670e6db1bba30305552c82" ;
+	ns1:lokaleIdentificator	"E_IEPER_RKT_H_Catharina_W" .
+ns4:ab68b99c1f280579cbba777d4c266632	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ab68b99c1f280579cbba777d4c266632" ;
+	ns1:lokaleIdentificator	"E_MOL_RKT_St_Niklaas_Postel_A" .
+ns4:e9942823bc9a14f2c3dd97fb1effb188	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"e9942823bc9a14f2c3dd97fb1effb188" ;
+	ns1:lokaleIdentificator	"E_ANTWERPEN_ISL_Mehmet_Akif_A" .
+ns4:bef764bbdba9c0ac3e89d3240ee5e1d5	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"bef764bbdba9c0ac3e89d3240ee5e1d5" ;
+	ns1:lokaleIdentificator	"E_ESSEN_RKT_OLV_Geboorte_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/30691718dea9557d8555a1076880bbb2>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"30691718dea9557d8555a1076880bbb2" ;
+	ns1:lokaleIdentificator	"E_HAMME_RKT_St_Anna_O" .
+ns3:af7b46206deeb721528e220d2a994989	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"af7b46206deeb721528e220d2a994989" ;
+	ns1:lokaleIdentificator	"0211339046" .
+ns3:f764c0fdda7c3c559a06ca65b968a8ff	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"f764c0fdda7c3c559a06ca65b968a8ff" ;
+	ns1:lokaleIdentificator	"0211162268" .
+ns3:f12d7b84dca40f222cf3016b76f6bbdd	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"f12d7b84dca40f222cf3016b76f6bbdd" ;
+	ns1:lokaleIdentificator	"0220867218" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/9774a50a8ddc27ad054e1f42e96e7f1c>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"9774a50a8ddc27ad054e1f42e96e7f1c" ;
+	ns1:lokaleIdentificator	"E_HARELBEKE_RKT_St_Jozef_W" .
+ns3:d0acf55f6a89ff6cddf7c1eb99ba6c43	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d0acf55f6a89ff6cddf7c1eb99ba6c43" ;
+	ns1:lokaleIdentificator	"0211348152" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/20f46667d2dad1fcc5b01c1a5d3195d7>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"20f46667d2dad1fcc5b01c1a5d3195d7" ;
+	ns1:lokaleIdentificator	"0211182559" .
+ns3:bb1b9608a76ea5aedd440ae8143c7700	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"bb1b9608a76ea5aedd440ae8143c7700" ;
+	ns1:lokaleIdentificator	"0211417240" .
+ns4:a95e79d9651e5a390e9e3aca427588e6	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a95e79d9651e5a390e9e3aca427588e6" ;
+	ns1:lokaleIdentificator	"E_RIEMST_RKT_St_Genoveva_Zussen_L" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/19eb3d342f5c86f2d6f388f2063205f1>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"19eb3d342f5c86f2d6f388f2063205f1" ;
+	ns1:lokaleIdentificator	"0211395959" .
+ns4:d4b67c7f2ecf882f6a01091e65d40f01	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d4b67c7f2ecf882f6a01091e65d40f01" ;
+	ns1:lokaleIdentificator	"E_LIER_RKT_St_Gummarus_en_St_Margarita_Begijnhof_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/2f6e1788c1a86a71143fe3db15f5b8a1>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"2f6e1788c1a86a71143fe3db15f5b8a1" ;
+	ns1:lokaleIdentificator	"0850327833" .
+ns3:abd1a672a9ada1633f511567abd1c8eb	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"abd1a672a9ada1633f511567abd1c8eb" ;
+	ns1:lokaleIdentificator	"0211287774" .
+ns3:e447318fa9f9427681c96b674978f170	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"e447318fa9f9427681c96b674978f170" ;
+	ns1:lokaleIdentificator	"0220675097" .
+ns3:b3ba632033988237188d3dec9bb76303	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b3ba632033988237188d3dec9bb76303" ;
+	ns1:lokaleIdentificator	"0850325952" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/358d99e3f79410cb4afbbd4d01fe14d8>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"358d99e3f79410cb4afbbd4d01fe14d8" ;
+	ns1:lokaleIdentificator	"0211249271" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/72487b79d6b578ba0ec86cc9e70547d4>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"72487b79d6b578ba0ec86cc9e70547d4" ;
+	ns1:lokaleIdentificator	"E_ROTSELAAR_RKT_St_Pieter_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/9b42bc137e02e7d9c74d785704a169cb>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"9b42bc137e02e7d9c74d785704a169cb" ;
+	ns1:lokaleIdentificator	"0211481378" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/57b60ef19a217f99a6c958d1b910eba9>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"57b60ef19a217f99a6c958d1b910eba9" ;
+	ns1:lokaleIdentificator	"E_ANTWERPEN_RKT_St_Bernardus_Kiel_A" .
+ns3:a5d06b452c5cfc643c9aebe77d59e8d4	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a5d06b452c5cfc643c9aebe77d59e8d4" ;
+	ns1:lokaleIdentificator	"0211371710" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0bf858004f987e952897d7268dc7aa04>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"0bf858004f987e952897d7268dc7aa04" ;
+	ns1:lokaleIdentificator	"E_LEUVEN_RKT_St_Jacob_V" .
+ns4:dd925d4976cfca891d088ae7f2070927	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"dd925d4976cfca891d088ae7f2070927" ;
+	ns1:lokaleIdentificator	"E_TIELT_RKT_St_Pieter_W" .
+ns3:d79fab8dbc740468e5483446abdc55b3	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d79fab8dbc740468e5483446abdc55b3" ;
+	ns1:lokaleIdentificator	"0211300147" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/3bb67f4ccaae55110d606e3a95d96811>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3bb67f4ccaae55110d606e3a95d96811" ;
+	ns1:lokaleIdentificator	"0685766145" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/033e9cfaf6cd789b4d0e05abc8fcf28b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"033e9cfaf6cd789b4d0e05abc8fcf28b" ;
+	ns1:lokaleIdentificator	"E_DENDERMONDE_RKT_St_Margriet_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/09f789965bd388d760ac528090b5e0fd>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"09f789965bd388d760ac528090b5e0fd" ;
+	ns1:lokaleIdentificator	"E_AALST_RKT_St_Martinus_O" .
+ns3:b125f043de15790d0b7ce9c0977f1673	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b125f043de15790d0b7ce9c0977f1673" ;
+	ns1:lokaleIdentificator	"0211160981" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/77ae4d1ed1cb9b607ad98bca12fceb4a>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"77ae4d1ed1cb9b607ad98bca12fceb4a" ;
+	ns1:lokaleIdentificator	"0211476727" .
+ns3:c68af96deaa12a2796d0208b610bf93c	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c68af96deaa12a2796d0208b610bf93c" ;
+	ns1:lokaleIdentificator	"0211452971" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/06f68a8e2a9e7a83ef589412619e55ab>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"06f68a8e2a9e7a83ef589412619e55ab" ;
+	ns1:lokaleIdentificator	"0211176720" .
+ns4:a52ddae7837d359d8d23fa7ec36d8bba	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a52ddae7837d359d8d23fa7ec36d8bba" ;
+	ns1:lokaleIdentificator	"E_ROOSDAAL_RKT_St_Gaugericus_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/3aec6276238e7ad2e7d31f2ed5b54d55>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3aec6276238e7ad2e7d31f2ed5b54d55" ;
+	ns1:lokaleIdentificator	"E_ZOUTLEEUW_RKT_St_Cyriacus_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/112fe6bb97bb01cd4d4c7a636750fd39>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"112fe6bb97bb01cd4d4c7a636750fd39" ;
+	ns1:lokaleIdentificator	"E_ZONNEBEKE_RKT_OL_Vrouw_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/15c11adc4fae4d3467ef6ac4139a1067>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"15c11adc4fae4d3467ef6ac4139a1067" ;
+	ns1:lokaleIdentificator	"0211390120" .
+ns4:d6d261cfcfb0143b5294a2b60cba9885	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d6d261cfcfb0143b5294a2b60cba9885" ;
+	ns1:lokaleIdentificator	"E_SCHERPENHEUVEL_ZICHEM_RKT_St_Jozef_en_StAnt_v_Padua_V" .
+@prefix ns5:	<http://www.w3.org/ns/adms#> .
+<http://data.lblod.info/id/identificatoren/906ee9f9f10066be976d02ee82ab6d6b>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"906ee9f9f10066be976d02ee82ab6d6b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/321f4498287a66fb5e8a0d78de56a9cb> .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+<http://data.lblod.info/id/identificatoren/906ee9f9f10066be976d02ee82ab6d6b>	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/321f4498287a66fb5e8a0d78de56a9cb>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"321f4498287a66fb5e8a0d78de56a9cb" ;
+	ns1:lokaleIdentificator	"0211534729" .
+<http://data.lblod.info/id/identificatoren/2cac41ed05e4db63fa5b0a16c1b51b2e>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"2cac41ed05e4db63fa5b0a16c1b51b2e" ;
+	ns1:gestructureerdeIdentificator	ns3:f12d7b84dca40f222cf3016b76f6bbdd ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/309d740d0332156a232971794fda5a12>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"309d740d0332156a232971794fda5a12" ;
+	ns1:gestructureerdeIdentificator	ns4:f680387c9cc54c77d3f4a810e45ab346 ;
+	skos:notation	"SharePoint identificator" .
+ns4:f680387c9cc54c77d3f4a810e45ab346	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"f680387c9cc54c77d3f4a810e45ab346" ;
+	ns1:lokaleIdentificator	"E_LAAKDAL_RKT_OLV_Wijngaard_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/3b5525335608edd7d7bbc0bbddbeb53b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3b5525335608edd7d7bbc0bbddbeb53b" ;
+	ns1:lokaleIdentificator	"E_VILVOORDE_RKT_St_Martinus_V" .
+<http://data.lblod.info/id/identificatoren/2f8092f70f8f2ed1e5755a9920505d76>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"2f8092f70f8f2ed1e5755a9920505d76" ;
+	ns1:gestructureerdeIdentificator	ns4:aefe0bc07479653015585675e2a316e8 ;
+	skos:notation	"SharePoint identificator" .
+ns4:aefe0bc07479653015585675e2a316e8	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"aefe0bc07479653015585675e2a316e8" ;
+	ns1:lokaleIdentificator	"E_MOL_RKT_ST_AntoniusAbt_A" .
+<http://data.lblod.info/id/identificatoren/5122f8c7ab0941da461ce71f1163b7b7>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"5122f8c7ab0941da461ce71f1163b7b7" ;
+	ns1:gestructureerdeIdentificator	ns3:d3b8c7990559132fd50564f6b3e6fb5e ;
+	skos:notation	"KBO nummer" .
+ns3:d3b8c7990559132fd50564f6b3e6fb5e	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d3b8c7990559132fd50564f6b3e6fb5e" ;
+	ns1:lokaleIdentificator	"0211288071" .
+<http://data.lblod.info/id/identificatoren/34c7bea5fede00880fc7a58f811ea7b5>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"34c7bea5fede00880fc7a58f811ea7b5" ;
+	ns1:gestructureerdeIdentificator	ns3:e06f67f619b176dc9e6f0fd4ef2b0e8f ;
+	skos:notation	"KBO nummer" .
+@prefix ns7:	<http://data.lblod.info/id/identificatoren/> .
+ns7:f25454bf7823dc65a94c58d03f402583	rdf:type	ns5:Identifier ;
+	ns2:uuid	"f25454bf7823dc65a94c58d03f402583" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/36ba1006c2670e6db1bba30305552c82> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/34f7ced91b47e7e6dfef569d92122ba5>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"34f7ced91b47e7e6dfef569d92122ba5" ;
+	ns1:gestructureerdeIdentificator	ns3:af687adfc12759790c0917d7350f8d1e ;
+	skos:notation	"KBO nummer" .
+ns3:af687adfc12759790c0917d7350f8d1e	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"af687adfc12759790c0917d7350f8d1e" ;
+	ns1:lokaleIdentificator	"0211391704" .
+ns7:c6ec45f3696fe1855d9f61b6f59ca32d	rdf:type	ns5:Identifier ;
+	ns2:uuid	"c6ec45f3696fe1855d9f61b6f59ca32d" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/3aec6276238e7ad2e7d31f2ed5b54d55> ;
+	skos:notation	"SharePoint identificator" .
+ns4:a038d04288b3ffb9691411b78babd0a7	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a038d04288b3ffb9691411b78babd0a7" ;
+	ns1:lokaleIdentificator	"E_TONGEREN_RKT_St_Servatius_Koninksem_L" .
+<http://data.lblod.info/id/identificatoren/397bdb2c64bd1f00e6034b6dbdc5d0c4>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"397bdb2c64bd1f00e6034b6dbdc5d0c4" ;
+	ns1:gestructureerdeIdentificator	ns3:c68af96deaa12a2796d0208b610bf93c ;
+	skos:notation	"KBO nummer" .
+ns7:f9a189ae7c46e77ed8142567654f0ffb	rdf:type	ns5:Identifier ;
+	ns2:uuid	"f9a189ae7c46e77ed8142567654f0ffb" ;
+	ns1:gestructureerdeIdentificator	ns3:c8c16953c250e4cfbd6f38657cace236 ;
+	skos:notation	"KBO nummer" .
+ns3:c8c16953c250e4cfbd6f38657cace236	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c8c16953c250e4cfbd6f38657cace236" ;
+	ns1:lokaleIdentificator	"0211473361" .
+ns7:c9e17122b02f8a19e67f51686c187bc6	rdf:type	ns5:Identifier ;
+	ns2:uuid	"c9e17122b02f8a19e67f51686c187bc6" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/2a9e92728ff5ba12fa9d0d319b54a626> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/2a9e92728ff5ba12fa9d0d319b54a626>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"2a9e92728ff5ba12fa9d0d319b54a626" ;
+	ns1:lokaleIdentificator	"0211156132" .
+<http://data.lblod.info/id/identificatoren/8eba6b7250a5357752590ba3e572b3f9>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8eba6b7250a5357752590ba3e572b3f9" ;
+	ns1:gestructureerdeIdentificator	ns3:a67181da82cb15fdc3e8272465631f92 ;
+	skos:notation	"KBO nummer" .
+ns7:cfc5e160637cb96bc8b477179f3e12f2	rdf:type	ns5:Identifier ;
+	ns2:uuid	"cfc5e160637cb96bc8b477179f3e12f2" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/21851550e0ea8535c00a2a8b054f0f83> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/21851550e0ea8535c00a2a8b054f0f83>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"21851550e0ea8535c00a2a8b054f0f83" ;
+	ns1:lokaleIdentificator	"E_ZWALM_RKT_St_Amandus_O" .
+ns7:efdbc4959ad1d0814004448c7851aa1d	rdf:type	ns5:Identifier ;
+	ns2:uuid	"efdbc4959ad1d0814004448c7851aa1d" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/8a1c475a75c654dde824cddbbcebf72b> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/8a1c475a75c654dde824cddbbcebf72b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"8a1c475a75c654dde824cddbbcebf72b" ;
+	ns1:lokaleIdentificator	"E_MENEN_RKT_Sint_Franciscus_W" .
+ns7:fbbea5a0e07a892f456e99bce509eae0	rdf:type	ns5:Identifier ;
+	ns2:uuid	"fbbea5a0e07a892f456e99bce509eae0" ;
+	ns1:gestructureerdeIdentificator	ns3:a439d5b18ad96e13ba232ac138e7f110 ;
+	skos:notation	"KBO nummer" .
+ns7:b3cc6a67e0e24029caef31a6694ae90d	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b3cc6a67e0e24029caef31a6694ae90d" ;
+	ns1:gestructureerdeIdentificator	ns3:a5d06b452c5cfc643c9aebe77d59e8d4 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/934c35e978e554073f2052ef37765ff6>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"934c35e978e554073f2052ef37765ff6" ;
+	ns1:gestructureerdeIdentificator	ns4:a3da1b118a3b6fe03d4bfe672ea8fa13 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/725be21987e5af8dca6407e5bcec7854>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"725be21987e5af8dca6407e5bcec7854" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/4a2b97ae2496c223467b82a8da5cebe8> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/9e2d29bf2b9d4407c38f4ffecb1dcf64>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"9e2d29bf2b9d4407c38f4ffecb1dcf64" ;
+	ns1:gestructureerdeIdentificator	ns4:d4b67c7f2ecf882f6a01091e65d40f01 ;
+	skos:notation	"SharePoint identificator" .
+ns7:afa866b6fc4964d4562446f3cb8e1f00	rdf:type	ns5:Identifier ;
+	ns2:uuid	"afa866b6fc4964d4562446f3cb8e1f00" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/9b42bc137e02e7d9c74d785704a169cb> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/81debe571da8e43ac65729ee5e8005aa>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"81debe571da8e43ac65729ee5e8005aa" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/52aa37f30ba221f3b4d5f95feec98b9c> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/11db788365d26667b9a764ec70c53caf>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"11db788365d26667b9a764ec70c53caf" ;
+	ns1:gestructureerdeIdentificator	ns4:dd9b91cf22c53c16f9f4cdfa62944c48 ;
+	skos:notation	"SharePoint identificator" .
+ns7:a502b2e3a2d84bad8a25f4f89620c725	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a502b2e3a2d84bad8a25f4f89620c725" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/96d4bd4b6940e3927ba62b0490bd35ac> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/96d4bd4b6940e3927ba62b0490bd35ac>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"96d4bd4b6940e3927ba62b0490bd35ac" ;
+	ns1:lokaleIdentificator	"E_ZONHOVEN_RKT_St_Jozef_Halveweg_L" .
+ns7:a968c70f35b43080d0d401ead15999c3	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a968c70f35b43080d0d401ead15999c3" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/231771fdf96dde645867a48af648d3ea> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/231771fdf96dde645867a48af648d3ea>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"231771fdf96dde645867a48af648d3ea" ;
+	ns1:lokaleIdentificator	"0211503154" .
+<http://data.lblod.info/id/identificatoren/30ee3271694892389910479862a687e8>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"30ee3271694892389910479862a687e8" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/31e5bee2c1e1e25caabb623900269afe> ;
+	skos:notation	"SharePoint identificator" .
+ns7:c1cbae5a8f74a37e0272bf7bcf37bc1a	rdf:type	ns5:Identifier ;
+	ns2:uuid	"c1cbae5a8f74a37e0272bf7bcf37bc1a" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/80b758a29dd26c84886db0cc80b74100> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/80b758a29dd26c84886db0cc80b74100>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"80b758a29dd26c84886db0cc80b74100" ;
+	ns1:lokaleIdentificator	"E_MORTSEL_RKT_St_Lodewijk_Station_A" .
+<http://data.lblod.info/id/identificatoren/3145e8acf31ece856f7ad25bbe5c66d4>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"3145e8acf31ece856f7ad25bbe5c66d4" ;
+	ns1:gestructureerdeIdentificator	ns4:cd3904416fae5afccba6dd1d7a104fb9 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/8637c2418286fe1fe27e1bb73c1f2b62>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8637c2418286fe1fe27e1bb73c1f2b62" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/47907231a96823fea41dad61104fdfde> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/47907231a96823fea41dad61104fdfde>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"47907231a96823fea41dad61104fdfde" ;
+	ns1:lokaleIdentificator	"E_DUFFEL_RKT_OLV_van_Goede_Wil_A" .
+ns7:ec46c8a9b42cd9eb44dc14d41b14aa64	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ec46c8a9b42cd9eb44dc14d41b14aa64" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/87529e70b1c3674ba687826e5ed46294> ;
+	skos:notation	"SharePoint identificator" .
+ns7:bbf75d4cd0a702b2acbc99d16b332679	rdf:type	ns5:Identifier ;
+	ns2:uuid	"bbf75d4cd0a702b2acbc99d16b332679" ;
+	ns1:gestructureerdeIdentificator	ns3:af7b46206deeb721528e220d2a994989 ;
+	skos:notation	"KBO nummer" .
+ns7:b63079b002c414643ac12566402c2855	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b63079b002c414643ac12566402c2855" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/26d5942f8fb82c4f7d245d9d6b77ceac> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/26d5942f8fb82c4f7d245d9d6b77ceac>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"26d5942f8fb82c4f7d245d9d6b77ceac" ;
+	ns1:lokaleIdentificator	"E_ZEMST_RKT_St_Clemens_V" .
+<http://data.lblod.info/id/identificatoren/274594d720aeb1073ec37404ec74b6b0>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"274594d720aeb1073ec37404ec74b6b0" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/8ee0911c10893752cb13a2776461d688> ;
+	skos:notation	"SharePoint identificator" .
+ns7:fc5d27f484f78bcb67739ed1b314d0a9	rdf:type	ns5:Identifier ;
+	ns2:uuid	"fc5d27f484f78bcb67739ed1b314d0a9" ;
+	ns1:gestructureerdeIdentificator	ns3:f0e4ebdc54b6539a20bc784238ef39be ;
+	skos:notation	"KBO nummer" .
+ns3:f0e4ebdc54b6539a20bc784238ef39be	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"f0e4ebdc54b6539a20bc784238ef39be" ;
+	ns1:lokaleIdentificator	"0211177611" .
+<http://data.lblod.info/id/identificatoren/15139b1cc98042d70d03fd59f7339ee7>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"15139b1cc98042d70d03fd59f7339ee7" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/9de619ab52c954ec52b41bc3275052a7> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/9de619ab52c954ec52b41bc3275052a7>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"9de619ab52c954ec52b41bc3275052a7" ;
+	ns1:lokaleIdentificator	"0220854746" .
+<http://data.lblod.info/id/identificatoren/9ac50b476154a505628f8503c26e0ce6>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"9ac50b476154a505628f8503c26e0ce6" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/19eb3d342f5c86f2d6f388f2063205f1> ;
+	skos:notation	"KBO nummer" .
+ns7:f2d3bc62ab7267e38ce4e59ff4b3ae30	rdf:type	ns5:Identifier ;
+	ns2:uuid	"f2d3bc62ab7267e38ce4e59ff4b3ae30" ;
+	ns1:gestructureerdeIdentificator	ns4:d14f924bc7a597f9e5cc4a27fe28c5fc ;
+	skos:notation	"SharePoint identificator" .
+ns7:a0d5040c42d6bd7b5762984ff9adc95a	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a0d5040c42d6bd7b5762984ff9adc95a" ;
+	ns1:gestructureerdeIdentificator	ns4:a038d04288b3ffb9691411b78babd0a7 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/0df241c5a7a568cb65ad2c1f6d4b23c7>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0df241c5a7a568cb65ad2c1f6d4b23c7" ;
+	ns1:gestructureerdeIdentificator	ns4:b4dbe0ef42ff80d18c98d059fb3d862e ;
+	skos:notation	"SharePoint identificator" .
+ns7:dfa4b443feac21765ab3323b9dde90ea	rdf:type	ns5:Identifier ;
+	ns2:uuid	"dfa4b443feac21765ab3323b9dde90ea" ;
+	ns1:gestructureerdeIdentificator	ns3:edb2d45b2ac64fe9742565d76efa574e ;
+	skos:notation	"KBO nummer" .
+ns7:b78a83986b7785d86b05937981e1c67d	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b78a83986b7785d86b05937981e1c67d" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/4cf6323785c8a07edd53e4e4dc18eaf6> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/4cf6323785c8a07edd53e4e4dc18eaf6>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"4cf6323785c8a07edd53e4e4dc18eaf6" ;
+	ns1:lokaleIdentificator	"0211250558" .
+<http://data.lblod.info/id/identificatoren/35d6111bf8f5092cb72a1c6efe6e63c2>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"35d6111bf8f5092cb72a1c6efe6e63c2" ;
+	ns1:gestructureerdeIdentificator	ns3:b3ba632033988237188d3dec9bb76303 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/5ce26d9043a29fde21d1dd0a4991c72d>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"5ce26d9043a29fde21d1dd0a4991c72d" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/112fe6bb97bb01cd4d4c7a636750fd39> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/0dc4ce12cfa6789f3ad067772fbfbbd5>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0dc4ce12cfa6789f3ad067772fbfbbd5" ;
+	ns1:gestructureerdeIdentificator	ns3:eba9eb3d273ae5ad365cce9c5d174921 ;
+	skos:notation	"KBO nummer" .
+ns7:d6ce9b9bf157d6bbe03480adea904450	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d6ce9b9bf157d6bbe03480adea904450" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/96886a813709eb14e7f9531161cf4d54> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/15ccd85ad9f2420977d3cfe8c82eecd1>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"15ccd85ad9f2420977d3cfe8c82eecd1" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/79448be3cdbbb51d13f1b70120031115> ;
+	skos:notation	"KBO nummer" .
+ns7:a5be1fac1947c3b4e6b7842ece9520ab	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a5be1fac1947c3b4e6b7842ece9520ab" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/185d9a112b4f93719d6e7f3713a74a15> ;
+	skos:notation	"SharePoint identificator" .
+ns7:ba27e56cebba144d21f2a3e48a9f6ddb	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ba27e56cebba144d21f2a3e48a9f6ddb" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/09a509dc01a54cac8cd97fdb4b2e0f8f> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/09a509dc01a54cac8cd97fdb4b2e0f8f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"09a509dc01a54cac8cd97fdb4b2e0f8f" ;
+	ns1:lokaleIdentificator	"E_ZOTTEGEM_RKT_OLV_Hemelvaart_SMOudenhove_O" .
+<http://data.lblod.info/id/identificatoren/961ba4db2de8ccb8dbe043989cec1134>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"961ba4db2de8ccb8dbe043989cec1134" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/74cf0e3b66caff41083cdd907efa1c44> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/0ad3c51d04ca75fbaa9baef380f8b36f>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0ad3c51d04ca75fbaa9baef380f8b36f" ;
+	ns1:gestructureerdeIdentificator	ns3:b125f043de15790d0b7ce9c0977f1673 ;
+	skos:notation	"KBO nummer" .
+ns7:ee5acd2c24c34d13cd9586d3d6432749	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ee5acd2c24c34d13cd9586d3d6432749" ;
+	ns1:gestructureerdeIdentificator	ns4:c39c01b340d9631328918fc8a9c3ae4c ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/6d67879695d6eb716be98b3938065379>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"6d67879695d6eb716be98b3938065379" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/695dbfb270d5e48f5cdf43abc4117885> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/695dbfb270d5e48f5cdf43abc4117885>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"695dbfb270d5e48f5cdf43abc4117885" ;
+	ns1:lokaleIdentificator	"0211475836" .
+<http://data.lblod.info/id/identificatoren/6ac95f00c68a9f5fcb45cfeddc0cd82b>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"6ac95f00c68a9f5fcb45cfeddc0cd82b" ;
+	ns1:gestructureerdeIdentificator	ns4:bef764bbdba9c0ac3e89d3240ee5e1d5 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/8d935ae2b85382d9f9d3577ac8545804>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8d935ae2b85382d9f9d3577ac8545804" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/4715f4e632b39058be86cfe7e18b07b8> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/1bc812e5f9a45e3b85b374e298b7d3e4>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"1bc812e5f9a45e3b85b374e298b7d3e4" ;
+	ns1:gestructureerdeIdentificator	ns4:b1fb7824f6fee4af5e7c1e031fd79bc8 ;
+	skos:notation	"SharePoint identificator" .
+ns7:d1b54c0d99e5d2d9a75c37a839c5a886	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d1b54c0d99e5d2d9a75c37a839c5a886" ;
+	ns1:gestructureerdeIdentificator	ns4:b8dd4545101f6af50d7a81006bbf38e7 ;
+	skos:notation	"SharePoint identificator" .
+ns4:b8dd4545101f6af50d7a81006bbf38e7	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b8dd4545101f6af50d7a81006bbf38e7" ;
+	ns1:lokaleIdentificator	"E_ZWEVEGEM_RKT_OL_Vrouw_Hemelvaart_W" .
+ns7:d60145ecad91ddb1bd8a549df9b2c189	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d60145ecad91ddb1bd8a549df9b2c189" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/77ae4d1ed1cb9b607ad98bca12fceb4a> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/24f7e4327ff2a3d7a5e4bb9fe553f53b>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"24f7e4327ff2a3d7a5e4bb9fe553f53b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/2f5ae37c96d814021ee8e3e3729cdb56> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/44078954a23b0e9d392af48e76e3a811>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"44078954a23b0e9d392af48e76e3a811" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/3b5525335608edd7d7bbc0bbddbeb53b> ;
+	skos:notation	"SharePoint identificator" .
+ns7:b758cad9554521d3f9043a0c557328a7	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b758cad9554521d3f9043a0c557328a7" ;
+	ns1:gestructureerdeIdentificator	ns3:c753eef9f10e173a9792c3642a08767b ;
+	skos:notation	"KBO nummer" .
+ns3:c753eef9f10e173a9792c3642a08767b	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c753eef9f10e173a9792c3642a08767b" ;
+	ns1:lokaleIdentificator	"0211232148" .
+ns3:a98a31580cc6dd8db44ccdac00e43b86	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a98a31580cc6dd8db44ccdac00e43b86" ;
+	ns1:lokaleIdentificator	"0211541459" .
+ns7:ec1815bf856cb9d1157a5e71e40b0971	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ec1815bf856cb9d1157a5e71e40b0971" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/40b1213946b8e8991769d29af15ba3b2> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/13cab0854d0b67836e485273adf37019>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"13cab0854d0b67836e485273adf37019" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/033e9cfaf6cd789b4d0e05abc8fcf28b> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/4f1eaec400aa3e1d600abe078ed36d27>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"4f1eaec400aa3e1d600abe078ed36d27" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/15c11adc4fae4d3467ef6ac4139a1067> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/4e0a91b4059c79cbe88590c60f6905ef>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"4e0a91b4059c79cbe88590c60f6905ef" ;
+	ns1:gestructureerdeIdentificator	ns4:ca2569cf4b9e6cb548406090055c22a3 ;
+	skos:notation	"SharePoint identificator" .
+ns7:d6826fb60ce7c3b4b5116974350da1eb	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d6826fb60ce7c3b4b5116974350da1eb" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/3749c8f4e7d72fd9a478c7db647575ab> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/3749c8f4e7d72fd9a478c7db647575ab>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3749c8f4e7d72fd9a478c7db647575ab" ;
+	ns1:lokaleIdentificator	"E_OUDENAARDE_RKT_St_Martinus_Melden_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/763f3ad05c8e23bccb0d0d1e7e9fd193>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"763f3ad05c8e23bccb0d0d1e7e9fd193" ;
+	ns1:lokaleIdentificator	"E_HOLSBEEK_RKT_St_Lambertus_V" .
+ns7:ae125f50f940be3b4aea3c13a6a42a2a	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ae125f50f940be3b4aea3c13a6a42a2a" ;
+	ns1:gestructureerdeIdentificator	ns3:c2b4f550d16d97154ddaa4dd5d51d9b7 ;
+	skos:notation	"KBO nummer" .
+ns7:a1723bb84655f568d21438914d49f917	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a1723bb84655f568d21438914d49f917" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0bf858004f987e952897d7268dc7aa04> ;
+	skos:notation	"SharePoint identificator" .
+ns7:a2722963166230b5ed203126d65cce04	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a2722963166230b5ed203126d65cce04" ;
+	ns1:gestructureerdeIdentificator	ns3:c651135df719bb459d6f7eb14f04434d ;
+	skos:notation	"KBO nummer" .
+ns7:beff831dcfd82e6b27f5cd30ffa3c341	rdf:type	ns5:Identifier ;
+	ns2:uuid	"beff831dcfd82e6b27f5cd30ffa3c341" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/1d06f8e429864d4f05f3534cbf7e3ca2> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/41a2e97b6e7529334278005c94383f25>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"41a2e97b6e7529334278005c94383f25" ;
+	ns1:gestructureerdeIdentificator	ns4:ab68b99c1f280579cbba777d4c266632 ;
+	skos:notation	"SharePoint identificator" .
+ns7:f3618ba3a15de5870f0d16fe7978325b	rdf:type	ns5:Identifier ;
+	ns2:uuid	"f3618ba3a15de5870f0d16fe7978325b" ;
+	ns1:gestructureerdeIdentificator	ns4:cd6d158acadfbbe94703d63a77806279 ;
+	skos:notation	"SharePoint identificator" .
+ns4:cd6d158acadfbbe94703d63a77806279	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"cd6d158acadfbbe94703d63a77806279" ;
+	ns1:lokaleIdentificator	"E_NIEUWERKERKEN_RKT_St_Pietersbanden_Wijer_Nieuwerkerken_L" .
+<http://data.lblod.info/id/identificatoren/585039e1ff9dc495f7c9190a7e304e84>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"585039e1ff9dc495f7c9190a7e304e84" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/5cd1276f079636856fe4d9e471f40266> ;
+	skos:notation	"KBO nummer" .
+ns7:a2f8d5acb25a6e050ab4a4899008243c	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a2f8d5acb25a6e050ab4a4899008243c" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/86872dbe70154555745765672e07df35> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/1ce55efe6e3fa8d2f4139bd7bd21d7fa>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"1ce55efe6e3fa8d2f4139bd7bd21d7fa" ;
+	ns1:gestructureerdeIdentificator	ns3:d79fab8dbc740468e5483446abdc55b3 ;
+	skos:notation	"KBO nummer" .
+ns7:b399583bede26100d58867a9e0eeb80c	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b399583bede26100d58867a9e0eeb80c" ;
+	ns1:gestructureerdeIdentificator	ns4:e9942823bc9a14f2c3dd97fb1effb188 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/217ac4945a09e96e7347b4af31f9a8b9>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"217ac4945a09e96e7347b4af31f9a8b9" ;
+	ns1:lokaleIdentificator	"E_HALLE_RKT_St_Jan_Bosco_V" .
+<http://data.lblod.info/id/identificatoren/037083458c50904c9a5141aba7c77596>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"037083458c50904c9a5141aba7c77596" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/170edc9a9b4c4f9632b8706adc514338> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/7be9b92de32e47124c141d5befafa400>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"7be9b92de32e47124c141d5befafa400" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/194a571df677b608ccac52ef78aae273> ;
+	skos:notation	"KBO nummer" .
+ns7:ef2ab9af060fbba5009822e0abb230de	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ef2ab9af060fbba5009822e0abb230de" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/2a2da1a1dbdbd91961eb79465e4ded85> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/0c869e34a910f6819d004f2134665296>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0c869e34a910f6819d004f2134665296" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/7c291ab7b025c00566adea758464ab88> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/30b30acaedc19ee89fa73481dd0dc91a>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"30b30acaedc19ee89fa73481dd0dc91a" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/5cb85c2309407ec09e03bb2013d8d11b> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/5cb85c2309407ec09e03bb2013d8d11b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"5cb85c2309407ec09e03bb2013d8d11b" ;
+	ns1:lokaleIdentificator	"E_DEINZE_RKT_Sst_Petrus_en_Paulus_Hansbeke_O" .
+<http://data.lblod.info/id/identificatoren/61d36b3cea70d54efd31adfa91b0a563>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"61d36b3cea70d54efd31adfa91b0a563" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/30691718dea9557d8555a1076880bbb2> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/8888a637351b1d43c9283405c9d750e8>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8888a637351b1d43c9283405c9d750e8" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/20f46667d2dad1fcc5b01c1a5d3195d7> ;
+	skos:notation	"KBO nummer" .
+ns7:c4f64a3f0b0308d0ef7b20875eb309b9	rdf:type	ns5:Identifier ;
+	ns2:uuid	"c4f64a3f0b0308d0ef7b20875eb309b9" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/45cbfd01301d91518e2c4e323b295b01> ;
+	skos:notation	"SharePoint identificator" .
+ns7:d9496635097f583cb2cda78c1e74402f	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d9496635097f583cb2cda78c1e74402f" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/6ffcf98c8c5d2287b63ed31159dfcd6e> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/6ffcf98c8c5d2287b63ed31159dfcd6e>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"6ffcf98c8c5d2287b63ed31159dfcd6e" ;
+	ns1:lokaleIdentificator	"0211495335" .
+<http://data.lblod.info/id/identificatoren/910240ed765cc7e22261adbabeab969a>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"910240ed765cc7e22261adbabeab969a" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/57b60ef19a217f99a6c958d1b910eba9> ;
+	skos:notation	"SharePoint identificator" .
+ns7:b3e63d0539e0ab4a60a1c6a3e30b4f41	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b3e63d0539e0ab4a60a1c6a3e30b4f41" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/67e1ec1bd3f6ccf9e7293ef68907ec1d> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/67e1ec1bd3f6ccf9e7293ef68907ec1d>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"67e1ec1bd3f6ccf9e7293ef68907ec1d" ;
+	ns1:lokaleIdentificator	"0211382794" .
+<http://data.lblod.info/id/identificatoren/3eb8de4626144eac42cb815cd6f40105>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"3eb8de4626144eac42cb815cd6f40105" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/79536f197ea69a4b5782247cd905cfcb> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/0f16495747673c3876bd57dec1044a81>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0f16495747673c3876bd57dec1044a81" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/1c40f169abb703638ba6a6bae86871c2> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/27f235fd5243db7916f12d89ea3bf1ff>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"27f235fd5243db7916f12d89ea3bf1ff" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/632ba779d5485044729035868f4ccf90> ;
+	skos:notation	"SharePoint identificator" .
+ns7:cce80f3fdc1b0fd8daf05573dda47d15	rdf:type	ns5:Identifier ;
+	ns2:uuid	"cce80f3fdc1b0fd8daf05573dda47d15" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/7fa49cad68294c2e620453170ea075f1> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/7fa49cad68294c2e620453170ea075f1>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"7fa49cad68294c2e620453170ea075f1" ;
+	ns1:lokaleIdentificator	"E_GENK_RKT_Christo_Regi_Waterschei_L" .
+ns7:db13ddbaea940fc8da025a7ce1e4307b	rdf:type	ns5:Identifier ;
+	ns2:uuid	"db13ddbaea940fc8da025a7ce1e4307b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/45c5743a19d643a94e6381dec200c19f> ;
+	skos:notation	"KBO nummer" .
+ns7:d09e4af7cb39c8ed094ccc9d00b9394b	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d09e4af7cb39c8ed094ccc9d00b9394b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/83afa8345d8f7466d17b20cb134bd19f> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/59d77b1c4b6bf7afbacffdc2bc47dc26>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"59d77b1c4b6bf7afbacffdc2bc47dc26" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/18b5c7d03fd8729e31b56b551df3c02f> ;
+	skos:notation	"SharePoint identificator" .
+ns7:a8aed535ab8aafe075636edae3922cc8	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a8aed535ab8aafe075636edae3922cc8" ;
+	ns1:gestructureerdeIdentificator	ns4:abb4e48058bf85453aebf47f0957d2a5 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/61035383459c036aba0ab36769a6389d>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"61035383459c036aba0ab36769a6389d" ;
+	ns1:gestructureerdeIdentificator	ns4:a52ddae7837d359d8d23fa7ec36d8bba ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/811f457c1bb74f7a6581c38af5aef6f5>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"811f457c1bb74f7a6581c38af5aef6f5" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/9fa202c387c8cc929bcb8d59826676cd> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/2f8c873844b533705d92ffce12f16ed6>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"2f8c873844b533705d92ffce12f16ed6" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/310c18521097c42458fd5425c8cd8c64> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/31df8645e8003098b37081f189c92001>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"31df8645e8003098b37081f189c92001" ;
+	ns1:gestructureerdeIdentificator	ns4:f69bd83569b48b63ebb078a2fd7ecc08 ;
+	skos:notation	"SharePoint identificator" .
+ns7:d0e772bc0528be9f96cc54e81e741e71	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d0e772bc0528be9f96cc54e81e741e71" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/48ed92796a53fe94e0ea4b87f687b022> ;
+	skos:notation	"SharePoint identificator" .
+ns7:aa92603918450d2973e17e1e803a52a4	rdf:type	ns5:Identifier ;
+	ns2:uuid	"aa92603918450d2973e17e1e803a52a4" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/4ea081b4704bce4eb55f7de50ad4916b> ;
+	skos:notation	"KBO nummer" .
+ns7:d5ac7be2d03a132fc8694168057b1a35	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d5ac7be2d03a132fc8694168057b1a35" ;
+	ns1:gestructureerdeIdentificator	ns3:ec74114c1973759bb26803b62a6580b3 ;
+	skos:notation	"KBO nummer" .
+ns3:ec74114c1973759bb26803b62a6580b3	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ec74114c1973759bb26803b62a6580b3" ;
+	ns1:lokaleIdentificator	"0211432680" .
+<http://data.lblod.info/id/identificatoren/349ac7679322606ad08dc1a6440bd2a7>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"349ac7679322606ad08dc1a6440bd2a7" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/3a513cc4d87cf1e2dbac4beae18040d2> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/3a513cc4d87cf1e2dbac4beae18040d2>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3a513cc4d87cf1e2dbac4beae18040d2" ;
+	ns1:lokaleIdentificator	"0211276886" .
+<http://data.lblod.info/id/identificatoren/21901e24d430f5b8b5ee6fa977793d8e>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"21901e24d430f5b8b5ee6fa977793d8e" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/1bc615ee9a45074c9ff23a8f6718dd83> ;
+	skos:notation	"SharePoint identificator" .
+ns7:fc8a72dd656337ee82cb1104b1759bb8	rdf:type	ns5:Identifier ;
+	ns2:uuid	"fc8a72dd656337ee82cb1104b1759bb8" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/32f8a566bb72861df19d9cc32674b49d> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/32f8a566bb72861df19d9cc32674b49d>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"32f8a566bb72861df19d9cc32674b49d" ;
+	ns1:lokaleIdentificator	"E_LUMMEN_RKT_St_Rochus_Genebos_Lummen_L" .
+ns7:ce76e21613209f596e8b9581212543f5	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ce76e21613209f596e8b9581212543f5" ;
+	ns1:gestructureerdeIdentificator	ns3:a98a31580cc6dd8db44ccdac00e43b86 ;
+	skos:notation	"KBO nummer" .
+ns7:d488f21561c7d23cf51f1cb3347cfb3c	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d488f21561c7d23cf51f1cb3347cfb3c" ;
+	ns1:gestructureerdeIdentificator	ns4:b9004441e33191fa8b48cd4e58ec1fe5 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/7beb0357d923d242115ee85f78654ba6>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"7beb0357d923d242115ee85f78654ba6" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/3a57e6a9c6c5a26ba0decdf741dca2cf> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/64d6fb713b31a35ebac3a0260298336e>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"64d6fb713b31a35ebac3a0260298336e" ;
+	ns1:gestructureerdeIdentificator	ns3:a4dbb3b22028b7146dbc47f06091c1e1 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/632d944607b9b2315ddc0f789a70e2d7>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"632d944607b9b2315ddc0f789a70e2d7" ;
+	ns1:lokaleIdentificator	"E_STEENOKKERZEEL_RKT_St_Niklaas_V" .
+<http://data.lblod.info/id/identificatoren/2c54f4016f728281748daca2777fbdee>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"2c54f4016f728281748daca2777fbdee" ;
+	ns1:gestructureerdeIdentificator	ns4:af601f6e8260be17cb520dc3db0a6c20 ;
+	skos:notation	"SharePoint identificator" .
+ns4:af601f6e8260be17cb520dc3db0a6c20	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"af601f6e8260be17cb520dc3db0a6c20" ;
+	ns1:lokaleIdentificator	"E_RUMST_RKT_St_Jozef_Terhagen_A" .
+ns7:acecdbd7a1a06a6889636f728a918ed1	rdf:type	ns5:Identifier ;
+	ns2:uuid	"acecdbd7a1a06a6889636f728a918ed1" ;
+	ns1:gestructureerdeIdentificator	ns3:a742668183d59d55e24abe4b83eacb37 ;
+	skos:notation	"KBO nummer" .
+ns7:a85b86ef32169b355730e6f5a3e3999b	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a85b86ef32169b355730e6f5a3e3999b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/03de18866af4fa5608e73425db807d84> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/03de18866af4fa5608e73425db807d84>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"03de18866af4fa5608e73425db807d84" ;
+	ns1:lokaleIdentificator	"0211238086" .
+<http://data.lblod.info/id/identificatoren/4daf41223324d465434c9667c0433943>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"4daf41223324d465434c9667c0433943" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/56886cf41eee5df9171f348fc93909d7> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/709106a2de5b541f00dc417566e4df16>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"709106a2de5b541f00dc417566e4df16" ;
+	ns1:gestructureerdeIdentificator	ns3:e447318fa9f9427681c96b674978f170 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/8db0ed6248885d56814f3453f5fbe669>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8db0ed6248885d56814f3453f5fbe669" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/69a07ea9ce9536e8bb8eec507fedd492> ;
+	skos:notation	"KBO nummer" .
+ns7:dc27f7a89d414aa5901d1fc3cc529797	rdf:type	ns5:Identifier ;
+	ns2:uuid	"dc27f7a89d414aa5901d1fc3cc529797" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/82f7f966832e5efa7cbc349c1e71f9c9> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/82f7f966832e5efa7cbc349c1e71f9c9>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"82f7f966832e5efa7cbc349c1e71f9c9" ;
+	ns1:lokaleIdentificator	"E_TIENEN_RKT_St_Laurentius_V" .
+ns7:b9b4fa5eee175ef144bde2eca0be7613	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b9b4fa5eee175ef144bde2eca0be7613" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/10d92cc0e08c142f470fa87a9a0bf3ec> ;
+	skos:notation	"KBO nummer" .
+ns7:da2ebd23ff7beab7b68a6d9021664b0b	rdf:type	ns5:Identifier ;
+	ns2:uuid	"da2ebd23ff7beab7b68a6d9021664b0b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/162c78cba024cd95a3196a2315d4ce1b> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/162c78cba024cd95a3196a2315d4ce1b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"162c78cba024cd95a3196a2315d4ce1b" ;
+	ns1:lokaleIdentificator	"0211388239" .
+<http://data.lblod.info/id/identificatoren/538ba867398fe5fe5d7b5ca6b37c4d54>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"538ba867398fe5fe5d7b5ca6b37c4d54" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/7581107b375c1c339ca01ee2c586824c> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/07a175396f22d3f00ed29dc11c6e1dfd>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"07a175396f22d3f00ed29dc11c6e1dfd" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/12cad1d307080c477ac14f7092eee738> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/6517ed9c818db2d719ae580e8c1c129f>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"6517ed9c818db2d719ae580e8c1c129f" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/42098d9a4428a9dbffc6291810db787b> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/45f4e69db2b57e557f472a005fed33c8>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"45f4e69db2b57e557f472a005fed33c8" ;
+	ns1:gestructureerdeIdentificator	ns4:a95e79d9651e5a390e9e3aca427588e6 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/3279c039a5ff3e35ccd423b46349b28b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3279c039a5ff3e35ccd423b46349b28b" ;
+	ns1:lokaleIdentificator	"0211215817" .
+ns3:b6f6de141684b85c48837d42023eb7f2	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b6f6de141684b85c48837d42023eb7f2" ;
+	ns1:lokaleIdentificator	"0220854845" .
+ns7:fed44901e6001162703a91b76111d6b7	rdf:type	ns5:Identifier ;
+	ns2:uuid	"fed44901e6001162703a91b76111d6b7" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/72487b79d6b578ba0ec86cc9e70547d4> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/498417997086602e35ea447e27d6606e>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"498417997086602e35ea447e27d6606e" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/5829f0bc5e4958f8243d5b754d1a078e> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/5829f0bc5e4958f8243d5b754d1a078e>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"5829f0bc5e4958f8243d5b754d1a078e" ;
+	ns1:lokaleIdentificator	"E_KALMTHOUT_RKT_St_Jozef_A" .
+ns7:a84a131f44debeda952d6fed5412b38c	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a84a131f44debeda952d6fed5412b38c" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/2f6e1788c1a86a71143fe3db15f5b8a1> ;
+	skos:notation	"KBO nummer" .
+ns7:d82dcf62f40dcc22650a6d4fb70ea5c3	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d82dcf62f40dcc22650a6d4fb70ea5c3" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/9f371b7d38d96f815bde6065990ff77f> ;
+	skos:notation	"SharePoint identificator" .
+ns7:da45b52e9f9c0f29280a44172e60e8c7	rdf:type	ns5:Identifier ;
+	ns2:uuid	"da45b52e9f9c0f29280a44172e60e8c7" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/3315f70c42331642f10e2c6f8028e631> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/3315f70c42331642f10e2c6f8028e631>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3315f70c42331642f10e2c6f8028e631" ;
+	ns1:lokaleIdentificator	"0826633208" .
+ns7:d624021662ef7de6067acdfb9aa7e3f3	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d624021662ef7de6067acdfb9aa7e3f3" ;
+	ns1:gestructureerdeIdentificator	ns3:b6f6de141684b85c48837d42023eb7f2 ;
+	skos:notation	"KBO nummer" .
+ns4:d674ed6ddc6c8d8915d81963a8ca30aa	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d674ed6ddc6c8d8915d81963a8ca30aa" ;
+	ns1:lokaleIdentificator	"E_WAREGEM_ISL_Assounah_W" .
+<http://data.lblod.info/id/identificatoren/24d426b0dcdc3c85008498d7bd5e690e>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"24d426b0dcdc3c85008498d7bd5e690e" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/3938c0ad0659145f8354ef746e82cc1a> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/8f2180580fc9508489f82ed955c23809>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8f2180580fc9508489f82ed955c23809" ;
+	ns1:gestructureerdeIdentificator	ns3:fcc9b521ab5a413fc088730b65ca64f3 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/03933bd443a42fd485f8848fe291aab1>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"03933bd443a42fd485f8848fe291aab1" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/4520d095ff312923ca7a76ab46e8594e> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/2545c1dece93c13b88eb0d5a9c98c5df>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"2545c1dece93c13b88eb0d5a9c98c5df" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0331f4a63c4c4f3ec075eb533c0e38fb> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0331f4a63c4c4f3ec075eb533c0e38fb>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"0331f4a63c4c4f3ec075eb533c0e38fb" ;
+	ns1:lokaleIdentificator	"E_MECHELEN_RKK_Kathedrale_kerkfabriek_Sint_Rumoldus_A" .
+<http://data.lblod.info/id/identificatoren/0361063ce36365fd90d7a9897ca0ea01>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0361063ce36365fd90d7a9897ca0ea01" ;
+	ns1:gestructureerdeIdentificator	ns4:a8565f74c24bde962fce71964883c72b ;
+	skos:notation	"SharePoint identificator" .
+ns4:a8565f74c24bde962fce71964883c72b	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a8565f74c24bde962fce71964883c72b" ;
+	ns1:lokaleIdentificator	"E_MIDDELKERKE_RKT_St_Petrus_W" .
+ns7:b894453f8c1758fb75158e1b6c26f627	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b894453f8c1758fb75158e1b6c26f627" ;
+	ns1:gestructureerdeIdentificator	ns3:f764c0fdda7c3c559a06ca65b968a8ff ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/346ff99bfe745272fb94fc536ab81b8c>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"346ff99bfe745272fb94fc536ab81b8c" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/10c69f82dc459da49ec849ef09e95396> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/2295c652026ccb17f093cebf50410a8e>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"2295c652026ccb17f093cebf50410a8e" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/358d99e3f79410cb4afbbd4d01fe14d8> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/9e62b53294ff8d0c54fab9b3be6382ae>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"9e62b53294ff8d0c54fab9b3be6382ae" ;
+	ns1:gestructureerdeIdentificator	ns4:eb881e8fc6b27bcc9361fd7228bba49c ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/598b22300ce806faa745ae2435ba23e3>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"598b22300ce806faa745ae2435ba23e3" ;
+	ns1:gestructureerdeIdentificator	ns4:da500c6efdc432b31f6d77cb6970ebf7 ;
+	skos:notation	"SharePoint identificator" .
+ns7:d81fe0fb6e453d1ee5cf112bd96b4251	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d81fe0fb6e453d1ee5cf112bd96b4251" ;
+	ns1:gestructureerdeIdentificator	ns4:bf784706db0aa0af347d8ec935f87a84 ;
+	skos:notation	"SharePoint identificator" .
+ns4:bf784706db0aa0af347d8ec935f87a84	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"bf784706db0aa0af347d8ec935f87a84" ;
+	ns1:lokaleIdentificator	"E_INGELMUNSTER_RKT_OLV_Onbevlekt_ontvangen_W" .
+<http://data.lblod.info/id/identificatoren/52d1e91c577ddfb9e44fe58ca0298374>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"52d1e91c577ddfb9e44fe58ca0298374" ;
+	ns1:gestructureerdeIdentificator	ns3:c359fd7eff82eef49918594e24238852 ;
+	skos:notation	"KBO nummer" .
+ns3:c359fd7eff82eef49918594e24238852	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c359fd7eff82eef49918594e24238852" ;
+	ns1:lokaleIdentificator	"0211169097" .
+<http://data.lblod.info/id/identificatoren/746403f3903d51457e9abcc6f99708f6>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"746403f3903d51457e9abcc6f99708f6" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/809cfea182ad54afb842e8a0f222dd64> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/809cfea182ad54afb842e8a0f222dd64>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"809cfea182ad54afb842e8a0f222dd64" ;
+	ns1:lokaleIdentificator	"E_BEERSE_RKT_St_Quirinus_Vlimmeren_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/40b1213946b8e8991769d29af15ba3b2>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"40b1213946b8e8991769d29af15ba3b2" ;
+	ns1:lokaleIdentificator	"E_DAMME_RKT_St_Quintinus_W" .
+<http://data.lblod.info/id/identificatoren/15ab9a9d13466b46cd72e54f3bb788f1>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"15ab9a9d13466b46cd72e54f3bb788f1" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/11d8fa6d071ab3c4f69bf32ada3a8894> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/11d8fa6d071ab3c4f69bf32ada3a8894>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"11d8fa6d071ab3c4f69bf32ada3a8894" ;
+	ns1:lokaleIdentificator	"E_GENT_RKT_St_Anna_O" .
+<http://data.lblod.info/id/identificatoren/39057ebb79f8605ebc3d46fa0988ec68>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"39057ebb79f8605ebc3d46fa0988ec68" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/9ea6395096da5f5b143e92cf88000bfb> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/9ea6395096da5f5b143e92cf88000bfb>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"9ea6395096da5f5b143e92cf88000bfb" ;
+	ns1:lokaleIdentificator	"E_LINTER_RKT_St_Foillanus_V" .
+<http://data.lblod.info/id/identificatoren/42c814117ee3e267742d957ce5628247>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"42c814117ee3e267742d957ce5628247" ;
+	ns1:gestructureerdeIdentificator	ns4:d674ed6ddc6c8d8915d81963a8ca30aa ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/9a6f44521ff713055574f9d881cb94c8>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"9a6f44521ff713055574f9d881cb94c8" ;
+	ns1:gestructureerdeIdentificator	ns4:d6d261cfcfb0143b5294a2b60cba9885 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/892b568c896540fb5a388cc1194c3bb6>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"892b568c896540fb5a388cc1194c3bb6" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/52b055c24fc405288a1a1ee2e4b8be20> ;
+	skos:notation	"KBO nummer" .
+ns7:eb9e91be822ad509fe25bb26eee8d56f	rdf:type	ns5:Identifier ;
+	ns2:uuid	"eb9e91be822ad509fe25bb26eee8d56f" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0a92137725a130a91bd9516f26f80c9f> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/1dd3070699d8edd85f2623ce910e9018>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"1dd3070699d8edd85f2623ce910e9018" ;
+	ns1:gestructureerdeIdentificator	ns4:a6d58a494057d2ad9af5ccd3d0123c08 ;
+	skos:notation	"SharePoint identificator" .
+ns4:a6d58a494057d2ad9af5ccd3d0123c08	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a6d58a494057d2ad9af5ccd3d0123c08" ;
+	ns1:lokaleIdentificator	"E_OOSTERZELE_RKT_St_Martinus_O" .
+ns7:f68270db2432f6d2726888acbe13e8ff	rdf:type	ns5:Identifier ;
+	ns2:uuid	"f68270db2432f6d2726888acbe13e8ff" ;
+	ns1:gestructureerdeIdentificator	ns4:b15488d8a65f2c7cf9ec3c9773d35915 ;
+	skos:notation	"SharePoint identificator" .
+ns4:b15488d8a65f2c7cf9ec3c9773d35915	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b15488d8a65f2c7cf9ec3c9773d35915" ;
+	ns1:lokaleIdentificator	"E_KORTRIJK_RKT_St_Eutropius_W" .
+ns7:ab296ada6e81ed8437c1f5af0323f8fe	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ab296ada6e81ed8437c1f5af0323f8fe" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/1c07376e7b0a0d5eef940eb358d02cdd> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/1c07376e7b0a0d5eef940eb358d02cdd>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"1c07376e7b0a0d5eef940eb358d02cdd" ;
+	ns1:lokaleIdentificator	"E_AALST_RKT_H_Hart_O" .
+ns7:f70f7ea432b4f8446dbc4742bc7ce1a0	rdf:type	ns5:Identifier ;
+	ns2:uuid	"f70f7ea432b4f8446dbc4742bc7ce1a0" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/90ab8fb5024bafc77cbbe4e9542b13d0> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/90ab8fb5024bafc77cbbe4e9542b13d0>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"90ab8fb5024bafc77cbbe4e9542b13d0" ;
+	ns1:lokaleIdentificator	"E_MORTSEL_RKT_St_Jozef_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/4715f4e632b39058be86cfe7e18b07b8>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"4715f4e632b39058be86cfe7e18b07b8" ;
+	ns1:lokaleIdentificator	"0211259070" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/96886a813709eb14e7f9531161cf4d54>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"96886a813709eb14e7f9531161cf4d54" ;
+	ns1:lokaleIdentificator	"E_DEINZE_RKT_St_Jan_Baptist_O" .
+<http://data.lblod.info/id/identificatoren/4b55d99c5385b99ca53767e49376fd79>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"4b55d99c5385b99ca53767e49376fd79" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/3f77533230f9bde4f9a48865d8efe434> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/3f77533230f9bde4f9a48865d8efe434>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3f77533230f9bde4f9a48865d8efe434" ;
+	ns1:lokaleIdentificator	"E_VOEREN_RKT_OLV_Tenhemelopn_Moelingen_L" .
+<http://data.lblod.info/id/identificatoren/1252587d603fb7eef670770f01782f5a>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"1252587d603fb7eef670770f01782f5a" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/41336c0ef749025097770ae2a327d519> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/41336c0ef749025097770ae2a327d519>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"41336c0ef749025097770ae2a327d519" ;
+	ns1:lokaleIdentificator	"E_LANAKEN_RKT_St_Lambertus_Veldwezelt_L" .
+ns7:c4548611c0c2dfd9220a21db52b941a3	rdf:type	ns5:Identifier ;
+	ns2:uuid	"c4548611c0c2dfd9220a21db52b941a3" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/57825517d74efdff05def4f69fabfaf3> ;
+	skos:notation	"SharePoint identificator" .
+ns7:d80f3ad53e95c61d4ba81eb7d38ba57c	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d80f3ad53e95c61d4ba81eb7d38ba57c" ;
+	ns1:gestructureerdeIdentificator	ns3:fa9ee573570a8f18abf310c6c4566a55 ;
+	skos:notation	"KBO nummer" .
+ns7:f79c8f8559b3ed75b6a49784e3480a61	rdf:type	ns5:Identifier ;
+	ns2:uuid	"f79c8f8559b3ed75b6a49784e3480a61" ;
+	ns1:gestructureerdeIdentificator	ns3:abd1a672a9ada1633f511567abd1c8eb ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/81df911771e412c60d70d6e7e2351e27>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"81df911771e412c60d70d6e7e2351e27" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/06f68a8e2a9e7a83ef589412619e55ab> ;
+	skos:notation	"KBO nummer" .
+ns7:ff109b2bab8210d86d8c110e79ab8170	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ff109b2bab8210d86d8c110e79ab8170" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/74049fc00e1e2c048416d490f3a6a587> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/02cc107c559358ceb1ad6c036655c19c>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"02cc107c559358ceb1ad6c036655c19c" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/763f3ad05c8e23bccb0d0d1e7e9fd193> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/1ce5058b0f8e8fa70b18cb94567b5312>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"1ce5058b0f8e8fa70b18cb94567b5312" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/3279c039a5ff3e35ccd423b46349b28b> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/4f6f820fadf705de51a58bc722e2404d>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"4f6f820fadf705de51a58bc722e2404d" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/217ac4945a09e96e7347b4af31f9a8b9> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/45e9f62cde1f191374338a96f4fcfa5b>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"45e9f62cde1f191374338a96f4fcfa5b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/424bcd528f1a350757c57f584767e552> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/3a40dca90fc1dfef79f7a650f9be4a70>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"3a40dca90fc1dfef79f7a650f9be4a70" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/3bb67f4ccaae55110d606e3a95d96811> ;
+	skos:notation	"KBO nummer" .
+ns7:a50dc62d9e6c2311bbaca73704713a41	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a50dc62d9e6c2311bbaca73704713a41" ;
+	ns1:gestructureerdeIdentificator	ns4:c13885d58eda8162376fccdebc7db1ac ;
+	skos:notation	"SharePoint identificator" .
+ns7:a925338088be9e0594cb43dfaeb8bb9e	rdf:type	ns5:Identifier ;
+	ns2:uuid	"a925338088be9e0594cb43dfaeb8bb9e" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/8ffde53a12f45df22a81b126fa2063af> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/8ffde53a12f45df22a81b126fa2063af>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"8ffde53a12f45df22a81b126fa2063af" ;
+	ns1:lokaleIdentificator	"E_BOECHOUT_RKT_St_Bavo_A" .
+<http://data.lblod.info/id/identificatoren/85aeb75f8d93defbdbf51487666cfa27>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"85aeb75f8d93defbdbf51487666cfa27" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/4350dcd009f0d007621c41893a203125> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/4350dcd009f0d007621c41893a203125>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"4350dcd009f0d007621c41893a203125" ;
+	ns1:lokaleIdentificator	"E_TONGEREN_RKT_St_Servatius_Nerem_L" .
+ns7:ec6ffdd63f9a8bd2c343e599eea9e265	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ec6ffdd63f9a8bd2c343e599eea9e265" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/2fdee1c033ac507befb09ca1bfd21152> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/2fdee1c033ac507befb09ca1bfd21152>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"2fdee1c033ac507befb09ca1bfd21152" ;
+	ns1:lokaleIdentificator	"0211121191" .
+<http://data.lblod.info/id/identificatoren/74663c2260a78c5b70a06aab8c1c861c>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"74663c2260a78c5b70a06aab8c1c861c" ;
+	ns1:gestructureerdeIdentificator	ns3:d457666697db1bbb80672ea8930fa38a ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/265965300f28e75f64b83fd505ce9162>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"265965300f28e75f64b83fd505ce9162" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/8d143d7dc800a92e76f14f967fd1b955> ;
+	skos:notation	"KBO nummer" .
+ns7:e1719c1262d69cafa40309efe525d1f0	rdf:type	ns5:Identifier ;
+	ns2:uuid	"e1719c1262d69cafa40309efe525d1f0" ;
+	ns1:gestructureerdeIdentificator	ns3:ea1a15e726501d06d38928983f917627 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/8f3f9a1ee4d38c963cc3c2503a6ea85c>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8f3f9a1ee4d38c963cc3c2503a6ea85c" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/1c76cd04a6763eecc0f8051f35739eb9> ;
+	skos:notation	"KBO nummer" .
+ns7:c2c781cbeedabefb241fd7ee571eb335	rdf:type	ns5:Identifier ;
+	ns2:uuid	"c2c781cbeedabefb241fd7ee571eb335" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/0ecbea9bf1d33c4dab8b75a3388f675e> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/607503d4535f3405487265ae3e7091cc>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"607503d4535f3405487265ae3e7091cc" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/7e260dcd799de3ce6a7d7cb10afee3c9> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/85d35e7e126d42255e8ea8c41df8f9d4>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"85d35e7e126d42255e8ea8c41df8f9d4" ;
+	ns1:gestructureerdeIdentificator	ns3:ef3d9e944cabe2d4e2ac24a8ac71d04c ;
+	skos:notation	"KBO nummer" .
+ns3:ef3d9e944cabe2d4e2ac24a8ac71d04c	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ef3d9e944cabe2d4e2ac24a8ac71d04c" ;
+	ns1:lokaleIdentificator	"0211392296" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/83f0ed4a7c726a8858230759c94fd0c1>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"83f0ed4a7c726a8858230759c94fd0c1" ;
+	ns1:lokaleIdentificator	"E_PUURS_SINT_AMANDS_RKT_St_Pieter_A" .
+ns7:b82615e1f51333ed881821f72747b4fd	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b82615e1f51333ed881821f72747b4fd" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/83f0ed4a7c726a8858230759c94fd0c1> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/316137fcf9eea5aa1bbf8c225d51fc6b>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"316137fcf9eea5aa1bbf8c225d51fc6b" ;
+	ns1:gestructureerdeIdentificator	ns4:f37c9d07a0178b52b2fcce26ff4b6554 ;
+	skos:notation	"SharePoint identificator" .
+ns7:d54e0f88bab9250a97d2ef32f98c07e4	rdf:type	ns5:Identifier ;
+	ns2:uuid	"d54e0f88bab9250a97d2ef32f98c07e4" ;
+	ns1:gestructureerdeIdentificator	ns4:ae807fadce14c989d6d812c65925f18e ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/7cf25351d34f7261a742b7c8b7014dc9>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"7cf25351d34f7261a742b7c8b7014dc9" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/845b6b421407fbf9c5d5347d85189b02> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/845b6b421407fbf9c5d5347d85189b02>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"845b6b421407fbf9c5d5347d85189b02" ;
+	ns1:lokaleIdentificator	"E_GINGELOM_RKT_St_Petrus_Gingelom_L" .
+ns7:cd0fdbd2b0031b73057c86acf905bc59	rdf:type	ns5:Identifier ;
+	ns2:uuid	"cd0fdbd2b0031b73057c86acf905bc59" ;
+	ns1:gestructureerdeIdentificator	ns4:dd925d4976cfca891d088ae7f2070927 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/84764b1c6645ef49a71a2a0eea3fa3e5>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"84764b1c6645ef49a71a2a0eea3fa3e5" ;
+	ns1:gestructureerdeIdentificator	ns4:ac52ac3609e9d08f571b9c8b82628ab9 ;
+	skos:notation	"SharePoint identificator" .
+ns7:b1bebef2844d973845ca203d8128ed2b	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b1bebef2844d973845ca203d8128ed2b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/7e9677f3f07ba990fa31235908756582> ;
+	skos:notation	"KBO nummer" .
+ns7:c2b02104b0c9c8167d82b2b6a59c822b	rdf:type	ns5:Identifier ;
+	ns2:uuid	"c2b02104b0c9c8167d82b2b6a59c822b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/36ca57afc43929fdce506ba84c4d5ec4> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/739a29b29932e054175ca6addbfcbaf4>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"739a29b29932e054175ca6addbfcbaf4" ;
+	ns1:gestructureerdeIdentificator	ns4:d420d23763b60426f0ae2336fc04ad94 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/204e6ac313a4d6655c5d6d7a35510047>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"204e6ac313a4d6655c5d6d7a35510047" ;
+	ns1:gestructureerdeIdentificator	ns3:dfce844c858247471b85c95376e9386a ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/74049fc00e1e2c048416d490f3a6a587>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"74049fc00e1e2c048416d490f3a6a587" ;
+	ns1:lokaleIdentificator	"0211269562" .
+<http://data.lblod.info/id/identificatoren/334ce8d3db07096763ad08cdd72819de>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"334ce8d3db07096763ad08cdd72819de" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/6cf2b7e6619783954665cfc9866667c2> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/6cf2b7e6619783954665cfc9866667c2>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"6cf2b7e6619783954665cfc9866667c2" ;
+	ns1:lokaleIdentificator	"0211408035" .
+<http://data.lblod.info/id/identificatoren/23fe48b8736c904fad5a7b6d98ba4b82>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"23fe48b8736c904fad5a7b6d98ba4b82" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0f11f118737150f096df1aac70d4114d> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/7bc11dfb4e7592f44e084c668e38cc9b>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"7bc11dfb4e7592f44e084c668e38cc9b" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/42aed4a2bcbc29c12c5ec5d2a67cc8cb> ;
+	skos:notation	"KBO nummer" .
+ns4:f37c9d07a0178b52b2fcce26ff4b6554	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"f37c9d07a0178b52b2fcce26ff4b6554" ;
+	ns1:lokaleIdentificator	"E_LENNIK_RKT_OLV_V" .
+ns7:bc026e24efa33b9aaa10073d781cfd6c	rdf:type	ns5:Identifier ;
+	ns2:uuid	"bc026e24efa33b9aaa10073d781cfd6c" ;
+	ns1:gestructureerdeIdentificator	ns4:f304c591b323fb13cddaf64b4164953c ;
+	skos:notation	"SharePoint identificator" .
+ns4:f304c591b323fb13cddaf64b4164953c	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"f304c591b323fb13cddaf64b4164953c" ;
+	ns1:lokaleIdentificator	"E_ANTWERPEN_RKT_St_Franciscus_v_Assisi_Merksem_A" .
+<http://data.lblod.info/id/identificatoren/5a36d89ede47c904a376dbd5fdeb6a99>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"5a36d89ede47c904a376dbd5fdeb6a99" ;
+	ns1:gestructureerdeIdentificator	ns4:d148027a71ac9a5e5356c9088abf24c9 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/592c7f0c10a000b58630a21b3eafcfcd>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"592c7f0c10a000b58630a21b3eafcfcd" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/678ff9e0f202e78d904a211289ab9475> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/31b488b0be2c79c6297330d13942a4e5>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"31b488b0be2c79c6297330d13942a4e5" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/0f958da9e1c71b7ca24d85ffad0b841f> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/6daaeb4c055158f3742adb798f671d1d>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"6daaeb4c055158f3742adb798f671d1d" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/632d944607b9b2315ddc0f789a70e2d7> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/1c08f8b1a434965bc530d6a1ce9c46f8>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"1c08f8b1a434965bc530d6a1ce9c46f8" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/8e27a5e718f91027d549bba9252232f5> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/31f72a78038a1c6f890a61a9420a8881>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"31f72a78038a1c6f890a61a9420a8881" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/864651361cd0c0f05781f3c5deb8f09a> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/864651361cd0c0f05781f3c5deb8f09a>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"864651361cd0c0f05781f3c5deb8f09a" ;
+	ns1:lokaleIdentificator	"0211347459" .
+<http://data.lblod.info/id/identificatoren/0387a585568195dd211d079ce51d8c3c>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0387a585568195dd211d079ce51d8c3c" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0ac77180162b24a6727d8b894d4eda5a> ;
+	skos:notation	"SharePoint identificator" .
+ns7:b76717b1d8fbdd4874096f67dada4973	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b76717b1d8fbdd4874096f67dada4973" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/09f789965bd388d760ac528090b5e0fd> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/7aacc11acec069d433560b20104ee0d4>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"7aacc11acec069d433560b20104ee0d4" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/51c85d147307cdfadbda611cbfd48ca3> ;
+	skos:notation	"KBO nummer" .
+ns7:fd3bbdf42dca7b63563248e918eb0cff	rdf:type	ns5:Identifier ;
+	ns2:uuid	"fd3bbdf42dca7b63563248e918eb0cff" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/32efa77ff6b2b883d599c6badf87f8e9> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/32efa77ff6b2b883d599c6badf87f8e9>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"32efa77ff6b2b883d599c6badf87f8e9" ;
+	ns1:lokaleIdentificator	"E_OUDSBERGEN_RKT_St_Hubertus_Neerglabb_L" .
+<http://data.lblod.info/id/identificatoren/953e56139a391a6142285832847b03d8>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"953e56139a391a6142285832847b03d8" ;
+	ns1:gestructureerdeIdentificator	ns4:a68831559e93f1b0e914846c8ba8bd94 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/0b4957a111a7d5c986bee9250536f0b7>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"0b4957a111a7d5c986bee9250536f0b7" ;
+	ns1:gestructureerdeIdentificator	ns3:a6101d8bb68a0d179d6b24ad379a2700 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/4338f3a0ca94e80677a0af99e4fe8e0c>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"4338f3a0ca94e80677a0af99e4fe8e0c" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/565ba1bf9d857225272c5138b3042120> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/886a1deae4e71a7963ae5192881cad38>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"886a1deae4e71a7963ae5192881cad38" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/3a0a9e2717cb2e1fa35dad041df3fd3f> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/7813c1f53b24492b09e5d8bd9bb82de8>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"7813c1f53b24492b09e5d8bd9bb82de8" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/9b2c2362b271297f42d571376b113b75> ;
+	skos:notation	"KBO nummer" .
+ns7:b80bed31fc8d8dc7b685dcf383f0b29a	rdf:type	ns5:Identifier ;
+	ns2:uuid	"b80bed31fc8d8dc7b685dcf383f0b29a" ;
+	ns1:gestructureerdeIdentificator	ns4:ac86686e7a57ded37328c8c155f32a21 ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/82141a9b7cbc4bdf48170263d7ed2924>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"82141a9b7cbc4bdf48170263d7ed2924" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/7cb2c076d68a50200b9e93eccbe56c27> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/991dcd7ab2b4fee890d890812378d098>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"991dcd7ab2b4fee890d890812378d098" ;
+	ns1:gestructureerdeIdentificator	ns3:d0acf55f6a89ff6cddf7c1eb99ba6c43 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/118c9d8b11ff7ccb544eb8876d7b1486>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"118c9d8b11ff7ccb544eb8876d7b1486" ;
+	ns1:gestructureerdeIdentificator	ns3:bb1b9608a76ea5aedd440ae8143c7700 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/5cc2abcec590ce9012151f6f576cc985>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"5cc2abcec590ce9012151f6f576cc985" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/631c06a1b2d83f35b30d111f065c4f28> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/631c06a1b2d83f35b30d111f065c4f28>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"631c06a1b2d83f35b30d111f065c4f28" ;
+	ns1:lokaleIdentificator	"E_WACHTEBEKE_RKT_St_Catharina_O" .
+<http://data.lblod.info/id/identificatoren/02947163ee4a203ab7f7419542afa3d7>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"02947163ee4a203ab7f7419542afa3d7" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/18c1b44fab98da154f26f303cb5291bf> ;
+	skos:notation	"SharePoint identificator" .
+ns4:b1fb7824f6fee4af5e7c1e031fd79bc8	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b1fb7824f6fee4af5e7c1e031fd79bc8" ;
+	ns1:lokaleIdentificator	"E_WEVELGEM_RKT_SS_Martinus_en_Christoffel_W" .
+ns7:ce3087df811d123b8c84d470a3d45557	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ce3087df811d123b8c84d470a3d45557" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/9774a50a8ddc27ad054e1f42e96e7f1c> ;
+	skos:notation	"SharePoint identificator" .
+ns7:ef4340922e154b4efb3b1f2d2459041e	rdf:type	ns5:Identifier ;
+	ns2:uuid	"ef4340922e154b4efb3b1f2d2459041e" ;
+	ns1:gestructureerdeIdentificator	ns3:e0ca63ac61fb2c04002fb35618243442 ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/9025ee04a3eb8733559836ef897ab715>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"9025ee04a3eb8733559836ef897ab715" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/69a4c87f84848bfc717fa3c5a907600c> ;
+	skos:notation	"SharePoint identificator" .
+<http://data.lblod.info/id/identificatoren/95530011bcd541cd421247ea667341b6>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"95530011bcd541cd421247ea667341b6" ;
+	ns1:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificatoren/19731ba8666099df04343e0b4140c702> ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/8f63213e504988dbba0595568fdfa40a>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"8f63213e504988dbba0595568fdfa40a" ;
+	ns1:gestructureerdeIdentificator	ns3:c7799a730a8e4d2b93a168f24f7ec19b ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/1c8e1cb651a55efecb9eb04a884ae5c4>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"1c8e1cb651a55efecb9eb04a884ae5c4" ;
+	ns1:gestructureerdeIdentificator	ns3:d6a96b5a441798a78d97ad5d767e4e0f ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/identificatoren/3b30737e749ef61c8308e8e5db8f3196>	rdf:type	ns5:Identifier ;
+	ns2:uuid	"3b30737e749ef61c8308e8e5db8f3196" ;
+	ns1:gestructureerdeIdentificator	ns3:e486ce023bfa50e26c77ca3dc72fc66c ;
+	skos:notation	"KBO nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/51c85d147307cdfadbda611cbfd48ca3>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"51c85d147307cdfadbda611cbfd48ca3" ;
+	ns1:lokaleIdentificator	"0211244917" .
+ns3:c651135df719bb459d6f7eb14f04434d	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"c651135df719bb459d6f7eb14f04434d" ;
+	ns1:lokaleIdentificator	"0211168208" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/7e9677f3f07ba990fa31235908756582>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"7e9677f3f07ba990fa31235908756582" ;
+	ns1:lokaleIdentificator	"0850326546" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/86872dbe70154555745765672e07df35>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"86872dbe70154555745765672e07df35" ;
+	ns1:lokaleIdentificator	"E_MESEN_RKT_St_Niklaas_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/57825517d74efdff05def4f69fabfaf3>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"57825517d74efdff05def4f69fabfaf3" ;
+	ns1:lokaleIdentificator	"E_ROESELARE_RKT_He_Kruisverheffing_W" .
+ns4:d420d23763b60426f0ae2336fc04ad94	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d420d23763b60426f0ae2336fc04ad94" ;
+	ns1:lokaleIdentificator	"E_ZOTTEGEM_RKT_St_Martinus_Oombergen_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/7cb2c076d68a50200b9e93eccbe56c27>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"7cb2c076d68a50200b9e93eccbe56c27" ;
+	ns1:lokaleIdentificator	"E_ZWEVEGEM_RKT_SS_Amandus_en_Anna_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/185d9a112b4f93719d6e7f3713a74a15>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"185d9a112b4f93719d6e7f3713a74a15" ;
+	ns1:lokaleIdentificator	"E_LINTER_RKT_St_Pieter_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/8ee0911c10893752cb13a2776461d688>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"8ee0911c10893752cb13a2776461d688" ;
+	ns1:lokaleIdentificator	"E_HERENTALS_RKT_St_Bavo_Noorderwijk_A" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/87529e70b1c3674ba687826e5ed46294>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"87529e70b1c3674ba687826e5ed46294" ;
+	ns1:lokaleIdentificator	"E_WETTEREN_RKT_St_Anna_O" .
+ns3:edb2d45b2ac64fe9742565d76efa574e	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"edb2d45b2ac64fe9742565d76efa574e" ;
+	ns1:lokaleIdentificator	"0211267087" .
+ns3:eba9eb3d273ae5ad365cce9c5d174921	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"eba9eb3d273ae5ad365cce9c5d174921" ;
+	ns1:lokaleIdentificator	"0211185925" .
+ns4:a68831559e93f1b0e914846c8ba8bd94	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a68831559e93f1b0e914846c8ba8bd94" ;
+	ns1:lokaleIdentificator	"E_MENEN_RKT_St_Bavo_W" .
+ns3:e06f67f619b176dc9e6f0fd4ef2b0e8f	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"e06f67f619b176dc9e6f0fd4ef2b0e8f" ;
+	ns1:lokaleIdentificator	"0211484744" .
+ns3:d457666697db1bbb80672ea8930fa38a	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"d457666697db1bbb80672ea8930fa38a" ;
+	ns1:lokaleIdentificator	"0211325782" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/0f958da9e1c71b7ca24d85ffad0b841f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"0f958da9e1c71b7ca24d85ffad0b841f" ;
+	ns1:lokaleIdentificator	"0211244422" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/310c18521097c42458fd5425c8cd8c64>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"310c18521097c42458fd5425c8cd8c64" ;
+	ns1:lokaleIdentificator	"0211356169" .
+ns4:ac86686e7a57ded37328c8c155f32a21	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ac86686e7a57ded37328c8c155f32a21" ;
+	ns1:lokaleIdentificator	"E_SCHOTEN_RKT_St_Philippus_De_Horst_A" .
+ns4:abb4e48058bf85453aebf47f0957d2a5	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"abb4e48058bf85453aebf47f0957d2a5" ;
+	ns1:lokaleIdentificator	"E_OUD_HEVERLEE_RKT_St_Joris_V" .
+ns4:f69bd83569b48b63ebb078a2fd7ecc08	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"f69bd83569b48b63ebb078a2fd7ecc08" ;
+	ns1:lokaleIdentificator	"E_HERENT_RKT_St_Michiel_V" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/1c40f169abb703638ba6a6bae86871c2>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"1c40f169abb703638ba6a6bae86871c2" ;
+	ns1:lokaleIdentificator	"0211321527" .
+ns3:a6101d8bb68a0d179d6b24ad379a2700	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a6101d8bb68a0d179d6b24ad379a2700" ;
+	ns1:lokaleIdentificator	"0211431690" .
+ns4:b9004441e33191fa8b48cd4e58ec1fe5	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"b9004441e33191fa8b48cd4e58ec1fe5" ;
+	ns1:lokaleIdentificator	"E_KRUIBEKE_RKT_OLVrouw_Rupelmonde_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/3938c0ad0659145f8354ef746e82cc1a>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3938c0ad0659145f8354ef746e82cc1a" ;
+	ns1:lokaleIdentificator	"0220853855" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/4ea081b4704bce4eb55f7de50ad4916b>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"4ea081b4704bce4eb55f7de50ad4916b" ;
+	ns1:lokaleIdentificator	"0211435254" .
+ns3:a742668183d59d55e24abe4b83eacb37	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a742668183d59d55e24abe4b83eacb37" ;
+	ns1:lokaleIdentificator	"0211539578" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/3a0a9e2717cb2e1fa35dad041df3fd3f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3a0a9e2717cb2e1fa35dad041df3fd3f" ;
+	ns1:lokaleIdentificator	"0211162367" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/83afa8345d8f7466d17b20cb134bd19f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"83afa8345d8f7466d17b20cb134bd19f" ;
+	ns1:lokaleIdentificator	"0211308065" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/9f371b7d38d96f815bde6065990ff77f>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"9f371b7d38d96f815bde6065990ff77f" ;
+	ns1:lokaleIdentificator	"E_LEDEGEM_RKT_St_Petrus_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/52aa37f30ba221f3b4d5f95feec98b9c>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"52aa37f30ba221f3b4d5f95feec98b9c" ;
+	ns1:lokaleIdentificator	"E_TONGEREN_RKT_St_Pancratius_Widooie_L" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/8e27a5e718f91027d549bba9252232f5>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"8e27a5e718f91027d549bba9252232f5" ;
+	ns1:lokaleIdentificator	"E_LEUVEN_PRT_Evangelische_kerk_Leuven(Heverlee)_V" .
+ns4:a3da1b118a3b6fe03d4bfe672ea8fa13	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"a3da1b118a3b6fe03d4bfe672ea8fa13" ;
+	ns1:lokaleIdentificator	"E_HAMME_RKT_OLV_van_Bijstand_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/3a57e6a9c6c5a26ba0decdf741dca2cf>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"3a57e6a9c6c5a26ba0decdf741dca2cf" ;
+	ns1:lokaleIdentificator	"0211250756" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/10d92cc0e08c142f470fa87a9a0bf3ec>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"10d92cc0e08c142f470fa87a9a0bf3ec" ;
+	ns1:lokaleIdentificator	"0851763037" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/4a2b97ae2496c223467b82a8da5cebe8>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"4a2b97ae2496c223467b82a8da5cebe8" ;
+	ns1:lokaleIdentificator	"0211470985" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/56886cf41eee5df9171f348fc93909d7>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"56886cf41eee5df9171f348fc93909d7" ;
+	ns1:lokaleIdentificator	"0211142967" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0f11f118737150f096df1aac70d4114d>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"0f11f118737150f096df1aac70d4114d" ;
+	ns1:lokaleIdentificator	"E_BRUGGE_RKT_St_Thomas_van_Kantelberg_W" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/678ff9e0f202e78d904a211289ab9475>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"678ff9e0f202e78d904a211289ab9475" ;
+	ns1:lokaleIdentificator	"E_GENT_RKT_St_Martinus_O" .
+<http://data.lblod.info/id/gestructureerdeIdentificatoren/1c76cd04a6763eecc0f8051f35739eb9>	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"1c76cd04a6763eecc0f8051f35739eb9" ;
+	ns1:lokaleIdentificator	"0211354189" .
+ns3:ea1a15e726501d06d38928983f917627	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"ea1a15e726501d06d38928983f917627" ;
+	ns1:lokaleIdentificator	"0211452080" .
+ns3:fa9ee573570a8f18abf310c6c4566a55	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"fa9ee573570a8f18abf310c6c4566a55" ;
+	ns1:lokaleIdentificator	"0211235217" .
+ns3:dfce844c858247471b85c95376e9386a	rdf:type	ns1:GestructureerdeIdentificator ;
+	ns2:uuid	"dfce844c858247471b85c95376e9386a" ;
+	ns1:lokaleIdentificator	"0211278470" .
