@@ -1,0 +1,1189 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://data.lblod.info/id/adressen/> .
+@prefix ns2:	<http://www.w3.org/ns/locn#> .
+ns1:da7e8e452f3d2753c7ecd9f4a6ce02df	rdf:type	ns2:Address .
+@prefix ns3:	<http://mu.semte.ch/vocabularies/core/> .
+ns1:da7e8e452f3d2753c7ecd9f4a6ce02df	ns3:uuid	"da7e8e452f3d2753c7ecd9f4a6ce02df" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"4" ;
+	ns2:postCode	"1700" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Processiestraat" ;
+	ns2:fullAddress	"Processiestraat 4, 1700 Dilbeek, Belgi\u00EB" .
+@prefix ns4:	<https://data.vlaanderen.be/ns/adres#> .
+ns1:da7e8e452f3d2753c7ecd9f4a6ce02df	ns4:gemeentenaam	"Dilbeek" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:bfbbf69f7bbfee1bed2ce8a7c006f0de	rdf:type	ns2:Address ;
+	ns3:uuid	"bfbbf69f7bbfee1bed2ce8a7c006f0de" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"86" ;
+	ns2:postCode	"2400" ;
+	ns2:adminUnitL2	"Antwerpen" ;
+	ns2:thoroughfare	"O.-L.-Vrouwstraat" ;
+	ns2:fullAddress	"O.-L.-Vrouwstraat 86, 2400 Mol, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Mol" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/1a7178b9fc9700c69b8a3359a6ebec78>	rdf:type	ns2:Address ;
+	ns3:uuid	"1a7178b9fc9700c69b8a3359a6ebec78" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"32" ;
+	ns2:postCode	"3110" ;
+	ns2:thoroughfare	"Torenstraat" ;
+	ns2:fullAddress	"Torenstraat 32, 3110 Rotselaar, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Rotselaar" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/570d9e61360450550dc2eb4c34e7d7cd>	rdf:type	ns2:Address ;
+	ns3:uuid	"570d9e61360450550dc2eb4c34e7d7cd" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"17" ;
+	ns2:postCode	"2460" ;
+	ns2:thoroughfare	"Populierenlaan" ;
+	ns2:fullAddress	"Populierenlaan 17, 2460 Kasterlee, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kasterlee" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/960ec92205bf0c39af9b6f64340f5c74>	rdf:type	ns2:Address ;
+	ns3:uuid	"960ec92205bf0c39af9b6f64340f5c74" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"151" ;
+	ns2:postCode	"1760" ;
+	ns2:thoroughfare	"Gasthuisstraat" ;
+	ns2:fullAddress	"Gasthuisstraat 151, 1760 Roosdaal, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Roosdaal" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:c29d101e13daa10a48d0b5460dbfbcfa	rdf:type	ns2:Address ;
+	ns3:uuid	"c29d101e13daa10a48d0b5460dbfbcfa" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"32" ;
+	ns2:postCode	"8880" ;
+	ns2:thoroughfare	"Vlaschaardlaan" ;
+	ns2:fullAddress	"Vlaschaardlaan 32, 8880 Ledegem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Ledegem" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:da9852722b5412d8e5bc67b622d586d1	rdf:type	ns2:Address ;
+	ns3:uuid	"da9852722b5412d8e5bc67b622d586d1" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"78" ;
+	ns2:postCode	"9750" ;
+	ns2:thoroughfare	"Beertegemstraat" ;
+	ns2:fullAddress	"Beertegemstraat 78, 9750 Kruisem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kruisem" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:ef185e3b7d8916e278d3730c2bb1ce3a	rdf:type	ns2:Address ;
+	ns3:uuid	"ef185e3b7d8916e278d3730c2bb1ce3a" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"66" ;
+	ns2:postCode	"9600" ;
+	ns2:thoroughfare	"Mussenstraat" ;
+	ns2:fullAddress	"Mussenstraat 66, 9600 Ronse, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Ronse" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:c6cac9866873d64a6faffdd32679c042	rdf:type	ns2:Address ;
+	ns3:uuid	"c6cac9866873d64a6faffdd32679c042" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"15" ;
+	ns2:postCode	"3680" ;
+	ns2:thoroughfare	"Dornerstationsstraat" ;
+	ns2:fullAddress	"Dornerstationsstraat 15, 3680 Maaseik, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Maaseik" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/569dd0b6bfc46671562d97d09074768a>	rdf:type	ns2:Address ;
+	ns3:uuid	"569dd0b6bfc46671562d97d09074768a" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"57" ;
+	ns2:postCode	"9260" ;
+	ns2:thoroughfare	"Statiestraat" ;
+	ns2:fullAddress	"Statiestraat 57, 9260 Wichelen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Wichelen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/97bbdda4feefeabcd08d8fc8de80782e>	rdf:type	ns2:Address ;
+	ns3:uuid	"97bbdda4feefeabcd08d8fc8de80782e" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"16" ;
+	ns2:postCode	"1800" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Pastoriestraat" ;
+	ns2:fullAddress	"Pastoriestraat 16, 1800 Vilvoorde, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Vilvoorde" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/9dab62ab977b24b85f7bc4fb60248d95>	rdf:type	ns2:Address ;
+	ns3:uuid	"9dab62ab977b24b85f7bc4fb60248d95" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"24" ;
+	ns2:postCode	"9600" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"L. Sturbautstraat" ;
+	ns2:fullAddress	"L. Sturbautstraat 24, 9600 Ronse, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Ronse" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/0cc36dfb39d60d04e2a6ae6d84409383>	rdf:type	ns2:Address ;
+	ns3:uuid	"0cc36dfb39d60d04e2a6ae6d84409383" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"16" ;
+	ns2:postCode	"8310" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Olmendreef" ;
+	ns2:fullAddress	"Olmendreef 16, 8310 Brugge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brugge" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:a3efa229b4a342b54bbf6437ff69a34c	rdf:type	ns2:Address ;
+	ns3:uuid	"a3efa229b4a342b54bbf6437ff69a34c" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"523" ;
+	ns2:postCode	"3300" ;
+	ns2:thoroughfare	"Hannuitsesteenweg" ;
+	ns2:fullAddress	"Hannuitsesteenweg 523, 3300 Tienen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Tienen" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:bf7766563e0ff2b2f001cbf5e9c7b70d	rdf:type	ns2:Address ;
+	ns3:uuid	"bf7766563e0ff2b2f001cbf5e9c7b70d" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"64" ;
+	ns2:postCode	"1600" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Sint-Stevensstraat" ;
+	ns2:fullAddress	"Sint-Stevensstraat 64, 1600 Sint-Pieters-Leeuw, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Sint-Pieters-Leeuw" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/7228e6e7ead5ef3baac701c7d01dac97>	rdf:type	ns2:Address ;
+	ns3:uuid	"7228e6e7ead5ef3baac701c7d01dac97" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"56" ;
+	ns2:postCode	"8691" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Roesbruggestraat" ;
+	ns2:fullAddress	"Roesbruggestraat 56, 8691 Alveringem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Alveringem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/5b5a88708b9e6e7ff8e1ec9533695d67>	rdf:type	ns2:Address ;
+	ns3:uuid	"5b5a88708b9e6e7ff8e1ec9533695d67" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"14" ;
+	ns2:postCode	"3500" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Simon Stevinlaan" ;
+	ns2:fullAddress	"Simon Stevinlaan 14, 3500 Hasselt, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Hasselt" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/447c526e6bac6f9c47bc907483f15a52>	rdf:type	ns2:Address ;
+	ns3:uuid	"447c526e6bac6f9c47bc907483f15a52" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"10" ;
+	ns2:postCode	"9230" ;
+	ns2:thoroughfare	"Duilhoekstraat" ;
+	ns2:fullAddress	"Duilhoekstraat 10, 9230 Wetteren, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Wetteren" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/52490f3d67457230825f33c3d4f4055a>	rdf:type	ns2:Address ;
+	ns3:uuid	"52490f3d67457230825f33c3d4f4055a" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6" ;
+	ns2:postCode	"9280" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Brugstraat" ;
+	ns2:fullAddress	"Brugstraat 6, 9280 Lebbeke, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Lebbeke" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:bd7dcb215b16d021f257e6c9bcb5d7c3	rdf:type	ns2:Address ;
+	ns3:uuid	"bd7dcb215b16d021f257e6c9bcb5d7c3" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"153" ;
+	ns2:postCode	"3510" ;
+	ns2:thoroughfare	"Waterlozestraat" ;
+	ns2:fullAddress	"Waterlozestraat 153, 3510 Hasselt, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Hasselt" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:a112d801a324783e9c1fb174323eabef	rdf:type	ns2:Address ;
+	ns3:uuid	"a112d801a324783e9c1fb174323eabef" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"9" ;
+	ns2:postCode	"3000" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Sint-Antoniusberg" ;
+	ns2:fullAddress	"Sint-Antoniusberg 9, 3000 Leuven, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Leuven" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:be235c176904a7d3ee2cb1dc4981c63f	rdf:type	ns2:Address ;
+	ns3:uuid	"be235c176904a7d3ee2cb1dc4981c63f" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"4" ;
+	ns2:postCode	"8200" ;
+	ns2:thoroughfare	"Iepenlaan" ;
+	ns2:fullAddress	"Iepenlaan 4, 8200 Brugge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brugge" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/4e3de5931287a78c3e0eb2bb1a01bc9e>	rdf:type	ns2:Address ;
+	ns3:uuid	"4e3de5931287a78c3e0eb2bb1a01bc9e" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"47" ;
+	ns2:postCode	"3803" ;
+	ns2:thoroughfare	"Duraslaan" ;
+	ns2:fullAddress	"Duraslaan 47, 3803 Sint-Truiden, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Sint-Truiden" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:f1c71ab115b348cdfb3b5a68ab1b9141	rdf:type	ns2:Address ;
+	ns3:uuid	"f1c71ab115b348cdfb3b5a68ab1b9141" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"757" ;
+	ns2:postCode	"2100" ;
+	ns2:thoroughfare	"Ruggeveldlaan" ;
+	ns2:fullAddress	"Ruggeveldlaan 757 10, 2100 Antwerpen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Antwerpen" ;
+	ns4:land	"Belgi\u00EB" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>	"10" .
+ns1:ca75115ee588bac69c16ae0983489538	rdf:type	ns2:Address ;
+	ns3:uuid	"ca75115ee588bac69c16ae0983489538" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"20" ;
+	ns2:postCode	"8570" ;
+	ns2:thoroughfare	"Ingooigemstraat" ;
+	ns2:fullAddress	"Ingooigemstraat 20, 8570 Anzegem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Anzegem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/9829298acb1f5b20bde929da721a4704>	rdf:type	ns2:Address ;
+	ns3:uuid	"9829298acb1f5b20bde929da721a4704" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"20" ;
+	ns2:postCode	"9520" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Luikerveld" ;
+	ns2:fullAddress	"Luikerveld 20, 9520 Sint-Lievens-Houtem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Sint-Lievens-Houtem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/0f1a9278befc6ed3902ce4f92588068b>	rdf:type	ns2:Address ;
+	ns3:uuid	"0f1a9278befc6ed3902ce4f92588068b" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"12" ;
+	ns2:postCode	"9120" ;
+	ns2:thoroughfare	"Soldatendreef" ;
+	ns2:fullAddress	"Soldatendreef 12, 9120 Beveren, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Beveren" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:b047affba11b02362ab0bdf4990303e2	rdf:type	ns2:Address ;
+	ns3:uuid	"b047affba11b02362ab0bdf4990303e2" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"46" ;
+	ns2:postCode	"1790" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Ternatstraat" ;
+	ns2:fullAddress	"Ternatstraat 46, 1790 Affligem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Affligem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/53207956c872df6156866cf8d52cce44>	rdf:type	ns2:Address ;
+	ns3:uuid	"53207956c872df6156866cf8d52cce44" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"440" ;
+	ns2:postCode	"3300" ;
+	ns2:thoroughfare	"Oplintersesteenweg" ;
+	ns2:fullAddress	"Oplintersesteenweg 440, 3300 Tienen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Tienen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/78491429348225c9455dfdb238ad43ff>	rdf:type	ns2:Address ;
+	ns3:uuid	"78491429348225c9455dfdb238ad43ff" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"10" ;
+	ns2:postCode	"8600" ;
+	ns2:thoroughfare	"Schoorbakkestraat" ;
+	ns2:fullAddress	"Schoorbakkestraat 10, 8600 Diksmuide, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Diksmuide" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/67ddfdc40079d7e415e048b45b4d6db4>	rdf:type	ns2:Address ;
+	ns3:uuid	"67ddfdc40079d7e415e048b45b4d6db4" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"3" ;
+	ns2:postCode	"3790" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Konenbos" ;
+	ns2:fullAddress	"Konenbos 3, 3790 Voeren, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Voeren" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:edb4b3fd08f0bb9b4bbf3e3e13f11d38	rdf:type	ns2:Address ;
+	ns3:uuid	"edb4b3fd08f0bb9b4bbf3e3e13f11d38" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6" ;
+	ns2:postCode	"1541" ;
+	ns2:thoroughfare	"Donkerstraat" ;
+	ns2:fullAddress	"Donkerstraat 6, 1541 Herne, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Herne" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:f48a8dfa5bd4dadeb12ca016c7572154	rdf:type	ns2:Address ;
+	ns3:uuid	"f48a8dfa5bd4dadeb12ca016c7572154" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6" ;
+	ns2:postCode	"1742" ;
+	ns2:thoroughfare	"Ternatstraat" ;
+	ns2:fullAddress	"Ternatstraat 6, 1742 Ternat, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Ternat" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:cf4ad11ef25ce1badc92f0d23bc0cad2	rdf:type	ns2:Address ;
+	ns3:uuid	"cf4ad11ef25ce1badc92f0d23bc0cad2" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"160" ;
+	ns2:postCode	"1760" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Koning Albertstraat" ;
+	ns2:fullAddress	"Koning Albertstraat 160, 1760 Roosdaal, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Roosdaal" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/109118bfc135b317328a27c6ed53bdb5>	rdf:type	ns2:Address ;
+	ns3:uuid	"109118bfc135b317328a27c6ed53bdb5" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"57" ;
+	ns2:postCode	"2600" ;
+	ns2:adminUnitL2	"Antwerpen" ;
+	ns2:thoroughfare	"Wapenstilstandstraat" ;
+	ns2:fullAddress	"Wapenstilstandstraat 57, 2600 Antwerpen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Antwerpen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6bc5ae272e8612a9500a72c2e76017f0>	rdf:type	ns2:Address ;
+	ns3:uuid	"6bc5ae272e8612a9500a72c2e76017f0" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"57" ;
+	ns2:postCode	"3511" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Joris Van Oostenrijkstraat" ;
+	ns2:fullAddress	"Joris Van Oostenrijkstraat 57, 3511 Hasselt, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Hasselt" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/809d0fe8791e9dc0f0f087be48ca1835>	rdf:type	ns2:Address ;
+	ns3:uuid	"809d0fe8791e9dc0f0f087be48ca1835" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"76" ;
+	ns2:postCode	"3400" ;
+	ns2:thoroughfare	"Kraanbeekstraat" ;
+	ns2:fullAddress	"Kraanbeekstraat 76, 3400 Landen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Landen" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:fb76a622b23f0e11bc2d591e2e012581	rdf:type	ns2:Address ;
+	ns3:uuid	"fb76a622b23f0e11bc2d591e2e012581" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"20" ;
+	ns2:postCode	"3870" ;
+	ns2:thoroughfare	"Ridderstraat" ;
+	ns2:fullAddress	"Ridderstraat 20, 3870 Heers, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Heers" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:dc993cd190e9f6a3c7ac2d046ba70291	rdf:type	ns2:Address ;
+	ns3:uuid	"dc993cd190e9f6a3c7ac2d046ba70291" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"5A" ;
+	ns2:postCode	"9190" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Polenlaan" ;
+	ns2:fullAddress	"Polenlaan 5A, 9190 Stekene, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Stekene" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:bd2d3080b86fdd8abfcf1cb1f73173f4	rdf:type	ns2:Address ;
+	ns3:uuid	"bd2d3080b86fdd8abfcf1cb1f73173f4" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"25" ;
+	ns2:postCode	"2920" ;
+	ns2:adminUnitL2	"Antwerpen" ;
+	ns2:thoroughfare	"Driehoekstraat" ;
+	ns2:fullAddress	"Driehoekstraat 25, 2920 Kalmthout, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kalmthout" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:b23b69d2c5222ef8a27a8a0730c54cb6	rdf:type	ns2:Address ;
+	ns3:uuid	"b23b69d2c5222ef8a27a8a0730c54cb6" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" ;
+	ns2:postCode	"2240" ;
+	ns2:adminUnitL2	"Antwerpen" ;
+	ns2:thoroughfare	"Beemdstraat" ;
+	ns2:fullAddress	"Beemdstraat 1, 2240 Zandhoven, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Zandhoven" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/92beef0e45bfaec22a47e2cfafbec492>	rdf:type	ns2:Address ;
+	ns3:uuid	"92beef0e45bfaec22a47e2cfafbec492" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"14" ;
+	ns2:postCode	"3700" ;
+	ns2:thoroughfare	"Kremersstraat" ;
+	ns2:fullAddress	"Kremersstraat 14, 3700 Tongeren, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Tongeren" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:c41844198aff92fa923be5e917926089	rdf:type	ns2:Address ;
+	ns3:uuid	"c41844198aff92fa923be5e917926089" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"71" ;
+	ns2:postCode	"8200" ;
+	ns2:thoroughfare	"Baron de Serretstraat" ;
+	ns2:fullAddress	"Baron de Serretstraat 71, 8200 Brugge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brugge" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/05036aabfb8ea9883932d044c06f5f68>	rdf:type	ns2:Address ;
+	ns3:uuid	"05036aabfb8ea9883932d044c06f5f68" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6" ;
+	ns2:postCode	"3510" ;
+	ns2:thoroughfare	"Regenbooglaan" ;
+	ns2:fullAddress	"Regenbooglaan 6, 3510 Hasselt, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Hasselt" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/4e621daedc8ff0e47f69567b58f13f2a>	rdf:type	ns2:Address ;
+	ns3:uuid	"4e621daedc8ff0e47f69567b58f13f2a" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"195" ;
+	ns2:postCode	"8000" ;
+	ns2:thoroughfare	"Blankenbergse steenweg" ;
+	ns2:fullAddress	"Blankenbergse steenweg 195, 8000 Brugge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brugge" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/866a93b441a5f0adc2b3d60c2c3c2a7f>	rdf:type	ns2:Address ;
+	ns3:uuid	"866a93b441a5f0adc2b3d60c2c3c2a7f" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"16" ;
+	ns2:postCode	"2600" ;
+	ns2:thoroughfare	"Wapenhaghestraat" ;
+	ns2:fullAddress	"Wapenhaghestraat 16, 2600 Antwerpen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Antwerpen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6f530094f46ded0885f1267cc6d0b5b1>	rdf:type	ns2:Address ;
+	ns3:uuid	"6f530094f46ded0885f1267cc6d0b5b1" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"121" ;
+	ns2:postCode	"8400" ;
+	ns2:thoroughfare	"Longchamplaan" ;
+	ns2:fullAddress	"Longchamplaan 121, 8400 Oostende, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Oostende" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/53ef486c6f39b8a5e16ade44d4d13d8d>	rdf:type	ns2:Address ;
+	ns3:uuid	"53ef486c6f39b8a5e16ade44d4d13d8d" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"2" ;
+	ns2:postCode	"1950" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Tortelduivenlaan" ;
+	ns2:fullAddress	"Tortelduivenlaan 2, 1950 Kraainem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kraainem" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:c92094a33fda10ab293242bd985c3d3c	rdf:type	ns2:Address ;
+	ns3:uuid	"c92094a33fda10ab293242bd985c3d3c" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"31B" ;
+	ns2:postCode	"3722" ;
+	ns2:thoroughfare	"Stationsstraat" ;
+	ns2:fullAddress	"Stationsstraat 31B, 3722 Kortessem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kortessem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6ecb7ff5b0e23ed2896bc36764f19937>	rdf:type	ns2:Address ;
+	ns3:uuid	"6ecb7ff5b0e23ed2896bc36764f19937" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"176" ;
+	ns2:postCode	"3001" ;
+	ns2:thoroughfare	"Waversebaan" ;
+	ns2:fullAddress	"Waversebaan 176, 3001 Leuven, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Leuven" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6bc4664bc19fc2a3c666c62ccd88d895>	rdf:type	ns2:Address ;
+	ns3:uuid	"6bc4664bc19fc2a3c666c62ccd88d895" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"61" ;
+	ns2:postCode	"1852" ;
+	ns2:thoroughfare	"Meerstraat" ;
+	ns2:fullAddress	"Meerstraat 61, 1852 Grimbergen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Grimbergen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/9abc818355a7774f03506df74e975b3a>	rdf:type	ns2:Address ;
+	ns3:uuid	"9abc818355a7774f03506df74e975b3a" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"52" ;
+	ns2:postCode	"2560" ;
+	ns2:thoroughfare	"Kessel-Dorp" ;
+	ns2:fullAddress	"Kessel-Dorp 52, 2560 Nijlen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Nijlen" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:bd5fb1d783192f8a341d4d0f132ae4d5	rdf:type	ns2:Address ;
+	ns3:uuid	"bd5fb1d783192f8a341d4d0f132ae4d5" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"34" ;
+	ns2:postCode	"3891" ;
+	ns2:thoroughfare	"Bronstraat" ;
+	ns2:fullAddress	"Bronstraat 34, 3891 Gingelom, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Gingelom" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/48e5cca06bc93d2b7d570ca7d242f78b>	rdf:type	ns2:Address ;
+	ns3:uuid	"48e5cca06bc93d2b7d570ca7d242f78b" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"51" ;
+	ns2:postCode	"2180" ;
+	ns2:adminUnitL2	"Antwerpen" ;
+	ns2:thoroughfare	"Bistkapellei" ;
+	ns2:fullAddress	"Bistkapellei 51, 2180 Antwerpen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Antwerpen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/868a4b3982ab45f7849bc7c550eca8d6>	rdf:type	ns2:Address ;
+	ns3:uuid	"868a4b3982ab45f7849bc7c550eca8d6" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"60" ;
+	ns2:postCode	"8954" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Dikkebusstraat" ;
+	ns2:fullAddress	"Dikkebusstraat 60, 8954 Heuvelland, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Heuvelland" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/73e5f5751496ea512aaa25622f4375ae>	rdf:type	ns2:Address ;
+	ns3:uuid	"73e5f5751496ea512aaa25622f4375ae" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"47" ;
+	ns2:postCode	"9100" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Hazewindstraat" ;
+	ns2:fullAddress	"Hazewindstraat 47, 9100 Sint-Niklaas, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Sint-Niklaas" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:f44969e442735377da0d33b25072bb68	rdf:type	ns2:Address ;
+	ns3:uuid	"f44969e442735377da0d33b25072bb68" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"110a" ;
+	ns2:postCode	"1742" ;
+	ns2:thoroughfare	"Affligemstraat" ;
+	ns2:fullAddress	"Affligemstraat 110a, 1742 Ternat, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Ternat" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:d481e90d226cc4b828ba5e2b8f819103	rdf:type	ns2:Address ;
+	ns3:uuid	"d481e90d226cc4b828ba5e2b8f819103" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"7" ;
+	ns2:postCode	"3560" ;
+	ns2:thoroughfare	"St.-Rochusstraat" ;
+	ns2:fullAddress	"St.-Rochusstraat 7, 3560 Lummen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Lummen" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:d2e4fe036301174c05d2463c4a48266e	rdf:type	ns2:Address ;
+	ns3:uuid	"d2e4fe036301174c05d2463c4a48266e" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"17" ;
+	ns2:postCode	"3390" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Sint-Annastraat" ;
+	ns2:fullAddress	"Sint-Annastraat 17, 3390 Tielt-Winge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Tielt-Winge" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:e35cca7fc575fa1a319b0f2d5b05e604	rdf:type	ns2:Address ;
+	ns3:uuid	"e35cca7fc575fa1a319b0f2d5b05e604" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"85" ;
+	ns2:postCode	"8870" ;
+	ns2:thoroughfare	"Oekensestraat" ;
+	ns2:fullAddress	"Oekensestraat 85, 8870 Izegem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Izegem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/92703de5968fab31eb539231c14ce664>	rdf:type	ns2:Address ;
+	ns3:uuid	"92703de5968fab31eb539231c14ce664" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"4" ;
+	ns2:postCode	"1730" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Schutstraat" ;
+	ns2:fullAddress	"Schutstraat 4, 1730 Asse, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Asse" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/412abfd05ac7d00a1235f6443a026163>	rdf:type	ns2:Address ;
+	ns3:uuid	"412abfd05ac7d00a1235f6443a026163" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"137" ;
+	ns2:postCode	"3520" ;
+	ns2:thoroughfare	"Herestraat" ;
+	ns2:fullAddress	"Herestraat 137, 3520 Zonhoven, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Zonhoven" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/15c7eaa0773288cf4ed94088ae1c941d>	rdf:type	ns2:Address ;
+	ns3:uuid	"15c7eaa0773288cf4ed94088ae1c941d" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"2" ;
+	ns2:postCode	"1540" ;
+	ns2:thoroughfare	"Druimerenstraat" ;
+	ns2:fullAddress	"Druimerenstraat 2, 1540 Herne, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Herne" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/854fbd51e85c89d1f956108e573dd8ee>	rdf:type	ns2:Address ;
+	ns3:uuid	"854fbd51e85c89d1f956108e573dd8ee" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"21" ;
+	ns2:postCode	"3800" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Sint-Genovevaplein" ;
+	ns2:fullAddress	"Sint-Genovevaplein 21, 3800 Sint-Truiden, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Sint-Truiden" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/4beeea456d0d35b3fcd5c99b86b058a6>	rdf:type	ns2:Address ;
+	ns3:uuid	"4beeea456d0d35b3fcd5c99b86b058a6" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"59" ;
+	ns2:postCode	"8951" ;
+	ns2:thoroughfare	"Dranouterstraat" ;
+	ns2:fullAddress	"Dranouterstraat 59, 8951 Heuvelland, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Heuvelland" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:ef77c9a0bb7de526d5fb77afdc1e15be	rdf:type	ns2:Address ;
+	ns3:uuid	"ef77c9a0bb7de526d5fb77afdc1e15be" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"76" ;
+	ns2:postCode	"2930" ;
+	ns2:thoroughfare	"Brechtsebaan" ;
+	ns2:fullAddress	"Brechtsebaan 76, 2930 Brasschaat, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brasschaat" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:a59d3963525831a02ef433568ace2a71	rdf:type	ns2:Address ;
+	ns3:uuid	"a59d3963525831a02ef433568ace2a71" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"5" ;
+	ns2:postCode	"1653" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Vroenenbosstraat" ;
+	ns2:fullAddress	"Vroenenbosstraat 5, 1653 Beersel, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Beersel" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/1690a788b019e5584677d56a3a5a53d2>	rdf:type	ns2:Address ;
+	ns3:uuid	"1690a788b019e5584677d56a3a5a53d2" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"12" ;
+	ns2:postCode	"1540" ;
+	ns2:thoroughfare	"Terlindenstraat" ;
+	ns2:fullAddress	"Terlindenstraat 12, 1540 Herne, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Herne" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/56c2fb74c63e81c55e1f38bc199805a9>	rdf:type	ns2:Address ;
+	ns3:uuid	"56c2fb74c63e81c55e1f38bc199805a9" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"31" ;
+	ns2:postCode	"8560" ;
+	ns2:thoroughfare	"Jezu\u00EFetengoed" ;
+	ns2:fullAddress	"Jezu\u00EFetengoed 31, 8560 Wevelgem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Wevelgem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/502794cb026bee5bdd8936eeee193766>	rdf:type	ns2:Address ;
+	ns3:uuid	"502794cb026bee5bdd8936eeee193766" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"30" ;
+	ns2:postCode	"9688" ;
+	ns2:thoroughfare	"Koekamerstraat" ;
+	ns2:fullAddress	"Koekamerstraat 30, 9688 Maarkedal, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Maarkedal" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/1aafe11f519bb55a91137f2c83c6a77b>	rdf:type	ns2:Address ;
+	ns3:uuid	"1aafe11f519bb55a91137f2c83c6a77b" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"18" ;
+	ns2:postCode	"3800" ;
+	ns2:thoroughfare	"Heide" ;
+	ns2:fullAddress	"Heide 18, 3800 Sint-Truiden, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Sint-Truiden" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:fa07120e0bf3951d30a3bfc54da9f269	rdf:type	ns2:Address ;
+	ns3:uuid	"fa07120e0bf3951d30a3bfc54da9f269" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"55" ;
+	ns2:postCode	"2310" ;
+	ns2:thoroughfare	"Sint-Lenaartsesteenweg" ;
+	ns2:fullAddress	"Sint-Lenaartsesteenweg 55, 2310 Rijkevorsel, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Rijkevorsel" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:a9ac26903f6928bd0996b48dc0850ed9	rdf:type	ns2:Address ;
+	ns3:uuid	"a9ac26903f6928bd0996b48dc0850ed9" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"349" ;
+	ns2:postCode	"8000" ;
+	ns2:thoroughfare	"Dudzeelse Steenweg" ;
+	ns2:fullAddress	"Dudzeelse Steenweg 349, 8000 Brugge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brugge" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:f5ac155117362bb0c745974861f93c71	rdf:type	ns2:Address ;
+	ns3:uuid	"f5ac155117362bb0c745974861f93c71" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"251" ;
+	ns2:postCode	"9470" ;
+	ns2:thoroughfare	"Steenweg" ;
+	ns2:fullAddress	"Steenweg 251, 9470 Denderleeuw, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Denderleeuw" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:c6c2f0e6a56474e73a9c2365f84993fc	rdf:type	ns2:Address ;
+	ns3:uuid	"c6c2f0e6a56474e73a9c2365f84993fc" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"31" ;
+	ns2:postCode	"3730" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Trulstraat" ;
+	ns2:fullAddress	"Trulstraat 31, 3730 Hoeselt, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Hoeselt" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/2c84a939b82236f6151118a8330ec1a8>	rdf:type	ns2:Address ;
+	ns3:uuid	"2c84a939b82236f6151118a8330ec1a8" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"37" ;
+	ns2:postCode	"3128" ;
+	ns2:thoroughfare	"Remerstraat" ;
+	ns2:fullAddress	"Remerstraat 37, 3128 Tremelo, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Tremelo" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/9f320b5873caa4b467a14330ac6b0440>	rdf:type	ns2:Address ;
+	ns3:uuid	"9f320b5873caa4b467a14330ac6b0440" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"30" ;
+	ns2:postCode	"3020" ;
+	ns2:thoroughfare	"Heidestraat" ;
+	ns2:fullAddress	"Heidestraat 30, 3020 Herent, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Herent" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/73dcf77cbcd805384b6d58a79e480210>	rdf:type	ns2:Address ;
+	ns3:uuid	"73dcf77cbcd805384b6d58a79e480210" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"2" ;
+	ns2:postCode	"1755" ;
+	ns2:thoroughfare	"Blijkheerstraat" ;
+	ns2:fullAddress	"Blijkheerstraat 2, 1755 Gooik, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Gooik" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/302d275126bf19bb0bd39f4bc76c8cc5>	rdf:type	ns2:Address ;
+	ns3:uuid	"302d275126bf19bb0bd39f4bc76c8cc5" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"211" ;
+	ns2:postCode	"2800" ;
+	ns2:thoroughfare	"Paardenkerkhofstraat" ;
+	ns2:fullAddress	"Paardenkerkhofstraat 211, 2800 Mechelen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Mechelen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/17eaf144d3ad0bd69ee30eee546cdd2d>	rdf:type	ns2:Address ;
+	ns3:uuid	"17eaf144d3ad0bd69ee30eee546cdd2d" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"63" ;
+	ns2:postCode	"8820" ;
+	ns2:thoroughfare	"Vredelaan" ;
+	ns2:fullAddress	"Vredelaan 63, 8820 Torhout, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Torhout" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/24ef4a81f54c1b6093f3c68baa2a0390>	rdf:type	ns2:Address ;
+	ns3:uuid	"24ef4a81f54c1b6093f3c68baa2a0390" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"67" ;
+	ns2:postCode	"8640" ;
+	ns2:thoroughfare	"Poperingestraat" ;
+	ns2:fullAddress	"Poperingestraat 67, 8640 Vleteren, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Vleteren" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/9af7894d3799d0f355ae6e83214e6899>	rdf:type	ns2:Address ;
+	ns3:uuid	"9af7894d3799d0f355ae6e83214e6899" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"351" ;
+	ns2:postCode	"9820" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Hundelgemsesteenweg" ;
+	ns2:fullAddress	"Hundelgemsesteenweg 351, 9820 Merelbeke, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Merelbeke" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/4804d094ea9f2b59b1f917f977b913ac>	rdf:type	ns2:Address ;
+	ns3:uuid	"4804d094ea9f2b59b1f917f977b913ac" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1bis" ;
+	ns2:postCode	"8740" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Markt" ;
+	ns2:fullAddress	"Markt 1bis, 8740 Pittem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Pittem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/68048b021126760234355a8b0d272ae3>	rdf:type	ns2:Address ;
+	ns3:uuid	"68048b021126760234355a8b0d272ae3" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"35" ;
+	ns2:postCode	"3560" ;
+	ns2:thoroughfare	"Stokrooiestraat" ;
+	ns2:fullAddress	"Stokrooiestraat 35, 3560 Lummen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Lummen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/4ee874d07e6f0bd54789b3890aa5dc8f>	rdf:type	ns2:Address ;
+	ns3:uuid	"4ee874d07e6f0bd54789b3890aa5dc8f" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"36" ;
+	ns2:postCode	"8020" ;
+	ns2:thoroughfare	"Olmenstraat" ;
+	ns2:fullAddress	"Olmenstraat 36, 8020 Oostkamp, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Oostkamp" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6f09c5d0a458dd5e1303f7c92b62d35f>	rdf:type	ns2:Address ;
+	ns3:uuid	"6f09c5d0a458dd5e1303f7c92b62d35f" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"103" ;
+	ns2:postCode	"9506" ;
+	ns2:thoroughfare	"Pijlekaartstraat" ;
+	ns2:fullAddress	"Pijlekaartstraat 103, 9506 Geraardsbergen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Geraardsbergen" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:d2849e79fa00ce6f4469712a662b5a10	rdf:type	ns2:Address ;
+	ns3:uuid	"d2849e79fa00ce6f4469712a662b5a10" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"54" ;
+	ns2:postCode	"8970" ;
+	ns2:thoroughfare	"Baljuwstraat" ;
+	ns2:fullAddress	"Baljuwstraat 54, 8970 Poperinge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Poperinge" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:c390caa14e370d17807d7d493a44523f	rdf:type	ns2:Address ;
+	ns3:uuid	"c390caa14e370d17807d7d493a44523f" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"3" ;
+	ns2:postCode	"2960" ;
+	ns2:thoroughfare	"Hoge Mereyt" ;
+	ns2:fullAddress	"Hoge Mereyt 3, 2960 Brecht, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brecht" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/07d021d745f3b88c5ffbe9bb18219f14>	rdf:type	ns2:Address ;
+	ns3:uuid	"07d021d745f3b88c5ffbe9bb18219f14" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"11" ;
+	ns2:postCode	"9030" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Hoge Olm" ;
+	ns2:fullAddress	"Hoge Olm 11, 9030 Gent, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Gent" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/9faabb7ce1b20fc50acc96c79d96295b>	rdf:type	ns2:Address ;
+	ns3:uuid	"9faabb7ce1b20fc50acc96c79d96295b" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"13" ;
+	ns2:postCode	"1760" ;
+	ns2:thoroughfare	"Pamelse Klei" ;
+	ns2:fullAddress	"Pamelse Klei 13, 1760 Roosdaal, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Roosdaal" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/2929cb90d70e8ed8492cb0b602a4f1d9>	rdf:type	ns2:Address ;
+	ns3:uuid	"2929cb90d70e8ed8492cb0b602a4f1d9" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"40a" ;
+	ns2:postCode	"1860" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Neerpoorten" ;
+	ns2:fullAddress	"Neerpoorten 40a, 1860 Meise, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Meise" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/7ccf3fe3dc9567adcf1a135aa093a5a1>	rdf:type	ns2:Address ;
+	ns3:uuid	"7ccf3fe3dc9567adcf1a135aa093a5a1" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"98" ;
+	ns2:postCode	"8210" ;
+	ns2:thoroughfare	"Heidelbergstraat" ;
+	ns2:fullAddress	"Heidelbergstraat 98, 8210 Zedelgem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Zedelgem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/8d7a55d5acdcff80281cb7a1d6132be4>	rdf:type	ns2:Address ;
+	ns3:uuid	"8d7a55d5acdcff80281cb7a1d6132be4" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"38" ;
+	ns2:postCode	"9940" ;
+	ns2:thoroughfare	"Raphael Suylaan" ;
+	ns2:fullAddress	"Raphael Suylaan 38, 9940 Evergem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Evergem" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:c703708303b32114149738eb57205bc7	rdf:type	ns2:Address ;
+	ns3:uuid	"c703708303b32114149738eb57205bc7" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"4" ;
+	ns2:postCode	"8710" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Sint-Laurentiusstraat" ;
+	ns2:fullAddress	"Sint-Laurentiusstraat 4, 8710 Wielsbeke, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Wielsbeke" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/445437134b106a1fa0884018ed69b8e9>	rdf:type	ns2:Address ;
+	ns3:uuid	"445437134b106a1fa0884018ed69b8e9" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" ;
+	ns2:postCode	"9840" ;
+	ns2:thoroughfare	"Koersveldlaan" ;
+	ns2:fullAddress	"Koersveldlaan 1, 9840 De Pinte, Belgi\u00EB" ;
+	ns4:gemeentenaam	"De Pinte" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/219f5f6df78f386acd038ad85b8d8b82>	rdf:type	ns2:Address ;
+	ns3:uuid	"219f5f6df78f386acd038ad85b8d8b82" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"27" ;
+	ns2:postCode	"2000" ;
+	ns2:thoroughfare	"Kronenburgstraat" ;
+	ns2:fullAddress	"Kronenburgstraat 27 322, 2000 Antwerpen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Antwerpen" ;
+	ns4:land	"Belgi\u00EB" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>	"322" .
+<http://data.lblod.info/id/adressen/029d10d26ed1dac8e08e31cd7b7da493>	rdf:type	ns2:Address ;
+	ns3:uuid	"029d10d26ed1dac8e08e31cd7b7da493" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"2" ;
+	ns2:postCode	"3930" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Pastoor Bungenerslaan" ;
+	ns2:fullAddress	"Pastoor Bungenerslaan 2 1, 3930 Hamont-Achel, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Hamont-Achel" ;
+	ns4:land	"Belgi\u00EB" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>	"1" .
+ns1:efcc630bc3b8ae31079cd66ee5941224	rdf:type	ns2:Address ;
+	ns3:uuid	"efcc630bc3b8ae31079cd66ee5941224" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"117" ;
+	ns2:postCode	"8510" ;
+	ns2:thoroughfare	"Tombroekstraat" ;
+	ns2:fullAddress	"Tombroekstraat 117, 8510 Kortrijk, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kortrijk" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/79524d9f4c523914f444e3138fe06e6d>	rdf:type	ns2:Address ;
+	ns3:uuid	"79524d9f4c523914f444e3138fe06e6d" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"60" ;
+	ns2:postCode	"1840" ;
+	ns2:thoroughfare	"Steenhuffeldorp" ;
+	ns2:fullAddress	"Steenhuffeldorp 60, 1840 Londerzeel, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Londerzeel" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:ece473d031775c4b73945baeb158173e	rdf:type	ns2:Address ;
+	ns3:uuid	"ece473d031775c4b73945baeb158173e" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"25" ;
+	ns2:postCode	"2360" ;
+	ns2:thoroughfare	"Zandstraat" ;
+	ns2:fullAddress	"Zandstraat 25, 2360 Oud-Turnhout, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Oud-Turnhout" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/8675b2735a1ed180cf3def49b792d947>	rdf:type	ns2:Address ;
+	ns3:uuid	"8675b2735a1ed180cf3def49b792d947" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"13" ;
+	ns2:postCode	"2920" ;
+	ns2:adminUnitL2	"Antwerpen" ;
+	ns2:thoroughfare	"Heuvel" ;
+	ns2:fullAddress	"Heuvel 13, 2920 Kalmthout, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kalmthout" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/613f82fed238b8137ce4838a14a7f776>	rdf:type	ns2:Address ;
+	ns3:uuid	"613f82fed238b8137ce4838a14a7f776" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"128" ;
+	ns2:postCode	"9700" ;
+	ns2:thoroughfare	"Wortegemstraat" ;
+	ns2:fullAddress	"Wortegemstraat 128, 9700 Oudenaarde, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Oudenaarde" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/935c277c3b816534ba03cee951f922cb>	rdf:type	ns2:Address ;
+	ns3:uuid	"935c277c3b816534ba03cee951f922cb" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"34" ;
+	ns2:postCode	"2460" ;
+	ns2:thoroughfare	"Hofdreef" ;
+	ns2:fullAddress	"Hofdreef 34, 2460 Kasterlee, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kasterlee" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/80910821ce49e00a9a16436b09c3100e>	rdf:type	ns2:Address ;
+	ns3:uuid	"80910821ce49e00a9a16436b09c3100e" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6" ;
+	ns2:postCode	"8560" ;
+	ns2:thoroughfare	"Kardinaal Cardijnstraat" ;
+	ns2:fullAddress	"Kardinaal Cardijnstraat 6, 8560 Wevelgem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Wevelgem" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:baa5e66080fc39e8bcf6236568f1ea2e	rdf:type	ns2:Address ;
+	ns3:uuid	"baa5e66080fc39e8bcf6236568f1ea2e" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" ;
+	ns2:postCode	"8600" ;
+	ns2:thoroughfare	"Hoppestraat" ;
+	ns2:fullAddress	"Hoppestraat 1, 8600 Diksmuide, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Diksmuide" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:b868a276a7ad438cd69a6ff106555ce5	rdf:type	ns2:Address ;
+	ns3:uuid	"b868a276a7ad438cd69a6ff106555ce5" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"228" ;
+	ns2:postCode	"3870" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Nieuwe Steenweg" ;
+	ns2:fullAddress	"Nieuwe Steenweg 228, 3870 Heers, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Heers" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:e2a6261c84a55da01679939cf0853a19	rdf:type	ns2:Address ;
+	ns3:uuid	"e2a6261c84a55da01679939cf0853a19" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"5" ;
+	ns2:postCode	"9680" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Kloosterstraat" ;
+	ns2:fullAddress	"Kloosterstraat 5, 9680 Maarkedal, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Maarkedal" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/2940569f9270ee9672ed5a425ec9a952>	rdf:type	ns2:Address ;
+	ns3:uuid	"2940569f9270ee9672ed5a425ec9a952" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"110" ;
+	ns2:postCode	"3680" ;
+	ns2:thoroughfare	"Houwstraat" ;
+	ns2:fullAddress	"Houwstraat 110, 3680 Maaseik, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Maaseik" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/5d3e8f51dd93f48aef11af2d9de88783>	rdf:type	ns2:Address ;
+	ns3:uuid	"5d3e8f51dd93f48aef11af2d9de88783" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"2" ;
+	ns2:postCode	"8720" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Kerkstraat" ;
+	ns2:fullAddress	"Kerkstraat 2, 8720 Dentergem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Dentergem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/93711f3af6d39329dd684b88adf76a1b>	rdf:type	ns2:Address ;
+	ns3:uuid	"93711f3af6d39329dd684b88adf76a1b" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"47" ;
+	ns2:postCode	"8510" ;
+	ns2:thoroughfare	"'t Rode Paard" ;
+	ns2:fullAddress	"'t Rode Paard 47, 8510 Kortrijk, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kortrijk" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/20dcc52f5caee117c49888f72fb62b49>	rdf:type	ns2:Address ;
+	ns3:uuid	"20dcc52f5caee117c49888f72fb62b49" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"225" ;
+	ns2:postCode	"8000" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Blankenbergsesteenweg" ;
+	ns2:fullAddress	"Blankenbergsesteenweg 225, 8000 Brugge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Brugge" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/667b933a080076c344d4e1c5b6288f20>	rdf:type	ns2:Address ;
+	ns3:uuid	"667b933a080076c344d4e1c5b6288f20" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"25" ;
+	ns2:postCode	"3390" ;
+	ns2:thoroughfare	"Haldertstraat" ;
+	ns2:fullAddress	"Haldertstraat 25, 3390 Tielt-Winge, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Tielt-Winge" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:acf8ca356ff351c30ade36eaf36a7b53	rdf:type	ns2:Address ;
+	ns3:uuid	"acf8ca356ff351c30ade36eaf36a7b53" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"174" ;
+	ns2:postCode	"3350" ;
+	ns2:thoroughfare	"Sint-Truidensesteenweg" ;
+	ns2:fullAddress	"Sint-Truidensesteenweg 174, 3350 Linter, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Linter" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/1b6c9810dd1ed5bdeb9f26fab83ca012>	rdf:type	ns2:Address ;
+	ns3:uuid	"1b6c9810dd1ed5bdeb9f26fab83ca012" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" ;
+	ns2:postCode	"9550" ;
+	ns2:thoroughfare	"Lavenderstraat" ;
+	ns2:fullAddress	"Lavenderstraat 1, 9550 Herzele, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Herzele" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:da1bfbbbd50828e172a1e46f45c74b42	rdf:type	ns2:Address ;
+	ns3:uuid	"da1bfbbbd50828e172a1e46f45c74b42" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"4" ;
+	ns2:postCode	"8600" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Rode Schuurpoortstraat" ;
+	ns2:fullAddress	"Rode Schuurpoortstraat 4, 8600 Diksmuide, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Diksmuide" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6bd229e9e12c9a6ae18ef094ee2cd75d>	rdf:type	ns2:Address ;
+	ns3:uuid	"6bd229e9e12c9a6ae18ef094ee2cd75d" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"11" ;
+	ns2:postCode	"1540" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Hondsbergstraat" ;
+	ns2:fullAddress	"Hondsbergstraat 11, 1540 Herne, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Herne" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:adae9197d6006edad521f40610b20815	rdf:type	ns2:Address ;
+	ns3:uuid	"adae9197d6006edad521f40610b20815" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"19" ;
+	ns2:postCode	"9870" ;
+	ns2:thoroughfare	"Machelenstraat" ;
+	ns2:fullAddress	"Machelenstraat 19, 9870 Zulte, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Zulte" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/068c71174ca5b925d300163eda79efce>	rdf:type	ns2:Address ;
+	ns3:uuid	"068c71174ca5b925d300163eda79efce" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"63" ;
+	ns2:postCode	"3020" ;
+	ns2:thoroughfare	"Lipselaan" ;
+	ns2:fullAddress	"Lipselaan 63, 3020 Herent, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Herent" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:d3398a2cb60209fe8697c4e471e70783	rdf:type	ns2:Address ;
+	ns3:uuid	"d3398a2cb60209fe8697c4e471e70783" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"79" ;
+	ns2:postCode	"2460" ;
+	ns2:thoroughfare	"Schoolstraat" ;
+	ns2:fullAddress	"Schoolstraat 79, 2460 Kasterlee, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kasterlee" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/3646b7a8428c907b6b3a184ac7d08900>	rdf:type	ns2:Address ;
+	ns3:uuid	"3646b7a8428c907b6b3a184ac7d08900" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"3" ;
+	ns2:postCode	"9890" ;
+	ns2:thoroughfare	"Kriephoekstraat" ;
+	ns2:fullAddress	"Kriephoekstraat 3, 9890 Gavere, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Gavere" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/5cedda0af15ca1af3e98f6f2f61e6da6>	rdf:type	ns2:Address ;
+	ns3:uuid	"5cedda0af15ca1af3e98f6f2f61e6da6" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"188" ;
+	ns2:postCode	"3600" ;
+	ns2:adminUnitL2	"Limburg" ;
+	ns2:thoroughfare	"Hooiweg" ;
+	ns2:fullAddress	"Hooiweg 188, 3600 Genk, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Genk" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6dfedb639c8672dac96171168b2eabb6>	rdf:type	ns2:Address ;
+	ns3:uuid	"6dfedb639c8672dac96171168b2eabb6" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"57" ;
+	ns2:postCode	"9200" ;
+	ns2:thoroughfare	"Ros Beiaardstraat" ;
+	ns2:fullAddress	"Ros Beiaardstraat 57, 9200 Dendermonde, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Dendermonde" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/3b6539597718202dbbe0d36adb5556c3>	rdf:type	ns2:Address ;
+	ns3:uuid	"3b6539597718202dbbe0d36adb5556c3" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"15" ;
+	ns2:postCode	"1930" ;
+	ns2:thoroughfare	"Watertorenlaan" ;
+	ns2:fullAddress	"Watertorenlaan 15, 1930 Zaventem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Zaventem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/70592d74625ba2b74636a2caf5f29550>	rdf:type	ns2:Address ;
+	ns3:uuid	"70592d74625ba2b74636a2caf5f29550" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" ;
+	ns2:postCode	"9041" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Oostakkerdorp" ;
+	ns2:fullAddress	"Oostakkerdorp 1, 9041 Gent, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Gent" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/62eeaea1475d1a35a98d765bfa9f8b14>	rdf:type	ns2:Address ;
+	ns3:uuid	"62eeaea1475d1a35a98d765bfa9f8b14" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6" ;
+	ns2:postCode	"9450" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Nieuwstraat" ;
+	ns2:fullAddress	"Nieuwstraat 6, 9450 Haaltert, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Haaltert" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/31e250a591c707831d02783818c30d59>	rdf:type	ns2:Address ;
+	ns3:uuid	"31e250a591c707831d02783818c30d59" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"83" ;
+	ns2:postCode	"9190" ;
+	ns2:thoroughfare	"Dorpsstraat" ;
+	ns2:fullAddress	"Dorpsstraat 83, 9190 Stekene, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Stekene" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/26c9b772e30f1d0e0233d7b62e8a99b8>	rdf:type	ns2:Address ;
+	ns3:uuid	"26c9b772e30f1d0e0233d7b62e8a99b8" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"14" ;
+	ns2:postCode	"8433" ;
+	ns2:thoroughfare	"Klakkaertstraat" ;
+	ns2:fullAddress	"Klakkaertstraat 14, 8433 Middelkerke, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Middelkerke" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:da4cd048982dde6d3cf6b6ab65f9480a	rdf:type	ns2:Address ;
+	ns3:uuid	"da4cd048982dde6d3cf6b6ab65f9480a" ;
+	ns2:postCode	"9420" ;
+	ns2:thoroughfare	"Aaigemdorp" ;
+	ns4:gemeentenaam	"Erpe-Mere" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/6e5f8e576f28b208c0d81baddf50af98>	rdf:type	ns2:Address ;
+	ns3:uuid	"6e5f8e576f28b208c0d81baddf50af98" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"26" ;
+	ns2:postCode	"3360" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Dorpstraat" ;
+	ns2:fullAddress	"Dorpstraat 26, 3360 Bierbeek, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Bierbeek" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:a86817ad94eeb9240e56f560baf0f5ff	rdf:type	ns2:Address ;
+	ns3:uuid	"a86817ad94eeb9240e56f560baf0f5ff" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"9" ;
+	ns2:postCode	"9130" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Essenlaan" ;
+	ns2:fullAddress	"Essenlaan 9, 9130 Beveren, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Beveren" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:e3565a68f2651daed4c1fd264caeb4e7	rdf:type	ns2:Address ;
+	ns3:uuid	"e3565a68f2651daed4c1fd264caeb4e7" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" ;
+	ns2:postCode	"3271" ;
+	ns2:thoroughfare	"Abdijstraat" ;
+	ns2:fullAddress	"Abdijstraat 1, 3271 Scherpenheuvel-Zichem, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Scherpenheuvel-Zichem" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/69df2441ba6ed6152874903d51b1b692>	rdf:type	ns2:Address ;
+	ns3:uuid	"69df2441ba6ed6152874903d51b1b692" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"128" ;
+	ns2:postCode	"1880" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Hogerheistraat" ;
+	ns2:fullAddress	"Hogerheistraat 128, 1880 Kapelle-op-den-Bos, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Kapelle-op-den-Bos" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/8608b136c5c32492487950b126c9b5d6>	rdf:type	ns2:Address ;
+	ns3:uuid	"8608b136c5c32492487950b126c9b5d6" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" ;
+	ns2:postCode	"9310" ;
+	ns2:thoroughfare	"Fijfelweg" ;
+	ns2:fullAddress	"Fijfelweg 1, 9310 Aalst, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Aalst" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:bdcf7ddb40b37eb309d8f383ca869b62	rdf:type	ns2:Address ;
+	ns3:uuid	"bdcf7ddb40b37eb309d8f383ca869b62" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"4" ;
+	ns2:postCode	"2400" ;
+	ns2:adminUnitL2	"Antwerpen" ;
+	ns2:thoroughfare	"Lindeplein" ;
+	ns2:fullAddress	"Lindeplein 4, 2400 Mol, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Mol" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/5ffc9b2cf11c163d44e84a2db5154406>	rdf:type	ns2:Address ;
+	ns3:uuid	"5ffc9b2cf11c163d44e84a2db5154406" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6" ;
+	ns2:postCode	"1840" ;
+	ns2:thoroughfare	"Pluimennest" ;
+	ns2:fullAddress	"Pluimennest 6, 1840 Londerzeel, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Londerzeel" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/4833e2847697fa9ba9ce98bf7554b339>	rdf:type	ns2:Address ;
+	ns3:uuid	"4833e2847697fa9ba9ce98bf7554b339" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"23" ;
+	ns2:postCode	"2400" ;
+	ns2:thoroughfare	"Astridlaan" ;
+	ns2:fullAddress	"Astridlaan 23, 2400 Mol, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Mol" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/381b521d30838d9357c223b67a36fac3>	rdf:type	ns2:Address ;
+	ns3:uuid	"381b521d30838d9357c223b67a36fac3" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"55" ;
+	ns2:postCode	"9630" ;
+	ns2:adminUnitL2	"Oost-Vlaanderen" ;
+	ns2:thoroughfare	"Latemdreef" ;
+	ns2:fullAddress	"Latemdreef 55, 9630 Zwalm, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Zwalm" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/04c107e42f14b3cdaa3c6b700fc1581f>	rdf:type	ns2:Address ;
+	ns3:uuid	"04c107e42f14b3cdaa3c6b700fc1581f" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"20" ;
+	ns2:postCode	"2300" ;
+	ns2:thoroughfare	"Leiseinde" ;
+	ns2:fullAddress	"Leiseinde 20, 2300 Turnhout, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Turnhout" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:a1e3c14395597fe9ac1cef5a20728662	rdf:type	ns2:Address ;
+	ns3:uuid	"a1e3c14395597fe9ac1cef5a20728662" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"32" ;
+	ns2:postCode	"2100" ;
+	ns2:thoroughfare	"Primeurstraat" ;
+	ns2:fullAddress	"Primeurstraat 32, 2100 Antwerpen, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Antwerpen" ;
+	ns4:land	"Belgi\u00EB" .
+<http://data.lblod.info/id/adressen/10032644dd8d59fca7db455f6f7f6a69>	rdf:type	ns2:Address ;
+	ns3:uuid	"10032644dd8d59fca7db455f6f7f6a69" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"24" ;
+	ns2:postCode	"3080" ;
+	ns2:adminUnitL2	"Vlaams-Brabant" ;
+	ns2:thoroughfare	"Hoornzeelstraat" ;
+	ns2:fullAddress	"Hoornzeelstraat 24, 3080 Tervuren, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Tervuren" ;
+	ns4:land	"Belgi\u00EB" .
+ns1:d1390d552ee7a5800542329c206f5280	rdf:type	ns2:Address ;
+	ns4:verwijstNaar	<https://data.vlaanderen.be/id/adres/798937> ;
+	ns3:uuid	"d1390d552ee7a5800542329c206f5280" ;
+	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"116" ;
+	ns2:postCode	"8540" ;
+	ns2:adminUnitL2	"West-Vlaanderen" ;
+	ns2:thoroughfare	"Hoogstraat" ;
+	ns2:fullAddress	"Hoogstraat 116, 8540 Deerlijk, Belgi\u00EB" ;
+	ns4:gemeentenaam	"Deerlijk" ;
+	ns4:land	"Belgi\u00EB" .
+@prefix ns5:	<http://purl.org/dc/terms/> .
+@prefix ns6:	<http://lblod.data.gift/concepts/> .
+ns1:d1390d552ee7a5800542329c206f5280	ns5:source	ns6:e59c97a9-4e95-4d65-9696-756de47fbc1f .

@@ -1,0 +1,295 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://www.w3.org/ns/adms#> .
+<http://data.lblod.info/id/identificatoren/07e0aef83779cda49c0d49cdf44c966d>	rdf:type	ns1:Identifier .
+@prefix ns2:	<http://mu.semte.ch/vocabularies/core/> .
+<http://data.lblod.info/id/identificatoren/07e0aef83779cda49c0d49cdf44c966d>	ns2:uuid	"07e0aef83779cda49c0d49cdf44c966d" .
+@prefix ns3:	<https://data.vlaanderen.be/ns/generiek#> .
+<http://data.lblod.info/id/identificatoren/07e0aef83779cda49c0d49cdf44c966d>	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0c232ee6137ee6ebc7cb8ce31b0bdc22> .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+<http://data.lblod.info/id/identificatoren/07e0aef83779cda49c0d49cdf44c966d>	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+@prefix ns5:	<http://data.lblod.info/id/identificatoren/> .
+ns5:da4eb8ce0a88f8f2ba9e03a165d57807	rdf:type	ns1:Identifier ;
+	ns2:uuid	"da4eb8ce0a88f8f2ba9e03a165d57807" .
+@prefix ns6:	<http://data.lblod.info/id/gestructureerdeIdentificator/> .
+ns5:da4eb8ce0a88f8f2ba9e03a165d57807	ns3:gestructureerdeIdentificator	ns6:fb515ac3b61ebc9fda44393cde9cf5b6 ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+<http://data.lblod.info/id/identificatoren/6def7fbfe0e949fdd7332bbdfa660e1e>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"6def7fbfe0e949fdd7332bbdfa660e1e" ;
+	ns3:gestructureerdeIdentificator	ns6:e4a00158485bcc761f766ce89d98af33 ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+ns5:b7a86461f4b62fb8ec5a58fa3e914313	rdf:type	ns1:Identifier ;
+	ns2:uuid	"b7a86461f4b62fb8ec5a58fa3e914313" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/552744f1e262739ddb0897bebc0e950a> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+ns5:be660ff3a045ae05045294073ef75c3c	rdf:type	ns1:Identifier ;
+	ns2:uuid	"be660ff3a045ae05045294073ef75c3c" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/18f1946027638f3d87d23593f3e386b0> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/18f1946027638f3d87d23593f3e386b0>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"18f1946027638f3d87d23593f3e386b0" ;
+	ns3:lokaleIdentificator	"0207542782" .
+<http://data.lblod.info/id/identificatoren/00a3407cc3764ae7db686825ad98cb81>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"00a3407cc3764ae7db686825ad98cb81" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/56111e6d3e36048873be79e1844f6793> ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/56111e6d3e36048873be79e1844f6793>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"56111e6d3e36048873be79e1844f6793" ;
+	ns3:lokaleIdentificator	"OVO002015" .
+<http://data.lblod.info/id/identificatoren/9b49544c317b706c5ac68db4ba76c257>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"9b49544c317b706c5ac68db4ba76c257" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/93191289aad043549954554149f1b641> ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+<http://data.lblod.info/id/identificatoren/6b5822134999ad5388e52e4257fd46be>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"6b5822134999ad5388e52e4257fd46be" ;
+	ns3:gestructureerdeIdentificator	ns6:d8b0c45df2226642ca87e0cfaecff89f ;
+	skos:notation	"KBO nummer"@nl ,
+		"KBO nummer" .
+ns6:d8b0c45df2226642ca87e0cfaecff89f	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"d8b0c45df2226642ca87e0cfaecff89f" ;
+	ns3:lokaleIdentificator	"0212187401" .
+ns5:e114a4c5ef3ceeabf7d0922ce6308f1e	rdf:type	ns1:Identifier ;
+	ns2:uuid	"e114a4c5ef3ceeabf7d0922ce6308f1e" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/649a9655defaec5b5c9aadff73179854> ;
+	skos:notation	"OVO-nummer" ,
+		"OVO-nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/649a9655defaec5b5c9aadff73179854>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"649a9655defaec5b5c9aadff73179854" ;
+	ns3:lokaleIdentificator	"OVO002420" .
+<http://data.lblod.info/id/identificatoren/1e1347ef17701876948edaa4bb52b2d2>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"1e1347ef17701876948edaa4bb52b2d2" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0a27d5f8e70025b6c1dccd5f5de01403> ;
+	skos:notation	"OVO-nummer" ,
+		"OVO-nummer"@nl .
+<http://data.lblod.info/id/identificatoren/31f5cd7c17d8d7f89a33c020bb8c927c>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"31f5cd7c17d8d7f89a33c020bb8c927c" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/884308e985e9e3be50e195daf9575a15> ;
+	skos:notation	"KBO nummer"@nl ,
+		"KBO nummer" .
+ns5:be0fa6690324d9a6ee94515f74e9e74c	rdf:type	ns1:Identifier ;
+	ns2:uuid	"be0fa6690324d9a6ee94515f74e9e74c" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/7567452b675a80afb9b411d110aced6d> ;
+	skos:notation	"OVO-nummer" ,
+		"OVO-nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/7567452b675a80afb9b411d110aced6d>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"7567452b675a80afb9b411d110aced6d" ;
+	ns3:lokaleIdentificator	"OVO002059" .
+<http://data.lblod.info/id/identificatoren/0d9a5dac885404dfb6446ed4dca21629>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"0d9a5dac885404dfb6446ed4dca21629" ;
+	ns3:gestructureerdeIdentificator	ns6:fc65097fd7af378c7dfeb925599b876d ;
+	skos:notation	"KBO nummer"@nl ,
+		"KBO nummer" .
+ns6:fc65097fd7af378c7dfeb925599b876d	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"fc65097fd7af378c7dfeb925599b876d" ;
+	ns3:lokaleIdentificator	"0212170276" .
+ns5:fb9536254c8ec005542ee66ed4e5a330	rdf:type	ns1:Identifier ;
+	ns2:uuid	"fb9536254c8ec005542ee66ed4e5a330" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/06599ef5caed5a8f2c5400ed08b7a77f> ;
+	skos:notation	"OVO-nummer" ,
+		"OVO-nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/06599ef5caed5a8f2c5400ed08b7a77f>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"06599ef5caed5a8f2c5400ed08b7a77f" ;
+	ns3:lokaleIdentificator	"OVO001992" .
+<http://data.lblod.info/id/identificatoren/2e2bccb123f9ca121f81cb280e96245d>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"2e2bccb123f9ca121f81cb280e96245d" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/95b7de5af30a5c7b4f21d2648efa02bf> ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/95b7de5af30a5c7b4f21d2648efa02bf>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"95b7de5af30a5c7b4f21d2648efa02bf" ;
+	ns3:lokaleIdentificator	"OVO002011" .
+<http://data.lblod.info/id/identificatoren/3f65bf73a22745e5353b4093dd5e6d72>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"3f65bf73a22745e5353b4093dd5e6d72" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/992c6ca28cf644f6e88f02e27ca5f273> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/992c6ca28cf644f6e88f02e27ca5f273>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"992c6ca28cf644f6e88f02e27ca5f273" ;
+	ns3:lokaleIdentificator	"0212183045" .
+<http://data.lblod.info/id/identificatoren/8243fd94bd9b7db7668398385c6b7eb6>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"8243fd94bd9b7db7668398385c6b7eb6" ;
+	ns3:gestructureerdeIdentificator	ns6:fe8e74d8f69dc382ac9a80baf4eb2df9 ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+ns6:fe8e74d8f69dc382ac9a80baf4eb2df9	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"fe8e74d8f69dc382ac9a80baf4eb2df9" ;
+	ns3:lokaleIdentificator	"OVO002364" .
+ns5:f414521c9f98a04f0a3b397694faf2da	rdf:type	ns1:Identifier ;
+	ns2:uuid	"f414521c9f98a04f0a3b397694faf2da" ;
+	ns3:gestructureerdeIdentificator	ns6:f69e475a1919ce333982fc3d837d8362 ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+ns6:f69e475a1919ce333982fc3d837d8362	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"f69e475a1919ce333982fc3d837d8362" ;
+	ns3:lokaleIdentificator	"0207888816" .
+<http://data.lblod.info/id/identificatoren/9618fe67180efbed05f10164c9ecca6c>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"9618fe67180efbed05f10164c9ecca6c" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/18212cc298eb206816899df400655f70> ;
+	skos:notation	"OVO-nummer" ,
+		"OVO-nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/18212cc298eb206816899df400655f70>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"18212cc298eb206816899df400655f70" ;
+	ns3:lokaleIdentificator	"OVO002062" .
+<http://data.lblod.info/id/identificatoren/191e6346712470a9dde821406aa1b625>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"191e6346712470a9dde821406aa1b625" ;
+	ns3:gestructureerdeIdentificator	ns6:ce7707974dbe6a3a8ffe901f2a1fbb8a ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+ns6:ce7707974dbe6a3a8ffe901f2a1fbb8a	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"ce7707974dbe6a3a8ffe901f2a1fbb8a" ;
+	ns3:lokaleIdentificator	"0212173444" .
+<http://data.lblod.info/id/identificatoren/3f0ee8b64aad8999ff5d35394ebb3c84>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"3f0ee8b64aad8999ff5d35394ebb3c84" ;
+	ns3:gestructureerdeIdentificator	ns6:e40b3b1bc1f6b012eeed2ef1bb59b24a ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+ns6:e40b3b1bc1f6b012eeed2ef1bb59b24a	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"e40b3b1bc1f6b012eeed2ef1bb59b24a" ;
+	ns3:lokaleIdentificator	"OVO002188" .
+<http://data.lblod.info/id/identificatoren/5eee964986bcbc0b256258517e50dfc5>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"5eee964986bcbc0b256258517e50dfc5" ;
+	ns3:gestructureerdeIdentificator	ns6:ac18aa049fb1c0c422b1d1097d348fe1 ;
+	skos:notation	"KBO nummer"@nl ,
+		"KBO nummer" .
+ns6:ac18aa049fb1c0c422b1d1097d348fe1	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"ac18aa049fb1c0c422b1d1097d348fe1" ;
+	ns3:lokaleIdentificator	"0212219370" .
+ns5:b1dda13262d5cdd6695fd21f151a0b6c	rdf:type	ns1:Identifier ;
+	ns2:uuid	"b1dda13262d5cdd6695fd21f151a0b6c" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/468c876c3713f28a0ec92e9a14ffd163> ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/468c876c3713f28a0ec92e9a14ffd163>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"468c876c3713f28a0ec92e9a14ffd163" ;
+	ns3:lokaleIdentificator	"OVO002268" .
+ns5:ed058de4a1f50a154b7a5f4c74b46d6c	rdf:type	ns1:Identifier ;
+	ns2:uuid	"ed058de4a1f50a154b7a5f4c74b46d6c" ;
+	ns3:gestructureerdeIdentificator	ns6:a8266f2f20436a675276f787fcac47fd ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+ns6:a8266f2f20436a675276f787fcac47fd	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"a8266f2f20436a675276f787fcac47fd" ;
+	ns3:lokaleIdentificator	"OVO002093" .
+ns5:f5753f3deb892bae70d8923ae49730e8	rdf:type	ns1:Identifier ;
+	ns2:uuid	"f5753f3deb892bae70d8923ae49730e8" ;
+	ns3:gestructureerdeIdentificator	ns6:a2b692d9defb05f9e0f6008ee46a4942 ;
+	skos:notation	"KBO nummer"@nl ,
+		"KBO nummer" .
+ns6:a2b692d9defb05f9e0f6008ee46a4942	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"a2b692d9defb05f9e0f6008ee46a4942" ;
+	ns3:lokaleIdentificator	"0207499430" .
+<http://data.lblod.info/id/identificatoren/346da75e4f68681bbcb4b3fb91981ce8>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"346da75e4f68681bbcb4b3fb91981ce8" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/9fc841de8b2f91de588a40ba70c251b4> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/9fc841de8b2f91de588a40ba70c251b4>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"9fc841de8b2f91de588a40ba70c251b4" ;
+	ns3:lokaleIdentificator	"0207501806" .
+<http://data.lblod.info/id/identificatoren/72fd27ad4fd533c5790728d00de9f879>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"72fd27ad4fd533c5790728d00de9f879" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/4009ef5a45d775bb1427ae4f3d3874f7> ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/4009ef5a45d775bb1427ae4f3d3874f7>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"4009ef5a45d775bb1427ae4f3d3874f7" ;
+	ns3:lokaleIdentificator	"OVO002193" .
+<http://data.lblod.info/id/identificatoren/17fe58f2da0b1ea5499a47b732717b34>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"17fe58f2da0b1ea5499a47b732717b34" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/0e805e93b896a7dc8611f045f7afa6da> ;
+	skos:notation	"OVO-nummer"@nl ,
+		"OVO-nummer" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0e805e93b896a7dc8611f045f7afa6da>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"0e805e93b896a7dc8611f045f7afa6da" ;
+	ns3:lokaleIdentificator	"OVO002125" .
+<http://data.lblod.info/id/identificatoren/8364410341926389fe2369eb1e68ffe0>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"8364410341926389fe2369eb1e68ffe0" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/51ba0d537d885ea524f16ce630fb984d> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/51ba0d537d885ea524f16ce630fb984d>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"51ba0d537d885ea524f16ce630fb984d" ;
+	ns3:lokaleIdentificator	"0212220558" .
+<http://data.lblod.info/id/identificatoren/5f365fd8e56dc2df739dbacd44462b15>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"5f365fd8e56dc2df739dbacd44462b15" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/21cd7972c75c2516c3b665d9b97297c3> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/21cd7972c75c2516c3b665d9b97297c3>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"21cd7972c75c2516c3b665d9b97297c3" ;
+	ns3:lokaleIdentificator	"0212224815" .
+ns5:d8daabd035cc3158a404f074ff1272ac	rdf:type	ns1:Identifier ;
+	ns2:uuid	"d8daabd035cc3158a404f074ff1272ac" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/7f41ce495d11b69c8970bba2a302e887> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/7f41ce495d11b69c8970bba2a302e887>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"7f41ce495d11b69c8970bba2a302e887" ;
+	ns3:lokaleIdentificator	"0212178590" .
+<http://data.lblod.info/id/identificatoren/2b00f2f320deb2dc458d6657d00f56c8>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"2b00f2f320deb2dc458d6657d00f56c8" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/7c68d4c9485beac61e6e99eb33d32266> ;
+	skos:notation	"OVO-nummer" ,
+		"OVO-nummer"@nl .
+<http://data.lblod.info/id/identificatoren/48cc77c0a31a082cf83c37beffcfa60c>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"48cc77c0a31a082cf83c37beffcfa60c" ;
+	ns3:gestructureerdeIdentificator	ns6:a4dfa52b617b2ad9ab1d48edcb179a84 ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/identificatoren/07f80b62a1355cb7e7a0e93ee6d3d7ad>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"07f80b62a1355cb7e7a0e93ee6d3d7ad" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/4edc2a5fb8e5a7ad3ec5240116cc7662> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/identificatoren/7078c0e5461115ad05acd7827d54a23a>	rdf:type	ns1:Identifier ;
+	ns2:uuid	"7078c0e5461115ad05acd7827d54a23a" ;
+	ns3:gestructureerdeIdentificator	ns6:ddbbabfe2aa2b9aaf732c6cb634d687b ;
+	skos:notation	"OVO-nummer" ,
+		"OVO-nummer"@nl .
+ns5:c65decd4893db46763221df0d6a97b50	rdf:type	ns1:Identifier ;
+	ns2:uuid	"c65decd4893db46763221df0d6a97b50" ;
+	ns3:gestructureerdeIdentificator	<http://data.lblod.info/id/gestructureerdeIdentificator/9d4732a2328ea5ee26280edea948c0b1> ;
+	skos:notation	"KBO nummer" ,
+		"KBO nummer"@nl .
+<http://data.lblod.info/id/gestructureerdeIdentificator/9d4732a2328ea5ee26280edea948c0b1>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"9d4732a2328ea5ee26280edea948c0b1" ;
+	ns3:lokaleIdentificator	"0212218281" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/884308e985e9e3be50e195daf9575a15>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"884308e985e9e3be50e195daf9575a15" ;
+	ns3:lokaleIdentificator	"0212192745" .
+ns6:e4a00158485bcc761f766ce89d98af33	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"e4a00158485bcc761f766ce89d98af33" ;
+	ns3:lokaleIdentificator	"OVO002499" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0c232ee6137ee6ebc7cb8ce31b0bdc22>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"0c232ee6137ee6ebc7cb8ce31b0bdc22" ;
+	ns3:lokaleIdentificator	"0207471518" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/93191289aad043549954554149f1b641>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"93191289aad043549954554149f1b641" ;
+	ns3:lokaleIdentificator	"OVO002236" .
+ns6:a4dfa52b617b2ad9ab1d48edcb179a84	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"a4dfa52b617b2ad9ab1d48edcb179a84" ;
+	ns3:lokaleIdentificator	"0207445287" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/552744f1e262739ddb0897bebc0e950a>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"552744f1e262739ddb0897bebc0e950a" ;
+	ns3:lokaleIdentificator	"0212247579" .
+ns6:fb515ac3b61ebc9fda44393cde9cf5b6	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"fb515ac3b61ebc9fda44393cde9cf5b6" ;
+	ns3:lokaleIdentificator	"OVO002023" .
+ns6:ddbbabfe2aa2b9aaf732c6cb634d687b	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"ddbbabfe2aa2b9aaf732c6cb634d687b" ;
+	ns3:lokaleIdentificator	"OVO002624" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/4edc2a5fb8e5a7ad3ec5240116cc7662>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"4edc2a5fb8e5a7ad3ec5240116cc7662" ;
+	ns3:lokaleIdentificator	"0212195418" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/0a27d5f8e70025b6c1dccd5f5de01403>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"0a27d5f8e70025b6c1dccd5f5de01403" ;
+	ns3:lokaleIdentificator	"OVO002566" .
+<http://data.lblod.info/id/gestructureerdeIdentificator/7c68d4c9485beac61e6e99eb33d32266>	rdf:type	ns3:GestructureerdeIdentificator ;
+	ns2:uuid	"7c68d4c9485beac61e6e99eb33d32266" ;
+	ns3:lokaleIdentificator	"OVO002038" .

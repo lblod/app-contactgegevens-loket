@@ -28,6 +28,13 @@ defmodule Acl.UserGroups.Config do
                       resource_types: [
                         "http://xmlns.com/foaf/0.1/OnlineAccount",
                         "http://xmlns.com/foaf/0.1/Person",
+                        "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
+                        "http://www.w3.org/ns/org#Organization",
+                        "http://lblod.data.gift/vocabularies/organisatie/TypeVestiging",
+                        "http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode",
+                        "http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode",
+                        "http://www.w3.org/2004/02/skos/core#Concept",
+                        "http://www.w3.org/2004/02/skos/core#ConceptScheme"
                       ]
                     } },
                   %GraphSpec{
