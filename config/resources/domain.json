@@ -124,6 +124,28 @@
           "predicate": "org:hasSite",
           "target": "site",
           "cardinality": "many"
+        },
+        "associated-organizations": {
+          "predicate": "org:linkedTo",
+          "target": "organization",
+          "cardinality": "many"
+        },
+        "sub-organizations": {
+          "predicate": "org:hasSubOrganization",
+          "target": "organization",
+          "cardinality": "many"
+        },
+        "is-associated-with": {
+          "predicate": "org:linkedTo",
+          "target": "organization",
+          "cardinality": "one",
+          "inverse": true
+        },
+        "is-sub-organization-of": {
+          "predicate": "org:hasSubOrganization",
+          "target": "organization",
+          "cardinality": "one",
+          "inverse": true
         }
       },
       "new-resource-base": "http://data.lblod.info/id/organisaties/"
