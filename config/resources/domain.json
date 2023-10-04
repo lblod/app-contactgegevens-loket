@@ -354,6 +354,20 @@
         }
       },
       "new-resource-base": "http://lblod.data.gift/concepts/"
+    },
+    "nationalities": {
+      "class": "euvoc:Country",
+      "attributes": {
+        "country-label": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        },
+        "nationality-label": {
+          "type": "string",
+          "predicate": "rdfs:label"
+        }
+      },
+      "new-resource-base": "http://lblod.data.gift/concepts/"
     }
   }
 }

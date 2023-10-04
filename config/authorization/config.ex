@@ -34,7 +34,8 @@ defmodule Acl.UserGroups.Config do
                         "http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode",
                         "http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode",
                         "http://www.w3.org/2004/02/skos/core#Concept",
-                        "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                        "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                        "http://publications.europa.eu/ontology/euvoc#Country"
                       ]
                     } },
                   %GraphSpec{
