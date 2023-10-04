@@ -46,7 +46,7 @@ defmodule Acl.UserGroups.Config do
       # // ORGANIZATION DATA
       %GroupSpec{
         name: "org",
-        useage: [:read],
+        useage: [:read, :write, :read_for_write],
         access: %AccessByQuery{
           vars: ["session_group"],
           query: "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
