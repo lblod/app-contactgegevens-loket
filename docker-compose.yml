@@ -81,3 +81,8 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
+  adressenregister:
+    image: lblod/adressenregister-fuzzy-search-service:0.6.3
+    labels:
+      - "logging=true"
+    restart: always

@@ -22,3 +22,5 @@ services:
     links:
       - database:database
     restart: "no"
+  adressenregister:
+    restart: "no"
