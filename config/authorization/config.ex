@@ -20,7 +20,7 @@ defmodule Acl.UserGroups.Config do
       # // PUBLIC
       %GroupSpec{
         name: "public",
-        useage: [:read,:read_for_write],
+        useage: [:read,:read_for_write, :write],
         access: %AlwaysAccessible{}, # TODO: Should be only for logged in users
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/public",
