@@ -20,7 +20,7 @@ defmodule Acl.UserGroups.Config do
       # // PUBLIC
       %GroupSpec{
         name: "public",
-        useage: [:read,:read_for_write],
+        useage: [:read,:read_for_write, :write],
         access: %AlwaysAccessible{}, # TODO: Should be only for logged in users
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/public",
@@ -28,6 +28,14 @@ defmodule Acl.UserGroups.Config do
                       resource_types: [
                         "http://xmlns.com/foaf/0.1/OnlineAccount",
                         "http://xmlns.com/foaf/0.1/Person",
+                        "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
+                        "http://www.w3.org/ns/org#Organization",
+                        "http://lblod.data.gift/vocabularies/organisatie/TypeVestiging",
+                        "http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode",
+                        "http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode",
+                        "http://www.w3.org/2004/02/skos/core#Concept",
+                        "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                        "http://publications.europa.eu/ontology/euvoc#Country"
                       ]
                     } },
                   %GraphSpec{
@@ -38,7 +46,7 @@ defmodule Acl.UserGroups.Config do
       # // ORGANIZATION DATA
       %GroupSpec{
         name: "org",
-        useage: [:read],
+        useage: [:read, :write, :read_for_write],
         access: %AccessByQuery{
           vars: ["session_group"],
           query: "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
@@ -52,7 +60,7 @@ defmodule Acl.UserGroups.Config do
                     constraint: %ResourceConstraint{
                       resource_types: [
                         "http://schema.org/ContactPoint",
-                        "http://schema.org/Site",
+                        "http://www.w3.org/ns/org#Site",
                         "http://www.w3.org/ns/adms#Identifier",
                         "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator",
                         "http://schema.org/ContactPoint",

@@ -124,6 +124,28 @@
           "predicate": "org:hasSite",
           "target": "site",
           "cardinality": "many"
+        },
+        "associated-organizations": {
+          "predicate": "org:linkedTo",
+          "target": "organization",
+          "cardinality": "many"
+        },
+        "sub-organizations": {
+          "predicate": "org:hasSubOrganization",
+          "target": "organization",
+          "cardinality": "many"
+        },
+        "is-associated-with": {
+          "predicate": "org:linkedTo",
+          "target": "organization",
+          "cardinality": "one",
+          "inverse": true
+        },
+        "is-sub-organization-of": {
+          "predicate": "org:hasSubOrganization",
+          "target": "organization",
+          "cardinality": "one",
+          "inverse": true
         }
       },
       "new-resource-base": "http://data.lblod.info/id/organisaties/"
@@ -203,17 +225,17 @@
       "relationships": {
         "contacts": {
           "predicate": "org:siteAddress",
-          "target": "contact-points",
+          "target": "contact-point",
           "cardinality": "many"
         },
         "address": {
           "predicate": "organisatie:bestaatUit",
-          "target": "addresses",
+          "target": "address",
           "cardinality": "one"
         },
         "site-type": {
           "predicate": "ere:vestigingstype",
-          "target": "site-types",
+          "target": "site-type",
           "cardinality": "one"
         }
       },
@@ -329,6 +351,20 @@
         "label": {
           "type": "string",
           "predicate": "skos:prefLabel"
+        }
+      },
+      "new-resource-base": "http://lblod.data.gift/concepts/"
+    },
+    "nationalities": {
+      "class": "euvoc:Country",
+      "attributes": {
+        "country-label": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        },
+        "nationality-label": {
+          "type": "string",
+          "predicate": "rdfs:label"
         }
       },
       "new-resource-base": "http://lblod.data.gift/concepts/"

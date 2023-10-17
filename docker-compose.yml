@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 x-logging: &default-logging
   driver: "json-file"
@@ -16,8 +16,8 @@ services:
     labels:
       - "logging=true"
     environment:
-      DEFAULT_MU_AUTH_ALLOWED_GROUPS_HEADER: "[{\"variables\":[],\"name\":\"public\"}]"
-      DEFAULT_ACCESS_CONTROL_ALLOW_ORIGIN_HEADER: '*'
+      DEFAULT_MU_AUTH_ALLOWED_GROUPS_HEADER: '[{"variables":[],"name":"public"}]'
+      DEFAULT_ACCESS_CONTROL_ALLOW_ORIGIN_HEADER: "*"
       SESSION_COOKIE_SECURE: "on"
       SESSION_COOKIE_SAME_SITE: "None"
     restart: always
@@ -81,3 +81,8 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
+  adressenregister:
+    image: lblod/adressenregister-fuzzy-search-service:0.6.3
+    labels:
+      - "logging=true"
+    restart: always
