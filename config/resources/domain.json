@@ -102,6 +102,10 @@
         "purpose": {
           "type": "string",
           "predicate": "org:purpose"
+        },
+        "is-city": {
+          "type": "boolean",
+          "predicate": "ext:isCity"
         }
       },
       "relationships": {
