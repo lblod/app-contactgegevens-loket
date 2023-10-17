@@ -37,6 +37,8 @@ services:
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_COMPATIBILITY: Virtuoso
+      LOG_OUTGOING_SPARQL_QUERIES: "true"
+      LOG_INCOMING_SPARQL_QUERIES: "true"
     volumes:
       - ./config/authorization:/config
     restart: always
