@@ -86,3 +86,12 @@ services:
     labels:
       - "logging=true"
     restart: always
+  form-management-service:
+    image: lblod/clbv-form-management-service:latest
+    ports:
+      - "8888:80"
+    environment: 
+      NODE_ENV: "development"
+    volumes:
+      - ./config/clbv-management:/config
+      - /Users/oscar.rodriguez/dev/redpencil/form-management-service:/app/
