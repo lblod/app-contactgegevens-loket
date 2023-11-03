@@ -7,7 +7,7 @@ x-logging: &default-logging
     max-file: "3"
 
 services:
- frontend:
+  frontend:
     image: lblod/frontend-contactgegevens-loket:1.0.0
     links:
       - identifier:backend
