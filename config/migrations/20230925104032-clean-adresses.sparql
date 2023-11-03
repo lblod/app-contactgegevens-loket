@@ -16,51 +16,13 @@ PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 
 DELETE {
     GRAPH <http://mu.semte.ch/application> {
-        ?address a locn:Address;
-    mu:uuid ?uuid;
-    adres:Adresvoorstelling.huisnummer ?number;
-    adres:Adresvoorstelling.busnummer ?boxNumber;
-    locn:thoroughfare ?street;
-    locn:postCode ?postcode;
-    adres:gemeentenaam ?municipality;
-    locn:adminUnitL2 ?province;
-    adres:land ?country;
-    locn:fullAddress ?fullAddress;
-    adres:verwijstNaar ?addressRegisterUri;
-    dc_terms:source ?source.
+      ?address a locn:Address;
+        mu:uuid ?uuid.
+      ?address ?pred ?obj.
     }
 }
 WHERE {
-    ?address a locn:Address;
-  mu:uuid ?uuid.
-  OPTIONAL {
-    ?address adres:Adresvoorstelling.huisnummer ?number.
-  }
-  OPTIONAL {
-    ?address adres:Adresvoorstelling.busnummer ?boxNumber.
-  }
-  OPTIONAL {
-    ?address locn:thoroughfare ?street.
-  }
-  OPTIONAL {
-    ?address locn:postCode ?postcode.
-  }
-  OPTIONAL {
-    ?address adres:gemeentenaam ?municipality.
-  }
-  OPTIONAL {
-    ?address locn:adminUnitL2 ?province.
-  }
-  OPTIONAL {
-    ?address adres:land ?country.
-  }
-  OPTIONAL {
-    ?address locn:fullAddress ?fullAddress.
-  }
-  OPTIONAL {
-    ?address adres:verwijstNaar ?addressRegisterUri.
-  }
-  OPTIONAL {
-    ?address dc_terms:source ?source.
-  }
+  ?address a locn:Address;
+    mu:uuid ?uuid.
+  ?address ?pred ?obj.
 }
