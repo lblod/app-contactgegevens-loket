@@ -102,6 +102,10 @@
         "purpose": {
           "type": "string",
           "predicate": "org:purpose"
+        },
+        "is-city": {
+          "type": "boolean",
+          "predicate": "ext:isCity"
         }
       },
       "relationships": {
@@ -160,6 +164,16 @@
         "classification": {
           "predicate": "org:classification",
           "target": "administrative-unit-classification-code",
+          "cardinality": "one"
+        },
+        "scope": {
+          "predicate": "besluit:werkingsgebied",
+          "target": "locations",
+          "cardinality": "one"
+        },
+        "located-within": {
+          "predicate": "geo:sfWithin",
+          "target": "locations",
           "cardinality": "one"
         }
       },
@@ -368,6 +382,44 @@
         }
       },
       "new-resource-base": "http://lblod.data.gift/concepts/"
+    },
+    "locations": {
+      "class": "prov:Location",
+      "attributes": {
+        "label": {
+          "type": "string",
+          "predicate": "rdfs:label"
+        },
+        "level": {
+          "type": "string",
+          "predicate": "ext:werkingsgebiedNiveau"
+        }
+      },
+      "relationships": {
+        "administrative-units": {
+          "predicate": "geo:sfWithin",
+          "target": "administrative-units",
+          "cardinality": "many",
+          "inverse": true
+        },
+        "located-within": {
+          "predicate": "geo:sfWithin",
+          "target": "locations",
+          "cardinality": "one"
+        },
+        "locations": {
+          "predicate": "geo:sfWithin",
+          "target": "locations",
+          "cardinality": "many",
+          "inverse": true
+        },
+        "exact-match": {
+          "predicate": "skos:exactMatch",
+          "target": "concepts",
+          "cardinality": "one"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/werkingsgebieden/"
     }
   }
 }
