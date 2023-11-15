@@ -111,6 +111,6 @@ services:
       - ./config/consumer/op:/config/triples-dispatching/custom-dispatching
       - ./data/files/consumer-files/op:/consumer-files/
     links:
-      - db:database
+      - database:database
     restart: always
     logging: *default-logging

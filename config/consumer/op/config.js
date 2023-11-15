@@ -13,7 +13,7 @@ const TARGET_GRAPH = process.env.TARGET_GRAPH || `http://mu.semte.ch/graphs/orga
 const LANDING_ZONE_GRAPH = process.env.DCR_LANDING_ZONE_GRAPH || `http://mu.semte.ch/graphs/landing-zone/op`;
 
 // ENDPOINTS
-const LANDING_ZONE_DATABASE = process.env.DCR_LANDING_ZONE_DATABASE || 'db';
+const LANDING_ZONE_DATABASE = process.env.DCR_LANDING_ZONE_DATABASE || 'database';
 const LANDING_ZONE_DATABASE_ENDPOINT = process.env.DCR_LANDING_ZONE_DATABASE_ENDPOINT || `http://${LANDING_ZONE_DATABASE}:8890/sparql`;
 
 module.exports = {
