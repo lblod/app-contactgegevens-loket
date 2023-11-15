@@ -92,7 +92,7 @@ services:
     labels:
       - "logging=true"
     restart: always
-   op-consumer:
+  op-consumer:
     image: lblod/delta-consumer:0.0.15
     environment:
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info/"
