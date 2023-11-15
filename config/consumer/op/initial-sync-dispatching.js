@@ -31,7 +31,7 @@ async function dispatch(lib, data) {
   const { mu, muAuthSudo } = lib;
   const { termObjects } = data;
   console.log('receiving data')
-  console.log(data)
+  console.log(Object.keys(data))
   throw new Error('Not yet implemented')
 
   // Steps:
