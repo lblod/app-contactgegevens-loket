@@ -20,6 +20,7 @@ const {
   * @return {void} Nothing
   */
   async function dispatch(lib, data) {
+    throw new Error('Not yet implemented')
     const { mu, fetch } = lib;
     let { termObjectChangeSets, termObjectChangeSetsWithContext } = data;
   
