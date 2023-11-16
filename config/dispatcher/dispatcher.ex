@@ -39,7 +39,7 @@ defmodule Dispatcher do
   match "/adresses-register/*path" do
     forward conn, path, "http://adressenregister"
   end
-  
+
   match "/organizations/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://cache/organizations/"
   end
@@ -91,12 +91,19 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://mocklogin/sessions/"
   end
 
-    #################################################################
+  #################################################################
   # Address search
   #################################################################
 
   match "/adresses-register/*path" do
     forward conn, path, "http://adressenregister"
+  end
+
+  #################################################################
+  # Semantic forms
+  #################################################################
+  match "/semantic-forms/*path" do
+    forward conn, path, "http://form-management-service/semantic-forms/"
   end
 
  match "/*_path", %{ accept: [:any], layer: :not_found} do
