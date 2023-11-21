@@ -1,4 +1,4 @@
-const { batchedDbUpdate, transformLandingZoneGraph } = require('./util');
+const { batchedDbUpdate, moveToOrganizationsGraph } = require('./util');
 const {
   BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES,
   DIRECT_DATABASE_ENDPOINT,
@@ -31,8 +31,7 @@ async function dispatch(lib, data) {
   const { mu, muAuthSudo } = lib;
   const { termObjects } = data;
   console.log('receiving data')
-  console.log(Object.keys(data))
-  throw new Error('Not yet implemented')
+  console.log(data)
 
   // Steps:
   // 1. Write the triples to the landing zone graph - withouth any mapping or filtering
@@ -65,21 +64,8 @@ async function onFinishInitialIngest(lib) {
 
   console.log(`!! On-finish triggered !!`);
 
-  const transformedInsertTriples = await transformLandingZoneGraph(fetch, endpoint);
-
-  console.log(`Transformed ${transformedInsertTriples.length} triples`);
-
-  await batchedDbUpdate(
-    muAuthSudo.updateSudo,
-    TARGET_GRAPH,
-    transformedInsertTriples,
-    { 'mu-call-scope-id': MU_CALL_SCOPE_ID_INITIAL_SYNC },
-    endpoint,
-    BATCH_SIZE,
-    MAX_DB_RETRY_ATTEMPTS,
-    SLEEP_BETWEEN_BATCHES,
-    SLEEP_TIME_AFTER_FAILED_DB_OPERATION
-  );
+  await moveToPublic(muAuthSudo.updateSudo, endpoint)
+  await moveToOrganizationsGraph(muAuthSudo.updateSudo, endpoint);
 }
 
 module.exports = {

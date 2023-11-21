@@ -8,6 +8,19 @@ const {
     LANDING_ZONE_GRAPH,
     BATCH_SIZE,
   } = require('./config');
+
+const prefixes = `
+  PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+  PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+  PREFIX lblodgeneriek: <https://data.lblod.info/vocabularies/generiek/>
+  PREFIX org: <http://www.w3.org/ns/org#>
+  PREFIX code: <http://lblod.data.gift/vocabularies/organisatie/>
+  PREFIX adms: <http://www.w3.org/ns/adms#>
+  PREFIX generiek: <https://data.vlaanderen.be/ns/generiek#>
+  PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
+  PREFIX organisatie: <https://data.vlaanderen.be/ns/organisatie#>
+  PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+`
   
   async function batchedDbUpdate(
     muUpdate,
@@ -157,6 +170,165 @@ const {
   
     return statements;
   }
+
+  async function moveToOrganizationsGraph(muUpdate, endpoint) {
+    console.log('moving to public')
+  }
+
+
+  async function moveToOrganizationsGraph(muUpdate, endpoint) {
+    // Move primary sites
+    await muUpdate(`
+      ${prefixes}
+      DELETE {
+        GRAPH <${LANDING_ZONE_GRAPH}> {
+          ?site a org:Site;
+            ?pred ?obj.
+        }
+      }
+      INSERT {
+        GRAPH ?g {
+          ?site a org:Site;
+            ?pred ?obj.
+        }
+      }
+      WHERE {
+        ?adminUnit org:hasPrimarySite ?site.
+        ?adminUnit mu:uuid ?adminUnitUuid.
+        ?site a org:Site;
+            ?pred ?obj.
+        BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+      }
+    `, undefined, endpoint)
+
+    // Move sites
+    await muUpdate(`
+      ${prefixes}
+      DELETE {
+        GRAPH <${LANDING_ZONE_GRAPH}> {
+          ?site a org:Site;
+            ?pred ?obj.
+        }
+      }
+      INSERT {
+        GRAPH ?g {
+          ?site a org:Site;
+            ?pred ?obj.
+        }
+      }
+      WHERE {
+        ?adminUnit org:hasSite ?site.
+        ?adminUnit mu:uuid ?adminUnitUuid.
+        ?site a org:Site;
+            ?pred ?obj.
+        BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+      }
+    `, undefined, endpoint)
+
+    // Move contacts
+    await muUpdate(`
+      ${prefixes}
+      DELETE {
+        GRAPH <${LANDING_ZONE_GRAPH}> {
+          ?contactPoint a schema:ContactPoint;
+            ?pred ?obj.
+        }
+      }
+      INSERT {
+        GRAPH ?g {
+          ?contactPoint a schema:ContactPoint;
+            ?pred ?obj.
+        }
+      }
+      WHERE {
+        GRAPH ?g {
+          ?site org:siteAddress ?contactPoint.
+        }
+        ?contactPoint a schema:ContactPoint;
+          ?pred ?obj.
+      }
+    `, undefined, endpoint)
+
+    // Move addresses from sites
+    await muUpdate(`
+      ${prefixes}
+      DELETE {
+        GRAPH <${LANDING_ZONE_GRAPH}> {
+          ?address a locn:Address;
+            ?pred ?obj.
+        }
+      }
+      INSERT {
+        GRAPH ?g {
+          ?address a locn:Address;
+            ?pred ?obj.
+        }
+      }
+      WHERE {
+        GRAPH ?g {
+          ?site organisatie:bestaatUit ?address.
+        }
+        ?address a locn:Address;
+          ?pred ?obj.
+      }
+    `, undefined, endpoint)
+
+    //Move addresses from contacts
+    await muUpdate(`
+      ${prefixes}
+      DELETE {
+        GRAPH <${LANDING_ZONE_GRAPH}> {
+          ?address a locn:Address;
+            ?pred ?obj.
+        }
+      }
+      INSERT {
+        GRAPH ?g {
+          ?address a locn:Address;
+            ?pred ?obj.
+        }
+      }
+      WHERE {
+        GRAPH ?g {
+          ?contact locn:address ?address.
+        }
+        ?address a locn:Address;
+          ?pred ?obj.
+      }
+    `, undefined, endpoint)
+
+    //Move identifiers
+    await muUpdate(`
+      ${prefixes}
+      DELETE {
+        GRAPH <${LANDING_ZONE_GRAPH}> {
+          ?identifier a adms:Identifier;
+            ?pred ?obj.
+          ?structuredId a generiek:GestructureerdeIdentificator;
+            ?strucPred ?strucObj.
+        }
+      }
+      INSERT {
+        GRAPH ?g {
+          ?identifier a adms:Identifier;
+            ?pred ?obj
+          ?structuredId a generiek:GestructureerdeIdentificator;
+            ?strucPred ?strucObj.
+        }
+      }
+      WHERE {
+        ?adminUnit adms:identifier ?identifier.
+        ?adminUnit mu:uuid ?adminUnitUuid.
+        ?identifier a adms:Identifier;
+          ?pred ?obj.
+        ?structuredId a generiek:GestructureerdeIdentificator;
+          ?strucPred ?strucObj.
+
+        BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+      }
+    `, undefined, endpoint)
+
+  }
   
   module.exports = {
     batchedDbUpdate,
@@ -164,5 +336,6 @@ const {
     transformStatements,
     transformLandingZoneGraph,
     deleteFromTargetGraph,
-    insertIntoTargetGraph
+    insertIntoTargetGraph,
+    moveToOrganizationsGraph
   };
