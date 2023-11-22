@@ -1,4 +1,4 @@
-const { batchedDbUpdate, moveToOrganizationsGraph } = require('./util');
+const { batchedDbUpdate, moveToOrganizationsGraph, moveToPublic } = require('./util');
 const {
   BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES,
   DIRECT_DATABASE_ENDPOINT,

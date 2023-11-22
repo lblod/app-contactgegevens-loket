@@ -20,6 +20,10 @@ const prefixes = `
   PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
   PREFIX organisatie: <https://data.vlaanderen.be/ns/organisatie#>
   PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+  PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
+  PREFIX prov: <http://www.w3.org/ns/prov#>
+  PREFIX schema: <http://schema.org/>
+  PREFIX locn: <http://www.w3.org/ns/locn#>
 `
   
   async function batchedDbUpdate(
@@ -171,8 +175,36 @@ const prefixes = `
     return statements;
   }
 
-  async function moveToOrganizationsGraph(muUpdate, endpoint) {
+  async function moveToPublic(muUpdate, endpoint) {
     console.log('moving to public')
+    await moveTypeToPublic(muUpdate, endpoint, 'code:BestuurseenheidClassificatieCode')
+    await moveTypeToPublic(muUpdate, endpoint, 'org:TypeVestiging')
+    await moveTypeToPublic(muUpdate, endpoint, 'besluit:Bestuurseenheid')
+    await moveTypeToPublic(muUpdate, endpoint, 'skos:Concept')
+    await moveTypeToPublic(muUpdate, endpoint, 'euvoc:Country')
+    await moveTypeToPublic(muUpdate, endpoint, 'prov:Location')
+  }
+
+  async function moveTypeToPublic(muUpdate, endpoint, type) {
+    await muUpdate(`
+      ${prefixes}
+      DELETE {
+        GRAPH <${LANDING_ZONE_GRAPH}> {
+          ?subject a ${type};
+            ?pred ?obj.
+        }
+      }
+      INSERT {
+        GRAPH <http://mu.semte.ch/graphs/public> {
+          ?site a ${type};
+            ?pred ?obj.
+        }
+      }
+      WHERE {
+        ?site a ${type};
+            ?pred ?obj.
+      }
+    `, undefined, endpoint)
   }
 
 
@@ -337,5 +369,6 @@ const prefixes = `
     transformLandingZoneGraph,
     deleteFromTargetGraph,
     insertIntoTargetGraph,
-    moveToOrganizationsGraph
+    moveToOrganizationsGraph,
+    moveToPublic
   };
