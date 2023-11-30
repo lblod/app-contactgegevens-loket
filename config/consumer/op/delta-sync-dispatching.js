@@ -1,86 +1,100 @@
 const {
-    transformStatements,
-    deleteFromTargetGraph,
-    insertIntoTargetGraph,
-  } = require('./util');
-  
-  /**
-  * Dispatch the fetched information to a target graph.
-  * Note: <share://file/data> will be ADDED to it's own graph.
-  *   We take only care of adding them, not updating triples, this is a TODO
-  * @param { mu, muAuthSudo } lib - The provided libraries from the host service.
-  * @param { termObjectChangeSets: { deletes, inserts } } data - The fetched changes sets, which objects of serialized Terms
-  *          [ {
-  *              graph: "<http://foo>",
-  *              subject: "<http://bar>",
-  *              predicate: "<http://baz>",
-  *              object: "<http://boom>^^<http://datatype>"
-  *            }
-  *         ]
-  * @return {void} Nothing
-  */
-  async function dispatch(lib, data) {
-    throw new Error('Not yet implemented')
-    const { mu, fetch } = lib;
-    let { termObjectChangeSets, termObjectChangeSetsWithContext } = data;
-  
-    // Both arrays are the same length, so we can zip them together for easier processing
-    zippedChangeSets = termObjectChangeSets.map((o, i) => ({
-      original: o,
-      withContext: termObjectChangeSetsWithContext[i]
-    }));
-  
-    console.log(`Received ${zippedChangeSets.length} change sets`)
-  
-    for (let { original, withContext } of zippedChangeSets) {
-      let originalDeletes, originalInserts, insertsWithContext, deletesWithContext;
-      try {
-        originalInserts = original.inserts.map(o => `${o.subject} ${o.predicate} ${o.object}.`);
-        originalDeletes = original.deletes.map(o => `${o.subject} ${o.predicate} ${o.object}.`);
-      } catch (e) {
-        console.log(`Error while processing change set: ${e}`);
-        console.log(`Original change set: ${JSON.stringify(original)}`);
-        throw e;
-      }
-  
-      // Extra context needed for mapping from DL to OP model and filtering based on type.
-      try {
-        insertsWithContext = withContext.inserts.map(o => `${o.subject} ${o.predicate} ${o.object}.`);
-        deletesWithContext = withContext.deletes.map(o => `${o.subject} ${o.predicate} ${o.object}.`);
-      } catch (e) {
-        console.log(`Error while processing change set with context: ${e}`);
-        console.log(`Change set with context: ${JSON.stringify(withContext)}`);
-        throw e;
-      }
-  
-      if (originalDeletes.length) {
-        // Map deletes from DL to OP model
-        const transformedDeletes = await transformStatements(fetch, deletesWithContext);
-  
-        if (!transformedDeletes.length) {
-          console.log(`Warn: Delete statements mapped to empty result.`);
-          console.log(`Input: ${deletesWithContext}`);
-          console.log(`Output: ${transformedDeletes}`);
+  transformStatements,
+  deleteFromPublicGraph,
+  insertIntoPublicGraph,
+  deleteFromSpecificGraphs,
+  insertIntoSpecificGraphs
+} = require('./util');
+
+/**
+* Dispatch the fetched information to a target graph.
+* Note: <share://file/data> will be ADDED to it's own graph.
+*   We take only care of adding them, not updating triples, this is a TODO
+* @param { mu, muAuthSudo } lib - The provided libraries from the host service.
+* @param { termObjectChangeSets: { deletes, inserts } } data - The fetched changes sets, which objects of serialized Terms
+*          [ {
+*              graph: "<http://foo>",
+*              subject: "<http://bar>",
+*              predicate: "<http://baz>",
+*              object: "<http://boom>^^<http://datatype>"
+*            }
+*         ]
+* @return {void} Nothing
+*/
+
+const publicTypes = [
+  'code:BestuurseenheidClassificatieCode',
+  'org:TypeVestiging',
+  'besluit:Bestuurseenheid',
+  'skos:Concept',
+  'euvoc:Country',
+  'prov:Location'
+]
+async function dispatch(lib, data) {
+  const { mu, fetch } = lib;
+  let { termObjectChangeSets, termObjectChangeSetsWithContext } = data;
+
+  // Both arrays are the same length, so we can zip them together for easier processing
+  zippedChangeSets = termObjectChangeSets.map((o, i) => ({
+    original: o,
+    withContext: termObjectChangeSetsWithContext && termObjectChangeSetsWithContext[i]
+  }));
+
+  console.log(`Received ${zippedChangeSets.length} change sets`)
+
+  for (let { original, withContext } of zippedChangeSets) {
+    const insertsOnPublic = [];
+    const insertsOnGraphs = {};
+    for(let insert of original.inserts) {
+      const subject = insert.subject;
+      const contextTriples = withContext.inserts.filter((context) => context.subject === subject);
+      const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>')
+      if(graphTriple) {
+        const graph = graphTriple.object.slice(1,-1); // We have to slice it to remove the "<" and ">"
+        if(!insertsOnGraphs[graph]) {
+          insertsOnGraphs[graph] = [`${insert.subject} ${insert.predicate} ${insert.object}.`]
         } else {
-          await deleteFromTargetGraph(lib, transformedDeletes);
+          insertsOnGraphs[graph].push(`${insert.subject} ${insert.predicate} ${insert.object}.`)
         }
       }
-  
-      if (originalInserts.length) {
-        // Map inserts from DL to OP model
-        const transformedInserts = await transformStatements(fetch, insertsWithContext);
-  
-        if (!transformedInserts.length) {
-          console.log(`Warn: Insert statements mapped to empty result.`);
-          console.log(`Input: ${insertsWithContext}`);
-          console.log(`Output: ${transformedInserts}`);
-        } else {
-          await insertIntoTargetGraph(lib, transformedInserts);
+      const typeTriple = contextTriples.find((context) => context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>');
+      if(typeTriple) {
+        const type = typeTriple.object;
+        if(publicTypes.includes(type)) {
+          insertsOnPublic.push(`${insert.subject} ${insert.predicate} ${insert.object}.`)
         }
       }
     }
+    const deletesOnPublic = [];
+    const deletesOnGraphs = {};
+    for(let deletion of original.deletes) {
+      const subject = deletion.subject;
+      const contextTriples = withContext.deletes.filter((context) => context.subject === subject);
+      const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>')
+      if(graphTriple) {
+        const graph = graphTriple.object.slice(1,-1); // We have to slice it to remove the "<" and ">"
+        if(!deletesOnGraphs[graph]) {
+          deletesOnGraphs[graph] = [`${deletion.subject} ${deletion.predicate} ${deletion.object}.`]
+        } else {
+          deletesOnGraphs[graph].push(`${deletion.subject} ${deletion.predicate} ${deletion.object}.`)
+        }
+      }
+      const typeTriple = contextTriples.find((context) => context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>');
+      if(!typeTriple) continue;
+      const type = typeTriple.object;
+      if(publicTypes.includes(type)) {
+        deletesOnPublic.push(`${deletion.subject} ${deletion.predicate} ${deletion.object}.`)
+      }
+    }
+
+    await deleteFromPublicGraph(lib, deletesOnPublic);
+    await deleteFromSpecificGraphs(lib, deletesOnGraphs);
+    await insertIntoPublicGraph(lib, insertsOnPublic);
+    await insertIntoSpecificGraphs(lib, insertsOnGraphs);
+
   }
-  
-  module.exports = {
-    dispatch
-  };
+}
+
+module.exports = {
+  dispatch
+};
