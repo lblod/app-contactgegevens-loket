@@ -1,5 +1,4 @@
 const {
-  transformStatements,
   deleteFromPublicGraph,
   insertIntoPublicGraph,
   deleteFromSpecificGraphs,

@@ -86,85 +86,6 @@ async function operationWithRetry(callback,
   }
 }
 
-/**
- * Splits an array into two parts, a part that passes and a part that fails a predicate function.
- * Credits: https://github.com/benjay10
- * @public
- * @function partition
- * @param {Array} arr - Array to be partitioned
- * @param {Function} fn - Function that accepts single argument: an element of the array, and should return a truthy or falsy value.
- * @returns {Object} Object that contains keys passes and fails, each representing an array with elemets that pass or fail the predicate respectively
- */
-function partition(arr, fn) {
-  let passes = [], fails = [];
-  arr.forEach((item) => (fn(item) ? passes : fails).push(item));
-  return { passes, fails };
-}
-
-/**
- * Send triples to reasoning service for conversion
- *
- */
-async function transformTriples(fetch, triples, mapping) {
-  return await operationWithRetry(mainConversion(fetch, triples, mapping), 0,
-    MAX_REASONING_RETRY_ATTEMPTS, SLEEP_TIME_AFTER_FAILED_REASONING_OPERATION);
-}
-
-async function mainConversion(fetch, triples, mapping) {
-  let formdata = new URLSearchParams();
-  formdata.append("data", triples);
-
-  let requestOptions = {
-    method: 'POST',
-    body: formdata,
-    redirect: 'follow'
-  };
-
-  const response = await fetch(`http://reasoner/reason/dl2op/${mapping}`, requestOptions)
-  return await response.text();
-}
-
-async function transformStatements(fetch, triples, mapping = 'main') {
-  console.log(`Received ${JSON.stringify(triples)} to transform`);
-  const transformedTriples = await transformTriples(fetch, triples.join('\n'), mapping);
-  statements = transformedTriples ? transformedTriples.replace(/\n{2,}/g, '').split('\n') : [];
-  console.log(`CONVERSION: FROM ${triples.length} triples to ${statements.length}`);
-  return statements;
-}
-
-async function deleteFromTargetGraph(lib, statements) {
-  console.log(`Deleting ${statements.length} statements from target graph`);
-  console.log(`Statements:  ${JSON.stringify(statements)}`)
-  await batchedDbUpdate(
-    lib.muAuthSudo.updateSudo,
-    TARGET_GRAPH,
-    statements,
-    {},
-    process.env.MU_SPARQL_ENDPOINT,
-    BATCH_SIZE,
-    MAX_DB_RETRY_ATTEMPTS,
-    SLEEP_BETWEEN_BATCHES,
-    SLEEP_TIME_AFTER_FAILED_DB_OPERATION,
-    'DELETE');
-}
-
-async function insertIntoTargetGraph(lib, statements) {
-  console.log(`Inserting ${statements.length} statements into target graph`);
-  console.log(`Statements:  ${JSON.stringify(statements)}`)
-
-  await batchedDbUpdate(
-    lib.muAuthSudo.updateSudo,
-    TARGET_GRAPH,
-    statements,
-    {},
-    process.env.MU_SPARQL_ENDPOINT,
-    BATCH_SIZE,
-    MAX_DB_RETRY_ATTEMPTS,
-    SLEEP_BETWEEN_BATCHES,
-    SLEEP_TIME_AFTER_FAILED_DB_OPERATION,
-    'INSERT');
-}
-
 async function insertIntoPublicGraph(lib, statements) {
   console.log(`Inserting ${statements.length} statements into public graph`);
   console.log(`Statements:  ${JSON.stringify(statements)}`)
@@ -220,7 +141,6 @@ async function deleteFromPublicGraph(lib, statements) {
 }
 
 async function deleteFromSpecificGraphs(lib, statementsWithGraphs) {
-  
 
   for( let graph in statementsWithGraphs) {
     console.log(`Deleting ${statementsWithGraphs[graph].length} statements from ${graph} graph`);
@@ -238,16 +158,6 @@ async function deleteFromSpecificGraphs(lib, statementsWithGraphs) {
       'INSERT');
   }
   
-}
-
-async function transformLandingZoneGraph(fetch, endpoint, mapping = 'main') {
-  console.log(`Transforming landing zone graph: ${LANDING_ZONE_GRAPH}`);
-
-  const response = await fetch(`http://reasoner/reason/dl2op/${mapping}?data=${encodeURIComponent(`${endpoint}?default-graph-uri=&query=CONSTRUCT+%7B%0D%0A%3Fs+%3Fp+%3Fo%0D%0A%7D+WHERE+%7B%0D%0A+GRAPH+<${LANDING_ZONE_GRAPH}>+%7B%0D%0A%3Fs+%3Fp+%3Fo%0D%0A%7D%0D%0A%7D&should-sponge=&format=text%2Fplain&timeout=0&run=+Run+Query`)}`);
-  const text = await response.text();
-  const statements = text.replace(/\n{2,}/g, '').split('\n');
-
-  return statements;
 }
 
 async function moveToPublic(muUpdate, endpoint) {
@@ -448,11 +358,6 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
 
 module.exports = {
   batchedDbUpdate,
-  partition,
-  transformStatements,
-  transformLandingZoneGraph,
-  deleteFromTargetGraph,
-  insertIntoTargetGraph,
   moveToOrganizationsGraph,
   moveToPublic,
   insertIntoPublicGraph,
