@@ -95,7 +95,7 @@ services:
   op-consumer:
     image: lblod/delta-consumer:0.0.24
     environment:
-      DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info/"
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info"
       DCR_SERVICE_NAME: "op-consumer"
       DCR_SYNC_FILES_PATH: "/sync/public/files"
       DCR_SYNC_DATASET_SUBJECT: "http://data.lblod.info/datasets/delta-producer/dumps/PublicCacheGraphDump"
