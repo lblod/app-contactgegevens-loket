@@ -47,7 +47,7 @@ async function dispatch(lib, data) {
     for(let insert of original.inserts) {
       const subject = insert.subject;
       const contextTriples = withContext.inserts.filter((context) => context.subject === subject);
-      const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>')
+      const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>' && context.object !== '<http://mu.semte.ch/graphs/system/landingzone>')
       if(graphTriple) {
         const graph = graphTriple.object.slice(1,-1); // We have to slice it to remove the "<" and ">"
         if(!insertsOnGraphs[graph]) {
@@ -69,7 +69,7 @@ async function dispatch(lib, data) {
     for(let deletion of original.deletes) {
       const subject = deletion.subject;
       const contextTriples = withContext.deletes.filter((context) => context.subject === subject);
-      const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>')
+      const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>' && context.object !== '<http://mu.semte.ch/graphs/system/landingzone>')
       if(graphTriple) {
         const graph = graphTriple.object.slice(1,-1); // We have to slice it to remove the "<" and ">"
         if(!deletesOnGraphs[graph]) {

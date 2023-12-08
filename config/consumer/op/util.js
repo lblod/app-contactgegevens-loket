@@ -1,10 +1,7 @@
 const {
-  MAX_REASONING_RETRY_ATTEMPTS,
-  SLEEP_TIME_AFTER_FAILED_REASONING_OPERATION,
   MAX_DB_RETRY_ATTEMPTS,
   SLEEP_BETWEEN_BATCHES,
   SLEEP_TIME_AFTER_FAILED_DB_OPERATION,
-  TARGET_GRAPH,
   LANDING_ZONE_GRAPH,
   BATCH_SIZE,
 } = require('./config');
@@ -38,7 +35,6 @@ async function batchedDbUpdate(
   sleepTimeOnFail = 1000,
   operation = 'INSERT'
 ) {
-  console.log(endpoint)
   for (let i = 0; i < triples.length; i += batchSize) {
     console.log(`Inserting triples in batch: ${i}-${i + batchSize}`);
 
@@ -86,9 +82,9 @@ async function operationWithRetry(callback,
   }
 }
 
+
 async function insertIntoPublicGraph(lib, statements) {
   console.log(`Inserting ${statements.length} statements into public graph`);
-  console.log(`Statements:  ${JSON.stringify(statements)}`)
 
   await batchedDbUpdate(
     lib.muAuthSudo.updateSudo,
@@ -107,7 +103,6 @@ async function insertIntoSpecificGraphs(lib, statementsWithGraphs) {
 
   for( let graph in statementsWithGraphs) {
     console.log(`Inserting ${statementsWithGraphs[graph].length} statements into ${graph} graph`);
-    console.log(`Statements:  ${JSON.stringify(statementsWithGraphs[graph])}`)
     await batchedDbUpdate(
       lib.muAuthSudo.updateSudo,
       graph,
@@ -125,7 +120,6 @@ async function insertIntoSpecificGraphs(lib, statementsWithGraphs) {
 
 async function deleteFromPublicGraph(lib, statements) {
   console.log(`Deleting ${statements.length} statements from public graph`);
-  console.log(`Statements:  ${JSON.stringify(statements)}`)
 
   await batchedDbUpdate(
     lib.muAuthSudo.updateSudo,
@@ -141,10 +135,10 @@ async function deleteFromPublicGraph(lib, statements) {
 }
 
 async function deleteFromSpecificGraphs(lib, statementsWithGraphs) {
+  
 
   for( let graph in statementsWithGraphs) {
     console.log(`Deleting ${statementsWithGraphs[graph].length} statements from ${graph} graph`);
-    console.log(`Statements:  ${JSON.stringify(statementsWithGraphs[graph])}`)
     await batchedDbUpdate(
       lib.muAuthSudo.updateSudo,
       graph,
@@ -155,7 +149,7 @@ async function deleteFromSpecificGraphs(lib, statementsWithGraphs) {
       MAX_DB_RETRY_ATTEMPTS,
       SLEEP_BETWEEN_BATCHES,
       SLEEP_TIME_AFTER_FAILED_DB_OPERATION,
-      'INSERT');
+      'DELETE');
   }
   
 }
@@ -323,9 +317,6 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         mu:uuid ?uuid;
           skos:notation ?idName;
           generiek:gestructureerdeIdentificator ?structuredId.
-        ?structuredId a generiek:GestructureerdeIdentificator;
-          mu:uuid ?structuredUuid;
-          generiek:lokaleIdentificator ?localId.
       }
     }
     INSERT {
@@ -334,9 +325,6 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         mu:uuid ?uuid;
           skos:notation ?idName;
           generiek:gestructureerdeIdentificator ?structuredId.
-        ?structuredId a generiek:GestructureerdeIdentificator;
-          mu:uuid ?structuredUuid;
-          generiek:lokaleIdentificator ?localId.
       }
     }
     WHERE {
@@ -346,11 +334,35 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         mu:uuid ?uuid;
           skos:notation ?idName;
           generiek:gestructureerdeIdentificator ?structuredId.
+          
+      BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+    }
+  `, undefined, endpoint)
+
+  //Move identifiers
+  await muUpdate(`
+    ${prefixes}
+    DELETE {
+      GRAPH <${LANDING_ZONE_GRAPH}> {
         ?structuredId a generiek:GestructureerdeIdentificator;
           mu:uuid ?structuredUuid;
           generiek:lokaleIdentificator ?localId.
-          
-      BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+      }
+    }
+    INSERT {
+      GRAPH ?g {
+        ?structuredId a generiek:GestructureerdeIdentificator;
+          mu:uuid ?structuredUuid;
+          generiek:lokaleIdentificator ?localId.
+      }
+    }
+    WHERE {
+      GRAPH ?g {
+        ?identifier generiek:gestructureerdeIdentificator ?structuredId.
+      }
+      ?structuredId a generiek:GestructureerdeIdentificator;
+        mu:uuid ?structuredUuid;
+        generiek:lokaleIdentificator ?localId.
     }
   `, undefined, endpoint)
 

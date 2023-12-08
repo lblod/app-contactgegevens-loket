@@ -28,8 +28,6 @@ const endpoint = BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES ? DIRECT_DATABASE_ENDPOINT
 async function dispatch(lib, data) {
   const { mu, muAuthSudo } = lib;
   const { termObjects } = data;
-  console.log('receiving data')
-  console.log(data)
 
   // Steps:
   // 1. Write the triples to the landing zone graph - withouth any mapping or filtering
@@ -58,7 +56,7 @@ async function dispatch(lib, data) {
 }
 
 async function onFinishInitialIngest(lib) {
-  const { muAuthSudo, fetch } = lib;
+  const { muAuthSudo } = lib;
 
   console.log(`!! On-finish triggered !!`);
 
