@@ -403,8 +403,8 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
           mu:uuid ?adminUnitUuid;
           org:classification/skos:prefLabel ?classificatie.
         BIND(CONCAT(?classificatie, " ", ?naam) as ?volledigeNaam)
-        BIND(MD5(?volledigeNaam) as ?uuidPersoon)
-        BIND(MD5(CONCAT(?volledigeNaam,"ACCOUNT")) as ?uuidAccount)
+        BIND(MD5(?adminUnitUuid) as ?uuidPersoon)
+        BIND(MD5(CONCAT(?adminUnitUuid,"ACCOUNT")) as ?uuidAccount)
         BIND(IRI(CONCAT("http://data.lblod.info/id/persoon/", ?uuidPersoon)) AS ?persoon)
         BIND(IRI(CONCAT("http://data.lblod.info/id/account/", ?uuidAccount)) AS ?account)
         BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
