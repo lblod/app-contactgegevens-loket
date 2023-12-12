@@ -21,6 +21,8 @@ PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <http://schema.org/>
 PREFIX locn: <http://www.w3.org/ns/locn#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ext:<http://mu.semte.ch/vocabularies/ext/>
 `
 
 async function batchedDbUpdate(
@@ -363,6 +365,49 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
       ?structuredId a generiek:GestructureerdeIdentificator;
         mu:uuid ?structuredUuid;
         generiek:lokaleIdentificator ?localId.
+    }
+  `, undefined, endpoint)
+
+  //Create mock users
+  await muUpdate(`
+    ${prefixes}
+    INSERT {
+      GRAPH <http://mu.semte.ch/graphs/public> {
+        ?persoon a foaf:Person;
+                mu:uuid ?uuidPersoon;
+                foaf:firstName ?classificatie;
+                foaf:familyName ?naam;
+                foaf:member ?bestuurseenheid;
+                foaf:account ?account.
+        ?account a foaf:OnlineAccount;
+                mu:uuid ?uuidAccount;
+                foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
+                ext:sessionRole "LoketLB-CLBVGebruiker". 
+      }
+      GRAPH ?g {
+        ?persoon a foaf:Person;
+                mu:uuid ?uuidPersoon;
+                foaf:firstName ?classificatie;
+                foaf:familyName ?naam;
+                foaf:member ?bestuurseenheid;
+                foaf:account ?account.
+        ?account a foaf:OnlineAccount;
+                mu:uuid ?uuidAccount;
+                foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
+                ext:sessionRole "LoketLB-CLBVGebruiker". 
+      }
+    }
+    WHERE {
+        ?bestuurseenheid a besluit:Bestuurseenheid;
+          skos:prefLabel ?naam;
+          mu:uuid ?adminUnitUuid;
+          org:classification/skos:prefLabel ?classificatie.
+        BIND(CONCAT(?classificatie, " ", ?naam) as ?volledigeNaam)
+        BIND(MD5(?volledigeNaam) as ?uuidPersoon)
+        BIND(MD5(CONCAT(?volledigeNaam,"ACCOUNT")) as ?uuidAccount)
+        BIND(IRI(CONCAT("http://data.lblod.info/id/persoon/", ?uuidPersoon)) AS ?persoon)
+        BIND(IRI(CONCAT("http://data.lblod.info/id/account/", ?uuidAccount)) AS ?account)
+        BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
     }
   `, undefined, endpoint)
 
