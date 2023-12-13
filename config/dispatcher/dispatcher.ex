@@ -39,7 +39,7 @@ defmodule Dispatcher do
   match "/adresses-register/*path" do
     forward conn, path, "http://adressenregister"
   end
-  
+
   match "/organizations/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://cache/organizations/"
   end
@@ -85,6 +85,18 @@ defmodule Dispatcher do
   end
   match "/accounts/*path" do
     forward conn, path, "http://cache/accounts/"
+  end
+
+  match "/change-events/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://cache/change-events/"
+  end
+
+  match "/change-event-types/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://cache/change-event-types/"
+  end
+
+  match "/change-event-results/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://cache/change-event-results/"
   end
 
   match "/mock/sessions/*path", %{ accept: [:any], layer: :api} do

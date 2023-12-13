@@ -159,11 +159,14 @@ async function deleteFromSpecificGraphs(lib, statementsWithGraphs) {
 async function moveToPublic(muUpdate, endpoint) {
   console.log('moving to public')
   await moveTypeToPublic(muUpdate, endpoint, 'code:BestuurseenheidClassificatieCode')
-  await moveTypeToPublic(muUpdate, endpoint, 'org:TypeVestiging')
+  await moveTypeToPublic(muUpdate, endpoint, 'code:TypeVestiging')
   await moveTypeToPublic(muUpdate, endpoint, 'besluit:Bestuurseenheid')
   await moveTypeToPublic(muUpdate, endpoint, 'skos:Concept')
   await moveTypeToPublic(muUpdate, endpoint, 'euvoc:Country')
   await moveTypeToPublic(muUpdate, endpoint, 'prov:Location')
+  await moveTypeToPublic(muUpdate, endpoint, 'org:ChangeEvent')
+  await moveTypeToPublic(muUpdate, endpoint, 'code:VeranderingsgebeurtenisResultaat')
+  await moveTypeToPublic(muUpdate, endpoint, 'code:Veranderingsgebeurtenis')
 }
 
 async function moveTypeToPublic(muUpdate, endpoint, type) {

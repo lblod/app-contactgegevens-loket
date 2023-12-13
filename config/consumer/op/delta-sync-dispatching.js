@@ -23,11 +23,14 @@ const {
 
 const publicTypes = [
   'code:BestuurseenheidClassificatieCode',
-  'org:TypeVestiging',
+  'code:TypeVestiging',
   'besluit:Bestuurseenheid',
   'skos:Concept',
   'euvoc:Country',
-  'prov:Location'
+  'prov:Location',
+  'org:ChangeEvent',
+  'code:VeranderingsgebeurtenisResultaat',
+  'code:Veranderingsgebeurtenis'
 ]
 async function dispatch(lib, data) {
   const { mu, fetch } = lib;
