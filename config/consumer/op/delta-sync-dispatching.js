@@ -109,7 +109,7 @@ async function dispatch(lib, data) {
       if(publicTypes.includes(type)) {
         deletesOnPublic.push(`${deletion.subject} ${deletion.predicate} ${deletion.object}.`)
         for(let triple of otherContextTriples) {
-          insertsOnPublic.push(`${triple.subject} ${triple.predicate} ${triple.object}.`)
+          deletesOnPublic.push(`${triple.subject} ${triple.predicate} ${triple.object}.`)
         }
       }
     }
