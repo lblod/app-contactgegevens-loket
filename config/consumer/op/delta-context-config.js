@@ -108,6 +108,113 @@ const contextConfig = {
           }
         }`
     },
+    //Predicate triggers to solve out of order deltas
+    {
+      trigger: { // subjectType or predicateValue
+        predicateValue: "org:hasSite"
+      },
+      queryTemplate: (subject) => `
+        ${PREFIXES}
+        CONSTRUCT {
+          ${subject} ext:contextDataGoesInGraph ?graph.
+          ?site ?pSite ?oSite.
+          ?contact ?pContact ?oContact.
+          ?address ?pAddress ?oAddress.
+          ?addressContact ?pAddressContact ?oAddressContact.
+        } WHERE {
+          ${subject} mu:uuid ?uuid.
+          ${subject} org:hasSite ?site.
+          ?site ?pSite ?oSite.
+          OPTIONAL {
+            ?site org:siteAddress ?contact.
+            ?contact ?pContact ?oContact.
+            OPTIONAL {
+              ?contact locn:address ?addressContact.
+              ?addressContact ?pAddressContact ?oAddressContact.
+            }
+          }
+          OPTIONAL {
+            ?site organisatie:bestaatUit ?address.
+            ?address ?pAddress ?oAddress.
+          }
+          BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?uuid)) AS ?graph)
+        }`
+    },
+    {
+      trigger: { // subjectType or predicateValue
+        predicateValue: "org:hasPrimarySite"
+      },
+      queryTemplate: (subject) => `
+        ${PREFIXES}
+        CONSTRUCT {
+          ${subject} ext:contextDataGoesInGraph ?graph.
+          ?site ?pSite ?oSite.
+          ?contact ?pContact ?oContact.
+          ?address ?pAddress ?oAddress.
+          ?addressContact ?pAddressContact ?oAddressContact.
+        } WHERE {
+          ${subject} mu:uuid ?uuid.
+          ${subject} org:hasPrimarySite ?site.
+          ?site ?pSite ?oSite.
+          OPTIONAL {
+            ?site org:siteAddress ?contact.
+            ?contact ?pContact ?oContact.
+            OPTIONAL {
+              ?contact locn:address ?addressContact.
+              ?addressContact ?pAddressContact ?oAddressContact.
+            }
+          }
+          OPTIONAL {
+            ?site organisatie:bestaatUit ?address.
+            ?address ?pAddress ?oAddress.
+          }
+          BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?uuid)) AS ?graph)
+        }`
+    },
+    {
+      trigger: { // subjectType or predicateValue
+        predicateValue: "org:siteAddress"
+      },
+      queryTemplate: (subject) => `
+        ${PREFIXES}
+        CONSTRUCT {
+          ?contact ?pContact ?oContact.
+          ?addressContact ?pAddressContact ?oAddressContact.
+        } WHERE {
+          ${subject} org:siteAddress ?contact.
+          ?contact ?pContact ?oContact.
+          OPTIONAL {
+            ?contact locn:address ?addressContact.
+            ?addressContact ?pAddressContact ?oAddressContact.
+          }
+        }`
+    },
+    {
+      trigger: { // subjectType or predicateValue
+        predicateValue: "locn:address"
+      },
+      queryTemplate: (subject) => `
+        ${PREFIXES}
+        CONSTRUCT {
+          ?addressContact ?pAddressContact ?oAddressContact.
+        } WHERE {
+          ${subject} locn:address ?addressContact.
+          ?addressContact ?pAddressContact ?oAddressContact.
+        }`
+    },
+    {
+      trigger: { // subjectType or predicateValue
+        predicateValue: "organisatie:bestaatUit"
+      },
+      queryTemplate: (subject) => `
+        ${PREFIXES}
+        CONSTRUCT {
+          ?address ?pAddress ?oAddress.
+        } WHERE {
+          ${subject} organisatie:bestaatUit ?address.
+          ?address ?pAddress ?oAddress.
+        }`
+    }
   ]
 }
 
