@@ -36,7 +36,10 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/2004/02/skos/core#Concept",
                         "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                         "http://publications.europa.eu/ontology/euvoc#Country",
-                        "http://www.w3.org/ns/prov#Location"
+                        "http://www.w3.org/ns/prov#Location",
+                        "http://www.w3.org/ns/org#ChangeEvent",
+                        "http://lblod.data.gift/vocabularies/organisatie/VeranderingsgebeurtenisResultaat",
+                        "http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis"
                       ]
                     } },
                   %GraphSpec{
