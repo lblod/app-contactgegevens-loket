@@ -115,3 +115,74 @@ services:
       - virtuoso:database
     restart: always
     logging: *default-logging
+  jobs-controller:
+    image: lblod/job-controller-service:1.0.1
+    links:
+      - db:database
+    volumes:
+      - ./config/jobs-controller/:/config/
+  delta-producer-background-initiator:
+    image: lblod/delta-producer-background-jobs-initiator:1.0.0
+    environment:
+      JOBS_GRAPH: "http://mu.semte.ch/graphs/jobs"
+      DUMP_FILE_CREATION_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactgegevens"
+      INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactgegevens"
+      HEALING_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactgegevens"
+      CRON_PATTERN_DUMP_JOB: "42 * * * *" # At minute 42 every hour
+      CRON_PATTERN_HEALING_JOB: "0 0 4 * * *" # everyday at 4 AM
+      START_INITIAL_SYNC: "false" # prefer to disable it now. We want to have feeling with how the DB acts.
+    labels:
+      - "logging=true"
+    links:
+      - db:database
+    restart: always
+    logging: *default-logging
+  delta-producer-pub-graph-maintainer-organizations:
+    image: lblod/delta-producer-publication-graph-maintainer:1.0.3
+    environment:
+      MAX_BODY_SIZE: "50mb"
+      JOBS_GRAPH: "http://mu.semte.ch/graphs/jobs"
+      RELATIVE_FILE_PATH: "deltas/contactgegevens"
+      PUBLICATION_GRAPH: "http://redpencil.data.gift/id/deltas/producer/contactgegevens"
+      HEALING_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactgegevens"
+      INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactgegevens"
+      QUEUE_POLL_INTERVAL: 3000
+      USE_VIRTUOSO_FOR_EXPENSIVE_SELECTS: "true" # some queries are just too expensive
+      SKIP_MU_AUTH_INITIAL_SYNC: "true"
+      HEALING_PATCH_GRAPH_BATCH_SIZE: 500
+      SERVE_DELTA_FILES: "true"
+      PUBLISHER_URI: "http://data.lblod.info/services/delta-production-json-diff-file-manager/organizations"
+      DELTA_INTERVAL_MS: 10000
+      PRETTY_PRINT_DIFF_JSON: "true"
+      ERROR_GRAPH: "http://mu.semte.ch/graphs/jobs"
+    volumes:
+      - ./config/delta-producer/organizations:/config
+      - ./data/files/:/share
+    links:
+      - db:database
+      - triplestore:virtuoso
+    restart: always
+    logging: *default-logging
+  delta-producer-dump-file-publisher:
+    image: lblod/delta-producer-dump-file-publisher:0.10.3
+    volumes:
+      - ./config/delta-producer/dump-file-publisher:/config
+      - ./data/files:/share
+    links:
+      - db:database
+    restart: always
+    logging: *default-logging
+  file:
+    image: semtech/mu-file-service:3.3.2
+    volumes:
+      - ./data/files:/share
+    labels:
+      - "logging=true"
+    links:
+      - db:database
+    restart: always
+    logging: *default-logging
+  
+
+
+

@@ -24,3 +24,13 @@ services:
     restart: "no"
   adressenregister:
     restart: "no"
+  jobs-controller:
+    restart: "no"
+  delta-producer-background-initiator:
+    restart: "no"
+  delta-producer-pub-graph-maintainer-organizations:
+    restart: "no"
+  delta-producer-dump-file-publisher:
+    restart: "no"
+  file:
+    restart: "no"
