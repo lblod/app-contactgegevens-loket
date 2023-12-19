@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   frontend:
-    image: lblod/frontend-contactgegevens-loket:latest
+    image: andreo141/contactgegevens:trying
     links:
       - identifier:backend
     restart: always
@@ -16,11 +16,11 @@ services:
     labels:
       - "logging=true"
     environment:
-      EMBER_OAUTH_API_REDIRECT_URL: "https://contactgegevens.abb.lblod.info/authorization/callback"
+      EMBER_OAUTH_API_REDIRECT_URL: "https://contactgegevens-loket.lblod.info/authorization/callback"
       EMBER_OAUTH_API_KEY: "300a3bc4-1aba-4338-862d-05df84f084c2"
       EMBER_OAUTH_API_BASE_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
       EMBER_OAUTH_API_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
-      EMBER_OAUTH_API_SCOPE: "openid vo profile abb_loketcontactapp"
+      EMBER_OAUTH_API_SCOPE: "openid rrn profile vo abb_loketcontactapp"
   identifier:
     image: semtech/mu-identifier:1.9.1
     links:
@@ -126,8 +126,8 @@ services:
     environment:
       MU_APPLICATION_AUTH_USERID_CLAIM: "vo_id"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/contacthub/accounts"
-      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_organisatieportaal_rol_3d"
+      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_loketcontactapp_rol_3d"
       MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
       MU_APPLICATION_AUTH_CLIENT_ID: "300a3bc4-1aba-4338-862d-05df84f084c2"
-      MU_APPLICATION_AUTH_REDIRECT_URI: "https://organisaties.abb.lblod.info/authorization/callback"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "https://contactgegevens-loket.lblod.info/authorization/callback"
       MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
