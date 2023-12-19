@@ -121,23 +121,22 @@ services:
   jobs-controller:
     image: lblod/job-controller-service:1.0.1
     links:
-      - db:database
+      - database:database
     volumes:
       - ./config/jobs-controller/:/config/
   delta-producer-background-initiator:
     image: lblod/delta-producer-background-jobs-initiator:1.0.0
     environment:
-      JOBS_GRAPH: "http://mu.semte.ch/graphs/jobs"
-      DUMP_FILE_CREATION_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactgegevens"
       INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactgegevens"
-      HEALING_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactgegevens"
-      CRON_PATTERN_DUMP_JOB: "42 * * * *" # At minute 42 every hour
-      CRON_PATTERN_HEALING_JOB: "0 0 4 * * *" # everyday at 4 AM
-      START_INITIAL_SYNC: "false" # prefer to disable it now. We want to have feeling with how the DB acts.
+      DUMP_FILE_CREATION_TASK_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData"
+      HEALING_TASK_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactgegevens"
+      JOB_TIMEOUT_MINUTES: 0 # No timeout
+    volumes:
+      - ./config/delta-producer/background-job-initiator/config.json:/config/config.json
     labels:
       - "logging=true"
     links:
-      - db:database
+      - database:database
     restart: always
     logging: *default-logging
   delta-producer-pub-graph-maintainer-organizations:
@@ -154,7 +153,7 @@ services:
       SKIP_MU_AUTH_INITIAL_SYNC: "true"
       HEALING_PATCH_GRAPH_BATCH_SIZE: 500
       SERVE_DELTA_FILES: "true"
-      PUBLISHER_URI: "http://data.lblod.info/services/delta-production-json-diff-file-manager/organizations"
+      PUBLISHER_URI: "http://data.lblod.info/services/delta-production-json-diff-file-manager/contact-info" # No json diff file publisher yet
       DELTA_INTERVAL_MS: 10000
       PRETTY_PRINT_DIFF_JSON: "true"
       ERROR_GRAPH: "http://mu.semte.ch/graphs/jobs"
@@ -162,8 +161,8 @@ services:
       - ./config/delta-producer/contact-data:/config
       - ./data/files/:/share
     links:
-      - db:database
-      - triplestore:virtuoso
+      - database:database
+      - virtuoso:virtuoso
     restart: always
     logging: *default-logging
   delta-producer-dump-file-publisher:
@@ -172,7 +171,7 @@ services:
       - ./config/delta-producer/dump-file-publisher:/config
       - ./data/files:/share
     links:
-      - db:database
+      - database:database
     restart: always
     logging: *default-logging
   file:
@@ -182,7 +181,7 @@ services:
     labels:
       - "logging=true"
     links:
-      - db:database
+      - database:database
     restart: always
     logging: *default-logging
   
