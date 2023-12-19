@@ -115,6 +115,9 @@ services:
       - virtuoso:database
     restart: always
     logging: *default-logging
+  # ---
+  # Producer mechanism. Send contact data to OP.
+  # ---
   jobs-controller:
     image: lblod/job-controller-service:1.0.1
     links:
@@ -143,9 +146,9 @@ services:
       MAX_BODY_SIZE: "50mb"
       JOBS_GRAPH: "http://mu.semte.ch/graphs/jobs"
       RELATIVE_FILE_PATH: "deltas/contactgegevens"
-      PUBLICATION_GRAPH: "http://redpencil.data.gift/id/deltas/producer/contactgegevens"
-      HEALING_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactgegevens"
-      INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactgegevens"
+      PUBLICATION_GRAPH: "http://redpencil.data.gift/id/deltas/producer/clb-sites"
+      HEALING_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData"
+      INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData"
       QUEUE_POLL_INTERVAL: 3000
       USE_VIRTUOSO_FOR_EXPENSIVE_SELECTS: "true" # some queries are just too expensive
       SKIP_MU_AUTH_INITIAL_SYNC: "true"
@@ -156,7 +159,7 @@ services:
       PRETTY_PRINT_DIFF_JSON: "true"
       ERROR_GRAPH: "http://mu.semte.ch/graphs/jobs"
     volumes:
-      - ./config/delta-producer/organizations:/config
+      - ./config/delta-producer/contact-data:/config
       - ./data/files/:/share
     links:
       - db:database

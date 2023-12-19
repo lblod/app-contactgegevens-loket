@@ -1,5 +1,5 @@
 {
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/administrative-units": {
+    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData": {
       "tasksConfiguration": [
         {
           "currentOperation": null,
@@ -13,7 +13,7 @@
         }
       ]
     },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/administrative-units": {
+    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData": {
       "tasksConfiguration": [
         {
           "currentOperation": null,
@@ -22,103 +22,7 @@
         }
       ]
     },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/administrative-units": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/deltaDumpFileCreation",
-          "nextIndex": "0"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/organizations": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/initialPublicationGraphSyncing",
-          "nextIndex": "0"
-        },
-        {
-          "currentOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/initialPublicationGraphSyncing",
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/deltaDumpFileCreation",
-          "nextIndex": "1"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/organizations": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/healing/patchPublicationGraph",
-          "nextIndex": "0"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/organizations": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/deltaDumpFileCreation",
-          "nextIndex": "0"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/public": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/initialPublicationGraphSyncing",
-          "nextIndex": "0"
-        },
-        {
-          "currentOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/initialPublicationGraphSyncing",
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/deltaDumpFileCreation",
-          "nextIndex": "1"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/public": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/healing/patchPublicationGraph",
-          "nextIndex": "0"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/public": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/deltaDumpFileCreation",
-          "nextIndex": "0"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/worship-posts": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/initialPublicationGraphSyncing",
-          "nextIndex": "0"
-        },
-        {
-          "currentOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/initialPublicationGraphSyncing",
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/deltaDumpFileCreation",
-          "nextIndex": "1"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/worship-posts": {
-      "tasksConfiguration": [
-        {
-          "currentOperation": null,
-          "nextOperation": "http://redpencil.data.gift/id/jobs/concept/TaskOperation/deltas/healing/patchPublicationGraph",
-          "nextIndex": "0"
-        }
-      ]
-    },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/worship-posts": {
+    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData": {
       "tasksConfiguration": [
         {
           "currentOperation": null,

@@ -27,6 +27,10 @@ services:
   jobs-controller:
     restart: "no"
   delta-producer-background-initiator:
+    environment:
+        CRON_PATTERN_DUMP_JOB: "0 0 * * *" # Midnight. Effectively off
+        CRON_PATTERN_HEALING_JOB: "0 0 * * *" # Midnight. Effectively off
+        START_INITIAL_SYNC: "false"
     restart: "no"
   delta-producer-pub-graph-maintainer-organizations:
     restart: "no"
