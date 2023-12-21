@@ -1,0 +1,12 @@
+[
+    {
+        "name": "contactgegevens",
+        "jobsGraph": "http://mu.semte.ch/graphs/jobs",
+        "dumpFileCreationJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData",
+        "initialPublicationGraphSyncJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData",
+        "healingJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData",
+        "cronPatternDumpJob": "0 0 * * *",
+        "cronPatternHealingJob": "0 0 * * *",
+        "startInitialSync": false
+    }
+]
