@@ -118,18 +118,19 @@ services:
   # ---
   # Producer mechanism. Send contact data to OP.
   # ---
-  jobs-controller:
+  jobs-controller: # Status indicator
     image: lblod/job-controller-service:1.0.1
     links:
       - database:database
     volumes:
       - ./config/jobs-controller/:/config/
-  delta-producer-background-initiator:
+  delta-producer-background-initiator: # CRON Machine to start healing, dump file, init pub graph sync
     image: lblod/delta-producer-background-jobs-initiator:1.0.0
     environment:
-      INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactgegevens"
+      INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData"
       DUMP_FILE_CREATION_TASK_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData"
-      HEALING_TASK_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactgegevens"
+      HEALING_TASK_OPERATION: "http://redpencil.data.gi
+      ft/id/jobs/concept/JobOperation/deltas/healingOperation/contactData"
       JOB_TIMEOUT_MINUTES: 0 # No timeout
     volumes:
       - ./config/delta-producer/background-job-initiator/config.json:/config/config.json
@@ -137,35 +138,21 @@ services:
       - "logging=true"
     links:
       - database:database
-    restart: always
+    restart: alwaysdelta-producer-pub-graph-maintainer-contactdata
     logging: *default-logging
-  delta-producer-pub-graph-maintainer-organizations:
+  delta-producer-pub-graph-maintainer-contactdata:
     image: lblod/delta-producer-publication-graph-maintainer:1.0.3
     environment:
-      MAX_BODY_SIZE: "50mb"
-      JOBS_GRAPH: "http://mu.semte.ch/graphs/jobs"
-      RELATIVE_FILE_PATH: "deltas/contactgegevens"
-      PUBLICATION_GRAPH: "http://redpencil.data.gift/id/deltas/producer/clb-sites"
-      HEALING_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData"
-      INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData"
-      QUEUE_POLL_INTERVAL: 3000
-      USE_VIRTUOSO_FOR_EXPENSIVE_SELECTS: "true" # some queries are just too expensive
-      SKIP_MU_AUTH_INITIAL_SYNC: "true"
-      HEALING_PATCH_GRAPH_BATCH_SIZE: 500
-      SERVE_DELTA_FILES: "true"
-      PUBLISHER_URI: "http://data.lblod.info/services/delta-production-json-diff-file-manager/contact-info" # No json diff file publisher yet
-      DELTA_INTERVAL_MS: 10000
-      PRETTY_PRINT_DIFF_JSON: "true"
-      ERROR_GRAPH: "http://mu.semte.ch/graphs/jobs"
+      CONFIG_SERVICES_JSON_PATH: "/config/services.json"
     volumes:
-      - ./config/delta-producer/contact-data:/config
+      - ./config/delta-producer/contact-data/:/config
       - ./data/files/:/share
     links:
       - database:database
       - virtuoso:virtuoso
     restart: always
     logging: *default-logging
-  delta-producer-dump-file-publisher:
+  delta-producer-dump-file-publisher: # Makes giant TTL file. How invoked?
     image: lblod/delta-producer-dump-file-publisher:0.10.3
     volumes:
       - ./config/delta-producer/dump-file-publisher:/config
@@ -184,6 +171,15 @@ services:
       - database:database
     restart: always
     logging: *default-logging
+  delta-notifier:
+    image: semtech/mu-delta-notifier:0.2.0
+    volumes:
+      - ./config/delta:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
   
 
 

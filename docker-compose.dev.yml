@@ -32,9 +32,12 @@ services:
         CRON_PATTERN_HEALING_JOB: "0 0 * * *" # Midnight. Effectively off
         START_INITIAL_SYNC: "false"
     restart: "no"
-  delta-producer-pub-graph-maintainer-organizations:
+  delta-producer-pub-graph-maintainer-contactdata:
     restart: "no"
   delta-producer-dump-file-publisher:
     restart: "no"
   file:
     restart: "no"
+  delta-notifier:
+    restart: "no"
+
