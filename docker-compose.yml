@@ -87,11 +87,14 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
-  adressenregister:
-    image: lblod/adressenregister-fuzzy-search-service:0.6.3
+  address-search-add-on:
+    build: https://github.com/DennisVanEecke/address-search-add-on.git
+    volumes:
+      - ./data/
     labels:
       - "logging=true"
     restart: always
+    logging: *default-logging
   op-consumer:
     image: lblod/delta-consumer:0.0.24
     environment:

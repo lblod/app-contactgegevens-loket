@@ -107,8 +107,8 @@ defmodule Dispatcher do
   # Address search
   #################################################################
 
-  match "/adresses-register/*path" do
-    forward conn, path, "http://adressenregister"
+  match "/address-search-add-on/*path" do
+    forward conn, path, "http://address-search-add-on/"
   end
 
   ###############################################################
