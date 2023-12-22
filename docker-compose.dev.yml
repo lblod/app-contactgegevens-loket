@@ -9,6 +9,11 @@ services:
     restart: "no"
   database:
     restart: "no"
+    environment:
+      LOG_OUTGOING_SPARQL_QUERIES: "false"
+      LOG_INCOMING_SPARQL_QUERIES: "false"
+      LOG_DELTA_MESSAGES : "true"
+      LOG_DELTA_CLIENT_COMMUNICATION : "true"
   virtuoso:
     ports:
       - "8890:8890"
@@ -34,10 +39,24 @@ services:
     restart: "no"
   delta-producer-pub-graph-maintainer-contactdata:
     restart: "no"
+    environment:
+      
   delta-producer-dump-file-publisher:
     restart: "no"
   file:
     restart: "no"
   delta-notifier:
     restart: "no"
+    environment:
+      DEBUG_DELTA_SEND: "true"
+      DEBUG_DELTA_MATCH: "true"
+  yasgui:
+    image: erikap/yasgui
+    ports:
+      - 8891:80
+    links:
+      - database:database
+    environment:
+      ENABLE_ENDPOINT_SELECTOR: "true"
+      DEFAULT_SPARQL_ENDPOINT: "http://dennisve-dev.s.redhost.be:8890/sparql"
 

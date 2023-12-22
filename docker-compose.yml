@@ -43,8 +43,6 @@ services:
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_COMPATIBILITY: Virtuoso
-      LOG_OUTGOING_SPARQL_QUERIES: "true"
-      LOG_INCOMING_SPARQL_QUERIES: "true"
     volumes:
       - ./config/authorization:/config
     restart: always
@@ -129,8 +127,7 @@ services:
     environment:
       INITIAL_PUBLICATION_GRAPH_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData"
       DUMP_FILE_CREATION_TASK_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData"
-      HEALING_TASK_OPERATION: "http://redpencil.data.gi
-      ft/id/jobs/concept/JobOperation/deltas/healingOperation/contactData"
+      HEALING_TASK_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData" # task is alias for job
       JOB_TIMEOUT_MINUTES: 0 # No timeout
     volumes:
       - ./config/delta-producer/background-job-initiator/config.json:/config/config.json
@@ -161,7 +158,7 @@ services:
       - database:database
     restart: always
     logging: *default-logging
-  file:
+  file: # NGINX static file hosting
     image: semtech/mu-file-service:3.3.2
     volumes:
       - ./data/files:/share
@@ -171,7 +168,7 @@ services:
       - database:database
     restart: always
     logging: *default-logging
-  delta-notifier:
+  delta-notifier: # Kind of delta message multiplexer
     image: semtech/mu-delta-notifier:0.2.0
     volumes:
       - ./config/delta:/config
