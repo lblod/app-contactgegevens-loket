@@ -22,12 +22,15 @@ const {
 */
 
 const publicTypes = [
-  'code:BestuurseenheidClassificatieCode',
-  'org:TypeVestiging',
-  'besluit:Bestuurseenheid',
-  'skos:Concept',
-  'euvoc:Country',
-  'prov:Location'
+  '<http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode>',
+  '<http://lblod.data.gift/vocabularies/organisatie/TypeVestiging>',
+  '<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>',
+  '<http://www.w3.org/2004/02/skos/core#Concept>',
+  '<http://publications.europa.eu/ontology/euvoc#Country>',
+  '<http://www.w3.org/ns/prov#Location>',
+  '<http://www.w3.org/ns/org#ChangeEvent>',
+  '<http://lblod.data.gift/vocabularies/organisatie/VeranderingsgebeurtenisResultaat>',
+  '<http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis>'
 ]
 async function dispatch(lib, data) {
   const { mu, fetch } = lib;
@@ -48,6 +51,7 @@ async function dispatch(lib, data) {
       const subject = insert.subject;
       const contextTriples = withContext.inserts.filter((context) => context.subject === subject);
       const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>' && context.object !== '<http://mu.semte.ch/graphs/system/landingzone>')
+      const otherContextTriples = withContext.inserts.filter((context) => context.predicate !== '<http://mu.semte.ch/vocabularies/ext/goesInGraph>' && context.predicate !== '<http://mu.semte.ch/vocabularies/ext/contextDataGoesInGraph>' && !(context.subject === subject && context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>'));
       if(graphTriple) {
         const graph = graphTriple.object.slice(1,-1); // We have to slice it to remove the "<" and ">"
         if(!insertsOnGraphs[graph]) {
@@ -55,12 +59,29 @@ async function dispatch(lib, data) {
         } else {
           insertsOnGraphs[graph].push(`${insert.subject} ${insert.predicate} ${insert.object}.`)
         }
+        for(let triple of otherContextTriples) {
+          insertsOnGraphs[graph].push(`${triple.subject} ${triple.predicate} ${triple.object}.`)
+        }
       }
-      const typeTriple = contextTriples.find((context) => context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>');
+      const typeTriple = contextTriples.find((context) => context.subject === subject && context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>');
       if(typeTriple) {
         const type = typeTriple.object;
         if(publicTypes.includes(type)) {
           insertsOnPublic.push(`${insert.subject} ${insert.predicate} ${insert.object}.`)
+          //For the case where the subject is an admin unit but everything else must go in private graph
+          const contextGraphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/contextDataGoesInGraph>' && context.object !== '<http://mu.semte.ch/graphs/system/landingzone>')
+          for(let triple of otherContextTriples) {
+            if(contextGraphTriple) {
+              const graph = contextGraphTriple.object.slice(1,-1);
+              if(!insertsOnGraphs[graph]) {
+                insertsOnGraphs[graph] = [`${triple.subject} ${triple.predicate} ${triple.object}.`]
+              } else {
+                insertsOnGraphs[graph].push(`${triple.subject} ${triple.predicate} ${triple.object}.`)
+              }
+            } else {
+              insertsOnPublic.push(`${triple.subject} ${triple.predicate} ${triple.object}.`)
+            }
+          }
         }
       }
     }
@@ -70,6 +91,7 @@ async function dispatch(lib, data) {
       const subject = deletion.subject;
       const contextTriples = withContext.deletes.filter((context) => context.subject === subject);
       const graphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/goesInGraph>' && context.object !== '<http://mu.semte.ch/graphs/system/landingzone>')
+      const otherContextTriples = withContext.deletes.filter((context) => context.predicate !== '<http://mu.semte.ch/vocabularies/ext/goesInGraph>' && context.predicate !== '<http://mu.semte.ch/vocabularies/ext/contextDataGoesInGraph>' && !(context.subject === subject && context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>'));
       if(graphTriple) {
         const graph = graphTriple.object.slice(1,-1); // We have to slice it to remove the "<" and ">"
         if(!deletesOnGraphs[graph]) {
@@ -77,12 +99,18 @@ async function dispatch(lib, data) {
         } else {
           deletesOnGraphs[graph].push(`${deletion.subject} ${deletion.predicate} ${deletion.object}.`)
         }
+        for(let triple of otherContextTriples) {
+          deletesOnGraphs[graph].push(`${triple.subject} ${triple.predicate} ${triple.object}.`)
+        }
       }
-      const typeTriple = contextTriples.find((context) => context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>');
+      const typeTriple = contextTriples.find((context) => context.subject === subject && context.predicate === '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>');
       if(!typeTriple) continue;
       const type = typeTriple.object;
       if(publicTypes.includes(type)) {
         deletesOnPublic.push(`${deletion.subject} ${deletion.predicate} ${deletion.object}.`)
+        for(let triple of otherContextTriples) {
+          deletesOnPublic.push(`${triple.subject} ${triple.predicate} ${triple.object}.`)
+        }
       }
     }
 

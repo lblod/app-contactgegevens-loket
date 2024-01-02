@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   frontend:
-    image: andreo141/contactgegevens:trying
+    image: youssefj4/contact:trying
     links:
       - identifier:backend
     restart: always
@@ -21,6 +21,7 @@ services:
       EMBER_OAUTH_API_BASE_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
       EMBER_OAUTH_API_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
       EMBER_OAUTH_API_SCOPE: "openid rrn profile vo abb_loketcontactapp"
+      EMBER_OAUTH_SWITCH_URL: "https://contactgegevens-loket.lblod.info/authorization/switch"
   identifier:
     image: semtech/mu-identifier:1.9.1
     links:
@@ -32,6 +33,16 @@ services:
       DEFAULT_ACCESS_CONTROL_ALLOW_ORIGIN_HEADER: "*"
       SESSION_COOKIE_SECURE: "on"
       SESSION_COOKIE_SAME_SITE: "None"
+    restart: always
+    logging: *default-logging
+  accountdetail:
+    image: lblod/account-detail-service:0.1.0
+    labels:
+      - "logging=true"
+    environment:
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/public"
+    links:
+      - database:database
     restart: always
     logging: *default-logging
   dispatcher:
@@ -104,7 +115,7 @@ services:
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info"
       DCR_SERVICE_NAME: "op-consumer"
       DCR_SYNC_FILES_PATH: "/sync/organizations-public-info/files"
-      DCR_SYNC_DATASET_SUBJECT: "http://data.lblod.info/datasets/delta-producer/dumps/PublicCacheGraphDump"
+      DCR_SYNC_DATASET_SUBJECT: "http://data.lblod.info/datasets/delta-producer/dumps/OrganizationsPublicInfoCacheGraphDump"
       DCR_INITIAL_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/consumer/op"
       DCR_DELTA_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/consumer/opDeltaFileSyncing"
       DCR_JOB_CREATOR_URI: "http://data.lblod.info/services/id/op-consumer"
@@ -125,7 +136,6 @@ services:
     image: lblod/acmidm-login-service:0.9.2
     environment:
       MU_APPLICATION_AUTH_USERID_CLAIM: "vo_id"
-      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/contacthub/accounts"
       MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_loketcontactapp_rol_3d"
       MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
       MU_APPLICATION_AUTH_CLIENT_ID: "300a3bc4-1aba-4338-862d-05df84f084c2"

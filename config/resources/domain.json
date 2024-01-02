@@ -150,6 +150,12 @@
           "target": "organization",
           "cardinality": "one",
           "inverse": true
+        },
+        "changed-by": {
+          "predicate": "org:originalOrganization",
+          "target": "change-events",
+          "cardinality": "many",
+          "inverse": true
         }
       },
       "new-resource-base": "http://data.lblod.info/id/organisaties/"
