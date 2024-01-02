@@ -33,6 +33,24 @@
                 "https://data.vlaanderen.be/ns/adres#verwijstNaar",
                 "http://purl.org/dc/terms/source"
             ]
-        }
+        },
+        {
+            "type": "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
+            "strictTypeExport": "true",
+            "properties": [
+              "http://www.w3.org/ns/org#hasPrimarySite",
+              "http://www.w3.org/ns/org#hasSite"
+            ]
+        },
+        {
+            "type": "http://lblod.data.gift/vocabularies/organisatie/TypeVestiging",
+            "graphsFilter": [
+              "http://mu.semte.ch/graphs/public"
+            ],
+            "properties": [
+              "http://mu.semte.ch/vocabularies/core/uuid",
+              "http://www.w3.org/2004/02/skos/core#prefLabel"
+            ]
+          }
     ]
 }
