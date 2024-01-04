@@ -21,7 +21,7 @@ export default [
         // anything -> note you can tweak the performance here by filtering on graphs if you need to.
       },
       callback: {
-        url: 'http://delta-producer-pub-graph-maintainer-contactdata/contactdata/delta',
+        url: 'http://delta-producer-pub-graph-maintainer/contactdata/delta',
         method: 'POST'
       },
       options: {

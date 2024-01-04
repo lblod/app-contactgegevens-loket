@@ -132,7 +132,7 @@ services:
       - database:database
     restart: always
     logging: *default-logging
-  delta-producer-pub-graph-maintainer-contactdata:
+  delta-producer-pub-graph-maintainer:
     image: lblod/delta-producer-publication-graph-maintainer:1.0.3
     environment:
       MAX_BODY_SIZE: "50mb"

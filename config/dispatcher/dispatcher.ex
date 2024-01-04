@@ -116,7 +116,7 @@ defmodule Dispatcher do
   end
 
   get "/sync/contactdata/files/*path", %{ accept: %{ json: true }, layer: :api} do
-    forward conn, path, "http://delta-producer-publication-graph-maintainer/contactdata/files/"
+    forward conn, path, "http://delta-producer-pub-graph-maintainer/contactdata/files/"
   end
 
   #################################################################
