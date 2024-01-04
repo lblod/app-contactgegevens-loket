@@ -113,6 +113,12 @@ services:
       - virtuoso:database
     restart: always
     logging: *default-logging
+  file:
+    image: semtech/mu-file-service:3.3.2
+    links:
+      - database:database
+    volumes:
+      - ./data/files:/share
   # ---
   # Producer mechanism. Send contact data to OP.
   # ---
