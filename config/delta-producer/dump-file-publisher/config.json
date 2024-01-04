@@ -1,11 +1,20 @@
 {
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData" : {
-      "dcatDataSetSubject": "http://data.lblod.info/datasets/delta-producer/dumps/ContactGegevensCacheGraphDump",
-      "targetGraph": "http://redpencil.data.gift/id/deltas/producer/clb-sites",
-      "fileBaseName": "dump-contact-data",
-      "targetDcatGraph": null,
-      "targetFilesGraph": null,
-      "cleanupOldDumps": false
-    }
-  }    "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+   "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData" : {
+    "dcatDataSetSubject": "http://data.lblod.info/datasets/delta-producer/dumps/ContactGegevensCacheGraphDump",
+    "targetGraph": "http://data.lblod.info/id/deltas/producer/lblod-harvester-contactdata-producer",
+    "fileBaseName": "dump-contact-data",
+    "publicationGraphEndpoint": "http://virtuoso:8890/sparql",
+    "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
     "targetFilesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+    "cleanupOldDumps": true
+  },
+  "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData": {
+    "dcatDataSetSubject": "http://data.lblod.info/datasets/delta-producer/dumps/ContactGegevensCacheGraphDump",
+    "targetGraph": "http://data.lblod.info/id/deltas/producer/lblod-harvester-contactdata-producer",
+    "fileBaseName": "dump-contact-data",
+    "publicationGraphEndpoint": "http://virtuoso:8890/sparql",
+    "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+    "targetFilesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+    "cleanupOldDumps": true
+  }
+}
