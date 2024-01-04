@@ -7,4 +7,5 @@
       "targetFilesGraph": null,
       "cleanupOldDumps": false
     }
-  }
+  }    "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+    "targetFilesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
