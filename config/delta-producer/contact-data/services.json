@@ -20,5 +20,3 @@
     "useVirtuosoForExpensiveSelects": true
   }
 }
-
-drc exec delta-producer-background-initiator curl -X DELETE http://localhost/contactData/initial-sync-jobs
