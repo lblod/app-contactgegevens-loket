@@ -17,6 +17,7 @@
     "serveDeltaFiles": true,
     "skipMuAuthInitialSync": true,
     "skipMuAuthHealing": true,
+    "useFileDiff": true,
     "useVirtuosoForExpensiveSelects": true,
     "loginPath": "/contactdata/login"
   }
