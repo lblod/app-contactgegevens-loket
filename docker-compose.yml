@@ -113,9 +113,9 @@ services:
       - virtuoso:database
     restart: always
     logging: *default-logging
-  # ---
-  # Producer mechanism. Send contact data to OP.
-  # ---
+  ###########################################################################
+  # START: Producer mechanism. Send contact data to OP.
+  ###########################################################################
   jobs-controller: # Status indicator
     image: lblod/job-controller-service:1.0.1
     links:
@@ -153,6 +153,9 @@ services:
       - database:database
     restart: always
     logging: *default-logging
+  ###########################################################################
+  # END: Producer mechanism. Send contact data to OP.
+  ###########################################################################
   file: # NGINX static file hosting
     image: semtech/mu-file-service:3.3.2
     volumes:
