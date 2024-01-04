@@ -111,6 +111,24 @@ defmodule Dispatcher do
     forward conn, path, "http://adressenregister"
   end
 
+  #################################################################
+  # jobs
+  #################################################################
+  match "/jobs/*path", @json do
+    forward conn, path, "http://cache/jobs/"
+  end
+
+  match "/tasks/*path", @json do
+    forward conn, path, "http://cache/tasks/"
+  end
+
+  match "/data-containers/*path", @json do
+    forward conn, path, "http://cache/data-containers/"
+  end
+
+  match "/job-errors/*path", @json do
+    forward conn, path, "http://cache/job-errors/"
+  end
   ###############################################################
   # frontend layer
   ###############################################################
