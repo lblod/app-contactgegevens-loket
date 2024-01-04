@@ -3,7 +3,7 @@
     "dcatDataSetSubject": "http://data.lblod.info/datasets/delta-producer/dumps/ContactGegevensCacheGraphDump",
     "targetGraph": "http://data.lblod.info/id/deltas/producer/lblod-harvester-contactdata-producer",
     "fileBaseName": "dump-contact-data",
-    "publicationGraphEndpoint": "http://virtuoso:8890/sparql",
+    "publicationGraphEndpoint": "http://publication-triplestore:8890/sparql",
     "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
     "targetFilesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
     "cleanupOldDumps": true
@@ -12,7 +12,7 @@
     "dcatDataSetSubject": "http://data.lblod.info/datasets/delta-producer/dumps/ContactGegevensCacheGraphDump",
     "targetGraph": "http://data.lblod.info/id/deltas/producer/lblod-harvester-contactdata-producer",
     "fileBaseName": "dump-contact-data",
-    "publicationGraphEndpoint": "http://virtuoso:8890/sparql",
+    "publicationGraphEndpoint": "http://publication-triplestore:8890/sparql",
     "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
     "targetFilesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
     "cleanupOldDumps": true

@@ -43,6 +43,10 @@ services:
       PRETTY_PRINT_DIFF_JSON: "true"
   delta-producer-dump-file-publisher:
     restart: "no"
+  publication-triplestore:
+    restart: "no"
+    ports:
+      - "8892:8890"
   file:
     restart: "no"
   delta-notifier:
