@@ -2,8 +2,70 @@
 
 Bootstrap a mu.semte.ch microservices environment in three easy steps.
 
-
 ## How-To
+
+### Setting up the Delta-Producers
+
+To ensure that the app can share data, it is necessary to set up the producers. This setup is currently a one-time manual interaction. The reason for this is that it's a potentially expensive operation, and there is a lot of coordination between services, making it a challenging one to coordinate.
+
+#### Description of the High-Level Flow
+  - An initial sync: This is a one-time job that prepares the first big batch of data that needs to be shared. It needs to be triggered manually.
+  - A healing process: This is a periodic job which corrects any mistakes that happened during the publication of deltas.
+  - A dump file creation: This is a periodic job that creates a snapshot of the published data, so new consumers don't have to replay all the changes to get to an up-to-date state.
+
+### Setting up producer besluiten
+0. Only in case you are *flushing the initial sync and re-doing it* ensure in  `./config/delta-producer/background-job-initiator/config.json`
+
+     ```json
+        [
+          {
+            "name": "contactData",
+            # (...) other config
+
+            "startInitialSync": false, # changed from 'true' to 'false'
+
+            # (...) other config
+
+          }
+        ]
+     ```
+     - And also ensure some data has been harvested before starting the initial sync.
+
+1. Make sure the app is up and running, and the migrations have run!
+2. In `./config/delta-producer/background-job-initiator/config.json` file, make sure the following
+   configuration is changed:
+
+     ```json
+        [
+          {
+            "name": "contactData",
+            # (...) other config
+
+            "startInitialSync": true, # changed from 'false' to 'true'
+
+            # (...) other config
+
+          }
+        ]
+     ```
+3. Restart the services: `drc restart delta-producer-background-jobs-initiator`
+4. You can follow the status of the job, through the dashboard frontend.
+5. If a success; dump-file-producer should be able to run too. But you still need to enable it. By doing:
+     ```json
+        [
+          {
+            "name": "contactData",
+            # (...) other config
+
+            "disableDumpFileCreation": false, # changed from true' to 'false'
+
+            # (...) other config
+
+          }
+        ]
+    ```
+    Make sure to restart the background-job-initiator service after changing the config.
+    Dumps will be generated in [data/files/delta-producer-dumps](data/files/delta-producer-dumps/).
 
 ### Quickstart an mu-project
 
@@ -38,7 +100,7 @@ If you aren't familiar with the semantic.works stack/microservices yet, you migh
 - [Adding Ember Fastboot to your project](#adding-ember-fastboot-to-your-project)
 - [Adding a machine learning microservice to your mu.semte.ch project](#adding-a-machine-learning-microservice-to-your-musemtech-project)
 
-### Creating a JSON API 
+### Creating a JSON API
 Repetition is boring. Web applications oftentimes require the same functionality: to create, read, update and delete resources. Even if they operate in different domains. Or, in terms of a REST API, endpoints to GET, POST, PATCH and DELETE resources. Since productivity is one of the driving forces behind the mu.semte.ch architecture, the platform provides a microservice – [mu-cl-resources](https://github.com/mu-semtech/mu-cl-resources) – that generates a [JSONAPI](http://jsonapi.org/) compliant API for your resources based on a simple configuration describing the domain. In this tutorial we will explain how to setup such a configuration.
 
 #### Adding mu-cl-resources to your project
@@ -121,7 +183,7 @@ Finally, define the properties of a book:
                 (:isbn :string ,(s-prefix "schema:isbn"))
                 (:publication-date :date ,(s-prefix "schema:datePublished"))
                 (:genre :string ,(s-prefix "schema:genre"))
-                (:language :string ,(s-prefix "schema:inLanguage")) 
+                (:language :string ,(s-prefix "schema:inLanguage"))
                 (:number-of-pages :integer ,(s-prefix "schema:numberOfPages")))
   :resource-base (s-url "http://mu.semte.ch/services/github/madnificent/book-service/books/")
 :on-path "books")
@@ -182,9 +244,9 @@ First, extend the book’s model:
                 (:isbn :string ,(s-prefix "schema:isbn"))
                 (:publication-date :date ,(s-prefix "schema:datePublished"))
                 (:genre :string ,(s-prefix "schema:genre"))
-                (:language :string ,(s-prefix "schema:inLanguage")) 
+                (:language :string ,(s-prefix "schema:inLanguage"))
                 (:number-of-pages :integer ,(s-prefix "schema:numberOfPages")))
-  :has-one `((author :via ,(s-prefix "schema:author") 
+  :has-one `((author :via ,(s-prefix "schema:author")
               :as "author"))
   :resource-base (s-url "http://mu.semte.ch/services/github/madnificent/book-service/books/")
 :on-path "books")
@@ -192,7 +254,7 @@ First, extend the book’s model:
 
 Adding an author to a book will now result in the following triple in the store:
 ```
-<http://mu.semte.ch/services/github/madnificent/book-service/books/182232da-e07d-438f-8608-f6356624a666> 
+<http://mu.semte.ch/services/github/madnificent/book-service/books/182232da-e07d-438f-8608-f6356624a666>
     schema:author <http://mu.semte.ch/services/github/madnificent/book-service/authors/e6c446ad-36ee-43b3-a8a0-2349ecfdcb5d> .
 ```
 
@@ -625,7 +687,7 @@ def process_mailbox(mailbox):
     if rv != 'OK':
       print "ERROR getting message", num
     return
-  
+
     msg = email.message_from_string(data[0][1])
     content = str(msg.get_payload())
     content = content.replace('\n','')
@@ -892,7 +954,7 @@ In this post, we’re going elaborate a little on how to add Ember FastBoot to y
 In a nutshell, Ember FastBoot introduces server side rendering on your ember app, which should not only improve user experience by serving static content first, but also make your website more SEO friendly. For more info, I would recommend you to check out [https://ember-fastboot.com/](https://ember-fastboot.com/).
 
 #### Setting the scene
-All right, let’s get started. Assume you’re writing the new blogging app, called “mu-fastboot-example”.  
+All right, let’s get started. Assume you’re writing the new blogging app, called “mu-fastboot-example”.
 It has a very simple data model with two entities. A blog post, which has a title, content, an author and many comments.  You can find the definition [here](https://github.com/cecemel/mu-fastboot-example-backend/blob/master/config/resources/domain.lisp). The backend needs a frontend of course and this has been published [here](https://github.com/cecemel/mu-fastboot-example-frontend).
 
 Assume for now, we only need an index page, which displays an overview of the current posts along with the number of comments to this post, and the authors of the comments.  A blog-post-summary component was created and  its template may be found [here](https://github.com/cecemel/mu-fastboot-example-frontend/blob/master/app/templates/components/blog-post-summary.hbs).
@@ -905,7 +967,7 @@ Fetching your index page with a JavaScript disabled client, like e.g. curl, resu
 
 #### Adding FastBoot
 
-As [https://ember-fastboot.com/docs/user-guide#architecture](https://ember-fastboot.com/docs/user-guide#architecture) will tell you, two components are involved: the ember addon fastboot, and the application server itself, which will pre-prender your app.  
+As [https://ember-fastboot.com/docs/user-guide#architecture](https://ember-fastboot.com/docs/user-guide#architecture) will tell you, two components are involved: the ember addon fastboot, and the application server itself, which will pre-prender your app.
 Installing fast boot add on is as simple as typing:
 ```bash
   ember install ember-cli-fastboot
@@ -918,9 +980,9 @@ The nice thing is, locally, you can immediately test the result of adding fastbo
 And to see the result (on port 3000):
 
 ```bash
-  curl localhost:3000 
+  curl localhost:3000
 ```
- 
+
 ```hbs
   <!-- snippet from the initial html page -->
   <div id="ember981" class="ember-view"><h3> Another even better post</h3>
@@ -933,14 +995,14 @@ And to see the result (on port 3000):
 
 #### caveats
 
-There is still an issue. As you might have noticed,  the second blog post doesn’t contain any comments or any comment authors.  
-This because, FastBoot decides returning the page to the client, once the _model()_ hook resolves (or _beforeModel(), afterModel()_).  
-If there is a component making an asynchronous call, e.g. counting the comments for each post, FastBook won’t consider this .  
+There is still an issue. As you might have noticed,  the second blog post doesn’t contain any comments or any comment authors.
+This because, FastBoot decides returning the page to the client, once the _model()_ hook resolves (or _beforeModel(), afterModel()_).
+If there is a component making an asynchronous call, e.g. counting the comments for each post, FastBook won’t consider this .
 The trick is, to make sure these async calls are resolved before, the _model()_ hook is resolved. You could change _app/routes/index.js_  e.g. to the following:
 
 ```js
     import Ember from 'ember';
-    
+
     export default Ember.Route.extend({
         fastboot: Ember.inject.service(),
         model() {
@@ -956,7 +1018,7 @@ This result of this change, can be seen immediately:
 ```bash
   curl localhost:3000
 ```
- 
+
 ```hbs
   <!-- snippet from the initial html page -->
   <div id="ember981" class="ember-view"><h3> Another even better post</h3>
@@ -978,14 +1040,14 @@ Just as with normal ember apps, in your app root, you build with
     ember build
 ```
 
-which should, among the normal files, also create a `dist/fastboot/` folder.  
+which should, among the normal files, also create a `dist/fastboot/` folder.
 To host everything, you should follow the instructions described [here](https://github.com/ember-fastboot/fastboot-app-server).
 
 FORTUNATELY, to ease the deploy, a [docker image](https://github.com/cecemel/ember-fastboot-proxy-service) has been created, which can easily be added to your mu-project, like e.g. [here](https://github.com/cecemel/mu-fastboot-example-backend/blob/master/docker-compose.yml) .
 
 As usual, firing the project up with
 ```bash
-    docker-compose stop; docker-compose rm -f; docker-compose up 
+    docker-compose stop; docker-compose rm -f; docker-compose up
 ```
 and you should have a working app.
 
@@ -1010,7 +1072,7 @@ TensorFlow’s inception library is great for image classification, it is a deep
 For an exisiting [mu.semte.ch](http://mu.semte.ch/) project you will probably want to add this microservice together with a trained graph and the use the classify route. While it is possible for a production system to learn, this may not be the best idea. Computers love to train, so they allocate all their computational resources to that, rather than keeping the rest smoothly running.
 
 #### Mu-image-classifier demo
-I have prepared [a small example project](https://github.com/langens-jonathan/mu-image-classifier) where you can see and test the classifier microservice. After you clone this it has no trained graph so the classify route will not work. The architecture of this demo app is as in the image below:  
+I have prepared [a small example project](https://github.com/langens-jonathan/mu-image-classifier) where you can see and test the classifier microservice. After you clone this it has no trained graph so the classify route will not work. The architecture of this demo app is as in the image below:
 ![](http://mu.semte.ch/wp-content/uploads/2017/08/mu-image-classifier.png)
 
 #### Train the model
@@ -1052,7 +1114,7 @@ match "/classify/*path" do
 end
 ```
 
-The architecture of your app might then look somewhat like:  
+The architecture of your app might then look somewhat like:
 ![](http://mu.semte.ch/wp-content/uploads/2017/08/integrating_mu-image-classifier.png)
 
 #### Classifying
