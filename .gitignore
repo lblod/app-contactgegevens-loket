@@ -1,5 +1,6 @@
-# Virtuoso files /data/db
 /data/db/*
+/data/publication-triplestore/*
+/data/files/*
 !/data/db/virtuoso.ini
 !/data/db/toLoad
 !/data/db/toLoad/*
