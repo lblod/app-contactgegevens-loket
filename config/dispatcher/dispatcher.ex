@@ -173,6 +173,7 @@ defmodule Dispatcher do
     # an error that we don't use the path variable.
     forward conn, [], "http://dashboard/index.html"
   end
+
   ###############################################################
   # frontend layer
   ###############################################################

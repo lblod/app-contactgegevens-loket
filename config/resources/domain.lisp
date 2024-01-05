@@ -5,3 +5,5 @@
 (read-domain-file "files-domain.lisp")
 (read-domain-file "job-domain.lisp")
 (read-domain-file "dcat.json")
+(read-domain-file "master-reports-domain.lisp")
+(read-domain-file "slave-files-domain.lisp")
