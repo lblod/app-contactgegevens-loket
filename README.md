@@ -2,8 +2,70 @@
 
 Bootstrap a mu.semte.ch microservices environment in three easy steps.
 
-
 ## How-To
+
+### Setting up the Delta-Producers
+
+To ensure that the app can share data, it is necessary to set up the producers. This setup is currently a one-time manual interaction. The reason for this is that it's a potentially expensive operation, and there is a lot of coordination between services, making it a challenging one to coordinate.
+
+#### Description of the High-Level Flow
+  - An initial sync: This is a one-time job that prepares the first big batch of data that needs to be shared. It needs to be triggered manually.
+  - A healing process: This is a periodic job which corrects any mistakes that happened during the publication of deltas.
+  - A dump file creation: This is a periodic job that creates a snapshot of the published data, so new consumers don't have to replay all the changes to get to an up-to-date state.
+
+### Setting up producer besluiten
+0. Only in case you are *flushing the initial sync and re-doing it* ensure in  `./config/delta-producer/background-job-initiator/config.json`
+
+     ```json
+        [
+          {
+            "name": "contactData",
+            # (...) other config
+
+            "startInitialSync": false, # changed from 'true' to 'false'
+
+            # (...) other config
+
+          }
+        ]
+     ```
+     - And also ensure some data has been harvested before starting the initial sync.
+
+1. Make sure the app is up and running, and the migrations have run!
+2. In `./config/delta-producer/background-job-initiator/config.json` file, make sure the following
+   configuration is changed:
+
+     ```json
+        [
+          {
+            "name": "contactData",
+            # (...) other config
+
+            "startInitialSync": true, # changed from 'false' to 'true'
+
+            # (...) other config
+
+          }
+        ]
+     ```
+3. Restart the services: `drc restart delta-producer-background-jobs-initiator`
+4. You can follow the status of the job, through the dashboard frontend.
+5. If a success; dump-file-producer should be able to run too. But you still need to enable it. By doing:
+     ```json
+        [
+          {
+            "name": "contactData",
+            # (...) other config
+
+            "disableDumpFileCreation": false, # changed from true' to 'false'
+
+            # (...) other config
+
+          }
+        ]
+    ```
+    Make sure to restart the background-job-initiator service after changing the config.
+    Dumps will be generated in [data/files/delta-producer-dumps](data/files/delta-producer-dumps/).
 
 ### Quickstart an mu-project
 
@@ -244,7 +306,7 @@ That's it! Now you can [fetch](http://jsonapi.org/format/#fetching-relationships
 ### Adding authentication to your mu-project
 ![](http://mu.semte.ch/wp-content/uploads/2017/08/customumize_for_user-1024x768.png)
 
-Web applications oftentimes require a user to be authenticated to access (part of) their application. For example a webshop may require a user to be logged in before placing an order. In a previous blog post we already explained [the semantic model to represent logged in users](https://mu.semte.ch/2017/08/24/representing-logged-in-users/). In this post we will show how to enable authentication in your app. We assume you already have  a [mu-project](https://github.com/mu-semtech/mu-project) running.
+Web applications oftentimes require a user to be authenticated to access (part of) their application. For example a webshop may require a user to be logged in before placing an order. In a previous blog post we already explained [the semantic model to represent logged in users](https://mu.semte.ch/2017/08/24/representing-logged-in-users/). In this post we will show how to enable authentication in your app. We assume you already have  a [mu-project](https://github.com/mu-semtech/mu-project) running.
 
 Adding authentication to your application consists of two tasks:
 
@@ -255,7 +317,7 @@ Both tasks require changes in the backend as well as in the frontend. Let’s st
 
 #### Registration
 
-First, we will add registration to the project. The backend will be enriched with a microservice to manage accounts. The frontend will be augmented with an Ember addon providing components to register, unregister and  change a password.
+First, we will add registration to the project. The backend will be enriched with a microservice to manage accounts. The frontend will be augmented with an Ember addon providing components to register, unregister and  change a password.
 
 ##### In the backend
 
@@ -287,7 +349,7 @@ From now on all requests starting with ‘/accounts’ will be forwarded to the 
 
 ##### In the frontend
 
-We now have an endpoint for registration in the backend. We need a complementary component in the frontend that provides a GUI to communicate with this backend.  This component is offered by the [ember-mu-registration](https://www.npmjs.com/package/ember-mu-registration) addon.
+We now have an endpoint for registration in the backend. We need a complementary component in the frontend that provides a GUI to communicate with this backend.  This component is offered by the [ember-mu-registration](https://www.npmjs.com/package/ember-mu-registration) addon.
 
 First, install the addon by executing the following command in your Ember project.
 ```bash
@@ -309,7 +371,7 @@ Finally create a new user account through the newly added mu-register component.
 Users can now create a new account, but how can they authenticate themselves in the app? In the next step we will enrich the backend with a login microservice and the frontend with a login form and a logout button.
 
 ##### In the backend
-The [login service](https://github.com/mu-semtech/login-service) provides a service to associate a session with a user’s account if the correct user credentials are provided. Have a look at [the semantic works docs](https://github.com/Denperidge-Redpencil/project/blob/master/docs/references/representing-logged-in-users.md) if you want to know the semantic model behind the users, sessions and accounts. To integrate the service in your project, add the following snippet to the `docker-compose.yml`.
+The [login service](https://github.com/mu-semtech/login-service) provides a service to associate a session with a user’s account if the correct user credentials are provided. Have a look at [the semantic works docs](https://github.com/Denperidge-Redpencil/project/blob/master/docs/references/representing-logged-in-users.md) if you want to know the semantic model behind the users, sessions and accounts. To integrate the service in your project, add the following snippet to the `docker-compose.yml`.
 ```yaml
 login:
   image: semtech/mu-login-service:2.8.0
@@ -889,13 +951,13 @@ If all went well then the person whose email address you filled in in the to fie
 ![](http://mu.semte.ch/wp-content/uploads/2017/03/kuifje_op_de_maan-248x300.png)
 In this post, we’re going elaborate a little on how to add Ember FastBoot to your mu-project. This should not be considered as a full blown tutorial, but rather as a set of notes to get you started.
 
-In a nutshell, Ember FastBoot introduces server side rendering on your ember app, which should not only improve user experience by serving static content first, but also make your website more SEO friendly. For more info, I would recommend you to check out [https://ember-fastboot.com/](https://ember-fastboot.com/).
+In a nutshell, Ember FastBoot introduces server side rendering on your ember app, which should not only improve user experience by serving static content first, but also make your website more SEO friendly. For more info, I would recommend you to check out [https://ember-fastboot.com/](https://ember-fastboot.com/).
 
 #### Setting the scene
 All right, let’s get started. Assume you’re writing the new blogging app, called “mu-fastboot-example”.  
-It has a very simple data model with two entities. A blog post, which has a title, content, an author and many comments.  You can find the definition [here](https://github.com/cecemel/mu-fastboot-example-backend/blob/master/config/resources/domain.lisp). The backend needs a frontend of course and this has been published [here](https://github.com/cecemel/mu-fastboot-example-frontend).
+It has a very simple data model with two entities. A blog post, which has a title, content, an author and many comments.  You can find the definition [here](https://github.com/cecemel/mu-fastboot-example-backend/blob/master/config/resources/domain.lisp). The backend needs a frontend of course and this has been published [here](https://github.com/cecemel/mu-fastboot-example-frontend).
 
-Assume for now, we only need an index page, which displays an overview of the current posts along with the number of comments to this post, and the authors of the comments.  A blog-post-summary component was created and  its template may be found [here](https://github.com/cecemel/mu-fastboot-example-frontend/blob/master/app/templates/components/blog-post-summary.hbs).
+Assume for now, we only need an index page, which displays an overview of the current posts along with the number of comments to this post, and the authors of the comments.  A blog-post-summary component was created and  its template may be found [here](https://github.com/cecemel/mu-fastboot-example-frontend/blob/master/app/templates/components/blog-post-summary.hbs).
 
 Firing up both frontend and backend, your home page would look like this.
 
@@ -933,10 +995,10 @@ And to see the result (on port 3000):
 
 #### caveats
 
-There is still an issue. As you might have noticed,  the second blog post doesn’t contain any comments or any comment authors.  
+There is still an issue. As you might have noticed,  the second blog post doesn’t contain any comments or any comment authors.  
 This because, FastBoot decides returning the page to the client, once the _model()_ hook resolves (or _beforeModel(), afterModel()_).  
 If there is a component making an asynchronous call, e.g. counting the comments for each post, FastBook won’t consider this .  
-The trick is, to make sure these async calls are resolved before, the _model()_ hook is resolved. You could change _app/routes/index.js_  e.g. to the following:
+The trick is, to make sure these async calls are resolved before, the _model()_ hook is resolved. You could change _app/routes/index.js_  e.g. to the following:
 
 ```js
     import Ember from 'ember';
@@ -971,7 +1033,7 @@ Unfortunately, this makes FastBoot a little less transparent then one would have
 
 #### Deploying
 
-FastBoot has some nice deploy possibilities such as with AWS and Heroku, but in our case, we’ll go for the [custom server](https://ember-fastboot.com/docs/deploying#custom-server).  At the time of writing, the documentation is NOT up to date,  and as an app server you should use, [fastboot-app-server](https://github.com/ember-fastboot/fastboot-app-server) instead of [fastboot](https://github.com/ember-fastboot/fastboot).
+FastBoot has some nice deploy possibilities such as with AWS and Heroku, but in our case, we’ll go for the [custom server](https://ember-fastboot.com/docs/deploying#custom-server).  At the time of writing, the documentation is NOT up to date,  and as an app server you should use, [fastboot-app-server](https://github.com/ember-fastboot/fastboot-app-server) instead of [fastboot](https://github.com/ember-fastboot/fastboot).
 
 Just as with normal ember apps, in your app root, you build with
 ```bash
@@ -995,7 +1057,7 @@ So, that’s it. In case of questions, feel free to reach out.
 
 
 ### Adding a machine learning microservice to your mu.semte.ch project
-In this post I want to explore how to add a machine learning microservice to any existing [mu.semte.ch](http://mu.semte.ch/) project. I want to be able to upload an image and add the labels for that image to the SPARQL store.
+In this post I want to explore how to add a machine learning microservice to any existing [mu.semte.ch](http://mu.semte.ch/) project. I want to be able to upload an image and add the labels for that image to the SPARQL store.
 
 ![](http://mu.semte.ch/wp-content/uploads/2017/08/docter-semtec-farious.png)
 
@@ -1007,10 +1069,10 @@ TensorFlow’s inception library is great for image classification, it is a deep
 -   Train: trains the model
 -   Classify: takes an image file and adds the classification to the triple store
 
-For an exisiting [mu.semte.ch](http://mu.semte.ch/) project you will probably want to add this microservice together with a trained graph and the use the classify route. While it is possible for a production system to learn, this may not be the best idea. Computers love to train, so they allocate all their computational resources to that, rather than keeping the rest smoothly running.
+For an exisiting [mu.semte.ch](http://mu.semte.ch/) project you will probably want to add this microservice together with a trained graph and the use the classify route. While it is possible for a production system to learn, this may not be the best idea. Computers love to train, so they allocate all their computational resources to that, rather than keeping the rest smoothly running.
 
 #### Mu-image-classifier demo
-I have prepared [a small example project](https://github.com/langens-jonathan/mu-image-classifier) where you can see and test the classifier microservice. After you clone this it has no trained graph so the classify route will not work. The architecture of this demo app is as in the image below:  
+I have prepared [a small example project](https://github.com/langens-jonathan/mu-image-classifier) where you can see and test the classifier microservice. After you clone this it has no trained graph so the classify route will not work. The architecture of this demo app is as in the image below:  
 ![](http://mu.semte.ch/wp-content/uploads/2017/08/mu-image-classifier.png)
 
 #### Train the model
@@ -1021,12 +1083,12 @@ So you have cloned the repository, cd in to the directory and type:
 docker-compose up
 ```
 
-Open a browser and surf to [localhost](http://localhost). Click on the training route. To train the model you have to add classes (min 2) and then add images for those classes. Be sure not to use any other image format than JPG. After you have prepared the training set you can click the “Train” button. Your computer will be busy for a while now. If you need a more detailed tutorial on how to train there is one on the main page of the project you have just cloned, check the ‘/’ route!
+Open a browser and surf to [localhost](http://localhost). Click on the training route. To train the model you have to add classes (min 2) and then add images for those classes. Be sure not to use any other image format than JPG. After you have prepared the training set you can click the “Train” button. Your computer will be busy for a while now. If you need a more detailed tutorial on how to train there is one on the main page of the project you have just cloned, check the ‘/’ route!
 
 ![](http://mu.semte.ch/wp-content/uploads/2017/08/Screenshot-from-2017-08-01-09-49-06s.png)
 
 #### Add the image classifier to a generic mu.semte.ch project
-After you have a trained graph it is really as simple as adding the image classifier microservice to your [mu.semte.ch](http://mu.semte.ch/) project and all will work. The assumption is though that the vocabulary that is used to describe the files in your triple store is the one that is documented on the [mu-file-service](https://github.com/mu-semtech/file-service).
+After you have a trained graph it is really as simple as adding the image classifier microservice to your [mu.semte.ch](http://mu.semte.ch/) project and all will work. The assumption is though that the vocabulary that is used to describe the files in your triple store is the one that is documented on the [mu-file-service](https://github.com/mu-semtech/file-service).
 
 Add this snippet to your docker-compose.yml:
 ```yml

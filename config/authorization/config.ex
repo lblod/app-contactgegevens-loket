@@ -46,7 +46,17 @@ defmodule Acl.UserGroups.Config do
                     graph: "http://mu.semte.ch/graphs/sessions",
                     constraint: %ResourceFormatConstraint{
                       resource_prefix: "http://mu.semte.ch/sessions/"
-                    } } ] },
+                    } },
+                  %GraphSpec{
+                    graph: "http://mu.semte.ch/graphs/delta-producer/files",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
+                        "http://www.w3.org/ns/dcat#Dataset",
+                        "http://www.w3.org/ns/dcat#Distribution",
+                      ]
+                    } },
+                 ] },
       # // ORGANIZATION DATA
       %GroupSpec{
         name: "org",
