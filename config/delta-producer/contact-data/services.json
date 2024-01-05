@@ -5,19 +5,20 @@
     "errorCreatorUri": "http://lblod.data.gift/services/delta-producer-publication-graph-maintainer-contactdata",
     "errorGraph": "http://mu.semte.ch/graphs/jobs",
     "exportConfigPath": "/config/export.json",
-    "filesGraph": "http://mu.semte.ch/graphs/files",
-    "filesPath": "/share/files",
+    "filesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+    "filesPath": "/contactdata/files",
     "healingJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData",
     "initialPublicationGraphSyncJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData",
     "jobsGraph": "http://mu.semte.ch/graphs/jobs",
-    "loginPath": "/contactdata/login",
-    "publicationGraph": "http://redpencil.data.gift/id/deltas/producer/lblod-harvester-contactdata-producer",
+    "publicationGraph": "http://data.lblod.info/id/deltas/producer/lblod-harvester-contactdata-producer",
     "publisherUri": "http://data.lblod.info/services/delta-production-json-diff-file-manager-contactdata",
     "queuePollInterval": 3000,
     "relativeFilePath": "deltas/contactdata",
-    "serveDeltaFiles": false,
-    "skipMuAuthInitialSync": false,
-    "useVirtuosoForExpensiveSelects": true
+    "serveDeltaFiles": true,
+    "skipMuAuthInitialSync": true,
+    "skipMuAuthHealing": true,
+    "useFileDiff": true,
+    "useVirtuosoForExpensiveSelects": true,
+    "loginPath": "/contactdata/login"
   }
 }
-  

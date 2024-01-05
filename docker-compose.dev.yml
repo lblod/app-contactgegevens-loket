@@ -32,17 +32,15 @@ services:
   jobs-controller:
     restart: "no"
   delta-producer-background-initiator:
-    environment:
-        CRON_PATTERN_DUMP_JOB: "0 0 * * *" # Midnight. Effectively off
-        CRON_PATTERN_HEALING_JOB: "0 0 * * *" # Midnight. Effectively off
-        START_INITIAL_SYNC: "false"
     restart: "no"
-  delta-producer-pub-graph-maintainer-contactdata:
+  delta-producer-pub-graph-maintainer:
     restart: "no"
-    environment:
-      PRETTY_PRINT_DIFF_JSON: "true"
   delta-producer-dump-file-publisher:
     restart: "no"
+  publication-triplestore:
+    restart: "no"
+    ports:
+      - "8892:8890"
   file:
     restart: "no"
   delta-notifier:
@@ -59,4 +57,3 @@ services:
     environment:
       ENABLE_ENDPOINT_SELECTOR: "true"
       DEFAULT_SPARQL_ENDPOINT: "http://dennisve-dev.s.redhost.be:8890/sparql"
-

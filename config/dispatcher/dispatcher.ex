@@ -103,7 +103,34 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://mocklogin/sessions/"
   end
 
-    #################################################################
+  #################################################################
+  # DELTA-PRODUCER
+  #################################################################
+
+  match "/datasets/*path", %{ accept: %{ json: true }, layer: :api} do
+    forward conn, path, "http://cache/datasets/"
+  end
+
+  match "/distributions/*path", %{ accept: %{ json: true }, layer: :api} do
+    forward conn, path, "http://cache/distributions/"
+  end
+
+  get "/sync/contactdata/files/*path", %{ accept: %{ json: true }, layer: :api} do
+    forward conn, path, "http://delta-producer-pub-graph-maintainer/contactdata/files/"
+  end
+
+  #################################################################
+  # FILES
+  # Note: also needed for deltas sharing
+  #################################################################
+  get "/files/:id/download", _  do
+    forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+  get "/files/*path", %{ accept: %{ json: true }, layer: :api} do
+    forward conn, path, "http://resource/files/"
+  end
+
+  #################################################################
   # Address search
   #################################################################
 
