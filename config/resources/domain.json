@@ -37,51 +37,63 @@
       "name": "user",
       "class": "foaf:Person",
       "attributes": {
-          "first-name": {
-              "type": "string",
-              "predicate": "foaf:firstName"
-          },
-          "family-name": {
-              "type": "string",
-              "predicate": "foaf:familyName"
-          }
+        "first-name": {
+          "type": "string",
+          "predicate": "foaf:firstName"
+        },
+        "family-name": {
+          "type": "string",
+          "predicate": "foaf:familyName"
+        }
       },
       "relationships": {
-          "accounts": {
-              "predicate": "foaf:account",
-              "target": "account",
-              "cardinality": "many"
-          },
-          "groups": {
-              "predicate": "foaf:member",
-              "target": "administrative-unit",
-              "cardinality": "many"
-          }
+        "accounts": {
+          "predicate": "foaf:account",
+          "target": "account",
+          "cardinality": "many"
+        },
+        "groups": {
+          "predicate": "foaf:member",
+          "target": "administrative-unit",
+          "cardinality": "many"
+        }
       },
       "new-resource-base": "http://data.lblod.info/id/gebruiker/"
     },
     "accounts": {
-        "name": "account",
-        "class": "foaf:OnlineAccount",
-        "attributes": {
-            "provider": {
-                "type": "string",
-                "predicate": "foaf:accountServiceHomepage"
-            },
-            "identifier": {
-                "type": "string",
-                "predicate": "dct:identifier"
-            }
+      "name": "account",
+      "class": "foaf:OnlineAccount",
+      "attributes": {
+        "provider": {
+          "type": "string",
+          "predicate": "foaf:accountServiceHomepage"
         },
-        "relationships": {
-            "user": {
-                "predicate": "foaf:account",
-                "target": "user",
-                "cardinality": "one",
-                "inverse": true
-            }
-        },
-        "new-resource-base": "http://data.lblod.info/id/account/"
+        "identifier": {
+          "type": "string",
+          "predicate": "dct:identifier"
+        }
+      },
+      "relationships": {
+        "user": {
+          "predicate": "foaf:account",
+          "target": "user",
+          "cardinality": "one",
+          "inverse": true
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/account/"
+    },
+    "groups": {
+      "name": "group",
+      "class": "besluit:Bestuurseenheid",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        }
+      },
+      "relationships": {},
+      "new-resource-base": "http://data.lblod.info/id/bestuurseenheden/"
     },
     "organizations": {
       "name": "organization",
