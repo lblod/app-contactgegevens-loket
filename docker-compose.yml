@@ -88,7 +88,7 @@ services:
     volumes:
       - ./config/migrations:/data/migrations
   address-search-add-on:
-    build: https://github.com/lblod/address-search-add-on.git
+    image: lblod/address-search-service:latest
     volumes:
       - ./config/address-search-add-on:/data/cache
     labels:
