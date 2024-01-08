@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   frontend:
-    image: lblod/frontend-contactgegevens-loket:1.1.0
+    image: lblod/frontend-contactgegevens-loket:latest
     links:
       - identifier:backend
     restart: always
@@ -87,11 +87,14 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
-  adressenregister:
-    image: lblod/adressenregister-fuzzy-search-service:0.6.3
+  address-search-add-on:
+    build: https://github.com/lblod/address-search-add-on.git
+    volumes:
+      - ./config/address-search-add-on:/data/cache
     labels:
       - "logging=true"
     restart: always
+    logging: *default-logging
   op-consumer:
     image: lblod/delta-consumer:0.0.24
     environment:
