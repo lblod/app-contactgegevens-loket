@@ -385,7 +385,7 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         ?account a foaf:OnlineAccount;
                 mu:uuid ?uuidAccount;
                 foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
-                ext:sessionRole "LoketLB-CLBVGebruiker". 
+                ext:sessionRole "LoketLB-ContactOrganisatiegegevensGebruiker" . 
       }
       GRAPH ?g {
         ?persoon a foaf:Person;
@@ -397,7 +397,7 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         ?account a foaf:OnlineAccount;
                 mu:uuid ?uuidAccount;
                 foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
-                ext:sessionRole "LoketLB-CLBVGebruiker". 
+                ext:sessionRole "LoketLB-ContactOrganisatiegegevensGebruiker" . 
       }
     }
     WHERE {
