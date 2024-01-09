@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   frontend:
-    image: youssefj4/contact:trying
+    image: lblod/frontend-contactgegevens-loket:latest
     links:
       - identifier:backend
     restart: always
