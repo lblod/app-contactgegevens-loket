@@ -115,3 +115,11 @@ services:
       - virtuoso:database
     restart: always
     logging: *default-logging
+  reasoner:
+    image: eyereasoner/reasoning-service:increased-stack-limit
+    volumes:
+      - ./config/reasoner:/config
+    restart: always
+    labels:
+      - "logging=true"
+    logging: *default-logging
