@@ -81,7 +81,7 @@
                 "inverse": true
             }
         },
-        "new-resource-base": "http://data.lblod.info/id/account/"
+        "new-resource-base": "http://data.lblod.info/id/account/",
     },
     "organizations": {
       "name": "organization",
