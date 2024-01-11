@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   frontend:
-    image: lblod/frontend-contactgegevens-loket:1.2.0
+    image: lblod/frontend-contactgegevens-loket:1.3.0
     links:
       - identifier:backend
     restart: always
