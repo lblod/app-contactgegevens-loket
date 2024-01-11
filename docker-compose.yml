@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   frontend:
-    image: lblod/frontend-contactgegevens-loket:latest
+    image: lblod/frontend-contactgegevens-loket:1.2.0
     links:
       - identifier:backend
     restart: always
@@ -137,7 +137,16 @@ services:
     environment:
       MU_APPLICATION_AUTH_USERID_CLAIM: "vo_id"
       MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_loketcontactapp_rol_3d"
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/public"
       MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
       MU_APPLICATION_AUTH_CLIENT_ID: "300a3bc4-1aba-4338-862d-05df84f084c2"
       MU_APPLICATION_AUTH_REDIRECT_URI: "https://contactgegevens-loket.lblod.info/authorization/callback"
       MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
+  reasoner:
+    image: eyereasoner/reasoning-service:increased-stack-limit
+    volumes:
+      - ./config/reasoner:/config
+    restart: always
+    labels:
+      - "logging=true"
+    logging: *default-logging

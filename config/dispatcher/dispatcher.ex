@@ -86,7 +86,7 @@ defmodule Dispatcher do
   match "/accounts", %{ accept: [:json], layer: :api} do
     forward conn, [], "http://resource/accounts/"
   end
-  
+
   match "/groups/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://resource/administrative-units/"
   end
@@ -94,10 +94,7 @@ defmodule Dispatcher do
   match "/accounts/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://accountdetail/accounts/"
   end
-  match "/groups/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://resource/groups/"
-  end
-
+  
   match "/change-events/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://cache/change-events/"
   end
