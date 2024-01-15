@@ -7,6 +7,11 @@ x-logging: &default-logging
     max-file: "3"
 
 services:
+  project-scripts:
+    image: semtech/mu-scripts:1.0.0
+    volumes:
+      - ./scripts/project:/app/scripts/
+    restart: always
   frontend:
     image: lblod/frontend-contactgegevens-loket:1.1.0
     links:
