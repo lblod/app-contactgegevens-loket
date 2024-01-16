@@ -104,11 +104,14 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
-  adressenregister:
-    image: lblod/adressenregister-fuzzy-search-service:0.6.3
+  address-search-add-on:
+    image: lblod/address-search-service:latest
+    volumes:
+      - ./config/address-search-add-on:/data/cache
     labels:
       - "logging=true"
     restart: always
+    logging: *default-logging
   op-consumer:
     image: lblod/delta-consumer:0.0.24
     environment:
