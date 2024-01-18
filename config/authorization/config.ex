@@ -67,7 +67,7 @@ defmodule Acl.UserGroups.Config do
                   PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
                   SELECT DISTINCT ?session_group WHERE {
                     <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group;
-                                 ext:sessionRole \"LoketLB-CLBVGebruiker\".
+                                 ext:sessionRole \"LoketLB-ContactOrganisatiegegevensGebruiker\".
                     }" },
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/organizations/",

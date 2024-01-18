@@ -83,10 +83,18 @@ defmodule Dispatcher do
   match "/users/*path" do
     forward conn, path, "http://cache/users/"
   end
-  match "/accounts/*path" do
-    forward conn, path, "http://cache/accounts/"
+  match "/accounts", %{ accept: [:json], layer: :api} do
+    forward conn, [], "http://resource/accounts/"
   end
 
+  match "/groups/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://resource/administrative-units/"
+  end
+
+  match "/accounts/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://accountdetail/accounts/"
+  end
+  
   match "/change-events/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://cache/change-events/"
   end
@@ -134,8 +142,8 @@ defmodule Dispatcher do
   # Address search
   #################################################################
 
-  match "/adresses-register/*path" do
-    forward conn, path, "http://adressenregister"
+  match "/address-search-add-on/*path" do
+    forward conn, path, "http://address-search-add-on/"
   end
 
   ###############################################################
@@ -158,6 +166,14 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://frontend/index.html"
   end
 
+
+###############################################################
+  # Login
+###############################################################
+
+match "/sessions/*path" do
+  Proxy.forward conn, path, "http://login/sessions/"
+end
 
  match "/*_path", %{ accept: [:any], layer: :not_found} do
     send_resp( conn, 404, "{\"error\": {\"code\": 404}")

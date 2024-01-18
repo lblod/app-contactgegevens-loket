@@ -385,7 +385,7 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         ?account a foaf:OnlineAccount;
                 mu:uuid ?uuidAccount;
                 foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
-                ext:sessionRole "LoketLB-CLBVGebruiker". 
+                ext:sessionRole "LoketLB-ContactOrganisatiegegevensGebruiker" . 
       }
       GRAPH ?g {
         ?persoon a foaf:Person;
@@ -397,7 +397,7 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         ?account a foaf:OnlineAccount;
                 mu:uuid ?uuidAccount;
                 foaf:accountServiceHomepage <https://github.com/lblod/mock-login-service>;
-                ext:sessionRole "LoketLB-CLBVGebruiker". 
+                ext:sessionRole "LoketLB-ContactOrganisatiegegevensGebruiker" . 
       }
     }
     WHERE {
@@ -416,6 +416,16 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
 
 }
 
+async function transformLandingZoneGraph(fetch, endpoint, mapping = 'main') {
+  console.log(`Transforming landing zone graph: ${LANDING_ZONE_GRAPH}`);
+
+  const response = await fetch(`http://reasoner/reason/op2clb/${mapping}?data=${encodeURIComponent(`${endpoint}?default-graph-uri=&query=CONSTRUCT+%7B%0D%0A%3Fs+%3Fp+%3Fo%0D%0A%7D+WHERE+%7B%0D%0A+GRAPH+<${LANDING_ZONE_GRAPH}>+%7B%0D%0A%3Fs+%3Fp+%3Fo%0D%0A%7D%0D%0A%7D&should-sponge=&format=text%2Fplain&timeout=0&run=+Run+Query`)}`);
+  const text = await response.text();
+  const statements = text.replace(/\n{2,}/g, '').split('\n');
+
+  return statements;
+}
+
 module.exports = {
   batchedDbUpdate,
   moveToOrganizationsGraph,
@@ -423,5 +433,6 @@ module.exports = {
   insertIntoPublicGraph,
   deleteFromPublicGraph,
   insertIntoSpecificGraphs,
-  deleteFromSpecificGraphs
+  deleteFromSpecificGraphs,
+  transformLandingZoneGraph
 };
