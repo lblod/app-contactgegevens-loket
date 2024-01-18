@@ -27,33 +27,5 @@ services:
     links:
       - database:database
     restart: "no"
-  adressenregister:
+  address-search-add-on:
     restart: "no"
-  jobs-controller:
-    restart: "no"
-  delta-producer-background-initiator:
-    restart: "no"
-  delta-producer-pub-graph-maintainer:
-    restart: "no"
-  delta-producer-dump-file-publisher:
-    restart: "no"
-  publication-triplestore:
-    restart: "no"
-    ports:
-      - "8892:8890"
-  file:
-    restart: "no"
-  delta-notifier:
-    restart: "no"
-    environment:
-      DEBUG_DELTA_SEND: "true"
-      DEBUG_DELTA_MATCH: "true"
-  yasgui:
-    image: erikap/yasgui
-    ports:
-      - 8891:80
-    links:
-      - database:database
-    environment:
-      ENABLE_ENDPOINT_SELECTOR: "true"
-      DEFAULT_SPARQL_ENDPOINT: "http://dennisve-dev.s.redhost.be:8890/sparql"
