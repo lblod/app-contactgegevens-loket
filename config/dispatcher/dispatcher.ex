@@ -160,6 +160,11 @@ defmodule Dispatcher do
   # Dashboard: frontend
   ###############################################################
 
+  # match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
+  #   IO.inspect("dashboard says hello")
+  #   Proxy.forward conn, path, "http://dashboard-login/sessions/"
+  # end
+
   get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest] }  do
     forward conn, path, "http://dashboard/assets/"
   end

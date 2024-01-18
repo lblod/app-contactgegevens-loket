@@ -69,7 +69,7 @@ INSERT DATA {
                                                    account:salt "#{account_salt}";
                                                    account:status <http://mu.semte.ch/vocabularies/account/status/active>;
                                                    dcterms:created "#{now}"^^xsd:datetime;
-                                                   ext:sessionRole "DatabankErediensten-dashboard-user";
+                                                   ext:sessionRole "contactgegevens-dashboard-user";
                                                    dcterms:modified "#{now}"^^xsd:datetime.
 }}
 )
