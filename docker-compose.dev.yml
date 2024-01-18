@@ -27,5 +27,5 @@ services:
     links:
       - database:database
     restart: "no"
-  address-search-add-on:
+  adressenregister:
     restart: "no"
