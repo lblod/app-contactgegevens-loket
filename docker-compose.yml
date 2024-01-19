@@ -60,6 +60,8 @@ services:
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_COMPATIBILITY: Virtuoso
+      LOG_OUTGOING_SPARQL_QUERIES: "true"
+      LOG_INCOMING_SPARQL_QUERIES: "true"
     volumes:
       - ./config/authorization:/config
     restart: always
@@ -126,6 +128,7 @@ services:
       DCR_ENABLE_DELTA_CONTEXT: "true"
       BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: "true"
       INGEST_GRAPH: "http://mu.semte.ch/graphs/ingest"
+      SLEEP_BETWEEN_BATCHES: 500
     volumes:
       - ./config/consumer/op:/config/triples-dispatching/custom-dispatching
       - ./data/files/consumer-files/op:/consumer-files/
