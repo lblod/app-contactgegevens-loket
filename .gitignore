@@ -10,3 +10,5 @@ docker-compose.override.yml
 Makefile
 prepare.sh
 Caddyfile
+/commands
+/.vscode

@@ -10,17 +10,27 @@ services:
   database:
     restart: "no"
   virtuoso:
-    ports:
-      - "8890:8890"
     restart: "no"
   resource:
     restart: "no"
   cache:
     restart: "no"
+  address-search-add-on:
+    restart: "no"
+  frontend:
+    restart: "no"
+  accountdetail:
+    restart: "no"
+  migrations:
+    restart: "no"
+  op-consumer:
+    restart: "no"
+  login:
+    restart: "no"
+  reasoner:
+    restart: "no"
   mocklogin:
     image: lblod/mock-login-service:latest
     links:
       - database:database
-    restart: "no"
-  address-search-add-on:
     restart: "no"
