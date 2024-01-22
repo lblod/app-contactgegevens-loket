@@ -3,8 +3,8 @@ version: "3.4"
 services:
   identifier:
     restart: "no"
-    ports:
-      - "80:80"
+    # ports:
+    #   - "80:80"
   dispatcher:
     restart: "no"
   database:
@@ -33,4 +33,6 @@ services:
     image: lblod/mock-login-service:latest
     links:
       - database:database
+    restart: "no"
+  project-scripts:
     restart: "no"

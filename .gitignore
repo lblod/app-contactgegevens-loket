@@ -12,3 +12,4 @@ prepare.sh
 Caddyfile
 /commands
 /.vscode
+/config/migrations/local/*
