@@ -149,6 +149,7 @@ services:
       DCR_ENABLE_DELTA_CONTEXT: "true"
       BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: "true"
       INGEST_GRAPH: "http://mu.semte.ch/graphs/ingest"
+      SLEEP_BETWEEN_BATCHES: 100
     volumes:
       - ./config/consumer/op:/config/triples-dispatching/custom-dispatching
       - ./data/files/consumer-files/op:/consumer-files/

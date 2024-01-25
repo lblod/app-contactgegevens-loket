@@ -86,7 +86,7 @@ defmodule Acl.UserGroups.Config do
       # // Dashboard users
       %GroupSpec{
         name: "dashboard-users",
-        useage: [:read],
+        useage: [:read, :write, :read_for_write],
         access: can_access_dashboard(),
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/reports",
