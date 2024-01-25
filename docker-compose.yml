@@ -113,7 +113,7 @@ services:
     restart: always
     logging: *default-logging
   op-consumer:
-    image: lblod/delta-consumer:0.0.24
+    image: lblod/delta-consumer:latest
     environment:
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info"
       DCR_SERVICE_NAME: "op-consumer"
@@ -126,6 +126,8 @@ services:
       DCR_DELTA_FILE_FOLDER: "/consumer-files"
       DCR_DISABLE_DELTA_INGEST: "false"
       DCR_ENABLE_DELTA_CONTEXT: "true"
+      DCR_BATCH_SIZE: 1000
+      SLEEP_BETWEEN_BATCHES: 100
       BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: "true"
       INGEST_GRAPH: "http://mu.semte.ch/graphs/ingest"
     volumes:
