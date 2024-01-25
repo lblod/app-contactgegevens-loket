@@ -24,24 +24,45 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
 
+  get "/favicon.ico", @any do
+    send_resp( conn, 404, "" )
+  end
+
+  ###############################################################
+  # Login
+  ###############################################################
+
+  match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
+    IO.inspect("dashboard says hello")
+    Proxy.forward conn, path, "http://dashboard-login/sessions/"
+  end
+
+  match "/sessions/*path" do
+    Proxy.forward conn, path, "http://login/sessions/"
+  end
+
+  ###############################################################
+  # Resources and jobs
+  ###############################################################
+
   match "/jobs/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://resource/jobs/"
+    forward conn, path, "http://cache/jobs/"
   end
 
   match "/tasks/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://resource/tasks/"
+    forward conn, path, "http://cache/tasks/"
   end
 
   match "/data-containers/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://resource/data-containers/"
+    forward conn, path, "http://cache/data-containers/"
   end
 
   match "/job-errors/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://resource/job-errors/"
+    forward conn, path, "http://cache/job-errors/"
   end
 
   match "/reports/*path", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, path, "http://resource/reports/"
+    forward conn, path, "http://resource/reports/"
   end
 
   match "/administrative-units/*path", %{ accept: [:json], layer: :api} do
@@ -97,10 +118,11 @@ defmodule Dispatcher do
   end
 
   match "/users/*path" do
-    Proxy.forward conn, path, "http://cache/users/"
+    forward conn, path, "http://cache/users/"
   end
+
   match "/accounts", %{ accept: [:json], layer: :api} do
-    Proxy.forward conn, [], "http://resource/accounts/"
+    forward conn, [], "http://resource/accounts/"
   end
 
   match "/groups/*path", %{ accept: [:json], layer: :api} do
@@ -126,13 +148,13 @@ defmodule Dispatcher do
   match "/mock/sessions/*path", %{ accept: [:any], layer: :api} do
     Proxy.forward conn, path, "http://mocklogin/sessions/"
   end
-
+    
   #################################################################
   # Address search
   #################################################################
 
   match "/address-search-add-on/*path" do
-    Proxy.forward conn, path, "http://address-search-add-on/"
+    forward conn, path, "http://address-search-add-on/"
   end
 
   ###############################################################
@@ -140,19 +162,25 @@ defmodule Dispatcher do
   ###############################################################
 
   get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest], layer: :api }  do
-    Proxy.forward conn, path, "http://dashboard/assets/"
+    forward conn, path, "http://frontend-dashboard/assets/"
   end
 
   get "/@appuniversum/*path", %{ reverse_host: ["dashboard" | _rest], layer: :api} do
-    Proxy.forward conn, path, "http://dashboard/@appuniversum/"
+    forward conn, path, "http://frontend-dashboard/@appuniversum/"
   end
 
   match "/*path", %{ reverse_host: ["dashboard" | _rest], accept: [:html], layer: :api } do
-    Proxy.forward conn, path, "http://dashboard/index.html"
+    # *_path allows a path to be supplied, but will not yield
+    # an error that we don't use the path variable.
+    IO.inspect("Dashboard trigger /*path")
+    forward conn, path, "http://frontend-dashboard/index.html"
   end
 
   match "/*_path", %{ reverse_host: ["dashboard" | _rest], layer: :frontend } do
-    Proxy.forward conn, [], "http://dashboard/index.html"
+    # *_path allows a path to be supplied, but will not yield
+    # an error that we don't use the path variable.
+    IO.inspect("Dashboard trigger /*_path")
+    forward conn, [], "http://frontend-dashboard/index.html"
   end
 
   match "/assets/*path", %{ layer: :api } do
@@ -171,19 +199,8 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://frontend/index.html"
   end
 
-  ###############################################################
-    # Login
-  ###############################################################
-
-  match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
-    Proxy.forward conn, path, "http://dashboard-login/sessions/"
-  end
-
-  match "/sessions/*path" do
-    Proxy.forward conn, path, "http://login/sessions/"
-  end
-
   match "/*_path", %{ accept: [:any], layer: :not_found} do
-    send_resp( conn, 404, "{\"error\": {\"code\": 404}}")
+    send_resp( conn, 404, "{\"error\": {\"code\": 404}")
   end
+
 end

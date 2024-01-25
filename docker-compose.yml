@@ -199,3 +199,6 @@ services:
     # the container exits when the link is not set.
     links:
       - identifier:backend
+    logging: *default-logging
+    restart: always
+

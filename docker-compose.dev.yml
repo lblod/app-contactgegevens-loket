@@ -36,3 +36,7 @@ services:
     restart: "no"
   project-scripts:
     restart: "no"
+  dashboard:
+    restart: "no"
+  dashboard-login:
+    restart: "no"
