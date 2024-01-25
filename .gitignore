@@ -1,10 +1,13 @@
 # Virtuoso files /data/db
 /data/db/*
 /data/files/*
-/data/*
+/data/publication-triplestore/*
 !/data/db/virtuoso.ini
 !/data/db/toLoad
 !/data/db/toLoad/*
+!/data/publication-triplestore/virtuoso.ini
+!/data/publication-triplestore/toLoad
+!/data/publication-triplestore/toLoad/*
 
 docker-compose.override.yml
 Makefile
