@@ -100,7 +100,7 @@ defmodule Acl.UserGroups.Config do
                       ]
                     } },
 
-                   %GraphSpec{
+                  %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/system/jobs",
                     constraint: %ResourceConstraint{
                       resource_types: [
@@ -108,7 +108,17 @@ defmodule Acl.UserGroups.Config do
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
-                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"
+                      ]
+                    } },
+                  %GraphSpec{
+                    graph: "http://mu.semte.ch/application",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry",
+                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level",
+                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode",
+                        "http://mu.semte.ch/vocabularies/ext/LogSource",
+                        "http://lblod.data.gift/vocabularies/reporting/Report"
                       ]
                     } },
                    ] },
