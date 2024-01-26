@@ -24,6 +24,26 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
 
+  match "/log-entries/*path" do
+    Proxy.forward conn, path, "http://resource/log-entries/"
+  end
+
+  match "/log-levels/*path" do
+    Proxy.forward conn, path, "http://resource/log-levels/"
+  end
+
+  match "/status-codes/*path" do
+    Proxy.forward conn, path, "http://resource/status-codes/"
+  end
+
+  match "/log-sources/*path" do
+    Proxy.forward conn, path, "http://resource/log-sources/"
+  end
+
+  match "/status-codes/*path" do
+    Proxy.forward conn, path, "http://resource/acm-idm-service-log-entries/"
+  end
+
   match "/jobs/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://resource/jobs/"
   end

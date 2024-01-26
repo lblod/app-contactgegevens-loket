@@ -107,7 +107,8 @@ defmodule Acl.UserGroups.Config do
                         "http://vocab.deri.ie/cogs#Job",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
-                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
+                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"
                       ]
                     } },
                    ] },

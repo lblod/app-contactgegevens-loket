@@ -5,3 +5,4 @@
 (read-domain-file "change-events.json")
 (read-domain-file "master-job-domain.lisp")
 (read-domain-file "master-reports-domain.lisp")
+(read-domain-file "master-log-domain.lisp")
