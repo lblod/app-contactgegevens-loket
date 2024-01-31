@@ -16,7 +16,6 @@ services:
     labels:
       - "logging=true"
     environment:
-      ENABLE_NEW_FEATURE: "false"
       ENABLE_EDIT_FEATURE: "false"
       EMBER_OAUTH_API_REDIRECT_URL: "https://contactgegevens-loket.lblod.info/authorization/callback"
       EMBER_OAUTH_API_KEY: "300a3bc4-1aba-4338-862d-05df84f084c2"
