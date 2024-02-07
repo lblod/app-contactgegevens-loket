@@ -125,18 +125,22 @@ const contextConfig = {
           ${subject} mu:uuid ?uuid.
           ${subject} org:hasSite ?site.
           ?site ?pSite ?oSite.
-          OPTIONAL {
+          {
             ?site org:siteAddress ?contact.
             ?contact ?pContact ?oContact.
-            OPTIONAL {
-              ?contact locn:address ?addressContact.
-              ?addressContact ?pAddressContact ?oAddressContact.
-            }
+            ?contact locn:address ?addressContact.
+            ?addressContact ?pAddressContact ?oAddressContact.
           }
-          OPTIONAL {
+          UNION
+          {
+            ?site org:siteAddress ?contact.
+            ?contact ?pContact ?oContact.
+          }
+          UNION
+          {
             ?site organisatie:bestaatUit ?address.
             ?address ?pAddress ?oAddress.
-          }
+          }        
           BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?uuid)) AS ?graph)
         }`
     },
@@ -156,18 +160,22 @@ const contextConfig = {
           ${subject} mu:uuid ?uuid.
           ${subject} org:hasPrimarySite ?site.
           ?site ?pSite ?oSite.
-          OPTIONAL {
+          {
             ?site org:siteAddress ?contact.
             ?contact ?pContact ?oContact.
-            OPTIONAL {
-              ?contact locn:address ?addressContact.
-              ?addressContact ?pAddressContact ?oAddressContact.
-            }
+            ?contact locn:address ?addressContact.
+            ?addressContact ?pAddressContact ?oAddressContact.
           }
-          OPTIONAL {
+          UNION
+          {
+            ?site org:siteAddress ?contact.
+            ?contact ?pContact ?oContact.
+          }
+          UNION
+          {
             ?site organisatie:bestaatUit ?address.
             ?address ?pAddress ?oAddress.
-          }
+          }        
           BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?uuid)) AS ?graph)
         }`
     },
