@@ -180,12 +180,12 @@ async function moveTypeToPublic(muUpdate, endpoint, type) {
     }
     INSERT {
       GRAPH <http://mu.semte.ch/graphs/public> {
-        ?site a ${type};
+        ?subject a ${type};
           ?pred ?obj.
       }
     }
     WHERE {
-      ?site a ${type};
+      ?subject a ${type};
           ?pred ?obj.
     }
   `, undefined, endpoint)
