@@ -1,0 +1,20 @@
+{
+  "version": "0.1",
+  "scripts": [
+    {
+      "documentation": {
+        "command": "create-dashboard-users",
+        "description": "Creates users for dashboard",
+        "arguments": []
+      },
+      "environment": {
+        "image": "semtech/mu-ruby-template",
+        "interactive": true,
+        "script": "create-dashboard-users/run.sh"
+      },
+      "mounts": {
+        "app": "/project"
+      }
+    }
+  ]
+}
