@@ -52,14 +52,13 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/ns/prov#Location",
                         "http://www.w3.org/ns/org#ChangeEvent",
                         "http://lblod.data.gift/vocabularies/organisatie/VeranderingsgebeurtenisResultaat",
-                        "http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis",
-                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"
+                        "http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis"
                       ]
                     } },
                   %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/sessions",
                     constraint: %ResourceFormatConstraint{
-                      resource_prefix: "http://mu.semte.ch/sessions/",
+                      resource_prefix: "http://mu.semte.ch/sessions/"
                     } } ] },
       # // ORGANIZATION DATA
       %GroupSpec{
