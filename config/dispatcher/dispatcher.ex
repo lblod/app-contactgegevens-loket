@@ -130,7 +130,7 @@ defmodule Dispatcher do
   match "/accounts/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://accountdetail/accounts/"
   end
-  
+
   match "/change-events/*path", %{ accept: [:json], layer: :api} do
     Proxy.forward conn, path, "http://cache/change-events/"
   end
@@ -153,6 +153,25 @@ defmodule Dispatcher do
 
   match "/address-search-add-on/*path" do
     Proxy.forward conn, path, "http://address-search-add-on/"
+  end
+
+    ###############################################################
+  # files
+  ###############################################################
+  get "/files/:id/download", %{ layer: :api_services } do
+    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+
+  post "/files/*path", %{ layer: :api_services } do
+    Proxy.forward conn, path, "http://file/files/"
+  end
+
+  delete "/files/*path", %{ accept: [ :json ], layer: :api_services } do
+    Proxy.forward conn, path, "http://file/files/"
+  end
+
+  get "/files/*path", %{ accept: [ :json ], layer: :api_services } do
+    Proxy.forward conn, path, "http://resource/files/"
   end
 
   ###############################################################
