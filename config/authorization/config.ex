@@ -9,6 +9,19 @@ alias Acl.GraphSpec.Constraint.Resource.NoPredicates, as: NoPredicates
 alias Acl.GraphSpec.Constraint.Resource.AllPredicates, as: AllPredicates
 
 defmodule Acl.UserGroups.Config do
+  defp can_access_dashboard() do
+    %AccessByQuery{
+      vars: [],
+      query: "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+        PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+        SELECT DISTINCT ?account WHERE {
+          <SESSION_ID> <http://mu.semte.ch/vocabularies/session/account> ?account.
+          ?account <http://mu.semte.ch/vocabularies/ext/sessionRole> ?session_role.
+          FILTER( ?session_role = \"contactgegevens-dashboard-user\" )
+        }"
+      }
+  end
+
   def user_groups do
     # These elements are walked from top to bottom.  Each of them may
     # alter the quads to which the current query applies.  Quads are
@@ -71,7 +84,45 @@ defmodule Acl.UserGroups.Config do
                         "http://schema.org/ContactPoint",
                         "http://www.w3.org/ns/locn#Address",
                       ] } } ] },
+      # // Dashboard users
+      %GroupSpec{
+        name: "dashboard-users",
+        useage: [:read, :write, :read_for_write],
+        access: can_access_dashboard(),
+        graphs: [ %GraphSpec{
+                    graph: "http://mu.semte.ch/graphs/reports",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://lblod.data.gift/vocabularies/reporting/Report",
+                        "http://open-services.net/ns/core#Error",
+                          "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
+                          "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
+                          "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"
+                      ]
+                    } },
 
+                  %GraphSpec{
+                    graph: "http://mu.semte.ch/graphs/system/jobs",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://vocab.deri.ie/cogs#Job",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
+                      ]
+                    } },
+                  %GraphSpec{
+                    graph: "http://mu.semte.ch/application",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry",
+                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level",
+                        "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode",
+                        "http://mu.semte.ch/vocabularies/ext/LogSource",
+                        "http://lblod.data.gift/vocabularies/reporting/Report"
+                      ]
+                    } },
+                   ] },
       %GraphCleanup{
         originating_graph: "http://mu.semte.ch/application",
         useage: [:write],
