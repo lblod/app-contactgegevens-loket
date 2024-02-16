@@ -5,7 +5,7 @@
         "errorCreatorUri": "http://lblod.data.gift/services/delta-producer-publication-graph-maintainer-contactdata",
         "errorGraph": "http://mu.semte.ch/graphs/system/jobs",
         "exportConfigPath": "/config/export.json",
-        "filesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+        "filesGraph": "http://mu.semte.ch/graphs/public",
         "filesPath": "/files",
         "healingJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData",
         "initialPublicationGraphSyncJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData",
