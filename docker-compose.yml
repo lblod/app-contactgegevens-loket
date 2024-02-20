@@ -256,4 +256,14 @@ services:
       - identifier:backend
     logging: *default-logging
     restart: always
+  file:
+    image: semtech/mu-file-service:3.2.0
+    volumes:
+      - ./data/files:/share
+    labels:
+      - "logging=true"
+    links:
+      - database:database
+    restart: always
+    logging: *default-logging
 

@@ -3,14 +3,16 @@ version: "3.4"
 services:
   identifier:
     restart: "no"
-    # ports:
-    #   - "80:80"
+    ports:
+      - "80:80"
   dispatcher:
     restart: "no"
   database:
     restart: "no"
   virtuoso:
     restart: "no"
+    ports:
+      - "8890:8890"
   resource:
     restart: "no"
   cache:

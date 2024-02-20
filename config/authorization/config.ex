@@ -56,12 +56,13 @@ defmodule Acl.UserGroups.Config do
                         "http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst",
                         "http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst",
                         "http://lblod.data.gift/vocabularies/organisatie/TypeEredienst",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"
                       ]
                     } },
                   %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/sessions",
                     constraint: %ResourceFormatConstraint{
-                      resource_prefix: "http://mu.semte.ch/sessions/"
+                      resource_prefix: "http://mu.semte.ch/sessions/",
                     } } ] },
       # // ORGANIZATION DATA
       %GroupSpec{
