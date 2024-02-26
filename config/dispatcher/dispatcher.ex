@@ -178,15 +178,15 @@ defmodule Dispatcher do
   # frontend layer
   ###############################################################
 
-  get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest], layer: :api }  do
+  get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest], layer: :frontend }  do
     Proxy.forward conn, path, "http://dashboard/assets/"
   end
 
-  get "/@appuniversum/*path", %{ reverse_host: ["dashboard" | _rest], layer: :api} do
+  get "/@appuniversum/*path", %{ reverse_host: ["dashboard" | _rest], layer: :frontend} do
     Proxy.forward conn, path, "http://dashboard/@appuniversum/"
   end
 
-  match "/*path", %{ reverse_host: ["dashboard" | _rest], accept: [:html], layer: :api } do
+  match "/*path", %{ reverse_host: ["dashboard" | _rest], accept: [:html], layer: :frontend } do
     Proxy.forward conn, path, "http://dashboard/index.html"
   end
 
@@ -194,15 +194,15 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://dashboard/index.html"
   end
 
-  match "/assets/*path", %{ layer: :api } do
+  match "/assets/*path", %{ layer: :frontend } do
     Proxy.forward conn, path, "http://frontend/assets/"
   end
 
-  match "/@appuniversum/*path", %{ layer: :api } do
+  match "/@appuniversum/*path", %{ layer: :frontend } do
     Proxy.forward conn, path, "http://frontend/@appuniversum/"
   end
 
-  match "/*path", %{ accept: [:html], layer: :api } do
+  match "/*path", %{ accept: [:html], layer: :frontend } do
     Proxy.forward conn, [], "http://frontend/index.html"
   end
 
