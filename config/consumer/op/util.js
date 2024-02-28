@@ -167,6 +167,7 @@ async function moveToPublic(muUpdate, endpoint) {
   await moveTypeToPublic(muUpdate, endpoint, 'org:ChangeEvent')
   await moveTypeToPublic(muUpdate, endpoint, 'code:VeranderingsgebeurtenisResultaat')
   await moveTypeToPublic(muUpdate, endpoint, 'code:Veranderingsgebeurtenis')
+  await moveTypeToPublic(muUpdate, endpoint, 'code:OrganisatieStatusCode')
 }
 
 async function moveTypeToPublic(muUpdate, endpoint, type) {
