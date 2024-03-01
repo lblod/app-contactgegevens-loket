@@ -53,6 +53,9 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/ns/org#ChangeEvent",
                         "http://lblod.data.gift/vocabularies/organisatie/VeranderingsgebeurtenisResultaat",
                         "http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis",
+                        "http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst",
+                        "http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst",
+                        "http://lblod.data.gift/vocabularies/organisatie/TypeEredienst",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"
                       ]
                     } },

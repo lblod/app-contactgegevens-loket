@@ -30,7 +30,10 @@ const publicTypes = [
   '<http://www.w3.org/ns/prov#Location>',
   '<http://www.w3.org/ns/org#ChangeEvent>',
   '<http://lblod.data.gift/vocabularies/organisatie/VeranderingsgebeurtenisResultaat>',
-  '<http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis>'
+  '<http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis>',
+  '<http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>',
+  '<http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>',
+  '<http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>'
 ]
 async function dispatch(lib, data) {
   const { mu, fetch } = lib;

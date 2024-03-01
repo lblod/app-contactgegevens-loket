@@ -167,7 +167,10 @@ async function moveToPublic(muUpdate, endpoint) {
   await moveTypeToPublic(muUpdate, endpoint, 'org:ChangeEvent')
   await moveTypeToPublic(muUpdate, endpoint, 'code:VeranderingsgebeurtenisResultaat')
   await moveTypeToPublic(muUpdate, endpoint, 'code:Veranderingsgebeurtenis')
+  await moveTypeToPublic(muUpdate, endpoint, 'ere:BestuurVanDeEredienst')
+  await moveTypeToPublic(muUpdate, endpoint, 'ere:CentraalBestuurVanDeEredienst')
   await moveTypeToPublic(muUpdate, endpoint, 'code:OrganisatieStatusCode')
+  await moveTypeToPublic(muUpdate, endpoint, 'code:TypeEredienst')
 }
 
 async function moveTypeToPublic(muUpdate, endpoint, type) {
@@ -406,6 +409,7 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
           skos:prefLabel ?naam;
           mu:uuid ?adminUnitUuid;
           org:classification/skos:prefLabel ?classificatie.
+        VALUES ?type { besluit:Bestuurseenheid <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> }
         BIND(CONCAT(?classificatie, " ", ?naam) as ?volledigeNaam)
         BIND(MD5(?adminUnitUuid) as ?uuidPersoon)
         BIND(MD5(CONCAT(?adminUnitUuid,"ACCOUNT")) as ?uuidAccount)

@@ -143,6 +143,18 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/change-event-results/"
   end
 
+  match "/worship-services/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://resource/worship-services/" 
+  end
+
+  match "/recognized-worship-types/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://cache/recognized-worship-types/"
+  end
+
+  match "/central-worship-services/*path", %{ accept: [:json], layer: :api} do
+    Proxy.forward conn, path, "http://resource/central-worship-services/"
+  end
+
   match "/mock/sessions/*path", %{ accept: [:any], layer: :api} do
     Proxy.forward conn, path, "http://mocklogin/sessions/"
   end

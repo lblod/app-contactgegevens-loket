@@ -432,6 +432,52 @@
         }
       },
       "new-resource-base": "http://data.lblod.info/id/werkingsgebieden/"
+    },
+    "worship-administrative-units": {
+      "name": "worship-administrative-unit",
+      "class": "ere:EredienstBestuurseenheid",
+      "super": ["administrative-unit"],
+      "relationships": {
+        "recognized-worship-type": {
+          "predicate": "ere:typeEredienst",
+          "target": "recognized-worship-type",
+          "cardinality": "one"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/eredienstBestuurseenheden/"
+    },
+    "worship-services": {
+      "name": "worship-service",
+      "class": "ere:BestuurVanDeEredienst",
+      "super": ["worship-administrative-unit"],
+      "attributes": {
+        "denomination": {
+          "type": "string",
+          "predicate": "ere:denominatie"
+        },
+        "cross-border": {
+          "type": "boolean",
+          "predicate": "ere:grensoverschrijdend"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/id/besturenVanDeEredienst/"
+    },
+    "recognized-worship-types": {
+      "name": "recognized-worship-type",
+      "class": "code:TypeEredienst",
+      "attributes": {
+        "label": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        }
+      },
+      "new-resource-base": "http://lblod.data.gift/concepts/"
+    },
+    "central-worship-services": {
+      "name": "central-worship-service",
+      "class": "ere:CentraalBestuurVanDeEredienst",
+      "super": ["worship-administrative-unit"],
+      "new-resource-base": "http://data.lblod.info/id/centraleBesturenVanDeEredienst/"
     }
   }
 }
