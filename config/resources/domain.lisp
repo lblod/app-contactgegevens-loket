@@ -7,5 +7,6 @@
 (read-domain-file "master-job-domain.lisp")
 (read-domain-file "master-reports-domain.lisp")
 (read-domain-file "master-log-domain.lisp")
+(read-domain-file "dcat.json")
 
 

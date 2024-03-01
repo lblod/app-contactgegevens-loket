@@ -237,4 +237,16 @@ defmodule Dispatcher do
   match "/*_path", %{ accept: [:any], layer: :not_found} do
     send_resp( conn, 404, "{\"error\": {\"code\": 404}}")
   end
+
+  #################################################################
+  #  DELTA: contact-data
+  #################################################################
+
+  get "/sync/contact-data/files/*path", %{ accept: [:any], layer: :api} do
+    Proxy.forward conn, path, "http://delta-producer-pub-graph-maintainer/files/"
+  end
+
+  get "/datasets/*path", %{ layer: :api_services, accept: %{ json: true } } do
+    Proxy.forward conn, path, "http://resource/datasets/"
+  end
 end
