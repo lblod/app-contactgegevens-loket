@@ -17,7 +17,7 @@ services:
     restart: "no"
   cache:
     restart: "no"
-  address-search-add-on:
+  adressenregister:
     restart: "no"
   frontend:
     restart: "no"
