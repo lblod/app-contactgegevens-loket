@@ -125,14 +125,11 @@ services:
       MU_APPLICATION_AUTH_REDIRECT_URI: "https://contactgegevens-loket.lblod.info/authorization/callback"
       MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
   ### ADDRESS SEARCH (not dependant on other microservices)
-  address-search-add-on:
-    image: lblod/address-search-service:latest
-    volumes:
-      - ./config/address-search-add-on:/data/cache
+  adressenregister:
+    image: lblod/adressenregister-fuzzy-search-service:0.6.3
     labels:
       - "logging=true"
     restart: always
-    logging: *default-logging
   # Delta notifier
   delta-notifier: # Kind of delta message multiplexer
     image: semtech/mu-delta-notifier:0.2.0
