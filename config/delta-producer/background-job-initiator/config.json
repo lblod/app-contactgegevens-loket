@@ -8,7 +8,7 @@
         "errorCreatorUri": "http://lblod.data.gift/services/delta-producer-background-jobs-initiator/contactData",
         "cronPatternDumpJob": "0 0 6 * * 6",
         "cronPatternHealingJob": "0 0 4 * * *",
-        "startInitialSync": false,
-        "disableDumpFileCreation": true
+        "startInitialSync": true,
+        "disableDumpFileCreation": false
     }
 ]

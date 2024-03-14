@@ -4,8 +4,8 @@
         "targetGraph": "http://data.lblod.info/id/deltas/producer/lblod-harvester-contactdata-producer",
         "fileBaseName": "dump-contact-data",
         "publicationGraphEndpoint": "http://publication-triplestore:8890/sparql",
-        "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
-        "targetFilesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+        "targetDcatGraph": "http://mu.semte.ch/graphs/public",
+        "targetFilesGraph": "http://mu.semte.ch/graphs/public",
         "cleanupOldDumps": true
     },
     "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData": {
@@ -13,8 +13,8 @@
         "targetGraph": "http://data.lblod.info/id/deltas/producer/lblod-harvester-contactdata-producer",
         "fileBaseName": "dump-contact-data",
         "publicationGraphEndpoint": "http://publication-triplestore:8890/sparql",
-        "targetDcatGraph": "http://mu.semte.ch/graphs/delta-producer/files",
-        "targetFilesGraph": "http://mu.semte.ch/graphs/delta-producer/files",
+        "targetDcatGraph": "http://mu.semte.ch/graphs/public",
+        "targetFilesGraph": "http://mu.semte.ch/graphs/public",
         "cleanupOldDumps": true
     }
 }
