@@ -14,7 +14,7 @@
                 "http://schema.org/email",
                 "http://schema.org/telephone",
                 "http://schema.org/faxNumber",
-                "http://schema.org/page",
+                "http://xmlns.com/foaf/0.1/page",
                 "http://schema.org/contactType",
                 "http://www.w3.org/ns/locn#address"
             ]
