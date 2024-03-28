@@ -5,7 +5,8 @@
             "properties": [
                 "http://www.w3.org/ns/org#siteAddress",
                 "https://data.vlaanderen.be/ns/organisatie#bestaatUit",
-                "http://data.lblod.info/vocabularies/erediensten/vestigingstype"
+                "http://data.lblod.info/vocabularies/erediensten/vestigingstype",
+                "http://purl.org/dc/terms/description"
             ]
         },
         {
