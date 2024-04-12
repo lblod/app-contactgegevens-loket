@@ -2,6 +2,11 @@
     "export": [
         {
             "type": "http://www.w3.org/ns/org#Site",
+            "graphsFilter": [
+                "http://mu.semte.ch/graphs/public",
+                "^http://mu.semte.ch/graphs/organizations\\/[^\\/]+$"
+            ],
+            "hasRegexGraphsFilter": true,
             "properties": [
                 "http://mu.semte.ch/vocabularies/core/uuid",
                 "http://www.w3.org/ns/org#siteAddress",
@@ -12,6 +17,11 @@
         },
         {
             "type": "http://schema.org/ContactPoint",
+            "graphsFilter": [
+                "http://mu.semte.ch/graphs/public",
+                "^http://mu.semte.ch/graphs/organizations\\/[^\\/]+$"
+            ],
+            "hasRegexGraphsFilter": true,
             "properties": [
                 "http://mu.semte.ch/vocabularies/core/uuid",
                 "http://schema.org/email",
@@ -24,6 +34,11 @@
         },
         {
             "type": "http://www.w3.org/ns/locn#Address",
+            "graphsFilter": [
+                "http://mu.semte.ch/graphs/public",
+                "^http://mu.semte.ch/graphs/organizations\\/[^\\/]+$"
+            ],
+            "hasRegexGraphsFilter": true,
             "properties": [
                 "http://mu.semte.ch/vocabularies/core/uuid",
                 "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
@@ -41,6 +56,11 @@
         {
             "type": "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
             "strictTypeExport": "true",
+            "graphsFilter": [
+                "http://mu.semte.ch/graphs/public",
+                "^http://mu.semte.ch/graphs/organizations\\/[^\\/]+$"
+            ],
+            "hasRegexGraphsFilter": true,
             "properties": [
                 "http://mu.semte.ch/vocabularies/core/uuid",
                 "http://www.w3.org/ns/org#hasPrimarySite",
