@@ -218,12 +218,14 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
     WHERE {
       ?adminUnit adms:identifier ?identifier.
       ?adminUnit mu:uuid ?adminUnitUuid.
-      ?identifier a adms:Identifier;
-        mu:uuid ?uuid;
-          skos:notation ?idName;
-          generiek:gestructureerdeIdentificator ?structuredId.
-          
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?identifier a adms:Identifier;
+          mu:uuid ?uuid;
+            skos:notation ?idName;
+            generiek:gestructureerdeIdentificator ?structuredId.
+      }
       BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+
     }
   `, undefined, endpoint)
 
@@ -248,9 +250,11 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
       GRAPH ?g {
         ?identifier generiek:gestructureerdeIdentificator ?structuredId.
       }
-      ?structuredId a generiek:GestructureerdeIdentificator;
-        mu:uuid ?structuredUuid;
-        generiek:lokaleIdentificator ?localId.
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?structuredId a generiek:GestructureerdeIdentificator;
+          mu:uuid ?structuredUuid;
+          generiek:lokaleIdentificator ?localId.
+      }
     }
   `, undefined, endpoint)
 
@@ -272,9 +276,11 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
       }
     }
     WHERE {
-      ?subject a ?type;
-          ?pred ?obj.
-      VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> }
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?subject a ?type;
+            ?pred ?obj.
+        VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> }
+      }
     }
   `, undefined, endpoint)
 
