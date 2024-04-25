@@ -60,7 +60,7 @@ async function onFinishInitialIngest(lib) {
 
   console.log(`!! On-finish triggered !!`);
 
-  const transformedMainInsertTriples = await transformLandingZoneGraph(fetch, endpoint);
+  /*const transformedMainInsertTriples = await transformLandingZoneGraph(fetch, endpoint);
   console.log(`Transformed ${transformedMainInsertTriples.length} main triples`);
 
   if (transformedMainInsertTriples.length) {
@@ -76,9 +76,10 @@ async function onFinishInitialIngest(lib) {
       SLEEP_TIME_AFTER_FAILED_DB_OPERATION
     );
   }
-
+*/
   await moveToPublic(muAuthSudo.updateSudo, endpoint)
   await moveToOrganizationsGraph(muAuthSudo.updateSudo, endpoint);
+  
 }
 
 module.exports = {

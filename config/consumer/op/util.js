@@ -337,11 +337,12 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
     WHERE {
       ?adminUnit adms:identifier ?identifier.
       ?adminUnit mu:uuid ?adminUnitUuid.
+      GRAPH <${LANDING_ZONE_GRAPH}> {
       ?identifier a adms:Identifier;
         mu:uuid ?uuid;
           skos:notation ?idName;
           generiek:gestructureerdeIdentificator ?structuredId.
-          
+      }
       BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
     }
   `, undefined, endpoint)
@@ -367,9 +368,11 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
       GRAPH ?g {
         ?identifier generiek:gestructureerdeIdentificator ?structuredId.
       }
+      GRAPH <${LANDING_ZONE_GRAPH}> {
       ?structuredId a generiek:GestructureerdeIdentificator;
         mu:uuid ?structuredUuid;
         generiek:lokaleIdentificator ?localId.
+      }
     }
   `, undefined, endpoint)
 
