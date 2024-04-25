@@ -35,6 +35,11 @@ const publicTypes = [
   '<http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>',
   '<http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>'
 ]
+
+const avoidPredicates = [
+  '<http://www.w3.org/ns/org#hasPrimarySite>',
+  '<http://www.w3.org/ns/org#hasSite>'
+]
 async function dispatch(lib, data) {
   const { mu, fetch } = lib;
   let { termObjectChangeSets, termObjectChangeSetsWithContext } = data;
@@ -70,11 +75,14 @@ async function dispatch(lib, data) {
       if(typeTriple) {
         const type = typeTriple.object;
         if(publicTypes.includes(type)) {
-          insertsOnPublic.push(`${insert.subject} ${insert.predicate} ${insert.object}.`)
+          if(!avoidPredicates.includes(insert.predicate)) {
+            insertsOnPublic.push(`${insert.subject} ${insert.predicate} ${insert.object}.`)
+          }
           //For the case where the subject is an admin unit but everything else must go in private graph
           const contextGraphTriple = contextTriples.find((context) => context.predicate === '<http://mu.semte.ch/vocabularies/ext/contextDataGoesInGraph>' && context.object !== '<http://mu.semte.ch/graphs/system/landingzone>')
           for(let triple of otherContextTriples) {
             if(contextGraphTriple) {
+              if(avoidPredicates.includes(triple.predicate)) continue;
               const graph = contextGraphTriple.object.slice(1,-1);
               if(!insertsOnGraphs[graph]) {
                 insertsOnGraphs[graph] = [`${triple.subject} ${triple.predicate} ${triple.object}.`]

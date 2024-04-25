@@ -62,7 +62,32 @@
             ],
             "hasRegexGraphsFilter": true,
             "properties": [
-                "http://mu.semte.ch/vocabularies/core/uuid",
+                "http://www.w3.org/ns/org#hasPrimarySite",
+                "http://www.w3.org/ns/org#hasSite"
+            ]
+        },
+        {
+            "type": "http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst",
+            "strictTypeExport": "true",
+            "graphsFilter": [
+                "http://mu.semte.ch/graphs/public",
+                "^http://mu.semte.ch/graphs/organizations\\/[^\\/]+$"
+            ],
+            "hasRegexGraphsFilter": true,
+            "properties": [
+                "http://www.w3.org/ns/org#hasPrimarySite",
+                "http://www.w3.org/ns/org#hasSite"
+            ]
+        },
+        {
+            "type": "http://data.lblod.info/vocabularies/erediensten/BestuurVanDeErediens",
+            "strictTypeExport": "true",
+            "graphsFilter": [
+                "http://mu.semte.ch/graphs/public",
+                "^http://mu.semte.ch/graphs/organizations\\/[^\\/]+$"
+            ],
+            "hasRegexGraphsFilter": true,
+            "properties": [
                 "http://www.w3.org/ns/org#hasPrimarySite",
                 "http://www.w3.org/ns/org#hasSite"
             ]
