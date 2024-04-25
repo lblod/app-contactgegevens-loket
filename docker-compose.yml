@@ -193,7 +193,7 @@ services:
     logging: *default-logging
   # Delta producer for contact data
   delta-producer-pub-graph-maintainer:
-    image: lblod/delta-producer-publication-graph-maintainer:1.0.3
+    image: lblod/delta-producer-publication-graph-maintainer:1.0.8
     environment:
       MAX_BODY_SIZE: "50mb"
       PRETTY_PRINT_DIFF_JSON: "true"
