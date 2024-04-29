@@ -15,7 +15,7 @@ services:
     restart: "no"
   ### FRONTEND
   frontend:
-    image: lblod/frontend-contactgegevens-loket:1.5.1
+    image: lblod/frontend-contactgegevens-loket:1.6.0
     links:
       - identifier:backend
     restart: always
