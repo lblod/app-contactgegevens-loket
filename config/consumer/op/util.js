@@ -195,6 +195,125 @@ async function moveTypeToPublic(muUpdate, endpoint, type) {
 
 
 async function moveToOrganizationsGraph(muUpdate, endpoint) {
+  // Move primary sites
+  await muUpdate(`
+    ${prefixes}
+    DELETE {
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?site a org:Site;
+          ?pred ?obj.
+      }
+    }
+    INSERT {
+      GRAPH ?g {
+        ?site a org:Site;
+          ?pred ?obj.
+      }
+    }
+    WHERE {
+      ?adminUnit org:hasPrimarySite ?site.
+      ?adminUnit mu:uuid ?adminUnitUuid.
+      ?site a org:Site;
+          ?pred ?obj.
+      BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+    }
+  `, undefined, endpoint)
+
+  // Move sites
+  await muUpdate(`
+    ${prefixes}
+    DELETE {
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?site a org:Site;
+          ?pred ?obj.
+      }
+    }
+    INSERT {
+      GRAPH ?g {
+        ?site a org:Site;
+          ?pred ?obj.
+      }
+    }
+    WHERE {
+      ?adminUnit org:hasSite ?site.
+      ?adminUnit mu:uuid ?adminUnitUuid.
+      ?site a org:Site;
+          ?pred ?obj.
+      BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
+    }
+  `, undefined, endpoint)
+
+  // Move contacts
+  await muUpdate(`
+    ${prefixes}
+    DELETE {
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?contactPoint a schema:ContactPoint;
+          ?pred ?obj.
+      }
+    }
+    INSERT {
+      GRAPH ?g {
+        ?contactPoint a schema:ContactPoint;
+          ?pred ?obj.
+      }
+    }
+    WHERE {
+      GRAPH ?g {
+        ?site org:siteAddress ?contactPoint.
+      }
+      ?contactPoint a schema:ContactPoint;
+        ?pred ?obj.
+    }
+  `, undefined, endpoint)
+
+  // Move addresses from sites
+  await muUpdate(`
+    ${prefixes}
+    DELETE {
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?address a locn:Address;
+          ?pred ?obj.
+      }
+    }
+    INSERT {
+      GRAPH ?g {
+        ?address a locn:Address;
+          ?pred ?obj.
+      }
+    }
+    WHERE {
+      GRAPH ?g {
+        ?site organisatie:bestaatUit ?address.
+      }
+      ?address a locn:Address;
+        ?pred ?obj.
+    }
+  `, undefined, endpoint)
+
+  //Move addresses from contacts
+  await muUpdate(`
+    ${prefixes}
+    DELETE {
+      GRAPH <${LANDING_ZONE_GRAPH}> {
+        ?address a locn:Address;
+          ?pred ?obj.
+      }
+    }
+    INSERT {
+      GRAPH ?g {
+        ?address a locn:Address;
+          ?pred ?obj.
+      }
+    }
+    WHERE {
+      GRAPH ?g {
+        ?contact locn:address ?address.
+      }
+      ?address a locn:Address;
+        ?pred ?obj.
+    }
+  `, undefined, endpoint)
 
   //Move identifiers
   await muUpdate(`
@@ -219,13 +338,12 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
       ?adminUnit adms:identifier ?identifier.
       ?adminUnit mu:uuid ?adminUnitUuid.
       GRAPH <${LANDING_ZONE_GRAPH}> {
-        ?identifier a adms:Identifier;
-          mu:uuid ?uuid;
-            skos:notation ?idName;
-            generiek:gestructureerdeIdentificator ?structuredId.
+      ?identifier a adms:Identifier;
+        mu:uuid ?uuid;
+          skos:notation ?idName;
+          generiek:gestructureerdeIdentificator ?structuredId.
       }
       BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", ?adminUnitUuid)) AS ?g)
-
     }
   `, undefined, endpoint)
 
@@ -251,38 +369,40 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         ?identifier generiek:gestructureerdeIdentificator ?structuredId.
       }
       GRAPH <${LANDING_ZONE_GRAPH}> {
-        ?structuredId a generiek:GestructureerdeIdentificator;
-          mu:uuid ?structuredUuid;
-          generiek:lokaleIdentificator ?localId.
+      ?structuredId a generiek:GestructureerdeIdentificator;
+        mu:uuid ?structuredUuid;
+        generiek:lokaleIdentificator ?localId.
       }
     }
   `, undefined, endpoint)
 
   //Move worships to assure everyone gets also the type besturseenheid and organization
   await muUpdate(`
-    ${prefixes}
-    DELETE {
-      GRAPH <${LANDING_ZONE_GRAPH}> {
-        ?subject a ?type;
+  ${prefixes}
+  DELETE {
+    GRAPH <${LANDING_ZONE_GRAPH}> {
+      ?subject a ?type;
+        ?pred ?obj.
+    }
+  }
+  INSERT {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+      ?subject a ?type;
+        a besluit:Bestuurseenheid;
+        ?pred ?obj.
+    }
+  }
+  WHERE {
+    GRAPH <${LANDING_ZONE_GRAPH}> {
+      ?subject a ?type;
           ?pred ?obj.
-          
-      }
+      VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>
+                     <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>
+                     <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan> }
     }
-    INSERT {
-      GRAPH <http://mu.semte.ch/graphs/public> {
-        ?subject a ?type;
-          a besluit:Bestuurseenheid;
-          ?pred ?obj.
-      }
-    }
-    WHERE {
-      GRAPH <${LANDING_ZONE_GRAPH}> {
-        ?subject a ?type;
-            ?pred ?obj.
-        VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan> }
-      }
-    }
-  `, undefined, endpoint)
+  }
+`, undefined, endpoint);
+
 
   //Create mock users
   await muUpdate(`
