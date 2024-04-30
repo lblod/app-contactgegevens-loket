@@ -8,7 +8,8 @@ x-logging: &default-logging
 
 services:
   ### MU-SEMTECH MANAGEMENT AND UTILITIES
-  project-scripts: # Useful project scripts triggered using mu-cli
+  project-scripts:
+    # Useful project scripts triggered using mu-cli
     image: semtech/mu-scripts:1.0.0
     volumes:
       - ./scripts/project:/app/scripts/
@@ -131,7 +132,8 @@ services:
       - "logging=true"
     restart: always
   # Delta notifier
-  delta-notifier: # Kind of delta message multiplexer
+  delta-notifier:
+    # Kind of delta message multiplexer
     image: semtech/mu-delta-notifier:0.2.0
     volumes:
       - ./config/delta:/config
@@ -175,13 +177,15 @@ services:
       - "logging=true"
     logging: *default-logging
   ### JOBS & TASKS
-  jobs-controller: # Status indicator
+  jobs-controller:
+    # Status indicator
     image: lblod/job-controller-service:1.0.1
     links:
       - database:database
     volumes:
       - ./config/jobs-controller/:/config/
-  delta-producer-background-initiator: # CRON Machine to start healing, dump file, init pub graph sync
+  delta-producer-background-initiator:
+    # CRON Machine to start healing, dump file, init pub graph sync
     image: lblod/delta-producer-background-jobs-initiator:1.0.1
     volumes:
       - ./config/delta-producer/background-job-initiator/config.json:/config/config.json
@@ -209,7 +213,8 @@ services:
       - virtuoso:virtuoso
     restart: always
     logging: *default-logging
-  delta-producer-dump-file-publisher: # Makes giant TTL file. How invoked?
+  delta-producer-dump-file-publisher:
+    # Makes giant TTL file. How invoked?
     image: lblod/delta-producer-dump-file-publisher:0.10.3
     volumes:
       - ./config/delta-producer/dump-file-publisher:/config
@@ -260,4 +265,36 @@ services:
       - database:database
     restart: always
     logging: *default-logging
+  deliver-email-service:
+    image: redpencil/deliver-email-service:0.2.0
+    environment:
+      HOST: maildev
+      PORT: 1025
+      MAILBOX_URI: 'http://data.lblod.info/id/mailboxes/1'
+      WELL_KNOWN_SERVICE: ""
+      EMAIL_CRON_PATTERN: '0 * * * * *'
+      FROM_NAME: "ContactGegevens Loket"
+      EMAIL_ADDRESS: "youssef@inuits.eu"
+    labels:
+      - "logging=true"
+    restart: always
+    volumes:
+      - ./data/files:/share
+    logging: *default-logging
+    links: 
+      - database:database
+  email-service:
+    image: youssefj4/emailservice:trying
+    volumes:
+      - /home/youssef/Documents/ABB/emailmicroservice:/app
+    environment:
+      NODE_ENV: development
+    ports:
+      - 1234:80
+    links:
+      - database:database
+  maildev:
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
 
