@@ -400,27 +400,8 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
                      <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>
                      <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan> }
     }
-<<<<<<< HEAD
   }
 `, undefined, endpoint);
-
-=======
-    INSERT {
-      GRAPH <http://mu.semte.ch/graphs/public> {
-        ?subject a ?type;
-          a besluit:Bestuurseenheid;
-          ?pred ?obj.
-      }
-    }
-    WHERE {
-      GRAPH <${LANDING_ZONE_GRAPH}> {
-        ?subject a ?type;
-            ?pred ?obj.
-        VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> }
-      }
-    }
-  `, undefined, endpoint)
->>>>>>> parent of 4259706 (add representatieve orgaan)
 
   //Create mock users
   await muUpdate(`
