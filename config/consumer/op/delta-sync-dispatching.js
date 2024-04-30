@@ -33,8 +33,7 @@ const publicTypes = [
   '<http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis>',
   '<http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>',
   '<http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>',
-  '<http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>',
-  '<http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan>'
+  '<http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>'
 ]
 
 const avoidPredicates = [
