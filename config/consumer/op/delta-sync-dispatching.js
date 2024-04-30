@@ -33,7 +33,8 @@ const publicTypes = [
   '<http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis>',
   '<http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>',
   '<http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>',
-  '<http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>'
+  '<http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>',
+  '<http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan>'
 ]
 async function dispatch(lib, data) {
   const { mu, fetch } = lib;
