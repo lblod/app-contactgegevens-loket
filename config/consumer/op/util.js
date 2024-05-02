@@ -260,30 +260,30 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
 
   //Move worships to assure everyone gets also the type besturseenheid and organization
   await muUpdate(`
-    ${prefixes}
-    DELETE {
-      GRAPH <${LANDING_ZONE_GRAPH}> {
-        ?subject a ?type;
+  ${prefixes}
+  DELETE {
+    GRAPH <${LANDING_ZONE_GRAPH}> {
+      ?subject a ?type;
+        ?pred ?obj.
+    }
+  }
+  INSERT {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+      ?subject a ?type;
+        a besluit:Bestuurseenheid;
+        ?pred ?obj.
+    }
+  }
+  WHERE {
+    GRAPH <${LANDING_ZONE_GRAPH}> {
+      ?subject a ?type;
           ?pred ?obj.
-          
-      }
+      VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>
+                     <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>
+                     <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan> }
     }
-    INSERT {
-      GRAPH <http://mu.semte.ch/graphs/public> {
-        ?subject a ?type;
-          a besluit:Bestuurseenheid;
-          ?pred ?obj.
-      }
-    }
-    WHERE {
-      GRAPH <${LANDING_ZONE_GRAPH}> {
-        ?subject a ?type;
-            ?pred ?obj.
-        VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> }
-      }
-    }
-  `, undefined, endpoint)
-
+  }
+`, undefined, endpoint);
   //Create mock users
   await muUpdate(`
     ${prefixes}
