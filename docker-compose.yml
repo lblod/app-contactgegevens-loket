@@ -273,28 +273,21 @@ services:
       MAILBOX_URI: 'http://data.lblod.info/id/mailboxes/1'
       WELL_KNOWN_SERVICE: ""
       EMAIL_CRON_PATTERN: '0 * * * * *'
-      FROM_NAME: "ContactGegevens Loket"
-      EMAIL_ADDRESS: "youssef@inuits.eu"
     labels:
       - "logging=true"
     restart: always
     volumes:
       - ./data/files:/share
     logging: *default-logging
-    links: 
+    links:
       - database:database
   email-service:
-    image: youssefj4/emailservice:trying
-    volumes:
-      - /home/youssef/Documents/ABB/emailmicroservice:/app
+    image: lblod/data-validation-email-notifcation-service:latest
     environment:
-      NODE_ENV: development
+      NUMBER_OF_MONTHS: "6"
+      CRON_JOB: "* * * * *"
+      URL: "https://contactgegevens.lokaalbestuur.vlaanderen.be"
     ports:
       - 1234:80
     links:
       - database:database
-  maildev:
-    image: maildev/maildev
-    ports:
-      - "1080:1080"
-
