@@ -284,8 +284,6 @@ services:
   email-service:
     image: lblod/data-validation-email-notifcation-service:latest
     environment:
-      NUMBER_OF_MONTHS: "6"
-      CRON_JOB: "* * * * *"
       URL: "https://contactgegevens.lokaalbestuur.vlaanderen.be"
     ports:
       - 1234:80
