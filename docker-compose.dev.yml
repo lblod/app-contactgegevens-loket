@@ -58,3 +58,7 @@ services:
     image: maildev/maildev
     ports:
       - "1080:1080"
+  deliver-email-service:
+    environment:
+      HOST: maildev
+      PORT: 1025

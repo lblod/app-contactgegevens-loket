@@ -268,8 +268,6 @@ services:
   deliver-email-service:
     image: redpencil/deliver-email-service:0.2.0
     environment:
-      HOST: maildev
-      PORT: 1025
       MAILBOX_URI: 'http://data.lblod.info/id/mailboxes/1'
       WELL_KNOWN_SERVICE: ""
       EMAIL_CRON_PATTERN: '0 0 * * *'
