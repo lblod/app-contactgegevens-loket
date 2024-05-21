@@ -154,6 +154,11 @@
           "target": "organization",
           "cardinality": "one",
           "inverse": true
+        }, "is-sub-organization-of": {
+          "predicate": "org:hasSubOrganization",
+          "target": "organization",
+          "cardinality": "one",
+          "inverse": true
         },
         "changed-by": {
           "predicate": "org:originalOrganization",
