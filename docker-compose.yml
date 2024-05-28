@@ -25,12 +25,20 @@ services:
       - "logging=true"
     environment:
       EMBER_ENABLE_EDIT_FEATURE: "false"
+      EMBER_ANNOUNCE_MAINTENANCE_ENABLED: "false"
+      EMBER_ANNOUNCE_MAINTENANCE_MESSAGE: "Het Contact- en Organisatiegegevens zal donderdag 29/05 tussen 12:00 en 15.00 u. onbeschikbaar zijn wegens onderhoud"
+      EMBER_ANNOUNCE_NEW_DEPLOYMENT_ENABLED: "false"
+      EMBER_ANNOUNCE_NEW_DEPLOYMENT_MESSAGE: "Het Contact- en Organisatiegegevens zal vanaf donderdag 24/03, 19.00 uur t.e.m. vrijdag 25/03 8.00 uur onbeschikbaar zijn wegens de uitrol van een nieuwe versie"
+      EMBER_ANNOUNCE_TESTING_ENABLED: "true"
+      EMBER_ANNOUNCE_TESTING_MESSAGE: "Het Contact- en Organisatiegegevens zal vandaag, donderdag 24/03, niet stabiel zijn wegens uitvoering van testen."
+      EMBER_ENVIRONMENT_NAME: "development"
       EMBER_OAUTH_API_REDIRECT_URL: "https://contactgegevens-loket.lblod.info/authorization/callback"
       EMBER_OAUTH_API_KEY: "300a3bc4-1aba-4338-862d-05df84f084c2"
       EMBER_OAUTH_API_BASE_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
       EMBER_OAUTH_API_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
       EMBER_OAUTH_API_SCOPE: "openid rrn profile vo abb_loketcontactapp"
       EMBER_OAUTH_SWITCH_URL: "https://contactgegevens-loket.lblod.info/switch-login"
+      
   ### TRADITIONAL MU-SEMTECH STACK FOR BACKEND
   identifier:
     image: semtech/mu-identifier:1.9.1
@@ -270,7 +278,7 @@ services:
     environment:
       MAILBOX_URI: 'http://data.lblod.info/id/mailboxes/1'
       WELL_KNOWN_SERVICE: ""
-      EMAIL_CRON_PATTERN: '0 0 * * *'
+      EMAIL_CRON_PATTERN: '* * * * *'
     labels:
       - "logging=true"
     restart: always
@@ -283,7 +291,8 @@ services:
     image: lblod/data-validation-email-notifcation-service:latest
     environment:
       URL: "https://contactgegevens.lokaalbestuur.vlaanderen.be"
-      CRON_JOB: "0 0 1 */6 *"
+      CRON_JOB: "* * * * *"
+      
     ports:
       - 1234:80
     links:
