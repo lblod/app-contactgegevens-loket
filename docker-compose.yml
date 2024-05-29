@@ -31,6 +31,7 @@ services:
       EMBER_OAUTH_API_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
       EMBER_OAUTH_API_SCOPE: "openid rrn profile vo abb_loketcontactapp"
       EMBER_OAUTH_SWITCH_URL: "https://contactgegevens-loket.lblod.info/switch-login"
+      
   ### TRADITIONAL MU-SEMTECH STACK FOR BACKEND
   identifier:
     image: semtech/mu-identifier:1.9.1
@@ -284,6 +285,7 @@ services:
     environment:
       URL: "https://contactgegevens.lokaalbestuur.vlaanderen.be"
       CRON_JOB: "0 0 1 */6 *"
+      
     ports:
       - 1234:80
     links:
