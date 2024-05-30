@@ -16,7 +16,7 @@ services:
     restart: "no"
   ### FRONTEND
   frontend:
-    image: lblod/frontend-contactgegevens-loket:1.7.0
+    image: lblod/frontend-contactgegevens-loket:1.7.1
     links:
       - identifier:backend
     restart: always
@@ -266,27 +266,27 @@ services:
       - database:database
     restart: always
     logging: *default-logging
-  deliver-email-service:
-    image: redpencil/deliver-email-service:0.2.0
-    environment:
-      MAILBOX_URI: 'http://data.lblod.info/id/mailboxes/1'
-      WELL_KNOWN_SERVICE: ""
-      EMAIL_CRON_PATTERN: '0 0 * * *'
-    labels:
-      - "logging=true"
-    restart: always
-    volumes:
-      - ./data/files:/share
-    logging: *default-logging
-    links:
-      - database:database
-  email-service:
-    image: lblod/data-validation-email-notifcation-service:latest
-    environment:
-      URL: "https://contactgegevens.lokaalbestuur.vlaanderen.be"
-      CRON_JOB: "0 0 1 */6 *"
+  # deliver-email-service:
+  #   image: redpencil/deliver-email-service:0.2.0
+  #   environment:
+  #     MAILBOX_URI: 'http://data.lblod.info/id/mailboxes/1'
+  #     WELL_KNOWN_SERVICE: ""
+  #     EMAIL_CRON_PATTERN: '0 0 * * *'
+  #   labels:
+  #     - "logging=true"
+  #   restart: always
+  #   volumes:
+  #     - ./data/files:/share
+  #   logging: *default-logging
+  #   links:
+  #     - database:database
+  # email-service:
+  #   image: lblod/data-validation-email-notifcation-service:latest
+  #   environment:
+  #     URL: "https://contactgegevens.lokaalbestuur.vlaanderen.be"
+  #     CRON_JOB: "0 0 1 */6 *"
       
-    ports:
-      - 1234:80
-    links:
-      - database:database
+  #   ports:
+  #     - 1234:80
+  #   links:
+  #     - database:database
