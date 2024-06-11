@@ -398,6 +398,7 @@ async function moveToOrganizationsGraph(muUpdate, endpoint) {
         ?subject a ?type;
             ?pred ?obj.
         VALUES ?type { <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan> }
+      }
     }
   `, undefined, endpoint)
 
