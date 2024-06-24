@@ -259,7 +259,14 @@
         "modified": {
           "type": "datetime",
           "predicate": "dct:modified"
-        }
+        },
+        "modifiedgroupClassificationLabel": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        },
+        "modifiedBygroupName": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
       },
       "relationships": {
         "contacts": {
