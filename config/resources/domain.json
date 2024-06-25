@@ -154,7 +154,8 @@
           "target": "organization",
           "cardinality": "one",
           "inverse": true
-        }, "is-sub-organization-of": {
+        },
+        "is-sub-organization-of": {
           "predicate": "org:hasSubOrganization",
           "target": "organization",
           "cardinality": "one",
@@ -260,13 +261,14 @@
           "type": "datetime",
           "predicate": "dct:modified"
         },
-        "modifiedgroupClassificationLabel": {
+        "modifiedlabel": {
           "type": "string",
           "predicate": "skos:prefLabel"
         },
-        "modifiedBygroupName": {
+        "modifiedname": {
           "type": "string",
           "predicate": "skos:prefLabel"
+        }
       },
       "relationships": {
         "contacts": {
