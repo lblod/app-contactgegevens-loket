@@ -154,7 +154,8 @@
           "target": "organization",
           "cardinality": "one",
           "inverse": true
-        }, "is-sub-organization-of": {
+        },
+        "is-sub-organization-of": {
           "predicate": "org:hasSubOrganization",
           "target": "organization",
           "cardinality": "one",
@@ -353,6 +354,10 @@
         "address-register-uri": {
           "type": "url",
           "predicate": "adres:verwijstNaar"
+        },
+        "mode": {
+          "type": "string",
+          "predicate": "ext:mode"
         }
       },
       "relationships": {
