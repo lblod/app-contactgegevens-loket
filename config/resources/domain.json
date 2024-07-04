@@ -155,12 +155,6 @@
           "cardinality": "one",
           "inverse": true
         },
-        "is-sub-organization-of": {
-          "predicate": "org:hasSubOrganization",
-          "target": "organization",
-          "cardinality": "one",
-          "inverse": true
-        },
         "changed-by": {
           "predicate": "org:originalOrganization",
           "target": "change-events",
@@ -260,14 +254,6 @@
         "modified": {
           "type": "datetime",
           "predicate": "dct:modified"
-        },
-        "modifiedlabel": {
-          "type": "string",
-          "predicate": "skos:prefLabel"
-        },
-        "modifiedname": {
-          "type": "string",
-          "predicate": "skos:prefLabel"
         }
       },
       "relationships": {
@@ -284,6 +270,11 @@
         "site-type": {
           "predicate": "ere:vestigingstype",
           "target": "site-type",
+          "cardinality": "one"
+        },
+        "modifiedBy": {
+          "predicate": "ext:modifiedBy",
+          "target": "user",
           "cardinality": "one"
         }
       },
