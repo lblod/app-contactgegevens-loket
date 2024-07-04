@@ -274,7 +274,7 @@
         },
         "modifiedBy": {
           "predicate": "ext:modifiedBy",
-          "target": "user",
+          "target": "administrative-unit",
           "cardinality": "one"
         }
       },
