@@ -272,7 +272,7 @@
           "target": "site-type",
           "cardinality": "one"
         },
-        "modifiedBy": {
+        "modified-by": {
           "predicate": "ext:modifiedBy",
           "target": "administrative-unit",
           "cardinality": "one"
