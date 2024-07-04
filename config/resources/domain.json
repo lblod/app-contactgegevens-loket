@@ -154,11 +154,6 @@
           "target": "organization",
           "cardinality": "one",
           "inverse": true
-        }, "is-sub-organization-of": {
-          "predicate": "org:hasSubOrganization",
-          "target": "organization",
-          "cardinality": "one",
-          "inverse": true
         },
         "changed-by": {
           "predicate": "org:originalOrganization",
@@ -275,6 +270,11 @@
         "site-type": {
           "predicate": "ere:vestigingstype",
           "target": "site-type",
+          "cardinality": "one"
+        },
+        "modified-by": {
+          "predicate": "ext:modifiedBy",
+          "target": "administrative-unit",
           "cardinality": "one"
         }
       },
