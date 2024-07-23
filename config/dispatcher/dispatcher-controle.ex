@@ -161,8 +161,8 @@ defmodule Dispatcher do
   # Address search
   #################################################################
 
-  match "/address-search-add-on/*path" do
-    Proxy.forward conn, path, "http://address-search-add-on/"
+  match "/adresses-register/*path" do
+    forward conn, path, "http://adressenregister"
   end
 
     ###############################################################
