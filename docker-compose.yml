@@ -115,6 +115,10 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
   ### ACM/IDM related; login
   login:
     image: lblod/acmidm-login-service:0.9.2
@@ -126,12 +130,17 @@ services:
       MU_APPLICATION_AUTH_CLIENT_ID: "300a3bc4-1aba-4338-862d-05df84f084c2"
       MU_APPLICATION_AUTH_REDIRECT_URI: "https://contactgegevens-loket.lblod.info/authorization/callback"
       MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
   ### ADDRESS SEARCH (not dependant on other microservices)
   adressenregister:
     image: lblod/adressenregister-fuzzy-search-service:0.8.0
     labels:
       - "logging=true"
     restart: always
+    logging: *default-logging
   # Delta notifier
   delta-notifier:
     # Kind of delta message multiplexer
@@ -185,6 +194,10 @@ services:
       - database:database
     volumes:
       - ./config/jobs-controller/:/config/
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
   delta-producer-background-initiator:
     # CRON Machine to start healing, dump file, init pub graph sync
     image: lblod/delta-producer-background-jobs-initiator:1.0.1
