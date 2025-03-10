@@ -170,7 +170,6 @@ services:
       SLEEP_BETWEEN_BATCHES: 100
       BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: "true"
       INGEST_GRAPH: "http://mu.semte.ch/graphs/ingest"
-
     volumes:
       - ./config/consumer/op:/config/triples-dispatching/custom-dispatching
       - ./data/files/consumer-files/op:/consumer-files/
