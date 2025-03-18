@@ -171,7 +171,7 @@ services:
       BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: "true"
       INGEST_GRAPH: "http://mu.semte.ch/graphs/ingest"
     volumes:
-      - ./config/consumer/op:/config/triples-dispatching/custom-dispatching
+      - ./config/delta-consumers/op:/config/triples-dispatching/custom-dispatching
       - ./data/files/consumer-files/op:/consumer-files/
     links:
       - virtuoso:database
