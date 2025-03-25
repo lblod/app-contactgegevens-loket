@@ -33,8 +33,6 @@ services:
     restart: "no"
   mocklogin:
     image: lblod/mock-login-service:latest
-    links:
-      - database:database
     restart: "no"
   project-scripts:
     restart: "no"
@@ -44,21 +42,21 @@ services:
     restart: "no"
   jobs-controller:
     restart: "no"
-  delta-producer-background-initiator:
-    restart: "no"
-  delta-producer-pub-graph-maintainer:
-    restart: "no"
-  delta-producer-dump-file-publisher:
-    restart: "no"
-  publication-triplestore:
-    restart: "no"
+  #delta-producer-background-initiator:
+  #  restart: "no"
+  #delta-producer-pub-graph-maintainer:
+  #  restart: "no"
+  #delta-producer-dump-file-publisher:
+  #  restart: "no"
+  #publication-triplestore:
+  #  restart: "no"
   delta-notifier:
     restart: "no"
-  maildev:
-    image: maildev/maildev
-    ports:
-      - "1080:1080"
-  deliver-email-service:
-    environment:
-      HOST: maildev
-      PORT: 1025
+  #maildev:
+  #  image: maildev/maildev
+  #  ports:
+  #    - "1080:1080"
+  #deliver-email-service:
+  #  environment:
+  #    HOST: maildev
+  #    PORT: 1025

@@ -186,68 +186,66 @@ services:
       - "logging=true"
     logging: *default-logging
   ### JOBS & TASKS
-  jobs-controller:
-    # Status indicator
-    image: lblod/job-controller-service:1.0.1
-    links:
-      - database:database
-    volumes:
-      - ./config/jobs-controller/:/config/
-    labels:
-      - "logging=true"
-    restart: always
-    logging: *default-logging
-  delta-producer-background-initiator:
-    # CRON Machine to start healing, dump file, init pub graph sync
-    image: lblod/delta-producer-background-jobs-initiator:1.0.1
-    volumes:
-      - ./config/delta-producer/background-job-initiator/config.json:/config/config.json
-    labels:
-      - "logging=true"
-    links:
-      - database:database
-    restart: always
-    logging: *default-logging
+  #jobs-controller:
+  #  # Status indicator
+  #  image: lblod/job-controller-service:1.0.1
+  #  links:
+  #    - database:database
+  #  volumes:
+  #    - ./config/jobs-controller/:/config/
+  #  labels:
+  #    - "logging=true"
+  #  restart: always
+  #  logging: *default-logging
+  #delta-producer-background-initiator:
+  #  image: lblod/delta-producer-background-jobs-initiator:1.0.1
+  #  volumes:
+  #    - ./config/delta-producer/background-job-initiator/config.json:/config/config.json
+  #  labels:
+  #    - "logging=true"
+  #  links:
+  #    - database:database
+  #  restart: always
+  #  logging: *default-logging
   # Delta producer for contact data
-  delta-producer-pub-graph-maintainer:
-    image: lblod/delta-producer-publication-graph-maintainer:1.0.8
-    environment:
-      MAX_BODY_SIZE: "50mb"
-      PRETTY_PRINT_DIFF_JSON: "true"
-      PUBLICATION_VIRTUOSO_ENDPOINT: "http://publication-triplestore:8890/sparql"
-      PUBLICATION_MU_AUTH_ENDPOINT: "http://publication-triplestore:8890/sparql"
-      SUDO_QUERY_RETRY_FOR_HTTP_STATUS_CODES: "404,500,503"
-      CONFIG_SERVICES_JSON_PATH: "/config/services.json"
-    volumes:
-      - ./config/delta-producer/contact-data/:/config
-      - ./data/files/:/share
-    links:
-      - database:database
-      - virtuoso:virtuoso
-    restart: always
-    logging: *default-logging
-  delta-producer-dump-file-publisher:
-    # Makes giant TTL file. How invoked?
-    image: lblod/delta-producer-dump-file-publisher:0.10.3
-    volumes:
-      - ./config/delta-producer/dump-file-publisher:/config
-      - ./data/files:/share
-    links:
-      - database:database
-    restart: always
-    logging: *default-logging
-  publication-triplestore:
-    image: tenforce/virtuoso:1.3.2-virtuoso7.2.5.1 # old: redpencil/virtuoso:1.2.0-rc.1
-    environment:
-      SPARQL_UPDATE: "true"
-      DEFAULT_GRAPH: "http://mu.semte.ch/application"
-    volumes:
-      - ./data/publication-triplestore:/data
-      - ./config/publication-triplestore/virtuoso.ini:/data/virtuoso.ini
-    labels:
-      - "logging=true"
-    restart: always
-    logging: *default-logging
+  #delta-producer-pub-graph-maintainer:
+  #  image: lblod/delta-producer-publication-graph-maintainer:1.0.8
+  #  environment:
+  #    MAX_BODY_SIZE: "50mb"
+  #    PRETTY_PRINT_DIFF_JSON: "true"
+  #    PUBLICATION_VIRTUOSO_ENDPOINT: "http://publication-triplestore:8890/sparql"
+  #    PUBLICATION_MU_AUTH_ENDPOINT: "http://publication-triplestore:8890/sparql"
+  #    SUDO_QUERY_RETRY_FOR_HTTP_STATUS_CODES: "404,500,503"
+  #    CONFIG_SERVICES_JSON_PATH: "/config/services.json"
+  #  volumes:
+  #    - ./config/delta-producer/contact-data/:/config
+  #    - ./data/files/:/share
+  #  links:
+  #    - database:database
+  #    - virtuoso:virtuoso
+  #  restart: always
+  #  logging: *default-logging
+  #delta-producer-dump-file-publisher:
+  #  image: lblod/delta-producer-dump-file-publisher:0.10.3
+  #  volumes:
+  #    - ./config/delta-producer/dump-file-publisher:/config
+  #    - ./data/files:/share
+  #  links:
+  #    - database:database
+  #  restart: always
+  #  logging: *default-logging
+  #publication-triplestore:
+  #  image: tenforce/virtuoso:1.3.2-virtuoso7.2.5.1 # old: redpencil/virtuoso:1.2.0-rc.1
+  #  environment:
+  #    SPARQL_UPDATE: "true"
+  #    DEFAULT_GRAPH: "http://mu.semte.ch/application"
+  #  volumes:
+  #    - ./data/publication-triplestore:/data
+  #    - ./config/publication-triplestore/virtuoso.ini:/data/virtuoso.ini
+  #  labels:
+  #    - "logging=true"
+  #  restart: always
+  #  logging: *default-logging
   # ### JOBS DASBOARD
   dashboard-login:
     image: semtech/mu-login-service:2.9.1
@@ -297,7 +295,6 @@ services:
   #   environment:
   #     URL: "https://contactgegevens.lokaalbestuur.vlaanderen.be"
   #     CRON_JOB: "0 0 1 */6 *"
-      
   #   ports:
   #     - 1234:80
   #   links:
