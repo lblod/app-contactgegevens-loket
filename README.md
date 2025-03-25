@@ -2,10 +2,6 @@
 
 For documentation about the CLBV-Application, you can go to: [GitBook Documentation](https://app.gitbook.com/o/-MP9Yduzf5xu7wIebqPG/s/O4tUAyb57Hcu6xbEK2aU/)
 
-
-
-
-
 ## Banner message : 
 
 ### **How to test the banner message ?**
@@ -34,5 +30,4 @@ You have to put this in your `Docker-compose.override.yml`:
 ```yaml
 EMBER_ANNOUNCE_TESTING_ENABLED: "true"
 EMBER_ANNOUNCE_TESTING_MESSAGE: "Het Contact- en Organisatiegegevens zal vandaag, donderdag 24/03, niet stabiel zijn wegens uitvoering van testen."
-```
 ```
