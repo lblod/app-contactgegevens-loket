@@ -27,6 +27,8 @@ services:
     restart: "no"
   login:
     restart: "no"
+  update-bestuurseenheid-mock-login:
+    restart: "no"
   mocklogin:
     image: lblod/mock-login-service:latest
     restart: "no"
@@ -42,8 +44,8 @@ services:
     restart: "no"
   dashboard-login:
     restart: "no"
-  jobs-controller:
-    restart: "no"
+  #jobs-controller:
+  #  restart: "no"
   #delta-producer-background-initiator:
   #  restart: "no"
   #delta-producer-pub-graph-maintainer:
