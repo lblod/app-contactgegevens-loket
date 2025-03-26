@@ -156,7 +156,7 @@ services:
     logging: *default-logging
   ### SYNC OP -> CLB
   op-consumer:
-    image: lblod/delta-consumer:latest
+    image: lblod/delta-consumer:0.0.23
     environment:
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info/"
       DCR_SERVICE_NAME: "op-consumer"
@@ -174,7 +174,7 @@ services:
       BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: "true"
       INGEST_GRAPH: "http://mu.semte.ch/graphs/ingest"
     volumes:
-      - ./config/consumer/op:/config/triples-dispatching/custom-dispatching
+      - ./config/delta-consumers/op:/config/triples-dispatching/custom-dispatching
       - ./data/files/consumer-files/op:/consumer-files/
     labels:
       - "logging=true"
