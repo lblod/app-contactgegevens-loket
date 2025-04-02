@@ -43,6 +43,12 @@ drc up -d
 
 The live delta sync is now up and the contact-data-dispatcher should be dispatching the updates on the go.
 
+## Mock-login accounts
+
+The service `update-bestuurseenheid-mock-login` will create mock-login accounts for you. Be aware that the first time it runs, as it has to create a lot of accounts, it'll be quite slow and take a lot of resources of your stack, to the point that you will not be able to log in or display any page.
+
+With the current configuration it will run every night at 22h. If you need the accounts created earlier, you can always set `RUN_CRON_ON_START: "true"` and `drc up -d update-bestuurseenheid-mock-login`.
+
 ## Banner message : 
 
 ### **How to test the banner message ?**
