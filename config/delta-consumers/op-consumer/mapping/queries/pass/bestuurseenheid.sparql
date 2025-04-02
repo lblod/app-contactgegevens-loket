@@ -1,5 +1,6 @@
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
 PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
@@ -22,6 +23,7 @@ CONSTRUCT {
     regorg:legalName,
     skos:altLabel,
     adms:identifier,
+    dcterms:identifier,
     regorg:orgStatus,
     org:hasPrimarySite,
     org:hasSite,
