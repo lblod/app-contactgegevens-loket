@@ -38,8 +38,6 @@ services:
     restart: "no"
   op-consumer:
     restart: "no"
-  reasoner:
-    restart: "no"
   dashboard:
     restart: "no"
   dashboard-login:

@@ -1,0 +1,9 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+CONSTRUCT {
+  ?s a besluit:Bestuurseenheid .
+} WHERE {
+  ?s a ere:CentraalBestuurVanDeEredienst
+}
