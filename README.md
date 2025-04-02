@@ -1,6 +1,47 @@
-# Contact en - Organisatie gegevens
+# Contact en Organisatie gegevens
 
 For documentation about the CLBV-Application, you can go to: [GitBook Documentation](https://app.gitbook.com/o/-MP9Yduzf5xu7wIebqPG/s/O4tUAyb57Hcu6xbEK2aU/)
+
+## How to set up the stack
+
+When first running the stack, data needs to be consumed by the application from external sources to be fully set-up. For this you'll need to update your `docker-compose.override.yml` as such:
+```
+services:
+  op-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info" # or any other OP environment you're linking to
+      DCR_DISABLE_INITIAL_SYNC: "false"
+      DCR_DISABLE_DELTA_INGEST: "true"
+      DCR_LANDING_ZONE_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
+      DCR_REMAPPING_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
+```
+
+You can then start your stack:
+```
+drc up -d virtuoso migrations
+# wait for end of migrations
+drc up -d database op-consumer
+# wait for end of initial sync of the op consumer
+drc up -d
+# the contact-data-dispatcher will kick in and dispatch the data from the op-consumer to the correct graphs it should be in
+```
+
+Once this is done, you can update your `docker-compose.override.yml` as follows:
+```
+services:
+  op-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info" # or any other OP environment you're linking to
+      DCR_DISABLE_INITIAL_SYNC: "false"
+      DCR_DISABLE_DELTA_INGEST: "false"
+```
+
+and
+```
+drc up -d
+```
+
+The live delta sync is now up and the contact-data-dispatcher should be dispatching the updates on the go.
 
 ## Banner message : 
 
