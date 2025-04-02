@@ -16,3 +16,4 @@ Caddyfile
 /commands
 /.vscode
 /config/migrations/local/*
+.env
