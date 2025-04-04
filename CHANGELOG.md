@@ -16,6 +16,9 @@ services:
       DCR_DISABLE_DELTA_INGEST: "true"
       DCR_LANDING_ZONE_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
       DCR_REMAPPING_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
+  contact-data-dispatcher:
+    environment:
+      DIRECT_DATABASE_ENDPOINT: "http://virtuoso:8890/sparql" # for the initial sync, we go directly to virtuoso
 ```
 Then
 ```
@@ -37,8 +40,14 @@ services:
       DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info" # or any other OP environment you're linking to
       DCR_DISABLE_INITIAL_SYNC: "false"
       DCR_DISABLE_DELTA_INGEST: "false"
+  # The contact-data-dispatcher entry can be removed, but it'll not affect the stack if we keep it either because the direct endpoint is only used for initial sync.
 ```
 and
 ```
 drc up -d
+```
+
+Once the stack is stable and the logs slowed down, now is a good time to kick in the mock login accounts creation. You can either wait for 22h for the cron job to start, or kick it in manually:
+```
+drc exec update-bestuurseenheid-mock-login curl -X POST http://localhost/heal-mock-logins
 ```
