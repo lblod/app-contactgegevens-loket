@@ -16,7 +16,7 @@ services:
     restart: "no"
   ### FRONTEND
   frontend:
-    image: lblod/frontend-contactgegevens-loket:1.9.0
+    image: lblod/frontend-contactgegevens-loket:1.9.2
     links:
       - identifier:backend
     environment:
@@ -182,7 +182,7 @@ services:
     restart: always
     logging: *default-logging
   contact-data-dispatcher:
-    image: lblod/contact-data-dispatcher-service:latest # TODO set tagged version once reviewed
+    image: lblod/contact-data-dispatcher-service:1.0.0
     environment:
       SUDO_QUERY_RETRY: "true"
       SUDO_QUERY_RETRY_FOR_HTTP_STATUS_CODES: "404,500,503"
