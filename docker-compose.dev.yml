@@ -1,10 +1,16 @@
 version: "3.4"
 
 services:
+  project-scripts:
+    restart: "no"
+  frontend:
+    restart: "no"
   identifier:
     restart: "no"
     ports:
       - "80:80"
+  accountdetail:
+    restart: "no"
   dispatcher:
     restart: "no"
   database:
@@ -17,48 +23,40 @@ services:
     restart: "no"
   cache:
     restart: "no"
-  adressenregister:
-    restart: "no"
-  frontend:
-    restart: "no"
-  accountdetail:
-    restart: "no"
   migrations:
-    restart: "no"
-  op-consumer:
     restart: "no"
   login:
     restart: "no"
-  reasoner:
+  update-bestuurseenheid-mock-login:
     restart: "no"
   mocklogin:
     image: lblod/mock-login-service:latest
-    links:
-      - database:database
     restart: "no"
-  project-scripts:
+  adressenregister:
+    restart: "no"
+  delta-notifier:
+    restart: "no"
+  op-consumer:
     restart: "no"
   dashboard:
     restart: "no"
   dashboard-login:
     restart: "no"
-  jobs-controller:
-    restart: "no"
-  delta-producer-background-initiator:
-    restart: "no"
-  delta-producer-pub-graph-maintainer:
-    restart: "no"
-  delta-producer-dump-file-publisher:
-    restart: "no"
-  publication-triplestore:
-    restart: "no"
-  delta-notifier:
-    restart: "no"
-  maildev:
-    image: maildev/maildev
-    ports:
-      - "1080:1080"
-  deliver-email-service:
-    environment:
-      HOST: maildev
-      PORT: 1025
+  #jobs-controller:
+  #  restart: "no"
+  #delta-producer-background-initiator:
+  #  restart: "no"
+  #delta-producer-pub-graph-maintainer:
+  #  restart: "no"
+  #delta-producer-dump-file-publisher:
+  #  restart: "no"
+  #publication-triplestore:
+  #  restart: "no"
+  #maildev:
+  #  image: maildev/maildev
+  #  ports:
+  #    - "1080:1080"
+  #deliver-email-service:
+  #  environment:
+  #    HOST: maildev
+  #    PORT: 1025

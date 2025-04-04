@@ -80,7 +80,6 @@ defmodule Acl.UserGroups.Config do
                     graph: "http://mu.semte.ch/graphs/organizations/",
                     constraint: %ResourceConstraint{
                       resource_types: [
-                        "http://schema.org/ContactPoint",
                         "http://www.w3.org/ns/org#Site",
                         "http://www.w3.org/ns/adms#Identifier",
                         "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator",
