@@ -1,5 +1,5 @@
 # CHANGELOG
-## Unreleased
+## 1.9.0 (2025-04-16)
 - Add missing keys for `migrations`, `login`, `addressenregister` and `jobs-controller`. [DL-6490]
 - Reorganize delta consumers config to harmonize with the ecosystem
 - Backend refactoring [CLBV-980]
