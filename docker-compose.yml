@@ -155,7 +155,7 @@ services:
     logging: *default-logging
   ### SYNC OP -> CLB
   op-consumer:
-    image: lblod/delta-consumer:0.1.4
+    image: lblod/delta-consumer:0.1.6
     environment:
       DCR_SERVICE_NAME: "op-consumer"
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info/"
