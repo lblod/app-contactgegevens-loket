@@ -1,0 +1,29 @@
+DELETE {
+  GRAPH ?g {
+    ?s ?p ?o .
+  }
+} WHERE {
+  VALUES ?p {
+    <https://data.vlaanderen.be/ns/adres#land>
+    <http://www.w3.org/ns/locn#fullAddress>
+    <http://www.w3.org/2004/02/skos/core#prefLabel>
+    <http://www.w3.org/2004/02/skos/core#altLabel>
+    <http://www.w3.org/ns/regorg#legalName>
+    <http://purl.org/dc/terms/>
+    <http://schema.org/email>
+  }
+
+  GRAPH <http://mu.semte.ch/graphs/ingest> {
+    ?s ?p ?o .
+
+    FILTER NOT EXISTS {
+      GRAPH <http://mu.semte.ch/graphs/landing-zone/op-consumer> {
+        ?s ?p ?o .
+      }
+    }
+  }
+
+  GRAPH ?g {
+    ?s ?p ?o .
+  }
+}

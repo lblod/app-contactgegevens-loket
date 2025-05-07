@@ -19,8 +19,6 @@ CONSTRUCT {
     locn:postCode,
     adres:gemeentenaam,
     locn:adminUnitL2,
-    adres:land,
-    locn:fullAddress,
     adres:verwijstNaar,
     dct:source
   ))

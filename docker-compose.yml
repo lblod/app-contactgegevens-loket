@@ -66,6 +66,7 @@ services:
       DATABASE_COMPATIBILITY: Virtuoso
       LOG_OUTGOING_SPARQL_QUERIES: "true"
       LOG_INCOMING_SPARQL_QUERIES: "true"
+      LOG_OUTGOING_SPARQL_QUERY_ROUNDTRIP: 
     volumes:
       - ./config/authorization:/config
     labels:
