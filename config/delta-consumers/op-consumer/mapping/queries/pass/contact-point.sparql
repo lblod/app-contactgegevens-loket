@@ -18,7 +18,6 @@ CONSTRUCT {
     foaf:page,
     schema:faxNumber,
     schema:contactType,
-    schema:email,
     schema:telephone
   ))
 }

@@ -18,7 +18,6 @@ CONSTRUCT {
     rdf:type,
     mu:uuid,
     dct:date,
-    dct:description,
     ch:typeWijziging,
     org:resultedFrom,
     org:changedBy,

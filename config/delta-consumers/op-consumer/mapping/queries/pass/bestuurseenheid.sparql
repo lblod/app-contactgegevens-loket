@@ -19,9 +19,6 @@ CONSTRUCT {
   FILTER (?p IN (
     rdf:type,
     mu:uuid,
-    skos:prefLabel,
-    regorg:legalName,
-    skos:altLabel,
     adms:identifier,
     dcterms:identifier,
     regorg:orgStatus,
