@@ -1,5 +1,7 @@
 (in-package :mu-cl-resources)
 
+(defparameter *include-count-in-paginated-responses* t)
+
 ;; reading in the domain.json
 (read-domain-file "domain.json")
 (read-domain-file "file-service.json")
