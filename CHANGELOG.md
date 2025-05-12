@@ -1,4 +1,10 @@
 # CHANGELOG
+## Unreleased
+- Fix mock-login accounts lists showing wrong total number [CLBV-1022]
+### Deploy notes
+```
+drc up -d resource
+```
 ## 1.9.1 (2025-05-08)
 - Workaround for strings with special characters not being properly deleted on update by the consumer [CLBV-1019]
 
