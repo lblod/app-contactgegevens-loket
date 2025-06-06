@@ -16,7 +16,7 @@ services:
     restart: "no"
   ### FRONTEND
   frontend:
-    image: lblod/frontend-contactgegevens-loket:1.9.3
+    image: lblod/frontend-contactgegevens-loket:1.9.4
     links:
       - identifier:backend
     environment:
@@ -256,7 +256,7 @@ services:
     logging: *default-logging
   dashboard:
     image: lblod/frontend-dashboard:1.6.0
-    # The following links statement shouldn't be 
+    # The following links statement shouldn't be
     # required. But due to legacy reasons (it's using an old version of the docker-ember)
     # the container exits when the link is not set.
     links:
