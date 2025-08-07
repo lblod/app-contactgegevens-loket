@@ -1,4 +1,6 @@
 # CHANGELOG
+## Unreleased
+ - Ensure restart directive is set for lpdc-management [DL-6508]
 ## 1.9.2 (2025-06-13)
 - Fix mock-login accounts lists showing wrong total number [CLBV-1022]
 - Bump frontend to v1.2.3 [DL-5635]
