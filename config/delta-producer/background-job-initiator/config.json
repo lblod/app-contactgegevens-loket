@@ -1,14 +1,12 @@
 [
-    {
-        "name": "contactData",
-        "jobsGraph": "http://mu.semte.ch/graphs/system/jobs",
-        "dumpFileCreationJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData",
-        "initialPublicationGraphSyncJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData",
-        "healingJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData",
-        "errorCreatorUri": "http://lblod.data.gift/services/delta-producer-background-jobs-initiator/contactData",
-        "cronPatternDumpJob": "0 0 6 * * 6",
-        "cronPatternHealingJob": "0 0 4 * * *",
-        "startInitialSync": true,
-        "disableDumpFileCreation": false
-    }
+  {
+    "name": "contact-data",
+    "jobsGraph": "http://mu.semte.ch/graphs/system/jobs",
+    "dumpFileCreationJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contact-data",
+    "initialPublicationGraphSyncJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contact-data",
+    "healingJobOperation": "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contact-data",
+    "cronPatternDumpJob": "11 */4 * * *",
+    "cronPatternHealingJob": "0 0 4 * * *",
+    "startInitialSync": true
+  }
 ]
