@@ -32,12 +32,12 @@
         },
         "resulting-organizations": {
           "predicate": "org:resultingOrganization",
-          "target": "organizations",
+          "target": "organization",
           "cardinality": "many"
         },
         "original-organizations": {
           "predicate": "org:originalOrganization",
-          "target": "organizations",
+          "target": "organization",
           "cardinality": "many"
         },
         "results": {
@@ -59,12 +59,12 @@
       "relationships": {
         "resulting-organization": {
           "predicate": "ext:resultingOrganization",
-          "target": "organizations",
+          "target": "organization",
           "cardinality": "one"
         },
         "status": {
           "predicate": "code:resulterendeStatus",
-          "target": "organization-status-codes",
+          "target": "organization-status-code",
           "cardinality": "one"
         },
         "result-from": {

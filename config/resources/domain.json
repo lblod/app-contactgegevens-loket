@@ -423,7 +423,7 @@
       "relationships": {
         "administrative-units": {
           "predicate": "geo:sfWithin",
-          "target": "administrative-units",
+          "target": "administrative-unit",
           "cardinality": "many",
           "inverse": true
         },
