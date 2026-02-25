@@ -46,12 +46,14 @@ services:
   #  restart: "no"
   #delta-producer-background-initiator:
   #  restart: "no"
-  #delta-producer-pub-graph-maintainer:
+  #delta-producer-publication-graph-maintainer:
   #  restart: "no"
   #delta-producer-dump-file-publisher:
   #  restart: "no"
-  #publication-triplestore:
-  #  restart: "no"
+  publication-triplestore:
+    restart: "no"
+    ports:
+      - "8891:8890"
   #maildev:
   #  image: maildev/maildev
   #  ports:

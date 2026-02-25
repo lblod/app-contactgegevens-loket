@@ -1,5 +1,5 @@
 {
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contactData": {
+    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/initialPublicationGraphSyncing/contact-data": {
         "tasksConfiguration": [
             {
                 "currentOperation": null,
@@ -13,7 +13,7 @@
             }
         ]
     },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contactData": {
+    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/healingOperation/contact-data": {
         "tasksConfiguration": [
             {
                 "currentOperation": null,
@@ -22,7 +22,7 @@
             }
         ]
     },
-    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contactData": {
+    "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/deltaDumpFileCreation/contact-data": {
         "tasksConfiguration": [
             {
                 "currentOperation": null,
