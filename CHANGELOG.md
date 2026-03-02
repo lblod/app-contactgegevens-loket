@@ -1,11 +1,11 @@
 # CHANGELOG
-## Unreleased
+## 1.9.3 (2026-03-02)
  - Ensure missing restart directive are set [DL-6508]
  - Errors in mu-cl-resources config files [CLBV-1158]
 
 ### Deploy notes
 ```
-drc restart resource
+drc restart resource cache
 ```
 ## 1.9.2 (2025-06-13)
 - Fix mock-login accounts lists showing wrong total number [CLBV-1022]
