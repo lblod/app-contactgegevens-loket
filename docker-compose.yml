@@ -60,14 +60,12 @@ services:
     restart: always
     logging: *default-logging
   database:
-    image: semtech/mu-authorization:0.6.0-beta.8
+    image: semtech/sparql-parser:0.0.15
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
-      DATABASE_COMPATIBILITY: Virtuoso
-      LOG_OUTGOING_SPARQL_QUERIES: "true"
-      LOG_INCOMING_SPARQL_QUERIES: "true"
     volumes:
       - ./config/authorization:/config
+      - ./data/authorization:/data
     labels:
       - "logging=true"
     restart: always

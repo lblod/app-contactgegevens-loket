@@ -1,4 +1,12 @@
 # CHANGELOG
+## Unreleased
+ - Replace mu-auth with sparql-parser [DL-6567]
+
+### Deploy notes
+```
+drc up -d database
+drc restart resource cache
+```
 ## 1.9.3 (2026-03-02)
  - Ensure missing restart directive are set [DL-6508]
  - Errors in mu-cl-resources config files [CLBV-1158]
