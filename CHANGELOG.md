@@ -1,4 +1,11 @@
 # CHANGELOG
+## Unreleased
+- Bump acm-login service [DL-7346]
+## Deploy notes
+```
+drc up -d login
+```
+
 ## 1.10.0 (2026-03-19)
  - Replace mu-auth with sparql-parser [DL-6567]
 

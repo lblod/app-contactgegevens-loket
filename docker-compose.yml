@@ -111,7 +111,7 @@ services:
     logging: *default-logging
   ### ACM/IDM related; login
   login:
-    image: lblod/acmidm-login-service:0.12.0
+    image: lblod/acmidm-login-service:0.12.1.rc-2
     environment:
       MU_APPLICATION_AUTH_USERID_CLAIM: "vo_id"
       MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_loketcontactapp_rol_3d"
