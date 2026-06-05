@@ -29,8 +29,7 @@ export default [
         gracePeriod: 10000,
         ignoreFromSelf: true
       }
-    }
-  /* Commenting out delta producer rules for now as the producers are not up yet.
+    },
     {
       match: {
         predicate: {
@@ -53,7 +52,7 @@ export default [
         // anything -> note you can tweak the performance here by filtering on graphs if you need to.
       },
       callback: {
-        url: 'http://delta-producer-pub-graph-maintainer/delta',
+        url: 'http://delta-producer-publication-graph-maintainer/delta',
         method: 'POST'
       },
       options: {
@@ -83,5 +82,4 @@ export default [
         ignoreFromSelf: true
       }
     }
-    */
   ];

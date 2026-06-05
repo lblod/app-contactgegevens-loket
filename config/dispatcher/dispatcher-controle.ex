@@ -245,7 +245,7 @@ defmodule Dispatcher do
   #################################################################
 
   get "/sync/contact-data/files/*path", %{ accept: [:any], layer: :api} do
-    Proxy.forward conn, path, "http://delta-producer-pub-graph-maintainer/files/"
+    Proxy.forward conn, path, "http://delta-producer-publication-graph-maintainer/contact-data/files/"
   end
 
   get "/datasets/*path", %{ layer: :api_services, accept: %{ json: true } } do
