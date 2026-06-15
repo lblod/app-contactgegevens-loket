@@ -1,5 +1,5 @@
 # CHANGELOG
-## Unreleased
+## 1.11.0 (2026-06-15)
 - Bump acm-login service [DL-7346]
 ## Deploy notes
 ```
